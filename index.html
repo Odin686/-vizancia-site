@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizancia — Learn AI the Fun Way</title>
+    <meta name="description"
+        content="Master artificial intelligence through bite-sized lessons, interactive quizzes, and addictive mini-games. Available on iOS.">
+    <meta name="keywords"
+        content="Vizancia, AI, artificial intelligence, learn AI, education, iOS app, machine learning">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6C5CE7;
+            --primary-light: #A29BFE;
+            --primary-dark: #5A4BD1;
+            --accent: #00CEC9;
+            --accent-light: #81ECEC;
+            --bg-dark: #0F0E17;
+            --bg-card: #1A1929;
+            --bg-card-hover: #232240;
+            --text-primary: #FFFFFE;
+            --text-secondary: #A7A9BE;
+            --gradient-1: linear-gradient(135deg, #6C5CE7 0%, #00CEC9 100%);
+            --gradient-2: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 50%, #00CEC9 100%);
+            --shadow: 0 20px 60px rgba(108, 92, 231, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Animated background */
+        .bg-glow {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(108, 92, 231, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 206, 201, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: glowFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes glowFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-2%, 2%);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 0;
+            backdrop-filter: blur(20px);
+            background: rgba(15, 14, 23, 0.8);
+            border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(108, 92, 231, 0.15);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 70px rgba(108, 92, 231, 0.25);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
+        }
+
+        /* Sections */
+        section {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 60px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 32px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(108, 92, 231, 0.3);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Learning Paths */
+        .paths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .path-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .path-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(108, 92, 231, 0.3);
+        }
+
+        .path-emoji {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .path-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .path-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Games Section */
+        .games-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .game-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.3s;
+        }
+
+        .game-item:hover {
+            transform: translateX(4px);
+        }
+
+        .game-emoji {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .game-item h4 {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .game-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Support / Privacy */
+        .legal-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .legal-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .legal-section p,
+        .legal-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .legal-section ul {
+            padding-left: 24px;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 32px;
+            margin-top: 32px;
+        }
+
+        .contact-card a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        footer a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            margin-top: 16px;
+        }
+
+        /* Divider */
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-1);
+            border-radius: 3px;
+            margin: 60px auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .paths-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .paths-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links a:not(.btn-primary) {
+                display: none;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Visibility animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="logo">Vizancia</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#paths">Paths</a>
+                <a href="#support">Support</a>
+                <a href="#" class="btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content fade-up">
+            <div class="hero-badge">🧠 Available on iOS</div>
+            <h1>Learn AI<br><span class="gradient-text">the Fun Way</span></h1>
+            <p>Master artificial intelligence through bite-sized lessons, interactive quizzes, and addictive mini-games.
+                No coding required.</p>
+            <div class="cta-group">
+                <a href="#" class="btn-primary">
+                    <svg width="20" height="24" viewBox="0 0 20 24" fill="currentColor">
+                        <path
+                            d="M15.07 12.95c-.03-2.76 2.26-4.1 2.36-4.16-1.29-1.88-3.29-2.14-4-2.17-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.61-.96-1.83.03-3.53 1.09-4.47 2.76-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.02 2.82 3.45 2.76 1.39-.06 1.92-.89 3.6-.89 1.67 0 2.15.89 3.61.86 1.5-.02 2.44-1.34 3.35-2.67 1.07-1.53 1.51-3.03 1.53-3.11-.04-.01-2.93-1.13-2.96-4.45zM12.33 4.54c.75-.93 1.27-2.2 1.13-3.49-1.09.05-2.44.74-3.22 1.66-.7.82-1.32 2.15-1.16 3.42 1.22.09 2.48-.62 3.25-1.59z" />
+                    </svg>
+                    Download on App Store
+                </a>
+                <a href="#features" class="btn-secondary">Learn More ↓</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="fade-up">
+            <p class="section-label">Features</p>
+            <h2 class="section-title">Everything you need to<br>understand AI</h2>
+            <p class="section-subtitle">Vizancia breaks down complex artificial intelligence concepts into digestible,
+                interactive lessons anyone can enjoy.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(108, 92, 231, 0.15);">📚</div>
+                <h3>10 Learning Paths</h3>
+                <p>From AI basics to the future of artificial intelligence — structured paths with bite-sized lessons
+                    and quizzes.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(0, 206, 201, 0.15);">🎮</div>
+                <h3>5 Mini-Games</h3>
+                <p>Speed rounds, ethics debates, prompt challenges — reinforce your knowledge through play.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(253, 203, 110, 0.15);">⚡</div>
+                <h3>XP & Leveling</h3>
+                <p>Earn experience points, level up, and maintain daily streaks to build consistent learning habits.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(255, 107, 107, 0.15);">🏆</div>
+                <h3>Achievements</h3>
+                <p>Unlock achievements as you master new concepts and track your progress on a visual dashboard.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(162, 155, 254, 0.15);">🎯</div>
+                <h3>Daily Goals</h3>
+                <p>Set personalized daily XP targets and watch your knowledge grow day by day.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(129, 236, 236, 0.15);">🔒</div>
+                <h3>Privacy First</h3>
+                <p>No account needed, no data collected, no servers. Your learning stays on your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Paths -->
+    <section id="paths">
+        <div class="fade-up">
+            <p class="section-label">Learning Paths</p>
+            <h2 class="section-title">10 paths to AI mastery</h2>
+            <p class="section-subtitle">Each path contains multiple lessons with interactive quizzes. Unlock new paths
+                as you progress.</p>
+        </div>
+
+        <div class="paths-grid">
+            <div class="path-card fade-up"><span class="path-emoji">🧠</span>
+                <h4>AI Basics</h4>
+                <p>AI, ML, deep learning & neural networks</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">🎓</span>
+                <h4>How AI Learns</h4>
+                <p>Supervised, unsupervised & reinforcement learning</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">✨</span>
+                <h4>Generative AI</h4>
+                <p>LLMs, GPT, Claude & diffusion models</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">✍️</span>
+                <h4>Prompt Engineering</h4>
+                <p>Crafting effective prompts</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">⚖️</span>
+                <h4>AI Ethics & Safety</h4>
+                <p>Bias, fairness & responsible AI</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">💼</span>
+                <h4>AI at Work</h4>
+                <p>AI transforming industries</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">🏥</span>
+                <h4>AI in Healthcare</h4>
+                <p>Diagnostics & medical AI</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">🎨</span>
+                <h4>AI in Creative Arts</h4>
+                <p>Music, art, writing & design</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">📜</span>
+                <h4>History of AI</h4>
+                <p>From Turing to modern breakthroughs</p>
+            </div>
+            <div class="path-card fade-up"><span class="path-emoji">🚀</span>
+                <h4>Future of AI</h4>
+                <p>AGI & emerging trends</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games -->
+    <section id="games">
+        <div class="fade-up">
+            <p class="section-label">Mini-Games</p>
+            <h2 class="section-title">Learn by playing</h2>
+            <p class="section-subtitle">Five unique games that make learning AI concepts addictive and fun.</p>
+        </div>
+
+        <div class="games-list">
+            <div class="game-item fade-up"><span class="game-emoji">⚡</span>
+                <div>
+                    <h4>Speed Round</h4>
+                    <p>Answer as many AI questions as you can in 60 seconds</p>
+                </div>
+            </div>
+            <div class="game-item fade-up"><span class="game-emoji">🤖</span>
+                <div>
+                    <h4>AI or Not?</h4>
+                    <p>Guess if a statement was made by AI or a human</p>
+                </div>
+            </div>
+            <div class="game-item fade-up"><span class="game-emoji">⚖️</span>
+                <div>
+                    <h4>Ethics Court</h4>
+                    <p>Judge real-world ethical dilemmas involving AI</p>
+                </div>
+            </div>
+            <div class="game-item fade-up"><span class="game-emoji">✍️</span>
+                <div>
+                    <h4>Prompt Craft</h4>
+                    <p>Pick the best prompt for each scenario</p>
+                </div>
+            </div>
+            <div class="game-item fade-up"><span class="game-emoji">🔤</span>
+                <div>
+                    <h4>Buzzword Buster</h4>
+                    <p>True or false — is this AI term real or made up?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Support -->
+    <div class="legal-section" id="support">
+        <h2>Support</h2>
+        <p>We're here to help! If you have any questions, feedback, or issues with Vizancia, please don't hesitate to
+            reach out.</p>
+
+        <div class="contact-card">
+            <h3 style="margin-bottom: 16px;">Contact Us</h3>
+            <p>📧 Email: <a href="mailto:info@vizancia.ca">info@vizancia.ca</a></p>
+            <p>We typically respond within 24–48 hours.</p>
+        </div>
+
+        <div class="contact-card">
+            <h3 style="margin-bottom: 16px;">FAQ</h3>
+            <p><strong>Is Vizancia free?</strong><br>Vizancia is free to download with all learning content included.
+            </p>
+            <p><strong>Do I need an account?</strong><br>No. Vizancia works entirely offline with no account or login
+                required.</p>
+            <p><strong>What devices are supported?</strong><br>Vizancia runs on iPhone and iPad with iOS 17.0 or later.
+            </p>
+            <p><strong>Is my data collected?</strong><br>No. Vizancia does not collect, store, or transmit any personal
+                data. All progress is saved locally on your device.</p>
+        </div>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div class="legal-section" id="privacy">
+        <h2>Privacy Policy</h2>
+        <p><em>Last updated: February 18, 2026</em></p>
+
+        <p>Vizancia ("we", "our", "the app") is committed to protecting your privacy. This privacy policy explains how
+            we handle information when you use our mobile application.</p>
+
+        <h3 style="margin-top: 32px; margin-bottom: 12px;">Information We Collect</h3>
+        <p><strong>We do not collect any personal information.</strong> Vizancia operates entirely on your device and
+            does not:</p>
+        <ul>
+            <li>Collect personal data (name, email, phone number, etc.)</li>
+            <li>Use tracking or analytics tools</li>
+            <li>Require account creation or login</li>
+            <li>Share data with third parties</li>
+            <li>Use cookies or similar technologies</li>
+            <li>Connect to external servers</li>
+        </ul>
+
+        <h3 style="margin-top: 32px; margin-bottom: 12px;">Data Storage</h3>
+        <p>All app data (learning progress, XP, achievements, settings) is stored locally on your device using Apple's
+            built-in data storage. This data is never transmitted off your device.</p>
+
+        <h3 style="margin-top: 32px; margin-bottom: 12px;">Children's Privacy</h3>
+        <p>Vizancia does not knowingly collect any information from children under 13. The app is suitable for users of
+            all ages as it contains only educational content about artificial intelligence.</p>
+
+        <h3 style="margin-top: 32px; margin-bottom: 12px;">Changes to This Policy</h3>
+        <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an
+            updated revision date.</p>
+
+        <h3 style="margin-top: 32px; margin-bottom: 12px;">Contact Us</h3>
+        <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:info@vizancia.ca"
+                style="color: var(--primary-light);">info@vizancia.ca</a>.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Vizancia. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#support">Support</a>
+            <a href="mailto:info@vizancia.ca">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Scroll Animations -->
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>

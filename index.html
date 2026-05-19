@@ -43,19 +43,19 @@
         <p>Master artificial intelligence through bite-sized lessons, addictive mini-games, and competitive 1v1 duels. No coding required.</p>
         <div class="hero-stats">
             <div class="hero-stat">
-                <div class="num" data-target="16">0</div>
+                <div class="num">16</div>
                 <div class="label">Categories</div>
             </div>
             <div class="hero-stat">
-                <div class="num" data-target="96">0</div>
+                <div class="num">96</div>
                 <div class="label">Lessons</div>
             </div>
             <div class="hero-stat">
-                <div class="num" data-target="11">0</div>
+                <div class="num">11</div>
                 <div class="label">Games</div>
             </div>
             <div class="hero-stat">
-                <div class="num" data-target="576">0</div>
+                <div class="num">576</div>
                 <div class="label">Questions</div>
             </div>
         </div>
@@ -70,11 +70,11 @@
 </header>
 
 <!-- Stats Bar -->
-<div class="stats-bar reveal">
-    <div class="stat-item"><div class="stat-num" data-target="96">0+</div><div class="stat-label">Lessons</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="11">0</div><div class="stat-label">Mini-Games</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="20">0</div><div class="stat-label">Levels</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="25">0+</div><div class="stat-label">Achievements</div></div>
+<div class="stats-bar">
+    <div class="stat-item"><div class="stat-num">96+</div><div class="stat-label">Lessons</div></div>
+    <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">Mini-Games</div></div>
+    <div class="stat-item"><div class="stat-num">20</div><div class="stat-label">Levels</div></div>
+    <div class="stat-item"><div class="stat-num">25+</div><div class="stat-label">Achievements</div></div>
     <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Duels</div></div>
 </div>
 
@@ -236,25 +236,25 @@
 </footer>
 
 <script>
-// ── Stat counter animation ──
-function animateCounters() {
-    document.querySelectorAll('[data-target]').forEach(el => {
-        const target = parseInt(el.dataset.target);
-        const suffix = el.textContent.includes('+') ? '+' : '';
-        let current = 0;
-        const increment = target / 40;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) { current = target; clearInterval(timer); }
-            el.textContent = Math.floor(current) + suffix;
-        }, 30);
-    });
-}
+// ── Nav scroll effect ──
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+});
 
-const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { animateCounters(); heroObserver.disconnect(); } });
-}, {threshold: 0.3});
-document.querySelectorAll('.hero-stats').forEach(el => heroObserver.observe(el));
+// ── Mobile menu ──
+const toggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        navLinks.classList.remove('open');
+    });
+});
 </script>
 
 </body>

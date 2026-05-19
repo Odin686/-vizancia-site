@@ -223,16 +223,18 @@ section {
 .feature-section {
     max-width: 1000px; margin: 0 auto;
     padding: 100px 24px;
-    display: flex; align-items: center; gap: 80px;
+    display: flex; align-items: center; gap: 60px;
 }
 .feature-section.reverse { flex-direction: row-reverse; }
-.feature-section .text-col { flex: 1; }
+.feature-section .text-col { flex: 1; min-width: 0; }
 .feature-section .illust-col {
-    flex: 1; display: flex; align-items: center; justify-content: center;
+    flex: 0 0 380px; display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
 }
 .feature-section .illust-col img {
-    max-width: 100%; height: auto;
-    max-height: 380px;
+    width: 100%; height: auto;
+    max-height: 340px;
+    object-fit: contain;
     filter: drop-shadow(0 8px 24px rgba(37, 99, 235, 0.1));
 }
 .feature-heading {
@@ -464,6 +466,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 /* ── Responsive ── */
 @media (max-width: 960px) {
     .feature-section, .feature-section.reverse { flex-direction: column; text-align: center; gap: 40px; }
+    .feature-section .illust-col { flex: none; width: 100%; max-width: 320px; }
     .feature-body { max-width: 100%; }
     .feature-chips { justify-content: center; }
     .duel-grid { grid-template-columns: 1fr; }

@@ -18,14 +18,14 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar" id="navbar">
+<nav id="navbar">
     <div class="nav-inner">
-        <a href="#" class="logo">Vizancia</a>
+        <div class="logo">Vizancia</div>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="navLinks">
-            <a href="#learn">Learn</a>
+            <a href="#features">Features</a>
             <a href="#games">Games</a>
             <a href="#duels">Duels</a>
             <a href="#paths">Paths</a>
@@ -37,237 +37,211 @@
 
 <!-- Hero -->
 <header class="hero">
-    <div class="hero-inner">
-        <div class="hero-illustration">
-            <div class="hero-mascot">🧠</div>
-        </div>
-        <div class="hero-text">
-            <h1>The free, fun, and effective way to <span class="hl">learn AI!</span></h1>
-            <div class="hero-buttons">
-                <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                    <svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M15.07 12.95c-.03-2.76 2.26-4.1 2.36-4.16-1.29-1.88-3.29-2.14-4-2.17-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.61-.96-1.83.03-3.53 1.09-4.47 2.76-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.02 2.82 3.45 2.76 1.39-.06 1.92-.89 3.6-.89 1.67 0 2.15.89 3.61.86 1.5-.02 2.44-1.34 3.35-2.67 1.07-1.53 1.51-3.03 1.53-3.11-.04-.01-2.93-1.13-2.96-4.45zM12.33 4.54c.75-.93 1.27-2.2 1.13-3.49-1.09.05-2.44.74-3.22 1.66-.7.82-1.32 2.15-1.16 3.42 1.22.09 2.48-.62 3.25-1.59z"/></svg>
-                    Download Free on App Store
-                </a>
-                <a href="#learn" class="btn-outline">Explore Features ↓</a>
+    <div class="hero-content">
+        <div class="hero-badge">✨ Version 3.2 — 11 Games, 16 Categories, 1v1 Duels</div>
+        <h1>Learn AI<br><span class="gradient-text">the Fun Way</span></h1>
+        <p>Master artificial intelligence through bite-sized lessons, addictive mini-games, and competitive 1v1 duels. No coding required.</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="num">16</div>
+                <div class="label">Categories</div>
             </div>
+            <div class="hero-stat">
+                <div class="num">96</div>
+                <div class="label">Lessons</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">11</div>
+                <div class="label">Games</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">576</div>
+                <div class="label">Questions</div>
+            </div>
+        </div>
+        <div class="cta-group">
+            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="currentColor"><path d="M15.07 12.95c-.03-2.76 2.26-4.1 2.36-4.16-1.29-1.88-3.29-2.14-4-2.17-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.61-.96-1.83.03-3.53 1.09-4.47 2.76-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.02 2.82 3.45 2.76 1.39-.06 1.92-.89 3.6-.89 1.67 0 2.15.89 3.61.86 1.5-.02 2.44-1.34 3.35-2.67 1.07-1.53 1.51-3.03 1.53-3.11-.04-.01-2.93-1.13-2.96-4.45zM12.33 4.54c.75-.93 1.27-2.2 1.13-3.49-1.09.05-2.44.74-3.22 1.66-.7.82-1.32 2.15-1.16 3.42 1.22.09 2.48-.62 3.25-1.59z"/></svg>
+                Download Free on App Store
+            </a>
+            <a href="#features" class="btn-secondary">Explore Features ↓</a>
         </div>
     </div>
 </header>
 
-<!-- Stats Strip -->
-<div class="stats-strip">
-    <div class="stats-inner">
-        <div class="stat-block"><div class="stat-num">96+</div><div class="stat-label">Lessons</div></div>
-        <div class="stat-block"><div class="stat-num">11</div><div class="stat-label">Mini-Games</div></div>
-        <div class="stat-block"><div class="stat-num">16</div><div class="stat-label">Categories</div></div>
-        <div class="stat-block"><div class="stat-num">576+</div><div class="stat-label">Questions</div></div>
-        <div class="stat-block"><div class="stat-num">∞</div><div class="stat-label">Duels</div></div>
-    </div>
+<!-- Stats Bar -->
+<div class="stats-bar">
+    <div class="stat-item"><div class="stat-num">96+</div><div class="stat-label">Lessons</div></div>
+    <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">Mini-Games</div></div>
+    <div class="stat-item"><div class="stat-num">20</div><div class="stat-label">Levels</div></div>
+    <div class="stat-item"><div class="stat-num">25+</div><div class="stat-label">Achievements</div></div>
+    <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Duels</div></div>
 </div>
 
-<!-- Section 1: Learn -->
-<section class="content-section" id="learn">
-    <div class="section-inner">
-        <div class="illust-col">
-            <div class="section-emoji">📚</div>
+<!-- Features -->
+<section id="features">
+    <div class="reveal">
+        <p class="section-label">Features</p>
+        <h2 class="section-title">Everything you need to<br>understand AI</h2>
+        <p class="section-subtitle">From structured learning paths to competitive duels — Vizancia makes AI education engaging, rewarding, and completely free.</p>
+    </div>
+
+    <div class="bento-grid">
+        <div class="bento-card featured reveal reveal-delay-1">
+            <div class="bento-icon">📚</div>
+            <h3>16 Learning Categories · 96+ Lessons</h3>
+            <p>From "What is AI?" to Neural Networks, NLP, Computer Vision, and AI Ethics — each lesson breaks down complex topics into engaging cards with real-world examples. Dynamic questions adapt to keep you challenged.</p>
+            <span class="bento-tag">Core Learning</span>
         </div>
-        <div class="text-col">
-            <h2 class="section-heading">free. fun. <span class="hl">effective.</span></h2>
-            <p class="section-body">Master artificial intelligence from the ground up with bite-sized lessons, interactive quizzes, and real-world examples. No coding required — just tap, learn, and grow. Our approach makes complex AI topics feel approachable and exciting.</p>
-            <div class="feature-chips">
-                <span class="chip">📖 96+ Lessons</span>
-                <span class="chip">🎯 Adaptive Quizzes</span>
-                <span class="chip">⚡ Bite-Sized</span>
-            </div>
+        <div class="bento-card reveal reveal-delay-2">
+            <div class="bento-icon">🎮</div>
+            <h3>11 Mini-Games</h3>
+            <p>Speed rounds, memory grids, word searches, falling words — reinforce knowledge through addictive play with combos and score multipliers.</p>
+            <span class="bento-tag">Play to Learn</span>
+        </div>
+        <div class="bento-card reveal reveal-delay-1">
+            <div class="bento-icon">⚔️</div>
+            <h3>1v1 Duels</h3>
+            <p>Challenge friends or get matched with opponents worldwide via Game Center. Can't find a match? Play against AI bots at Easy, Medium, or Hard difficulty.</p>
+            <span class="bento-tag">Competitive</span>
+        </div>
+        <div class="bento-card reveal reveal-delay-2">
+            <div class="bento-icon">⚡</div>
+            <h3>XP & 20 Levels</h3>
+            <p>Earn XP from lessons, games, and duels. Maintain daily streaks and choose your pace: Casual, Regular, Serious, or Intense.</p>
+        </div>
+        <div class="bento-card featured reveal reveal-delay-3">
+            <div class="bento-icon">🏆</div>
+            <h3>Leaderboards, Achievements & Trophies</h3>
+            <p>Compete on global Game Center leaderboards for Total XP, Weekly XP, and Duel Victories. Collect 25+ achievements and 8 duel trophy milestones — from First Blood to Legendary Duelist.</p>
+            <span class="bento-tag">Community</span>
+        </div>
+        <div class="bento-card reveal reveal-delay-1">
+            <div class="bento-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>No account needed, no data collected, no servers. Your learning stays on your device. Completely free, no ads, no subscriptions.</p>
         </div>
     </div>
 </section>
 
-<hr class="section-divider">
+<!-- Games -->
+<section id="games">
+    <div class="reveal">
+        <p class="section-label">Mini-Games</p>
+        <h2 class="section-title">11 ways to master AI<br><span class="gradient-text">through play</span></h2>
+        <p class="section-subtitle">Each game features combos, score multipliers, sound effects, and expanding content to keep every session fresh.</p>
+    </div>
 
-<!-- Section 2: Curriculum -->
-<section class="content-section">
-    <div class="section-inner reverse">
-        <div class="illust-col">
-            <div class="section-emoji">🗺️</div>
+    <div class="games-grid">
+        <div class="game-card reveal"><div class="game-icon">⚡</div><div><h4>Speed Round</h4><p>60-second blitz with combo multipliers up to 4×</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🤖</div><div><h4>Fact or Fiction</h4><p>33 claims about AI — separate truth from myth</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">⚖️</div><div><h4>Ethics Court</h4><p>Judge real-world ethical dilemmas involving AI</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">✍️</div><div><h4>Prompt Craft</h4><p>Pick the best prompt for each scenario</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🔤</div><div><h4>Buzzword Buster</h4><p>44 terms — real AI jargon or made up?</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🧩</div><div><h4>Memory Grid</h4><p>Match AI concept pairs against the clock</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🔍</div><div><h4>Word Search</h4><p>Find hidden AI terms in the puzzle grid</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🔗</div><div><h4>AI Pairs</h4><p>Connect related AI concepts together</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🏷️</div><div><h4>Jargon Match</h4><p>Match AI terms to their definitions</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">📅</div><div><h4>AI Timeline</h4><p>Put AI milestones in chronological order</p></div></div>
+        <div class="game-card reveal"><div class="game-icon">🌊</div><div><h4>Falling Words</h4><p>Drag & drop into correct buckets — 4× combos</p></div></div>
+    </div>
+</section>
+
+<!-- Duels -->
+<section id="duels" class="duel-section">
+    <div class="reveal">
+        <p class="section-label">Compete</p>
+        <h2 class="section-title">Challenge anyone.<br><span class="gradient-text">Prove you're the smartest.</span></h2>
+        <p class="section-subtitle">Go head-to-head in real-time AI knowledge duels. Climb leaderboards and earn exclusive trophies.</p>
+    </div>
+
+    <div class="duel-grid">
+        <div class="duel-card reveal reveal-delay-1">
+            <span class="duel-icon">👥</span>
+            <h3>Online 1v1</h3>
+            <p>Challenge friends or get matched with opponents worldwide via Game Center. Real-time head-to-head battles.</p>
         </div>
-        <div class="text-col">
-            <h2 class="section-heading">backed by <span class="hl-teal">structured learning.</span></h2>
-            <p class="section-body">16 curated learning categories from AI Basics to Neural Networks, Computer Vision, NLP, and AI Ethics. Each path builds on the last, guiding you from complete beginner to AI-literate in a structured, proven sequence.</p>
-            <div class="feature-chips">
-                <span class="chip">🧠 AI Basics</span>
-                <span class="chip">✨ Generative AI</span>
-                <span class="chip">⚖️ AI Ethics</span>
-                <span class="chip">🔐 AI Security</span>
-            </div>
+        <div class="duel-card reveal reveal-delay-2">
+            <span class="duel-icon">🤖</span>
+            <h3>Play vs Bot</h3>
+            <p>No opponents? No problem. Choose from three difficulty levels: 🐢 Easy, 🐇 Medium, or 🔥 Hard.</p>
+        </div>
+        <div class="duel-card reveal reveal-delay-3">
+            <span class="duel-icon">🏅</span>
+            <h3>Duel Trophies</h3>
+            <p>Earn 8 milestone badges from First Blood (1 win) all the way to Legendary Duelist (100 wins).</p>
         </div>
     </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- Section 3: Gamification -->
-<section class="content-section" id="games">
-    <div class="section-inner">
-        <div class="illust-col">
-            <div class="section-emoji">🎮</div>
-        </div>
-        <div class="text-col">
-            <h2 class="section-heading">stay motivated with <span class="hl-amber">game-based learning.</span></h2>
-            <p class="section-body">11 mini-games turn studying into play. Earn XP, maintain daily streaks, climb 20 levels, and unlock 25+ achievements. Combo multipliers, leaderboards, and trophies keep you coming back for more.</p>
-            <div class="feature-chips">
-                <span class="chip">🔥 Daily Streaks</span>
-                <span class="chip">🏆 25+ Achievements</span>
-                <span class="chip">📊 Leaderboards</span>
-            </div>
-        </div>
+<!-- Learning Paths -->
+<section id="paths">
+    <div class="reveal">
+        <p class="section-label">Learning Paths</p>
+        <h2 class="section-title">16 categories to<br><span class="gradient-text">AI mastery</span></h2>
+        <p class="section-subtitle">Each category contains multiple lessons with interactive quizzes. Unlock new paths as you progress.</p>
     </div>
-</section>
 
-<hr class="section-divider">
-
-<!-- Section 4: Duels -->
-<section class="content-section" id="duels">
-    <div class="section-inner reverse">
-        <div class="illust-col">
-            <div class="section-emoji">⚔️</div>
-        </div>
-        <div class="text-col">
-            <h2 class="section-heading">challenge anyone. <span class="hl-rose">prove you're the smartest.</span></h2>
-            <p class="section-body">Go head-to-head in real-time 1v1 AI knowledge duels via Game Center. No opponent? Battle AI bots at Easy, Medium, or Hard difficulty. Earn 8 milestone trophies from First Blood to Legendary Duelist.</p>
-            <div class="feature-chips">
-                <span class="chip">👥 Online 1v1</span>
-                <span class="chip">🤖 Bot Opponents</span>
-                <span class="chip">🏅 8 Trophies</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- Section 5: Privacy -->
-<section class="content-section">
-    <div class="section-inner">
-        <div class="illust-col">
-            <div class="section-emoji">🔒</div>
-        </div>
-        <div class="text-col">
-            <h2 class="section-heading">completely free. <span class="hl-emerald">completely private.</span></h2>
-            <p class="section-body">No account required. No data collected. No servers. Your entire learning journey stays on your device. Vizancia is 100% free with no ads and no subscriptions — ever. Just pure learning.</p>
-            <div class="feature-chips">
-                <span class="chip">✅ 100% Free</span>
-                <span class="chip">🚫 No Ads</span>
-                <span class="chip">📱 Works Offline</span>
-                <span class="chip">🔒 No Data Collected</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- Games Grid -->
-<section class="games-section">
-    <div class="section-header">
-        <h2 class="section-heading" style="text-align:center;">11 ways to master AI <span class="hl">through play</span></h2>
-        <p class="section-body" style="text-align:center; max-width:500px; margin: 0 auto;">Each game features combos, score multipliers, and expanding content to keep every session fresh.</p>
-    </div>
-    <div class="games-grid-container">
-        <div class="games-grid">
-            <div class="game-tile"><span class="tile-icon">⚡</span><h4>Speed Round</h4><p>60-second blitz with 4× combos</p></div>
-            <div class="game-tile"><span class="tile-icon">🤖</span><h4>Fact or Fiction</h4><p>Separate AI truth from myth</p></div>
-            <div class="game-tile"><span class="tile-icon">⚖️</span><h4>Ethics Court</h4><p>Judge real-world AI dilemmas</p></div>
-            <div class="game-tile"><span class="tile-icon">✍️</span><h4>Prompt Craft</h4><p>Pick the best prompt</p></div>
-            <div class="game-tile"><span class="tile-icon">🔤</span><h4>Buzzword Buster</h4><p>Real jargon or made up?</p></div>
-            <div class="game-tile"><span class="tile-icon">🧩</span><h4>Memory Grid</h4><p>Match AI concept pairs</p></div>
-            <div class="game-tile"><span class="tile-icon">🔍</span><h4>Word Search</h4><p>Find hidden AI terms</p></div>
-            <div class="game-tile"><span class="tile-icon">🔗</span><h4>AI Pairs</h4><p>Connect related concepts</p></div>
-            <div class="game-tile"><span class="tile-icon">🏷️</span><h4>Jargon Match</h4><p>Terms to definitions</p></div>
-            <div class="game-tile"><span class="tile-icon">📅</span><h4>AI Timeline</h4><p>Chronological milestones</p></div>
-            <div class="game-tile"><span class="tile-icon">🌊</span><h4>Falling Words</h4><p>Drag & drop 4× combos</p></div>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- Paths Grid -->
-<section class="paths-section" id="paths">
-    <div class="section-header">
-        <h2 class="section-heading" style="text-align:center;">16 categories to <span class="hl">AI mastery</span></h2>
-        <p class="section-body" style="text-align:center; max-width:500px; margin: 0 auto;">Each category contains multiple lessons with interactive quizzes. Unlock new paths as you progress.</p>
-    </div>
     <div class="paths-grid">
-        <div class="path-tile"><span class="tile-emoji">🧠</span><h4>AI Basics</h4><p>AI, ML & neural networks</p></div>
-        <div class="path-tile"><span class="tile-emoji">🎓</span><h4>How AI Learns</h4><p>Supervised & reinforcement</p></div>
-        <div class="path-tile"><span class="tile-emoji">✨</span><h4>Generative AI</h4><p>LLMs, GPT & diffusion</p></div>
-        <div class="path-tile"><span class="tile-emoji">✍️</span><h4>Prompt Eng.</h4><p>Crafting effective prompts</p></div>
-        <div class="path-tile"><span class="tile-emoji">⚖️</span><h4>AI Ethics</h4><p>Bias, fairness & responsibility</p></div>
-        <div class="path-tile"><span class="tile-emoji">💼</span><h4>AI at Work</h4><p>Transforming industries</p></div>
-        <div class="path-tile"><span class="tile-emoji">🏥</span><h4>Healthcare</h4><p>Diagnostics & medical AI</p></div>
-        <div class="path-tile"><span class="tile-emoji">🎨</span><h4>Creative Arts</h4><p>Music, art & design</p></div>
-        <div class="path-tile"><span class="tile-emoji">📜</span><h4>History of AI</h4><p>Turing to modern era</p></div>
-        <div class="path-tile"><span class="tile-emoji">🚀</span><h4>Future of AI</h4><p>AGI & emerging trends</p></div>
-        <div class="path-tile"><span class="tile-emoji">👁️</span><h4>Computer Vision</h4><p>Image recognition</p></div>
-        <div class="path-tile"><span class="tile-emoji">💬</span><h4>NLP</h4><p>Language understanding</p></div>
-        <div class="path-tile"><span class="tile-emoji">🤖</span><h4>Robotics</h4><p>Autonomous systems</p></div>
-        <div class="path-tile"><span class="tile-emoji">🔐</span><h4>AI Security</h4><p>Adversarial attacks & safety</p></div>
-        <div class="path-tile"><span class="tile-emoji">📊</span><h4>Data Science</h4><p>Datasets & training</p></div>
-        <div class="path-tile"><span class="tile-emoji">🌍</span><h4>AI & Society</h4><p>Impact on jobs & law</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🧠</span><h4>AI Basics</h4><p>AI, ML, deep learning & neural networks</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🎓</span><h4>How AI Learns</h4><p>Supervised, unsupervised & reinforcement</p></div>
+        <div class="path-card reveal"><span class="path-emoji">✨</span><h4>Generative AI</h4><p>LLMs, GPT, Claude & diffusion models</p></div>
+        <div class="path-card reveal"><span class="path-emoji">✍️</span><h4>Prompt Engineering</h4><p>Crafting effective prompts</p></div>
+        <div class="path-card reveal"><span class="path-emoji">⚖️</span><h4>AI Ethics</h4><p>Bias, fairness & responsible AI</p></div>
+        <div class="path-card reveal"><span class="path-emoji">💼</span><h4>AI at Work</h4><p>AI transforming industries</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🏥</span><h4>AI in Healthcare</h4><p>Diagnostics & medical AI</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🎨</span><h4>Creative Arts</h4><p>Music, art, writing & design</p></div>
+        <div class="path-card reveal"><span class="path-emoji">📜</span><h4>History of AI</h4><p>From Turing to modern breakthroughs</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🚀</span><h4>Future of AI</h4><p>AGI & emerging trends</p></div>
+        <div class="path-card reveal"><span class="path-emoji">👁️</span><h4>Computer Vision</h4><p>Image recognition & visual AI</p></div>
+        <div class="path-card reveal"><span class="path-emoji">💬</span><h4>NLP</h4><p>Language understanding & generation</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🤖</span><h4>Robotics</h4><p>Autonomous systems & embodied AI</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🔐</span><h4>AI Security</h4><p>Adversarial attacks & AI safety</p></div>
+        <div class="path-card reveal"><span class="path-emoji">📊</span><h4>Data Science</h4><p>Datasets, training & evaluation</p></div>
+        <div class="path-card reveal"><span class="path-emoji">🌍</span><h4>AI & Society</h4><p>Impact on jobs, law & daily life</p></div>
     </div>
 </section>
 
-<!-- Download Banner -->
-<section class="download-banner">
-    <div class="banner-content">
-        <h2>ready to master AI?</h2>
-        <p>Join thousands of learners. 16 categories, 11 games, 576+ questions — all free.</p>
-        <div class="download-features">
-            <span class="chip">✅ 100% Free</span>
-            <span class="chip">🔒 No Data Collected</span>
-            <span class="chip">📱 Works Offline</span>
-            <span class="chip">🚫 No Ads Ever</span>
+
+<!-- Download CTA -->
+<section class="download-cta-section">
+    <div class="reveal">
+        <div class="cta-card">
+            <h2>Ready to Master AI?</h2>
+            <p>Join thousands of learners. 16 categories, 11 games, 576+ questions — all free, no ads, no account required.</p>
+            <div class="cta-features">
+                <span>✅ 100% Free</span>
+                <span>🔒 No Data Collected</span>
+                <span>📱 Works Offline</span>
+                <span>🚫 No Ads Ever</span>
+            </div>
+            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="currentColor"><path d="M15.07 12.95c-.03-2.76 2.26-4.1 2.36-4.16-1.29-1.88-3.29-2.14-4-2.17-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.61-.96-1.83.03-3.53 1.09-4.47 2.76-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.02 2.82 3.45 2.76 1.39-.06 1.92-.89 3.6-.89 1.67 0 2.15.89 3.61.86 1.5-.02 2.44-1.34 3.35-2.67 1.07-1.53 1.51-3.03 1.53-3.11-.04-.01-2.93-1.13-2.96-4.45zM12.33 4.54c.75-.93 1.27-2.2 1.13-3.49-1.09.05-2.44.74-3.22 1.66-.7.82-1.32 2.15-1.16 3.42 1.22.09 2.48-.62 3.25-1.59z"/></svg>
+                Download Free on the App Store
+            </a>
         </div>
-        <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" class="btn-primary" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M15.07 12.95c-.03-2.76 2.26-4.1 2.36-4.16-1.29-1.88-3.29-2.14-4-2.17-1.68-.18-3.31 1.01-4.17 1.01-.87 0-2.19-.99-3.61-.96-1.83.03-3.53 1.09-4.47 2.76-1.93 3.34-.49 8.27 1.36 10.97.93 1.33 2.02 2.82 3.45 2.76 1.39-.06 1.92-.89 3.6-.89 1.67 0 2.15.89 3.61.86 1.5-.02 2.44-1.34 3.35-2.67 1.07-1.53 1.51-3.03 1.53-3.11-.04-.01-2.93-1.13-2.96-4.45zM12.33 4.54c.75-.93 1.27-2.2 1.13-3.49-1.09.05-2.44.74-3.22 1.66-.7.82-1.32 2.15-1.16 3.42 1.22.09 2.48-.62 3.25-1.59z"/></svg>
-            Download Free on App Store
-        </a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-brand">
-            <div class="footer-logo">Vizancia</div>
-            <p>The free, fun, and effective way to learn artificial intelligence.</p>
-        </div>
-        <div class="footer-col">
-            <h4>About</h4>
-            <a href="#learn">How It Works</a>
-            <a href="#games">Mini-Games</a>
-            <a href="#duels">Duels</a>
-            <a href="#paths">Learning Paths</a>
-        </div>
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="legal.html#privacy">Privacy Policy</a>
-            <a href="legal.html#terms">Terms of Service</a>
-            <a href="legal.html#support">Support</a>
-            <a href="mailto:info@vizancia.ca">Contact</a>
-        </div>
-        <div class="footer-col">
-            <h4>Download</h4>
-            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">App Store</a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2026 Vizancia. All rights reserved.
+<footer>
+    <p>&copy; 2026 Vizancia. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="legal.html#privacy">Privacy Policy</a>
+        <a href="legal.html#terms">Terms of Service</a>
+        <a href="legal.html#support">Support</a>
+        <a href="mailto:info@vizancia.ca">Contact</a>
+        <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">App Store</a>
     </div>
 </footer>
 
 <script>
+// ── Nav scroll effect ──
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
 // ── Mobile menu ──
 const toggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');

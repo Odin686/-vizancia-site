@@ -124,6 +124,32 @@ nav.scrolled {
     color: var(--text-primary);
     margin-bottom: 32px;
 }
+.sandbox-badge-hero {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #10B981, #14B8A6);
+    border: 2px solid #059669;
+    border-bottom: 4px solid #047857;
+    border-radius: 100px;
+    font-size: 0.85rem; font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    animation: sandbox-pulse 2.5s ease-in-out infinite;
+    transition: transform 0.1s, border-bottom-width 0.1s;
+    cursor: pointer;
+}
+.sandbox-badge-hero:hover {
+    transform: translateY(2px);
+    border-bottom-width: 2px;
+}
+.sandbox-badge-hero:active {
+    transform: translateY(4px);
+    border-bottom-width: 0px;
+}
+@keyframes sandbox-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.15); }
+}
 .hero h1 {
     font-size: clamp(2.8rem, 7vw, 4.5rem);
     font-weight: 800; line-height: 1.05;

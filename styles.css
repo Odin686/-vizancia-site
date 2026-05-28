@@ -532,12 +532,18 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
         background: rgba(255,255,255,0.99);
         padding: 16px 0;
     }
+    nav.menu-open .nav-inner {
+        height: 100%;
+        flex-direction: column;
+    }
     nav.menu-open .nav-links {
-        display: flex; flex-direction: column;
-        justify-content: center; align-items: center;
-        gap: 24px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        flex: 1;
         width: 100%;
-        height: calc(100vh - 70px);
         padding: 0 24px;
     }
     nav.menu-open .nav-links a {

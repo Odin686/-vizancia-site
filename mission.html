@@ -531,11 +531,13 @@ const navLinks = document.getElementById('navLinks');
 toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
     navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
 });
 navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
         toggle.classList.remove('active');
         navLinks.classList.remove('open');
+        document.body.classList.remove('menu-open');
     });
 });
 

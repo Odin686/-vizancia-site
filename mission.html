@@ -532,9 +532,11 @@ toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
     nav.classList.toggle('menu-open');
     document.body.classList.toggle('menu-open');
+    if (navigator.vibrate) navigator.vibrate(10);
 });
 navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
+        if (navigator.vibrate) navigator.vibrate(10);
         toggle.classList.remove('active');
         nav.classList.remove('menu-open');
         document.body.classList.remove('menu-open');

@@ -541,14 +541,37 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
         padding: 0 24px;
     }
     nav.menu-open .nav-links a {
-        font-size: 1.3rem;
-        font-weight: 700;
+        font-size: 1.15rem;
+        font-weight: 800;
         color: var(--text-primary);
+        padding: 14px 36px;
+        background: var(--bg-card-hover);
+        border: 2px solid var(--border);
+        border-bottom: 4px solid var(--border);
+        border-radius: 100px;
+        min-width: 220px;
+        text-align: center;
+        transition: transform 0.1s, border-bottom-width 0.1s, background 0.15s;
+    }
+    nav.menu-open .nav-links a:hover {
+        background: #EEF2FF;
+    }
+    nav.menu-open .nav-links a:active {
+        transform: translateY(3px);
+        border-bottom-width: 1px;
+        background: #E0E7FF;
     }
     nav.menu-open .nav-links .nav-cta {
-        margin-top: 12px;
-        font-size: 1rem !important;
-        padding: 14px 36px !important;
+        margin-top: 8px;
+        min-width: 220px;
+        background: var(--primary) !important;
+        color: white !important;
+        border-color: var(--primary-dark) !important;
+        border-bottom: 4px solid var(--primary-dark) !important;
+    }
+    nav.menu-open .nav-links .nav-cta:active {
+        transform: translateY(3px) !important;
+        border-bottom-width: 1px !important;
     }
     .menu-toggle { display: block; z-index: 102; }
     .feature-section .illust-col img { max-height: 280px; }

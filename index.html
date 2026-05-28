@@ -262,13 +262,13 @@ const toggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    nav.classList.toggle('menu-open');
     document.body.classList.toggle('menu-open');
 });
 navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
         toggle.classList.remove('active');
-        navLinks.classList.remove('open');
+        nav.classList.remove('menu-open');
         document.body.classList.remove('menu-open');
     });
 });

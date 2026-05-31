@@ -2,21 +2,21 @@
     --primary: #2563EB; /* Vizancia Blue */
     --primary-light: #3B82F6;
     --primary-dark: #1D4ED8;
-    --accent: #1CB0F6; /* Duolingo Blue */
+    --accent: #1CB0F6; /* Sky blue accent */
     --accent-light: #51C6F8;
     --accent-dark: #1899D6;
-    --accent-warm: #FFC800; /* Duolingo Yellow */
+    --accent-warm: #FFC800; /* Gold accent */
     --accent-warm-dark: #D4A300;
-    --accent-red: #FF4B4B; /* Duolingo Red */
+    --accent-red: #FF4B4B; /* Coral red accent */
     --accent-red-dark: #EA2B2B;
     --bg-dark: #FFFFFF; /* White background */
     --bg-surface: #FFFFFF;
     --bg-card: #FFFFFF;
     --bg-card-hover: #F7F7F7;
-    --text-primary: #4B4B4B; /* Duo Dark Gray */
-    --text-secondary: #777777; /* Duo Light Gray */
+    --text-primary: #4B4B4B; /* Dark gray text */
+    --text-secondary: #777777; /* Light gray text */
     --text-muted: #AFAFAF;
-    --border: #E5E5E5; /* Duo border */
+    --border: #E5E5E5; /* Border gray */
     --border-hover: #E5E5E5;
     --gradient-1: linear-gradient(135deg, #2563EB 0%, #1CB0F6 100%);
     --gradient-2: linear-gradient(135deg, #1CB0F6 0%, #1899D6 100%);

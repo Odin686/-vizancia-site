@@ -533,6 +533,15 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
     .stats-bar { gap: 24px; padding: 40px 24px; }
     .stat-item .stat-num { font-size: 2rem; }
     section { padding: 80px 20px; }
+    /* Keep download/CTA buttons (icon + label) on a single line */
+    .cta-group { width: 100%; }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        white-space: nowrap;
+        padding: 16px 20px;
+        font-size: 1rem;
+    }
+    .btn-primary svg, .btn-secondary svg { flex-shrink: 0; }
 }
 
 /* Mobile menu overlay — triggered by body.menu-open */
@@ -595,6 +604,12 @@ body.menu-open .nav-links .nav-cta:active {
     .hero-stats { flex-wrap: wrap; gap: 16px; }
     footer { padding: 40px 16px 32px; }
     .footer-links { gap: 16px 20px; }
+    /* Shrink button padding/text further so the label fits on one line */
+    .btn-primary, .btn-secondary {
+        padding: 15px 14px;
+        font-size: 0.9rem;
+        gap: 8px;
+    }
 }
 
 /* Prevent scroll when mobile menu is open */

@@ -220,6 +220,15 @@ nav.scrolled {
     border-bottom-width: 0px;
 }
 
+/* ── Official Apple App Store badge ── */
+.app-store-badge {
+    display: inline-flex; align-items: center;
+    transition: transform 0.1s, opacity 0.2s;
+}
+.app-store-badge img { height: 56px; width: auto; display: block; }
+.app-store-badge:hover { opacity: 0.85; }
+.app-store-badge:active { transform: scale(0.97); }
+
 /* ── Google Play "Coming Soon" Hyperlink ── */
 .play-soon-link {
     display: inline-block;

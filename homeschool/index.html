@@ -6,10 +6,10 @@
 <!-- Persona landing page: homeschool families. Serves at vizancia.com/homeschool -->
 <!-- Light, warm palette with the brand gradient brought up as a richer accent. -->
 <title>Vizancia | Teach your kids to think clearly about AI</title>
-<meta name="description" content="A free game that runs entirely on the iPad and teaches kids to understand and question AI. No account, no data, nothing leaves the device. Try it yourself in five minutes.">
+<meta name="description" content="A free game that runs entirely on your child's device and teaches kids to understand and question AI. No account, no data, nothing leaves the device. Try it yourself in five minutes.">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Teach your kids to think clearly about AI">
-<meta property="og:description" content="A free game that runs on the iPad. No account, no data, nothing leaves the device. Try it yourself first.">
+<meta property="og:description" content="A free game for tablets and phones. No account, no data, nothing leaves the device. Try it yourself first.">
 <meta property="og:type" content="website">
 <!-- Self-hosted fonts (matches site convention; no Google Fonts dependency) -->
 <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -148,7 +148,7 @@
     <p class="sub">It isn’t a chatbot, and it won’t replace you as their teacher. It’s a short game that helps your kids understand what AI is, where it gets things wrong, and how to question it.</p>
     <div class="rating-row"><span class="rating"><span class="stars">★★★★★</span> <span class="muted">Loved by families on the App Store</span></span></div>
     <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Try it yourself first →</a>
-    <span class="reassure"><b>Free</b> · No account · Nothing leaves the iPad · iOS</span>
+    <span class="reassure"><b>Free</b> · No account · Nothing leaves the device · iOS & Android</span>
   </div>
 </div>
 
@@ -159,7 +159,7 @@
       <h2 style="margin-bottom:4px">Nothing leaves your child’s device.</h2>
       <p class="lead" style="margin-bottom:10px">On the App Store, under App Privacy, you’ll see two words most kids’ apps can’t show:</p>
       <span class="label"><span class="dot">●</span> Data Not Collected</span>
-      <p class="lead">No account. No email. No request to create a profile for your child. Everything runs on the iPad, so the app can’t see your kid, and neither can anyone else.</p>
+      <p class="lead">No account. No email. No request to create a profile for your child. Everything runs on the device, so the app can’t see your kid, and neither can anyone else.</p>
       <ul>
         <li>No account</li><li>No email</li><li>No data collected</li><li>No ads</li><li>Nothing to buy</li>
       </ul>
@@ -184,7 +184,7 @@
 <div class="wrap">
   <section>
     <h2>What your kids actually do</h2>
-    <p class="lead">Short games that teach AI the way Duolingo teaches Spanish, by playing instead of lecturing.</p>
+    <p class="lead">Short games that teach AI by playing instead of lecturing.</p>
     <div class="card c1"><span class="tag t1">AI or Not?</span><h3>Was this written by a person or a machine?</h3><p>Kids guess, then start to notice the tells. That kind of judgment is hard to teach with a worksheet.</p></div>
     <div class="card c2"><span class="tag t2">Ethics Court</span><h3>You be the judge.</h3><p>Kids weigh real AI dilemmas about fairness, bias, and when a machine should and shouldn’t decide. It makes them think.</p></div>
     <div class="card c3"><span class="tag t3">Buzzword Buster</span><h3>Real AI term, or made up?</h3><p>The vocabulary their friends throw around, made clear one quick round at a time.</p></div>
@@ -230,8 +230,8 @@
   <div class="final">
     <h2>Try it yourself before the kids ever touch it.</h2>
     <p class="lead">Five minutes, no signup. If it isn’t for you, delete it and no one’s the wiser.</p>
-    <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Open it on the App Store →</a>
-    <span class="reassure"><b>Free</b> · Nothing to buy · No account · Data not collected · iOS 17+</span>
+    <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Get the free app →</a>
+    <span class="reassure"><b>Free</b> · Nothing to buy · No account · Data not collected · iOS & Android</span>
   </div>
 </div>
 
@@ -239,7 +239,16 @@
 
 <div class="sticky">
   <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Try Vizancia free →</a>
-  <small>No account · Data not collected · iOS</small>
+  <small>No account · Data not collected · iOS & Android</small>
 </div>
+
+<script>
+// Android devices go straight to Google Play
+if (/android/i.test(navigator.userAgent)) {
+  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(a => {
+    a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool';
+  });
+}
+</script>
 </body>
 </html>

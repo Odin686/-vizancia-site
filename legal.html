@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vizancia | Support, Privacy & Terms</title>
     <meta name="description" content="Vizancia support, privacy policy, and terms of service.">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
     <style>
         .legal-hero {
             padding: 90px 24px 40px;
@@ -270,7 +270,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question">What devices are supported?</div>
-                <div class="faq-answer"><p>Vizancia runs on iPhone and iPad with iOS 17.0 or later.</p></div>
+                <div class="faq-answer"><p>Vizancia runs on iPhone and iPad with iOS 17.0 or later, and on Android phones and tablets via Google Play.</p></div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Is my data collected?</div>
@@ -282,7 +282,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question">How do I report a bug?</div>
-                <div class="faq-answer"><p>Email us at info@vizancia.ca with a description of the issue, your device model, and iOS version. Screenshots or screen recordings are always helpful.</p></div>
+                <div class="faq-answer"><p>Email us at info@vizancia.ca with a description of the issue, your device model, and operating system version. Screenshots or screen recordings are always helpful.</p></div>
             </div>
         </div>
     </div>
@@ -294,7 +294,7 @@
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p>
-    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc.</p>
+    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
     <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="mission.html">Mission</a>
@@ -303,6 +303,7 @@
         <a href="#support">Support</a>
         <a href="mailto:info@vizancia.ca">Contact</a>
         <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">Google Play</a>
     </div>
 </footer>
 
@@ -312,6 +313,13 @@ const toggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 toggle.addEventListener('click', () => { toggle.classList.toggle('active'); document.body.classList.toggle('menu-open'); if (navigator.vibrate) navigator.vibrate(10); });
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (navigator.vibrate) navigator.vibrate(10); toggle.classList.remove('active'); document.body.classList.remove('menu-open'); }));
+
+// Store-aware Download button (Android → Google Play)
+if (/android/i.test(navigator.userAgent)) {
+    document.querySelectorAll('a.nav-cta').forEach(a => {
+        a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app';
+    });
+}
 
 // FAQ accordion
 document.querySelectorAll('.faq-question').forEach(q => {

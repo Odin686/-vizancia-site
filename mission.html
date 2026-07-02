@@ -10,7 +10,7 @@
     <meta property="og:description" content="Teaching learners, families, and curious minds to access AI safely and learn through structured, thoughtful design.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vizancia.com/mission.html">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
     <style>
         /* ── Mission-Specific Styles ── */
         .mission-hero {
@@ -496,16 +496,21 @@
     <div class="promise-card reveal">
         <h2>Join us on the mission.</h2>
         <p>We're building Vizancia for the learners, educators, and curious minds who believe AI literacy belongs in everyone's toolkit. Whether you're here to learn, share, or explore with someone you care about, we're glad you came.</p>
-        <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">
-            <img src="assets/app-store-badge.svg" alt="Download on the App Store" style="height: 48px;">
-        </a>
+        <div style="display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; line-height: 0;">
+                <img src="assets/app-store-badge.svg" alt="Download on the App Store" style="height: 48px;">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; line-height: 0;">
+                <img src="assets/google-play-badge.svg" alt="Get it on Google Play" style="height: 48px;">
+            </a>
+        </div>
     </div>
 </section>
 
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p>
-    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc.</p>
+    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
     <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="mission.html">Mission</a>
@@ -514,6 +519,7 @@
         <a href="legal.html#support">Support</a>
         <a href="mailto:info@vizancia.ca">Contact</a>
         <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">Google Play</a>
     </div>
 </footer>
 
@@ -539,6 +545,13 @@ navLinks.querySelectorAll('a').forEach(a => {
         document.body.classList.remove('menu-open');
     });
 });
+
+// ── Store-aware Download button (Android → Google Play) ──
+if (/android/i.test(navigator.userAgent)) {
+    document.querySelectorAll('a.nav-cta').forEach(a => {
+        a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app';
+    });
+}
 
 // ── Scroll Reveal ──
 const revealObserver = new IntersectionObserver((entries) => {

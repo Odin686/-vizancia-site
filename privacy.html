@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Vizancia | Learn AI Safely</title>
     <meta name="description" content="Vizancia is committed to your privacy. Read our clear, track-free mobile application privacy policy.">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
     <style>
         .legal-hero {
             padding: 140px 24px 40px;
@@ -193,7 +193,7 @@
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p>
-    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc.</p>
+    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
     <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="mission.html">Mission</a>
@@ -202,6 +202,7 @@
         <a href="legal.html#support">Support</a>
         <a href="mailto:info@vizancia.ca">Contact</a>
         <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">Google Play</a>
     </div>
 </footer>
 
@@ -221,6 +222,13 @@ navLinks.querySelectorAll('a').forEach(a => {
         document.body.classList.remove('menu-open');
     });
 });
+
+// Store-aware Download button (Android → Google Play)
+if (/android/i.test(navigator.userAgent)) {
+    document.querySelectorAll('a.nav-cta').forEach(a => {
+        a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app';
+    });
+}
 </script>
 
 </body>

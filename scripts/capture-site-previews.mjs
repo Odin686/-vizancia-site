@@ -7,16 +7,27 @@ const outputDirectory = '/tmp/vizancia-site-qa';
 const profileDirectory = mkdtempSync('/tmp/vizancia-site-qa-profile-');
 const debuggingPort = 9223;
 const baseUrl = process.env.VIZANCIA_PREVIEW_URL || 'http://127.0.0.1:4173';
+const previewOrigin = new URL(baseUrl).origin;
+const corePages = [
+  { name: 'home', path: '/' },
+  { name: 'parents', path: '/parents/' },
+  { name: 'homeschool', path: '/homeschool/' },
+];
+const coreViewports = [
+  { name: 'mobile', width: 390, height: 844, mobile: true },
+  { name: 'tablet', width: 768, height: 1024, mobile: true },
+  { name: 'compact-desktop', width: 1024, height: 900, mobile: false },
+  { name: 'desktop', width: 1440, height: 1000, mobile: false },
+];
 const previews = [
-  { name: 'home-consent-mobile', path: '/', width: 390, height: 844, mobile: true },
-  { name: 'home-mobile', path: '/', width: 390, height: 844, mobile: true, rejectConsent: true },
+  ...corePages.flatMap(page => coreViewports.flatMap(viewport => [
+    { ...viewport, name: `${page.name}-${viewport.name}-consent`, path: page.path },
+    { ...viewport, name: `${page.name}-${viewport.name}`, path: page.path, rejectConsent: true },
+  ])),
   { name: 'home-mobile-menu', path: '/', width: 390, height: 844, mobile: true, click: '#proMenu' },
-  { name: 'parents-mobile', path: '/parents/', width: 390, height: 844, mobile: true },
   { name: 'parents-mobile-menu', path: '/parents/', width: 390, height: 844, mobile: true, click: '#parentMenu' },
-  { name: 'homeschool-mobile', path: '/homeschool/', width: 390, height: 844, mobile: true },
   { name: 'resources-mobile', path: '/resources/', width: 390, height: 844, mobile: true },
   { name: 'resources-mobile-menu', path: '/resources/', width: 390, height: 844, mobile: true, click: '#menuToggle' },
-  { name: 'home-desktop', path: '/', width: 1440, height: 1000, mobile: false },
   { name: 'sandbox-desktop', path: '/sandbox.html', width: 1440, height: 1000, mobile: false },
   { name: 'support-desktop', path: '/support.html', width: 1440, height: 1000, mobile: false },
 ];
@@ -84,6 +95,10 @@ try {
     const { name, path, width, height, mobile, rejectConsent, click } = preview;
     const client = await createPageClient();
     await client.send('Page.enable');
+    await client.send('Storage.clearDataForOrigin', {
+      origin: previewOrigin,
+      storageTypes: 'local_storage',
+    });
     await client.send('Emulation.setDeviceMetricsOverride', {
       width,
       height,

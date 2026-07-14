@@ -47,10 +47,13 @@ def main() -> None:
     parser.add_argument("--widths", required=True, help="comma-separated pixel widths")
     parser.add_argument("--focal-x", type=float, default=0.5)
     parser.add_argument("--focal-y", type=float, default=0.5)
+    parser.add_argument("--jpeg-quality", type=int, default=72)
     args = parser.parse_args()
 
     if not 0 <= args.focal_x <= 1 or not 0 <= args.focal_y <= 1:
         parser.error("focal coordinates must be between 0 and 1")
+    if not 1 <= args.jpeg_quality <= 95:
+        parser.error("JPEG quality must be between 1 and 95")
 
     widths = sorted({int(value) for value in args.widths.split(",")})
     if not widths or widths[0] <= 0:
@@ -67,7 +70,7 @@ def main() -> None:
             resized.save(stem.with_suffix(".webp"), quality=78, method=6)
             resized.save(
                 stem.with_suffix(".jpg"),
-                quality=76,
+                quality=args.jpeg_quality,
                 optimize=True,
                 progressive=True,
                 subsampling="4:2:0",

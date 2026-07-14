@@ -20,9 +20,11 @@
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="../assets/visuals/v2/parents-home-mobile-720.avif" type="image/avif" media="(max-width: 640px)" imagesrcset="../assets/visuals/v2/parents-home-mobile-480.avif 480w, ../assets/visuals/v2/parents-home-mobile-720.avif 720w" imagesizes="calc(100vw - 28px)" fetchpriority="high">
+  <link rel="preload" as="image" href="../assets/visuals/v2/parents-home-1000.avif" type="image/avif" media="(min-width: 641px)" imagesrcset="../assets/visuals/v2/parents-home-600.avif 600w, ../assets/visuals/v2/parents-home-1000.avif 1000w, ../assets/visuals/v2/parents-home-1400.avif 1400w" imagesizes="(max-width: 920px) min(560px, 90vw), 42vw" fetchpriority="high">
   <link rel="stylesheet" href="../assets/privacy-consent.css">
-  <link rel="stylesheet" href="../assets/home.css?v=2">
-  <link rel="stylesheet" href="parents.css?v=3">
+  <link rel="stylesheet" href="../assets/home.css?v=4">
+  <link rel="stylesheet" href="parents.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -56,11 +58,19 @@
           </div>
           <p class="hero-note"><strong>Free to download</strong> · No account for core lessons · No in-app ads · Core lessons work offline</p>
         </div>
-        <div class="hero-visual" aria-label="AI literacy learning illustration">
-          <div class="visual-card"><img src="../assets/illustrations/classroom-learning.jpg" alt="Educator guiding three learners through an AI concept on tablets" width="1100" height="1100" fetchpriority="high"></div>
-          <div class="floating-note one">Clear, age-aware concepts</div>
-          <div class="floating-note two">Five-minute sessions</div>
-        </div>
+        <figure class="hero-visual">
+          <div class="visual-card">
+            <picture class="hero-media">
+              <source media="(max-width: 640px)" type="image/avif" srcset="../assets/visuals/v2/parents-home-mobile-480.avif 480w, ../assets/visuals/v2/parents-home-mobile-720.avif 720w" sizes="calc(100vw - 28px)" width="720" height="960">
+              <source media="(max-width: 640px)" type="image/webp" srcset="../assets/visuals/v2/parents-home-mobile-480.webp 480w, ../assets/visuals/v2/parents-home-mobile-720.webp 720w" sizes="calc(100vw - 28px)" width="720" height="960">
+              <source media="(max-width: 640px)" srcset="../assets/visuals/v2/parents-home-mobile-480.jpg 480w, ../assets/visuals/v2/parents-home-mobile-720.jpg 720w" sizes="calc(100vw - 28px)" width="720" height="960">
+              <source type="image/avif" srcset="../assets/visuals/v2/parents-home-600.avif 600w, ../assets/visuals/v2/parents-home-1000.avif 1000w, ../assets/visuals/v2/parents-home-1400.avif 1400w" sizes="(max-width: 920px) min(560px, 90vw), 42vw" width="1400" height="1050">
+              <source type="image/webp" srcset="../assets/visuals/v2/parents-home-600.webp 600w, ../assets/visuals/v2/parents-home-1000.webp 1000w, ../assets/visuals/v2/parents-home-1400.webp 1400w" sizes="(max-width: 920px) min(560px, 90vw), 42vw" width="1400" height="1050">
+              <img src="../assets/visuals/v2/parents-home-1000.jpg" srcset="../assets/visuals/v2/parents-home-600.jpg 600w, ../assets/visuals/v2/parents-home-1000.jpg 1000w, ../assets/visuals/v2/parents-home-1400.jpg 1400w" sizes="(max-width: 920px) min(560px, 90vw), 42vw" alt="A parent and teenager compare an AI answer on a tablet with a reliable reference book" width="1400" height="1050" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <figcaption>A simple family habit: compare an AI answer with a reliable source, then discuss what changed.</figcaption>
+        </figure>
       </div>
     </section>
 

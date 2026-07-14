@@ -100,7 +100,8 @@
   font-size: 0.75rem;
 }
 
-body .sticky ~ .privacy-choices-button {
+body .sticky ~ .privacy-choices-button,
+body .sticky-download ~ .privacy-choices-button {
   bottom: 86px;
 }
 

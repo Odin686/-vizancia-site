@@ -1,0 +1,2 @@
+# Docker recommends keeping workspace MCP client settings user-specific.
+.vscode/mcp.json

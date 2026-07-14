@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../assets/privacy-consent.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Hub | Vizancia</title>
+    <meta name="description" content="Practical, age-aware guides and activities that help families build AI literacy safely and thoughtfully.">
+    <meta name="theme-color" content="#2563EB">
+    <link rel="canonical" href="https://vizancia.com/resources/">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=6">
+    <link rel="stylesheet" href="../assets/privacy-consent.css">
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body class="resource-page">
+<nav id="navbar"><div class="nav-inner">
+    <a href="../index.html" class="logo" style="text-decoration:none;">Vizancia</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+        <a href="../index.html#features">Features</a><a href="../index.html#games">Games</a><a href="../mission.html">Mission</a>
+        <a href="../parents/">For parents</a><a href="../homeschool/">Homeschool</a><a href="../index.html#download" class="nav-cta">Choose your store</a>
+    </div>
+</div></nav>
+<main class="resource-main">
+    <header class="resource-hero">
+        <div class="resource-kicker">The Vizancia AI Learning Hub</div>
+        <h1>Good questions are a superpower.</h1>
+        <p>Clear, practical resources for parents, educators, and curious learners. We focus on understanding how AI works, using it safely, and keeping human judgment in the driver’s seat.</p>
+        <div class="resource-meta"><span>Reviewed and updated July 14, 2026</span><span>•</span><span>Written for families and educators</span></div>
+    </header>
+    <section class="resource-grid" aria-label="Learning hub articles">
+        <article class="resource-card"><div class="resource-tag">Start here · Families</div><h2>AI literacy for parents</h2><p>What “AI literacy” means, what teens are already doing with chatbots, and five calm conversations to start at home.</p><a class="resource-link" href="ai-literacy-for-parents.html">Read the guide →</a></article>
+        <article class="resource-card"><div class="resource-tag">Safety · Privacy</div><h2>A safer family AI routine</h2><p>A practical checklist for privacy, verification, healthy boundaries, school rules, and what to do when an output feels wrong.</p><a class="resource-link" href="ai-safety-for-families.html">Read the safety guide →</a></article>
+        <article class="resource-card"><div class="resource-tag">Homeschool · Lesson plan</div><h2>Four weeks of AI literacy</h2><p>A flexible, discussion-led sequence for ages 8–17: understand, apply, question, and create with AI.</p><a class="resource-link" href="homeschool-ai-lesson-plan.html">View the lesson plan →</a></article>
+        <article class="resource-card"><div class="resource-tag">Plain language</div><h2>AI concepts, simply explained</h2><p>Short definitions for AI, machine learning, language models, training data, hallucinations, bias, and prompts.</p><a class="resource-link" href="ai-concepts-explained.html">Explore the glossary →</a></article>
+        <article class="resource-card"><div class="resource-tag">Printable activity</div><h2>Family AI check-in worksheet</h2><p>A print-friendly activity to practise checking a claim, protecting personal information, and choosing when not to use AI.</p><a class="resource-link" href="worksheet-ai-literacy.html">Print the worksheet →</a></article>
+        <article class="resource-card"><div class="resource-tag">Our approach</div><h2>How Vizancia teaches</h2><p>See the educational methodology, editorial standards, and privacy commitments behind the app and these resources.</p><a class="resource-link" href="../methodology.html">Read our methodology →</a></article>
+    </section>
+    <section class="article" style="margin-top:56px;">
+        <div class="callout"><p><strong>A note on evidence:</strong> We avoid fear-based claims. When we quote a statistic or recommendation, we link to the original research or public guidance and identify its audience, date, and limitations. Educational content is not a substitute for a school policy, professional advice, or a family’s own judgment.</p></div>
+    </section>
+</main>
+<footer class="site-footer"><p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p><div class="footer-links"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../accessibility.html">Accessibility</a><a href="../legal.html#support">Support</a><a href="mailto:info@vizancia.ca">Contact</a></div></footer>
+<script>
+const toggle = document.getElementById('menuToggle'); const navLinks = document.getElementById('navLinks');
+toggle.addEventListener('click', () => { const open = !toggle.classList.contains('active'); toggle.classList.toggle('active', open); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); document.body.classList.toggle('menu-open', open); });
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('active'); toggle.setAttribute('aria-expanded','false'); toggle.setAttribute('aria-label','Open menu'); document.body.classList.remove('menu-open'); }));
+</script>
+</body>
+</html>

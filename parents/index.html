@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18320211414"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18320211414');
-</script>
+<!-- Privacy-first Google Ads consent and measurement -->
+<script src="../assets/privacy-consent.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Persona landing page: parents of tweens. Serves at vizancia.com/parents -->
@@ -26,6 +20,7 @@
 <link rel="canonical" href="https://vizancia.com/parents/">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/privacy-consent.css">
 
 <!-- Self-hosted fonts (matches site convention; no Google Fonts dependency) -->
 <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -84,6 +79,21 @@
   .cta:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(108,92,231,.38)}
   .reassure{display:block;color:var(--body);font-size:.85rem;margin-top:12px;font-weight:600}
   .reassure b{color:var(--tealdeep)}
+  .store-buttons{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+  .store-buttons a{display:inline-flex;line-height:0}
+  .store-buttons img{height:48px;width:auto}
+  .store-note{text-align:center;color:var(--body);font-size:.82rem;margin-top:10px;font-weight:600}
+  .sample-quiz{background:#fff;border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow);max-width:620px;margin:0 auto}
+  .sample-quiz .quiz-label{display:inline-block;color:var(--purple);background:var(--lavender);font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:8px;margin-bottom:12px}
+  .sample-quiz legend{color:var(--ink);font-family:"Plus Jakarta Sans";font-size:1.12rem;font-weight:800;line-height:1.35;margin-bottom:14px}
+  .sample-quiz fieldset{border:0}
+  .quiz-options{display:grid;gap:10px}
+  .quiz-option{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:12px;background:#fff;color:var(--ink);font:700 .95rem/1.35 "Nunito",sans-serif;text-align:left;cursor:pointer}
+  .quiz-option:hover,.quiz-option:focus-visible{border-color:var(--purple);background:var(--lavender)}
+  .quiz-option:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .quiz-option.correct{border-color:var(--tealdeep);background:var(--tealtint)}
+  .quiz-option.incorrect{border-color:var(--coral);background:var(--coraltint)}
+  .quiz-feedback{color:var(--ink);font-weight:700;margin:14px 0 0}
 
   section{padding:44px 0;border-top:1px solid var(--border)}
   h2{font-size:1.7rem;font-weight:800;letter-spacing:-0.01em;color:var(--ink);margin-bottom:16px;text-align:center}
@@ -144,6 +154,8 @@
     backdrop-filter:blur(10px);border-top:1px solid var(--border);padding:12px 16px;text-align:center;z-index:50}
   .sticky a{display:inline-block;background:var(--grad);color:#fff;font-weight:800;text-decoration:none;
     padding:13px 28px;border-radius:12px;font-family:"Plus Jakarta Sans";box-shadow:var(--shadow);width:100%;max-width:420px}
+  .sticky .store-buttons a{display:inline-flex;background:transparent;padding:0;border-radius:0;box-shadow:none;width:auto;max-width:none}
+  .sticky .store-buttons img{height:36px}
   .sticky small{display:block;color:var(--body);font-size:.72rem;margin-top:5px;font-weight:600}
   @media(max-width:560px){h1{font-size:1.95rem}h2{font-size:1.4rem}.founder{flex-direction:column}}
 </style>
@@ -157,10 +169,44 @@
     <div class="eyebrow">For parents of tweens</div>
     <h1>The screen time you <span class="em">won’t feel guilty</span> about.</h1>
     <p class="sub">Bite-sized games that teach your kid how AI really works. Five minutes a day on a phone they already have, and they’re actually learning to think instead of just scrolling.</p>
-    <div class="rating-row"><span class="rating"><span class="stars">★★★★★</span> <span class="muted">Loved by parents on the App Store</span></span></div>
-    <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents">Download the free app →</a>
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dparents" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+    </div>
+    <p class="store-note">Choose your store. No account required.</p>
     <span class="reassure"><b>Free</b> · Nothing to buy · No account · iOS & Android</span>
   </div>
+</div>
+
+<!-- PRODUCT PREVIEW -->
+<div class="wrap">
+  <section>
+    <h2>What a five-minute session looks like</h2>
+    <p class="lead">A representative learning loop: understand one idea, play with it, then see what you remember.</p>
+    <div class="card c1"><span class="tag t1">1 · Learn</span><h3>Start with one clear AI idea.</h3><p>Short lessons introduce concepts such as AI, machine learning, generative AI, and bias in plain language.</p></div>
+    <div class="card c2"><span class="tag t2">2 · Play</span><h3>Use a game to test the idea.</h3><p>Mini-games such as Speed Round, Ethics Court, and Buzzword Buster turn the concept into an active decision.</p></div>
+    <div class="card c3"><span class="tag t3">3 · Build momentum</span><h3>Earn progress without endless scrolling.</h3><p>XP, levels, streaks, and achievements make the next short session easy to find.</p></div>
+  </section>
+</div>
+
+<!-- INTERACTIVE SAMPLE -->
+<div class="wrap">
+  <section>
+    <h2>Try one question</h2>
+    <p class="lead">A small preview of the kind of judgment-based question learners encounter.</p>
+    <div class="sample-quiz" data-quiz>
+      <span class="quiz-label">Sample AI literacy question</span>
+      <fieldset>
+        <legend>What is a large language model mainly trained to do?</legend>
+        <div class="quiz-options">
+          <button class="quiz-option" type="button" data-correct="false">A. Look up a guaranteed correct answer every time</button>
+          <button class="quiz-option" type="button" data-correct="true">B. Predict likely patterns in language from its training</button>
+          <button class="quiz-option" type="button" data-correct="false">C. Think and understand exactly like a person</button>
+        </div>
+      </fieldset>
+      <p class="quiz-feedback" data-feedback aria-live="polite"></p>
+    </div>
+  </section>
 </div>
 
 <!-- SAFETY / TRUST STACK -->
@@ -195,8 +241,19 @@
 <div class="wrap">
   <section>
     <h2>What your kid actually plays</h2>
-    <div class="card c1"><span class="tag t1">Ethics Court</span><h3>“She played it for 20 minutes without realizing she was learning about bias.”</h3><p>Kids judge real AI dilemmas about fairness, about when a machine should decide and when it shouldn’t. It feels like a game, and it’s a conversation most schools aren’t having yet.</p></div>
-    <div class="card c2"><span class="tag t2">10 paths and 5 mini games</span><h3>From “what even is AI” to how it actually works.</h3><p>XP, levels, streaks, and achievements. It works offline too, which helps on long drives and in arena lobbies. iPhone, iPad, and Android.</p></div>
+    <div class="card c1"><span class="tag t1">Ethics Court</span><h3>Judge a real-world AI dilemma.</h3><p>Kids weigh questions about fairness, bias, and when a machine should decide and when it shouldn’t.</p></div>
+    <div class="card c2"><span class="tag t2">16 categories · 11 mini-games</span><h3>From “what even is AI” to how it actually works.</h3><p>XP, levels, streaks, and achievements. It works offline too, which helps on long drives and in arena lobbies. iPhone, iPad, and Android.</p></div>
+  </section>
+</div>
+
+<!-- AGE / CURRICULUM FIT -->
+<div class="wrap">
+  <section>
+    <h2>Choose the right starting point</h2>
+    <p class="lead">The current Google Play listing describes three learning modes, so families can start at the level that fits.</p>
+    <div class="card c1"><span class="tag t1">Child mode · ages 8–12</span><h3>Plain language and beginner-friendly questions.</h3><p>A gentle starting point for building vocabulary and asking better questions about AI.</p></div>
+    <div class="card c2"><span class="tag t2">Teen mode · ages 13–17</span><h3>More content and intermediate challenges.</h3><p>A step up for learners who are ready to connect concepts, examples, and responsible use.</p></div>
+    <div class="card c3"><span class="tag t3">Adult mode · ages 18+</span><h3>Adjustable difficulty and technical depth.</h3><p>Adults can explore the full learning map at their own pace. <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">See the current listing</a>.</p></div>
   </section>
 </div>
 
@@ -207,19 +264,18 @@
     <div class="founder">
       <div class="avatar">V</div>
       <div>
-        <p>“We’re a small Canadian team, and we’re parents ourselves. Every ‘free’ kids’ app we tried turned into purchases, ads, or a data grab. We wanted one that just teaches kids about AI, takes nothing, and costs nothing. So we built it. No account, no ads, no catch.”</p>
-        <div class="name">The Vizancia team, Canada</div>
+        <p>Vizancia is built in Canada around a simple idea: children should learn how AI works before they are asked to trust it. The learning experience combines short explanations, active games, and privacy-first design.</p>
+        <div class="name">Vizancia · Canadian-built AI literacy</div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- SOCIAL PROOF (illustrative; replace with a real review; never a perfect 5.0 claim) -->
+<!-- SOCIAL PROOF -->
 <div class="wrap">
   <section>
-    <h2>What other parents say</h2>
-    <blockquote class="quote">“Mia’s on a 14 day streak and told me what an LLM is at dinner. I have no idea how this works. I just know she hasn’t quit it like every other app, and it never asked me for a thing.”<cite>Parent of a Grade 6 student in Mississauga</cite></blockquote>
-    <p class="lead" style="margin-top:18px;margin-bottom:0">Made in Canada. We don’t collect data, which for most parents beats any download number.</p>
+    <h2>See the evidence before you decide</h2>
+    <p class="lead" style="margin-bottom:0">The App Store currently says there are not enough ratings or reviews to display an overview. We would rather show that honestly than publish invented testimonials. <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents" target="_blank" rel="noopener noreferrer">Review the current App Store listing</a> and try the first session yourself.</p>
   </section>
 </div>
 
@@ -240,25 +296,40 @@
   <div class="final">
     <h2>Hand them the phone tonight.</h2>
     <p class="lead">The first game takes under a minute. No account, no email, and no “cancellation flow” later.</p>
-    <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents">Download the free app →</a>
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dparents" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+    </div>
     <span class="reassure"><b>Free</b> · Nothing to buy · No ads · Data not collected · iOS & Android</span>
   </div>
 </div>
 
-<footer class="wrap">Vizancia · Made in Canada · <a href="https://vizancia.com">vizancia.com</a><br>No account, no data collected, nothing to buy, no ads.</footer>
+<footer class="wrap">Vizancia · Made in Canada · <a href="https://vizancia.com">vizancia.com</a><br>The app has no account, data collection, purchases, or ads. Optional website ad measurement requires consent.</footer>
 
 <div class="sticky">
-  <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents">Get Vizancia free →</a>
-  <small>Nothing to buy · Data not collected · iOS & Android</small>
+  <div class="store-buttons">
+    <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dparents" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+  </div>
+  <small>Nothing to buy · Data not collected in the app · iOS & Android</small>
 </div>
 
 <script>
-// Android devices go straight to Google Play
-if (/android/i.test(navigator.userAgent)) {
-  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(a => {
-    a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dparents';
+document.querySelectorAll('[data-quiz]').forEach(function (quiz) {
+  var feedback = quiz.querySelector('[data-feedback]');
+  quiz.querySelectorAll('.quiz-option').forEach(function (option) {
+    option.addEventListener('click', function () {
+      quiz.querySelectorAll('.quiz-option').forEach(function (item) {
+        item.classList.remove('correct', 'incorrect');
+      });
+      var correct = option.dataset.correct === 'true';
+      option.classList.add(correct ? 'correct' : 'incorrect');
+      feedback.textContent = correct
+        ? 'Correct. A language model predicts patterns from its training; it does not guarantee truth or think like a person.'
+        : 'Not quite. Language models predict patterns from training, so their answers can sound confident and still be wrong.';
+    });
   });
-}
+});
 </script>
 </body>
 </html>

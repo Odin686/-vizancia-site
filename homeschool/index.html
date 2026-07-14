@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18320211414"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18320211414');
-</script>
+<!-- Privacy-first Google Ads consent and measurement -->
+<script src="../assets/privacy-consent.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Persona landing page: homeschool families. Serves at vizancia.com/homeschool -->
@@ -26,6 +20,7 @@
 <link rel="canonical" href="https://vizancia.com/homeschool/">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/privacy-consent.css">
 
 <!-- Self-hosted fonts (matches site convention; no Google Fonts dependency) -->
 <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -84,6 +79,21 @@
   .cta:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(108,92,231,.38)}
   .reassure{display:block;color:var(--body);font-size:.85rem;margin-top:12px;font-weight:600}
   .reassure b{color:var(--tealdeep)}
+  .store-buttons{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+  .store-buttons a{display:inline-flex;line-height:0}
+  .store-buttons img{height:48px;width:auto}
+  .store-note{text-align:center;color:var(--body);font-size:.82rem;margin-top:10px;font-weight:600}
+  .sample-quiz{background:#fff;border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow);max-width:620px;margin:0 auto}
+  .sample-quiz .quiz-label{display:inline-block;color:var(--purple);background:var(--lavender);font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:8px;margin-bottom:12px}
+  .sample-quiz legend{color:var(--ink);font-family:"Plus Jakarta Sans";font-size:1.12rem;font-weight:800;line-height:1.35;margin-bottom:14px}
+  .sample-quiz fieldset{border:0}
+  .quiz-options{display:grid;gap:10px}
+  .quiz-option{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:12px;background:#fff;color:var(--ink);font:700 .95rem/1.35 "Nunito",sans-serif;text-align:left;cursor:pointer}
+  .quiz-option:hover,.quiz-option:focus-visible{border-color:var(--purple);background:var(--lavender)}
+  .quiz-option:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .quiz-option.correct{border-color:var(--tealdeep);background:var(--tealtint)}
+  .quiz-option.incorrect{border-color:var(--coral);background:var(--coraltint)}
+  .quiz-feedback{color:var(--ink);font-weight:700;margin:14px 0 0}
 
   section{padding:44px 0;border-top:1px solid var(--border)}
   h2{font-size:1.7rem;font-weight:800;letter-spacing:-0.01em;color:var(--ink);margin-bottom:16px;text-align:center}
@@ -149,6 +159,8 @@
     backdrop-filter:blur(10px);border-top:1px solid var(--border);padding:12px 16px;text-align:center;z-index:50}
   .sticky a{display:inline-block;background:var(--grad);color:#fff;font-weight:800;text-decoration:none;
     padding:13px 28px;border-radius:12px;font-family:"Plus Jakarta Sans";box-shadow:var(--shadow);width:100%;max-width:420px}
+  .sticky .store-buttons a{display:inline-flex;background:transparent;padding:0;border-radius:0;box-shadow:none;width:auto;max-width:none}
+  .sticky .store-buttons img{height:36px}
   .sticky small{display:block;color:var(--body);font-size:.72rem;margin-top:5px;font-weight:600}
   @media(max-width:560px){h1{font-size:1.95rem}h2{font-size:1.4rem}.founder{flex-direction:column}}
 </style>
@@ -162,10 +174,55 @@
     <div class="eyebrow">For homeschool families</div>
     <h1>Teach your kids to <span class="em">think clearly about AI</span>, not just use it.</h1>
     <p class="sub">It isn’t a chatbot, and it won’t replace you as their teacher. It’s a short game that helps your kids understand what AI is, where it gets things wrong, and how to question it.</p>
-    <div class="rating-row"><span class="rating"><span class="stars">★★★★★</span> <span class="muted">Loved by families on the App Store</span></span></div>
-    <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Try it yourself first →</a>
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+    </div>
+    <p class="store-note">Try it yourself first. Choose your store.</p>
     <span class="reassure"><b>Free</b> · No account · Nothing leaves the device · iOS & Android</span>
   </div>
+</div>
+
+<!-- AGE / CURRICULUM FIT -->
+<div class="wrap">
+  <section>
+    <h2>Where it fits in a homeschool day</h2>
+    <p class="lead">Use the mode that matches your learner, then connect a short session to a discussion, journal entry, or research activity.</p>
+    <div class="card c1"><span class="tag t1">Child mode · ages 8–12</span><h3>Start with the foundations.</h3><p>Begin with plain-language concepts, teaching cards, and beginner-friendly questions.</p></div>
+    <div class="card c2"><span class="tag t2">Teen mode · ages 13–17</span><h3>Move into ethics and application.</h3><p>Use intermediate challenges to discuss bias, reliability, prompts, and how AI affects everyday life.</p></div>
+    <div class="card c3"><span class="tag t3">Adult mode · ages 18+</span><h3>Preview and learn alongside them.</h3><p>Adjust the difficulty and explore the full curriculum before choosing what to share. <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">See the current listing</a>.</p></div>
+  </section>
+</div>
+
+<!-- PRODUCT PREVIEW -->
+<div class="wrap">
+  <section>
+    <h2>A small, repeatable learning loop</h2>
+    <p class="lead">Use this representative session as a starting point for a conversation or a short homeschool block.</p>
+    <div class="card c1"><span class="tag t1">Learn</span><h3>Define one idea in plain language.</h3><p>Start with an AI concept, then ask your child to explain it back in their own words.</p></div>
+    <div class="card c2"><span class="tag t2">Question</span><h3>Test a claim instead of memorizing it.</h3><p>Games such as AI or Not?, Ethics Court, and Buzzword Buster turn AI literacy into active judgment.</p></div>
+    <div class="card c3"><span class="tag t3">Reflect</span><h3>Connect the idea to everyday life.</h3><p>Finish with a short discussion about where the concept appears in school, media, or the tools your family uses.</p></div>
+  </section>
+</div>
+
+<!-- INTERACTIVE SAMPLE -->
+<div class="wrap">
+  <section>
+    <h2>Try one question together</h2>
+    <p class="lead">Use this short preview as a conversation starter before you download.</p>
+    <div class="sample-quiz" data-quiz>
+      <span class="quiz-label">Sample AI literacy question</span>
+      <fieldset>
+        <legend>What is a large language model mainly trained to do?</legend>
+        <div class="quiz-options">
+          <button class="quiz-option" type="button" data-correct="false">A. Look up a guaranteed correct answer every time</button>
+          <button class="quiz-option" type="button" data-correct="true">B. Predict likely patterns in language from its training</button>
+          <button class="quiz-option" type="button" data-correct="false">C. Think and understand exactly like a person</button>
+        </div>
+      </fieldset>
+      <p class="quiz-feedback" data-feedback aria-live="polite"></p>
+    </div>
+  </section>
 </div>
 
 <!-- SAFETY / PRIVACY -->
@@ -214,18 +271,18 @@
     <div class="founder">
       <div class="avatar">V</div>
       <div>
-        <p>“We’re a small Canadian team. We built Vizancia because everything out there was either a chatbot we didn’t want near our kids, or a course they’d never finish. We wanted something that teaches kids to <em>see through</em> AI and collects absolutely nothing. So we made it, and we made it free.”</p>
-        <div class="name">The Vizancia team, Canada</div>
+        <p>Vizancia is built in Canada around a simple idea: children should learn how AI works before they are asked to trust it. The learning experience combines short explanations, active games, and privacy-first design.</p>
+        <div class="name">Vizancia · Canadian-built AI literacy</div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- SOCIAL PROOF (illustrative; replace with a real review) -->
+<!-- SOCIAL PROOF -->
 <div class="wrap">
   <section>
-    <h2>What other parents say</h2>
-    <blockquote class="quote">“Finally, something about AI that isn’t an AI talking to my kid. Owen actually likes it, the lessons are short, and I checked: nothing leaves the iPad.”<cite>Homeschool parent of a 10 year old in Alberta</cite></blockquote>
+    <h2>Preview it before you commit</h2>
+    <p class="lead" style="margin-bottom:0">The App Store currently says there are not enough ratings or reviews to display an overview. We would rather show that honestly than publish invented testimonials. <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer">Review the current App Store listing</a> and play the first session yourself.</p>
   </section>
 </div>
 
@@ -246,25 +303,40 @@
   <div class="final">
     <h2>Try it yourself before the kids ever touch it.</h2>
     <p class="lead">Five minutes, no signup. If it isn’t for you, delete it and no one’s the wiser.</p>
-    <a class="cta" href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Get the free app →</a>
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+    </div>
     <span class="reassure"><b>Free</b> · Nothing to buy · No account · Data not collected · iOS & Android</span>
   </div>
 </div>
 
-<footer class="wrap">Vizancia · Made in Canada · <a href="https://vizancia.com">vizancia.com</a><br>No account, no data collected, no tracking.</footer>
+<footer class="wrap">Vizancia · Made in Canada · <a href="https://vizancia.com">vizancia.com</a><br>The app has no account or tracking. Optional website ad measurement requires consent.</footer>
 
 <div class="sticky">
-  <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool">Try Vizancia free →</a>
-  <small>No account · Data not collected · iOS & Android</small>
+  <div class="store-buttons">
+    <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+  </div>
+  <small>No account · Data not collected in the app · iOS & Android</small>
 </div>
 
 <script>
-// Android devices go straight to Google Play
-if (/android/i.test(navigator.userAgent)) {
-  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(a => {
-    a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool';
+document.querySelectorAll('[data-quiz]').forEach(function (quiz) {
+  var feedback = quiz.querySelector('[data-feedback]');
+  quiz.querySelectorAll('.quiz-option').forEach(function (option) {
+    option.addEventListener('click', function () {
+      quiz.querySelectorAll('.quiz-option').forEach(function (item) {
+        item.classList.remove('correct', 'incorrect');
+      });
+      var correct = option.dataset.correct === 'true';
+      option.classList.add(correct ? 'correct' : 'incorrect');
+      feedback.textContent = correct
+        ? 'Correct. A language model predicts patterns from its training; it does not guarantee truth or think like a person.'
+        : 'Not quite. Language models predict patterns from training, so their answers can sound confident and still be wrong.';
+    });
   });
-}
+});
 </script>
 </body>
 </html>

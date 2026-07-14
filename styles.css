@@ -68,6 +68,23 @@
 
 html { scroll-behavior: smooth; }
 
+/* Keyboard and motion preferences are first-class on every page. */
+:focus-visible {
+    outline: 3px solid var(--accent-warm);
+    outline-offset: 3px;
+}
+img { max-width: 100%; height: auto; }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1 !important; transform: none !important; }
+}
+
 body {
     font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg-dark);

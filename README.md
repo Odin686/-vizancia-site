@@ -1,0 +1,23 @@
+# Vizancia website
+
+This is a dependency-free static website for Vizancia. It can be hosted from the repository root (including GitHub Pages) without a build step.
+
+## Structure
+
+- `index.html`, `parents/`, and `homeschool/` are the current marketing landing pages.
+- `resources/` is the AI Learning Hub. Article pages share `resources/resources.css` and link to their primary sources.
+- `about.html`, `methodology.html`, `editorial-policy.html`, `accessibility.html`, and `changelog.html` are technical trust pages.
+- `assets/privacy-consent.js` and `assets/privacy-consent.css` are the shared website consent implementation. Google Ads measurement must remain behind the consent flow.
+- `sitemap.xml`, `robots.txt`, and `404.html` are deployment metadata and error handling.
+
+## Publishing checklist
+
+1. Update the visible review date and `sitemap.xml` when a page changes.
+2. Keep product claims tied to a current app-store listing, screenshot, or internal release note. Do not add ratings, testimonials, credentials, or performance claims without verification.
+3. For research-based articles, preserve the source link and identify the source’s audience, date, and limitations.
+4. Test keyboard navigation, reduced motion, narrow mobile widths, the privacy choices control, and both store links before publishing.
+5. Have the privacy policy, consent implementation, and terms reviewed by qualified counsel for the jurisdictions where you advertise.
+
+## Maintainability roadmap
+
+The site currently has repeated navigation and footer markup in legacy pages. The new resource and trust pages share a CSS vocabulary but remain plain HTML so they can deploy immediately. The next maintainability step should be a small static-site generator (Eleventy or Astro) with shared partials for navigation, footer, metadata, and consent. Migrate one page at a time, compare rendered output, then remove duplicated templates once the generated pages are verified.

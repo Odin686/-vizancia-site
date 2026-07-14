@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18320211414"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18320211414');
-    </script>
+    <!-- Privacy-first Google Ads consent and measurement -->
+    <script src="assets/privacy-consent.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Mission | Vizancia | AI Literacy for Everyone</title>
@@ -23,6 +17,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="assets/privacy-consent.css">
     <style>
         /* ── Mission-Specific Styles ── */
         .mission-hero {
@@ -313,7 +308,7 @@
 <nav id="navbar">
     <div class="nav-inner">
         <a href="index.html" class="logo" style="text-decoration:none;">Vizancia</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="navLinks">
@@ -323,7 +318,7 @@
             <a href="mission.html" style="color: var(--primary); font-weight: 800;">Mission</a>
             <a href="sandbox.html" style="color: var(--accent); font-weight: 800;">Sandbox</a>
             <a href="legal.html#support">Support</a>
-            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" class="nav-cta" target="_blank" rel="noopener noreferrer">Download</a>
+            <a href="index.html#download" class="nav-cta">Choose your store</a>
         </div>
     </div>
 </nav>
@@ -546,24 +541,22 @@ window.addEventListener('scroll', () => {
 const toggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
+    const open = !toggle.classList.contains('active');
+    toggle.classList.toggle('active', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
     if (navigator.vibrate) navigator.vibrate(10);
 });
 navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
         if (navigator.vibrate) navigator.vibrate(10);
         toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
         document.body.classList.remove('menu-open');
     });
 });
-
-// ── Store-aware Download button (Android → Google Play) ──
-if (/android/i.test(navigator.userAgent)) {
-    document.querySelectorAll('a.nav-cta').forEach(a => {
-        a.href = 'https://play.google.com/store/apps/details?id=com.vizancia.app';
-    });
-}
 
 // ── Scroll Reveal ──
 const revealObserver = new IntersectionObserver((entries) => {

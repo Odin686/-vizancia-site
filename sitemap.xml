@@ -48,6 +48,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url><loc>https://vizancia.com/sandbox-safety.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://vizancia.com/about.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://vizancia.com/methodology.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://vizancia.com/editorial-policy.html</loc><lastmod>2026-07-14</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
@@ -60,4 +61,8 @@
   <url><loc>https://vizancia.com/resources/homeschool-ai-lesson-plan.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vizancia.com/resources/ai-concepts-explained.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vizancia.com/resources/worksheet-ai-literacy.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vizancia.com/resources/ai-literacy-by-age.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vizancia.com/resources/how-to-verify-ai-answers.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vizancia.com/resources/family-ai-agreement.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vizancia.com/resources/ai-hallucinations-for-families.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

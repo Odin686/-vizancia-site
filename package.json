@@ -1,0 +1,10 @@
+{
+  "name": "vizancia-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node scripts/audit-site.mjs",
+    "render:social": "node scripts/render-social-cards.mjs",
+    "qa:visual": "node scripts/capture-site-previews.mjs"
+  }
+}

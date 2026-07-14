@@ -1,342 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Privacy-first Google Ads consent and measurement -->
-<script src="../assets/privacy-consent.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Persona landing page: homeschool families. Serves at vizancia.com/homeschool -->
-<!-- Light, warm palette with the brand gradient brought up as a richer accent. -->
-<title>Vizancia | Teach your kids to think clearly about AI</title>
-<meta name="description" content="A free game that runs entirely on your child's device and teaches kids to understand and question AI. No account, no data, nothing leaves the device. Try it yourself in five minutes.">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="Teach your kids to think clearly about AI">
-<meta property="og:description" content="A free game for tablets and phones. No account, no data, nothing leaves the device. Try it yourself first.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://vizancia.com/homeschool/">
-<meta property="og:image" content="https://vizancia.com/img-learn.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#2563EB">
-<link rel="canonical" href="https://vizancia.com/homeschool/">
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/privacy-consent.css">
-
-<!-- Self-hosted fonts (matches site convention; no Google Fonts dependency) -->
-<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-  @font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/fonts/nunito-latin.woff2') format('woff2')}
-  @font-face{font-family:'Nunito';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/fonts/nunito-latin.woff2') format('woff2')}
-  @font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/fonts/nunito-latin.woff2') format('woff2')}
-  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2')}
-  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2')}
-  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2')}
-  :root{
-    --page:#FBFAF7; --lavender:#F4F2FB; --tealtint:#EDF8F7; --coraltint:#FFF1ED; --goldtint:#FFF7E6;
-    --ink:#1F1D2B; --body:#4B4A5A; --border:#E8E6F0;
-    --purple:#6C5CE7; --teal:#00CEC9; --tealdeep:#00B894; --gold:#FDCB6E; --coral:#FF6B6B; --coraldeep:#E17055; --blue:#0984E3; --softpurple:#A29BFE;
-    --grad:linear-gradient(135deg,#6C5CE7,#00CEC9);
-    --shadow:0 10px 40px rgba(108,92,231,.10);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:
-      radial-gradient(120% 46% at 50% 0,#ECE6FF 0%,rgba(236,230,255,0) 42%),
-      var(--page);
-    color:var(--body); overflow-x:hidden;
-    font-family:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased; padding-bottom:78px;
-  }
-  /* Colorful top bar */
-  body::before{content:"";position:fixed;top:0;left:0;right:0;height:4px;background:var(--grad);z-index:100}
-  h1,h2,h3,.brand,.cta{font-family:"Plus Jakarta Sans",-apple-system,sans-serif}
-  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
-  .em{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .brand{font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;
-    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  header{padding:24px 0;display:flex;justify-content:center}
-
-  /* Hero */
-  .hero{text-align:center;padding:24px 0 16px;position:relative;z-index:0}
-  .hero::before{content:"";position:absolute;left:50%;top:-26px;transform:translateX(-50%);
-    width:min(700px,94vw);height:340px;z-index:-1;border-radius:50%;
-    background:radial-gradient(closest-side,rgba(108,92,231,.22),rgba(0,206,201,.12) 55%,transparent 78%);filter:blur(20px)}
-  .eyebrow{display:inline-block;background:var(--grad);color:#fff;font-weight:800;
-    text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;padding:7px 16px;border-radius:999px;margin-bottom:18px;box-shadow:var(--shadow)}
-  h1{font-size:2.4rem;line-height:1.1;letter-spacing:-0.02em;font-weight:800;color:var(--ink);margin-bottom:18px}
-  .sub{color:var(--body);font-size:1.15rem;max-width:560px;margin:0 auto 22px}
-  .rating{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);margin-bottom:22px;font-size:.95rem;
-    background:var(--goldtint);border:1px solid #F4E3BD;padding:6px 14px;border-radius:999px}
-  .stars{color:var(--gold);letter-spacing:1px}
-  .rating .muted{color:var(--body);font-weight:600}
-  .rating-row{text-align:center;margin-bottom:22px}
-
-  .cta{display:inline-block;background:var(--grad);color:#fff;font-weight:800;
-    text-decoration:none;padding:16px 34px;border-radius:14px;font-size:1.05rem;
-    box-shadow:0 12px 30px rgba(108,92,231,.30);transition:transform .15s ease,box-shadow .15s ease}
-  .cta:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(108,92,231,.38)}
-  .reassure{display:block;color:var(--body);font-size:.85rem;margin-top:12px;font-weight:600}
-  .reassure b{color:var(--tealdeep)}
-  .store-buttons{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
-  .store-buttons a{display:inline-flex;line-height:0}
-  .store-buttons img{height:48px;width:auto}
-  .store-note{text-align:center;color:var(--body);font-size:.82rem;margin-top:10px;font-weight:600}
-  .sample-quiz{background:#fff;border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow);max-width:620px;margin:0 auto}
-  .sample-quiz .quiz-label{display:inline-block;color:var(--purple);background:var(--lavender);font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:8px;margin-bottom:12px}
-  .sample-quiz legend{color:var(--ink);font-family:"Plus Jakarta Sans";font-size:1.12rem;font-weight:800;line-height:1.35;margin-bottom:14px}
-  .sample-quiz fieldset{border:0}
-  .quiz-options{display:grid;gap:10px}
-  .quiz-option{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:12px;background:#fff;color:var(--ink);font:700 .95rem/1.35 "Nunito",sans-serif;text-align:left;cursor:pointer}
-  .quiz-option:hover,.quiz-option:focus-visible{border-color:var(--purple);background:var(--lavender)}
-  .quiz-option:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-  .quiz-option.correct{border-color:var(--tealdeep);background:var(--tealtint)}
-  .quiz-option.incorrect{border-color:var(--coral);background:var(--coraltint)}
-  .quiz-feedback{color:var(--ink);font-weight:700;margin:14px 0 0}
-
-  section{padding:44px 0;border-top:1px solid var(--border)}
-  h2{font-size:1.7rem;font-weight:800;letter-spacing:-0.01em;color:var(--ink);margin-bottom:16px;text-align:center}
-  h2::after{content:"";display:block;width:56px;height:4px;border-radius:3px;margin:14px auto 0;background:var(--grad)}
-  .lead{color:var(--body);text-align:center;max-width:600px;margin:0 auto 26px}
-
-  .card{background:#fff;border:1px solid var(--border);border-top:4px solid var(--purple);border-radius:18px;padding:24px;margin-bottom:16px;box-shadow:var(--shadow)}
-  .card.c1{border-top-color:var(--purple)} .card.c2{border-top-color:var(--tealdeep)} .card.c3{border-top-color:var(--coral)}
-  .card h3{font-size:1.15rem;color:var(--ink);margin-bottom:8px}
-  .tag{display:inline-block;font-size:.72rem;font-weight:800;color:var(--purple);background:var(--lavender);
-    text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:8px;margin-bottom:12px}
-  .tag.t1{color:var(--purple);background:var(--lavender)}
-  .tag.t2{color:var(--tealdeep);background:var(--tealtint)}
-  .tag.t3{color:var(--coraldeep);background:var(--coraltint)}
-
-  /* Safety / privacy block */
-  .safety{background:linear-gradient(160deg,var(--tealtint),#F4F2FB);border:1px solid #DDF0EE;border-radius:20px;padding:30px;text-align:center;box-shadow:var(--shadow)}
-  .safety h2::after{display:none}
-  .safety .label{display:inline-block;background:#fff;border:2px solid var(--teal);border-radius:10px;
-    padding:8px 16px;font-weight:800;color:var(--ink);margin:6px 0 18px;font-family:"Plus Jakarta Sans"}
-  .safety .label .dot{color:var(--teal)}
-  .safety ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px}
-  .safety li{font-weight:700;color:var(--ink)}
-  .safety li::before{content:"✓ ";color:var(--tealdeep)}
-
-  /* Reasons */
-  ol.reasons{list-style:none;counter-reset:r;max-width:600px;margin:0 auto}
-  ol.reasons li{counter-increment:r;position:relative;padding:18px 0 18px 58px;border-bottom:1px solid var(--border)}
-  ol.reasons li:last-child{border-bottom:none}
-  ol.reasons li::before{content:counter(r);position:absolute;left:0;top:16px;width:38px;height:38px;
-    background:var(--grad);color:#fff;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Plus Jakarta Sans"}
-  ol.reasons li:nth-child(1)::before{background:linear-gradient(135deg,#6C5CE7,#A29BFE)}
-  ol.reasons li:nth-child(2)::before{background:linear-gradient(135deg,#00B894,#00CEC9)}
-  ol.reasons li:nth-child(3)::before{background:linear-gradient(135deg,#E17055,#FF6B6B)}
-  ol.reasons li:nth-child(4)::before{background:linear-gradient(135deg,#0984E3,#6C5CE7)}
-  ol.reasons strong{display:block;font-size:1.08rem;color:var(--ink);margin-bottom:2px}
-
-  /* Founder note */
-  .founder{background:linear-gradient(160deg,var(--lavender),#FCEFF6);border:1px solid #EBE2F3;border-radius:20px;padding:28px;display:flex;gap:18px;align-items:flex-start}
-  .founder .avatar{flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:var(--grad);
-    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.3rem;font-family:"Plus Jakarta Sans";box-shadow:var(--shadow)}
-  .founder p{color:var(--body)}
-  .founder .name{font-weight:800;color:var(--ink);margin-top:10px;font-family:"Plus Jakarta Sans"}
-
-  /* Testimonial */
-  .quote{background:#fff;border:1px solid var(--border);border-left:4px solid var(--teal);
-    border-radius:0 16px 16px 0;padding:22px 24px;max-width:600px;margin:0 auto;font-size:1.05rem;color:var(--ink);box-shadow:var(--shadow)}
-  .quote cite{display:block;color:var(--body);font-size:.85rem;font-style:normal;margin-top:12px;font-weight:600}
-
-  details{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:12px}
-  summary{font-weight:700;cursor:pointer;list-style:none;color:var(--ink);font-family:"Plus Jakarta Sans"}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";float:right;color:var(--purple);font-weight:800}
-  details[open] summary::after{content:"\2013"}
-  details p{color:var(--body);margin-top:10px}
-
-  .final{text-align:center;padding:54px 0}
-  footer{text-align:center;color:var(--body);font-size:.8rem;padding:28px 0 36px}
-  footer a{color:var(--purple);font-weight:700}
-
-  /* Sticky mobile CTA */
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(251,250,247,.92);
-    backdrop-filter:blur(10px);border-top:1px solid var(--border);padding:12px 16px;text-align:center;z-index:50}
-  .sticky a{display:inline-block;background:var(--grad);color:#fff;font-weight:800;text-decoration:none;
-    padding:13px 28px;border-radius:12px;font-family:"Plus Jakarta Sans";box-shadow:var(--shadow);width:100%;max-width:420px}
-  .sticky .store-buttons a{display:inline-flex;background:transparent;padding:0;border-radius:0;box-shadow:none;width:auto;max-width:none}
-  .sticky .store-buttons img{height:36px}
-  .sticky small{display:block;color:var(--body);font-size:.72rem;margin-top:5px;font-weight:600}
-  @media(max-width:560px){h1{font-size:1.95rem}h2{font-size:1.4rem}.founder{flex-direction:column}}
-</style>
+  <script src="../assets/privacy-consent.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Homeschool AI Literacy Lessons and Activities | Vizancia</title>
+  <meta name="description" content="Add practical AI literacy to your homeschool with short lessons, active games, family discussion prompts, and a flexible four-week learning plan.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AI literacy for a thoughtful homeschool day">
+  <meta property="og:description" content="Short lessons, active games, discussion prompts, and a flexible AI literacy plan for homeschool families.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vizancia.com/homeschool/">
+  <meta property="og:image" content="https://vizancia.com/assets/og-homeschool.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#10213f">
+  <link rel="canonical" href="https://vizancia.com/homeschool/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/pro-pages.css?v=2">
+  <link rel="stylesheet" href="../assets/home.css?v=1">
+  <link rel="stylesheet" href="../assets/privacy-consent.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Vizancia for Homeschool Families","url":"https://vizancia.com/homeschool/","description":"Practical AI literacy lessons, games, and activities for homeschool families.","isPartOf":{"@type":"WebSite","name":"Vizancia","url":"https://vizancia.com/"},"publisher":{"@type":"Organization","name":"Vizancia Incorporated","url":"https://vizancia.com/"}}
+  </script>
 </head>
-<body>
-<header><span class="brand">Vizancia</span></header>
-
-<!-- HERO -->
-<div class="wrap">
-  <div class="hero">
-    <div class="eyebrow">For homeschool families</div>
-    <h1>Teach your kids to <span class="em">think clearly about AI</span>, not just use it.</h1>
-    <p class="sub">It isn’t a chatbot, and it won’t replace you as their teacher. It’s a short game that helps your kids understand what AI is, where it gets things wrong, and how to question it.</p>
-    <div class="store-buttons">
-      <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
+<body class="pro-page home-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="pro-header">
+    <div class="pro-container pro-header-row">
+      <a class="pro-brand" href="../index.html" aria-label="Vizancia home">Vizancia</a>
+      <button class="pro-menu" id="proMenu" type="button" aria-label="Open menu" aria-controls="proNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="pro-nav" id="proNav" aria-label="Primary navigation">
+        <a href="../index.html#product">Product</a><a href="../parents/">For parents</a><a href="index.html" aria-current="page">Homeschool</a><a href="../sandbox.html">Sandbox</a><a href="../resources/">Learning Hub</a><a href="../support.html">Support</a><a class="pro-nav-cta" href="#download">Get the app</a>
+      </nav>
     </div>
-    <p class="store-note">Try it yourself first. Get the app.</p>
-    <span class="reassure"><b>Free</b> · No account · Nothing leaves the device · iOS & Android</span>
-  </div>
-</div>
+  </header>
 
-<!-- AGE / CURRICULUM FIT -->
-<div class="wrap">
-  <section>
-    <h2>Where it fits in a homeschool day</h2>
-    <p class="lead">Use the mode that matches your learner, then connect a short session to a discussion, journal entry, or research activity.</p>
-    <div class="card c1"><span class="tag t1">Child mode · ages 8–12</span><h3>Start with the foundations.</h3><p>Begin with plain-language concepts, teaching cards, and beginner-friendly questions.</p></div>
-    <div class="card c2"><span class="tag t2">Teen mode · ages 13–17</span><h3>Move into ethics and application.</h3><p>Use intermediate challenges to discuss bias, reliability, prompts, and how AI affects everyday life.</p></div>
-    <div class="card c3"><span class="tag t3">Adult mode · ages 18+</span><h3>Preview and learn alongside them.</h3><p>Adjust the difficulty and explore the full curriculum before choosing what to share. <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">See the current listing</a>.</p></div>
-  </section>
-</div>
-
-<!-- PRODUCT PREVIEW -->
-<div class="wrap">
-  <section>
-    <h2>A small, repeatable learning loop</h2>
-    <p class="lead">Use this representative session as a starting point for a conversation or a short homeschool block.</p>
-    <div class="card c1"><span class="tag t1">Learn</span><h3>Define one idea in plain language.</h3><p>Start with an AI concept, then ask your child to explain it back in their own words.</p></div>
-    <div class="card c2"><span class="tag t2">Question</span><h3>Test a claim instead of memorizing it.</h3><p>Games such as AI or Not?, Ethics Court, and Buzzword Buster turn AI literacy into active judgment.</p></div>
-    <div class="card c3"><span class="tag t3">Reflect</span><h3>Connect the idea to everyday life.</h3><p>Finish with a short discussion about where the concept appears in school, media, or the tools your family uses.</p></div>
-  </section>
-</div>
-
-<!-- INTERACTIVE SAMPLE -->
-<div class="wrap">
-  <section>
-    <h2>Try one question together</h2>
-    <p class="lead">Use this short preview as a conversation starter before you download.</p>
-    <div class="sample-quiz" data-quiz>
-      <span class="quiz-label">Sample AI literacy question</span>
-      <fieldset>
-        <legend>What is a large language model mainly trained to do?</legend>
-        <div class="quiz-options">
-          <button class="quiz-option" type="button" data-correct="false">A. Look up a guaranteed correct answer every time</button>
-          <button class="quiz-option" type="button" data-correct="true">B. Predict likely patterns in language from its training</button>
-          <button class="quiz-option" type="button" data-correct="false">C. Think and understand exactly like a person</button>
+  <main id="main-content">
+    <section class="home-hero">
+      <div class="pro-container home-hero-grid">
+        <div class="reveal">
+          <p class="pro-kicker">AI literacy for homeschool families</p>
+          <h1 class="home-title">Teach learners to <span>question AI, not depend on it.</span></h1>
+          <p class="home-lede">Vizancia combines five-minute lessons, active games, and discussion-ready ideas so AI literacy can fit naturally into a homeschool week—without requiring coding experience or a Vizancia account for core learning.</p>
+          <div class="store-row" aria-label="Download Vizancia">
+            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store" width="144" height="48"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&amp;referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play" width="162" height="48"></a>
+          </div>
+          <p class="hero-note">Free to download · Core progress stays on-device · Lessons and most games work offline</p>
         </div>
-      </fieldset>
-      <p class="quiz-feedback" data-feedback aria-live="polite"></p>
-    </div>
-  </section>
-</div>
+        <div class="lesson-demo reveal" aria-label="Sample homeschool learning block">
+          <div class="lesson-shell">
+            <div class="lesson-toolbar"><strong>Homeschool learning block</strong><span>Approximately 20 minutes</span></div>
+            <div class="lesson-progress" aria-hidden="true"><span></span></div>
+            <div class="lesson-content">
+              <span class="lesson-tag">Question of the day</span>
+              <h2>Why can AI sound sure when it is wrong?</h2>
+              <p>Complete one short lesson, then ask the learner to identify which claim needs a source and explain how they would check it.</p>
+              <div class="lesson-example"><strong>Extend it offline</strong><p>Write two confident statements—one accurate and one invented—then compare the evidence behind each.</p></div>
+              <div class="lesson-action"><span>Lesson · game · discussion · reflection</span><b>Four steps</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- SAFETY / PRIVACY -->
-<div class="wrap">
-  <section>
-    <div class="safety">
-      <h2 style="margin-bottom:4px">Nothing leaves your child’s device.</h2>
-      <p class="lead" style="margin-bottom:10px">On the App Store, under App Privacy, you’ll see two words most kids’ apps can’t show:</p>
-      <span class="label"><span class="dot">●</span> Data Not Collected</span>
-      <p class="lead">No account. No email. No request to create a profile for your child. Everything runs on the device, so the app can’t see your kid, and neither can anyone else.</p>
-      <ul>
-        <li>No account</li><li>No email</li><li>No data collected</li><li>No ads</li><li>Nothing to buy</li>
-      </ul>
-    </div>
-  </section>
-</div>
-
-<!-- REASONS -->
-<div class="wrap">
-  <section>
-    <h2>Why homeschool parents are trying it</h2>
-    <ol class="reasons">
-      <li><strong>It builds thinking, not dependency.</strong>The goal was never a kid who leans on AI. It’s a kid who isn’t fooled by it, one who asks who made this, why, and whether it can be trusted.</li>
-      <li><strong>It fits a real homeschool day.</strong>Lessons run about five minutes, and your kids move at their own pace. Short enough for the child who can’t sit still for a worksheet. Secular, and it works for every age.</li>
-      <li><strong>You can vet it before they touch it.</strong>Download it, play a lesson yourself, and see exactly what they would see. Then decide. Nothing autoplays, and nothing overwhelms them.</li>
-      <li><strong>And it costs nothing.</strong>No subscription to cancel, and no data traded for it. Keep your budget for the curriculum you actually have to buy.</li>
-    </ol>
-  </section>
-</div>
-
-<!-- WHAT THEY DO -->
-<div class="wrap">
-  <section>
-    <h2>What your kids actually do</h2>
-    <p class="lead">Short games that teach AI by playing instead of lecturing.</p>
-    <div class="card c1"><span class="tag t1">AI or Not?</span><h3>Was this written by a person or a machine?</h3><p>Kids guess, then start to notice the tells. That kind of judgment is hard to teach with a worksheet.</p></div>
-    <div class="card c2"><span class="tag t2">Ethics Court</span><h3>You be the judge.</h3><p>Kids weigh real AI dilemmas about fairness, bias, and when a machine should and shouldn’t decide. It makes them think.</p></div>
-    <div class="card c3"><span class="tag t3">Buzzword Buster</span><h3>Real AI term, or made up?</h3><p>The vocabulary their friends throw around, made clear one quick round at a time.</p></div>
-  </section>
-</div>
-
-<!-- FOUNDER NOTE -->
-<div class="wrap">
-  <section>
-    <h2>Why we built this</h2>
-    <div class="founder">
-      <div class="avatar">V</div>
-      <div>
-        <p>Vizancia is built in Canada around a simple idea: children should learn how AI works before they are asked to trust it. The learning experience combines short explanations, active games, and privacy-first design.</p>
-        <div class="name">Vizancia · Canadian-built AI literacy</div>
+    <div class="pro-container home-proof reveal" aria-label="Homeschool fit">
+      <div class="home-proof-grid">
+        <div class="home-proof-item"><strong>Flexible pacing</strong><span>Use one activity or build a full learning block</span></div>
+        <div class="home-proof-item"><strong>Three learning modes</strong><span>Child, teen, and adult starting points</span></div>
+        <div class="home-proof-item"><strong>No coding required</strong><span>Focus on concepts, evidence, and judgment</span></div>
+        <div class="home-proof-item"><strong>Printable extension</strong><span>Continue with worksheets and discussion offline</span></div>
       </div>
     </div>
-  </section>
-</div>
 
-<!-- SOCIAL PROOF -->
-<div class="wrap">
-  <section>
-    <h2>Preview it before you commit</h2>
-    <p class="lead" style="margin-bottom:0">The App Store currently says there are not enough ratings or reviews to display an overview. We would rather show that honestly than publish invented testimonials. <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer">Review the current App Store listing</a> and play the first session yourself.</p>
-  </section>
-</div>
+    <section class="home-section" id="approach">
+      <div class="pro-container">
+        <div class="home-heading center reveal"><p class="pro-kicker">A repeatable homeschool rhythm</p><h2>Learn one idea. Test it. Explain it back.</h2><p>The strongest evidence of learning is not a completed screen—it is whether the learner can explain the idea, notice a limitation, and choose a safer next step.</p></div>
+        <div class="habit-grid">
+          <article class="habit-card reveal"><span class="habit-index">01</span><h3>Start with a concept</h3><p>Use a short lesson to introduce patterns, training data, language models, bias, privacy, or another focused idea.</p></article>
+          <article class="habit-card reveal"><span class="habit-index">02</span><h3>Practise through a decision</h3><p>Use a game or scenario to distinguish evidence from confidence and apply the idea in a new context.</p></article>
+          <article class="habit-card reveal"><span class="habit-index">03</span><h3>Document the reasoning</h3><p>Finish with a journal entry, discussion, source check, or portfolio note explaining what the human contributed.</p></article>
+        </div>
+      </div>
+    </section>
 
-<!-- FAQ -->
-<div class="wrap">
-  <section>
-    <h2>The questions parents ask first</h2>
-    <details><summary>Is it a chatbot talking to my kid?</summary><p>No. There’s no AI talking to your child, no automatic tutoring, and no surveillance. It’s a game that teaches them <em>about</em> AI. They play, and you stay in charge.</p></details>
-    <details><summary>Does it collect my child’s data?</summary><p>No. No account, no email, and no servers. Everything runs on the device, and the App Store privacy label reads “Data Not Collected.” We honestly can’t see your kid.</p></details>
-    <details><summary>Is it heavy on screen time?</summary><p>Not at all. Lessons take about five minutes. They’re short, finite, and purposeful, with nothing on autoplay. It’s built to replace mindless scrolling, not pile onto it.</p></details>
-    <details><summary>Is it secular?</summary><p>Yes. It’s about understanding AI through evidence and clear thinking, with no ideological pressure either way. You can preview every bit of it yourself first.</p></details>
-    <details><summary>What’s the catch with “free”?</summary><p>There isn’t one. Nothing is collected, so there’s nothing to monetize behind it. No subscription, and nothing to buy. Made in Canada.</p></details>
-  </section>
-</div>
+    <section class="home-section white" aria-labelledby="sample-title">
+      <div class="pro-container sample-grid">
+        <div class="sample-copy reveal"><p class="pro-kicker">Try a question together</p><h2 id="sample-title">Make verification part of the lesson.</h2><p>This example is designed to prompt reasoning rather than reward memorized vocabulary.</p><div class="sample-points"><div class="sample-point"><span>1</span><div><strong>Choose</strong><p>Select the strongest next step.</p></div></div><div class="sample-point"><span>2</span><div><strong>Explain</strong><p>Ask the learner to defend the choice.</p></div></div><div class="sample-point"><span>3</span><div><strong>Apply</strong><p>Try the same habit with a real claim.</p></div></div></div></div>
+        <div class="quiz-card reveal">
+          <fieldset><legend>An AI tool invents a book citation for a research paragraph. What should the learner do?</legend><div class="quiz-options"><button class="quiz-option" type="button" data-answer="incorrect">Keep it because the title sounds believable.</button><button class="quiz-option" type="button" data-answer="correct">Remove it unless the source can be found and verified.</button><button class="quiz-option" type="button" data-answer="incorrect">Ask AI to invent a publisher and page number too.</button></div></fieldset>
+          <div class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite">Choose an answer, then ask the learner to explain why.</div>
+        </div>
+      </div>
+    </section>
 
-<!-- FINAL CTA -->
-<div class="wrap">
-  <div class="final">
-    <h2>Try it yourself before the kids ever touch it.</h2>
-    <p class="lead">Five minutes, no signup. If it isn’t for you, delete it and no one’s the wiser.</p>
-    <div class="store-buttons">
-      <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
-    </div>
-    <span class="reassure"><b>Free</b> · Nothing to buy · No account · Data not collected · iOS & Android</span>
-  </div>
-</div>
+    <section class="home-section" id="plan">
+      <div class="pro-container">
+        <div class="home-heading reveal"><p class="pro-kicker">Four-week starter plan</p><h2>A practical sequence you can adapt.</h2><p>Use the app for structured practice and the Learning Hub for discussion, writing, assessment, and offline extensions.</p></div>
+        <div class="curriculum-grid">
+          <article class="curriculum-card reveal"><small>Week 1 · Explain</small><h3>What AI is—and is not</h3><p>Patterns, predictions, training data, and the difference between a generated answer and verified evidence.</p></article>
+          <article class="curriculum-card reveal"><small>Week 2 · Experiment</small><h3>How prompts change output</h3><p>Compare vague and specific questions while keeping personal information out of the activity.</p></article>
+          <article class="curriculum-card reveal"><small>Week 3 · Question</small><h3>Bias, errors, and authorship</h3><p>Identify an invented citation, a biased description, and work that hides the human contribution.</p></article>
+          <article class="curriculum-card reveal"><small>Week 4 · Create</small><h3>A responsible final project</h3><p>Build a source-backed explainer, quiz, or family AI policy and document every verification step.</p></article>
+        </div>
+        <p class="disclosure-note"><a class="text-link" href="../resources/homeschool-ai-lesson-plan.html">Open the complete lesson plan and assessment rubric</a></p>
+      </div>
+    </section>
 
-<footer class="wrap">Vizancia · Made in Canada · <a href="https://vizancia.com">vizancia.com</a><br>The app has no account or tracking. Optional website ad measurement requires consent.</footer>
+    <section class="home-section white">
+      <div class="pro-container">
+        <div class="privacy-panel reveal">
+          <div><p class="pro-kicker">Understand the boundary</p><h2>Core learning is local. Connected features are separate.</h2><p>Families should know what changes before choosing multiplayer, leaderboards, or the limited-beta AI Sandbox.</p><p><a class="text-link" href="../privacy.html">Read the full Privacy Policy</a></p></div>
+          <div class="privacy-facts"><div class="privacy-fact"><strong>Lessons and most games</strong><span>No Vizancia account is required; core progress is stored locally on the device.</span></div><div class="privacy-fact"><strong>Multiplayer and platform services</strong><span>Connected play uses the applicable platform connection and policies.</span></div><div class="privacy-fact"><strong>AI Sandbox beta</strong><span>Prompts are processed online. The beta is adult-managed and not authorized for independent use by a child under 13.</span></div><div class="privacy-fact"><strong>Marketing website</strong><span>Optional Google Ads measurement remains off unless the visitor accepts it.</span></div></div>
+        </div>
+      </div>
+    </section>
 
-<div class="sticky">
-  <div class="store-buttons">
-    <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
-    <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
-  </div>
-  <small>No account · Data not collected in the app · iOS & Android</small>
-</div>
+    <section class="home-section" id="resources">
+      <div class="pro-container">
+        <div class="home-heading reveal"><p class="pro-kicker">Ready-to-use resources</p><h2>Continue the learning away from the screen.</h2></div>
+        <div class="resource-teasers"><a class="resource-teaser reveal" href="../resources/homeschool-ai-lesson-plan.html"><small>Four-week plan</small><h3>Complete homeschool AI literacy sequence</h3><p>Objectives, activities, evidence of learning, and an assessment rubric.</p><b>Open the plan →</b></a><a class="resource-teaser reveal" href="../resources/worksheet-ai-literacy.html"><small>Printable</small><h3>Family AI check-in worksheet</h3><p>Practise pausing, protecting, probing, proving, and reflecting.</p><b>Print the worksheet →</b></a><a class="resource-teaser reveal" href="../resources/ai-concepts-explained.html"><small>Reference</small><h3>AI concepts explained simply</h3><p>A plain-language glossary for lessons, writing, and review.</p><b>Open the glossary →</b></a></div>
+      </div>
+    </section>
 
-<script>
-document.querySelectorAll('[data-quiz]').forEach(function (quiz) {
-  var feedback = quiz.querySelector('[data-feedback]');
-  quiz.querySelectorAll('.quiz-option').forEach(function (option) {
-    option.addEventListener('click', function () {
-      quiz.querySelectorAll('.quiz-option').forEach(function (item) {
-        item.classList.remove('correct', 'incorrect');
-      });
-      var correct = option.dataset.correct === 'true';
-      option.classList.add(correct ? 'correct' : 'incorrect');
-      feedback.textContent = correct
-        ? 'Correct. A language model predicts patterns from its training; it does not guarantee truth or think like a person.'
-        : 'Not quite. Language models predict patterns from training, so their answers can sound confident and still be wrong.';
-    });
-  });
-});
-</script>
+    <section class="home-section white" id="faq">
+      <div class="pro-container support-layout">
+        <aside class="support-aside reveal"><p class="pro-kicker">Before you begin</p><h2>Common homeschool questions</h2><p>Current product details can change; the relevant store listing remains the source for compatibility and availability.</p></aside>
+        <div class="support-faq">
+          <details open><summary>Is Vizancia a complete homeschool curriculum?</summary><p>No. It is a supplementary AI-literacy app and resource library. Families remain responsible for local curriculum, assessment, reporting, and legal requirements.</p></details>
+          <details><summary>Is the current app free?</summary><p>Vizancia is free to download, and current lessons, games, and duels are included at no cost. Any future paid feature would be identified before purchase.</p></details>
+          <details><summary>Can we use it without internet?</summary><p>Lessons and most games work offline after installation. Multiplayer, leaderboards, platform services, and the AI Sandbox require a connection.</p></details>
+          <details><summary>Does it replace adult supervision?</summary><p>No. Adult involvement should increase with the learner's age, maturity, and the stakes of the topic. Connected AI practice is offered only through an adult-managed limited beta.</p></details>
+          <details><summary>How do we document learning?</summary><p>Use the four-part rubric in the lesson plan: explain a concept, protect private information, question a claim, and make the human contribution visible.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="download">
+      <div class="pro-container"><div class="download-panel reveal"><div><p class="pro-kicker">Try the first lesson yourself</p><h2>See whether it fits your homeschool.</h2><p>Download the current app, preview a lesson, and use one question as a family discussion prompt.</p></div><div class="store-row" aria-label="Download Vizancia"><a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=homeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store" width="144" height="48"></a><a href="https://play.google.com/store/apps/details?id=com.vizancia.app&amp;referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhomeschool" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play" width="162" height="48"></a></div></div></div>
+    </section>
+  </main>
+
+  <footer class="pro-footer"><div class="pro-container"><div class="footer-grid"><div class="footer-brand"><a class="pro-brand" href="../index.html">Vizancia</a><p>Practical AI literacy through short lessons, active games, and thoughtful practice.</p></div><div class="footer-column"><strong>Product</strong><a href="../index.html#product">How it works</a><a href="../parents/">For parents</a><a href="index.html">Homeschool</a><a href="../sandbox.html">Sandbox beta</a></div><div class="footer-column"><strong>Learn</strong><a href="../resources/">Learning Hub</a><a href="../methodology.html">Methodology</a><a href="../about.html">About</a><a href="../changelog.html">Changelog</a></div><div class="footer-column"><strong>Trust &amp; help</strong><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../sandbox-safety.html">Sandbox safety</a><a href="../accessibility.html">Accessibility</a></div></div><div class="footer-bottom"><p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p><span>Canadian company</span></div></div></footer>
+
+  <script>
+    const menu=document.getElementById('proMenu'),nav=document.getElementById('proNav');
+    menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close menu':'Open menu');nav.classList.toggle('open',open)});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open menu');nav.classList.remove('open')}));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open menu');nav.classList.remove('open');menu.focus()}});
+    const feedback=document.getElementById('quizFeedback');
+    document.querySelectorAll('.quiz-option').forEach(option=>option.addEventListener('click',()=>{document.querySelectorAll('.quiz-option').forEach(button=>{button.classList.remove('correct','incorrect');button.removeAttribute('aria-pressed')});const correct=option.dataset.answer==='correct';option.classList.add(correct?'correct':'incorrect');option.setAttribute('aria-pressed','true');feedback.innerHTML=correct?'<strong>Correct.</strong> A citation is only useful if the learner can locate and verify the real source.':'<strong>Try again.</strong> A believable title is not evidence that a source exists.'}));
+    if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(element=>observer.observe(element))}else{document.querySelectorAll('.reveal').forEach(element=>element.classList.add('visible'))}
+  </script>
 </body>
 </html>

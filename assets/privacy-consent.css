@@ -7,6 +7,7 @@
   position: fixed;
   inset: auto 16px 16px;
   z-index: 10000;
+  width: min(920px, calc(100vw - 32px));
   max-width: 920px;
   margin: 0 auto;
   padding: 20px;
@@ -18,6 +19,11 @@
   font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.privacy-consent,
+.privacy-consent * {
+  box-sizing: border-box;
+}
+
 .privacy-consent__content {
   display: flex;
   align-items: center;
@@ -26,6 +32,7 @@
 
 .privacy-consent__copy {
   flex: 1;
+  min-width: 0;
 }
 
 .privacy-consent__copy strong {
@@ -44,6 +51,7 @@
   color: #1d4ed8;
   font-size: 0.88rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .privacy-consent__actions {
@@ -99,6 +107,9 @@ body .sticky ~ .privacy-choices-button {
 @media (max-width: 700px) {
   .privacy-consent {
     inset: auto 10px 10px;
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+    overflow-y: auto;
     padding: 16px;
   }
 
@@ -114,6 +125,10 @@ body .sticky ~ .privacy-choices-button {
 
   .privacy-consent__actions {
     gap: 8px;
+  }
+
+  .privacy-consent__button {
+    width: 100%;
   }
 }
 

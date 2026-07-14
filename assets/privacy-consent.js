@@ -6,6 +6,14 @@
   var CONSENT_MAX_AGE = 180 * 24 * 60 * 60 * 1000;
   var googleTagLoaded = false;
 
+  // Add the conversion destinations supplied by Google Ads after the two
+  // website conversion actions are created. Expected format:
+  // AW-18320211414/AbCdEfGhIjKlMnOp
+  var CONVERSION_DESTINATIONS = {
+    app_store: '',
+    google_play: ''
+  };
+
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
     window.dataLayer.push(arguments);
@@ -43,6 +51,12 @@
     } catch (error) {
       // If storage is unavailable, the visitor will be asked again next time.
     }
+  }
+
+  function applyGlobalPrivacyControl() {
+    if (navigator.globalPrivacyControl !== true || readChoice()) return;
+    saveChoice('rejected');
+    updateConsent(false);
   }
 
   function updateConsent(accepted) {
@@ -135,11 +149,29 @@
 
     document.querySelectorAll('a[href*="apps.apple.com"], a[href*="play.google.com"]').forEach(function (link) {
       link.addEventListener('click', function () {
-        window.gtag('event', 'store_click', {
-          store: link.href.indexOf('play.google.com') !== -1 ? 'google_play' : 'app_store',
+        var store = link.href.indexOf('play.google.com') !== -1 ? 'google_play' : 'app_store';
+        var eventParameters = {
+          store: store,
           landing_page: window.location.pathname,
-          link_url: link.href
+          link_url: link.href,
+          transport_type: 'beacon'
+        };
+
+        window.gtag('event', 'store_click', {
+          store: eventParameters.store,
+          landing_page: eventParameters.landing_page,
+          link_url: eventParameters.link_url,
+          transport_type: eventParameters.transport_type
         });
+
+        if (CONVERSION_DESTINATIONS[store]) {
+          window.gtag('event', 'conversion', {
+            send_to: CONVERSION_DESTINATIONS[store],
+            event_category: 'app_acquisition',
+            event_label: store,
+            transport_type: 'beacon'
+          });
+        }
       });
     });
 
@@ -161,6 +193,8 @@
     updateConsent(true);
     loadGoogleTag();
   }
+
+  applyGlobalPrivacyControl();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderControls);

@@ -1,309 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Privacy-first Google Ads consent and measurement -->
-    <script src="assets/privacy-consent.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizancia | Learn AI the Fun Way</title>
-    <meta name="description" content="Master artificial intelligence through 96+ lessons, 11 mini-games, 1v1 duels, and global leaderboards. Free on iOS and Android.">
-    <meta name="keywords" content="Vizancia, AI, artificial intelligence, learn AI, education, iOS app, Android app, Google Play, machine learning, duels, quiz">
-    <meta property="og:title" content="Vizancia | Learn AI the Fun Way">
-    <meta property="og:description" content="Master AI through lessons, games, and competitive duels. Free on iOS and Android.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vizancia.com/">
-    <meta property="og:site_name" content="Vizancia">
-    <meta property="og:image" content="https://vizancia.com/img-learn.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vizancia | Learn AI the Fun Way">
-    <meta name="twitter:description" content="Master AI through lessons, games, and competitive duels. Free on iOS and Android.">
-    <meta name="twitter:image" content="https://vizancia.com/img-learn.png">
-    <meta name="theme-color" content="#2563EB">
-    <link rel="canonical" href="https://vizancia.com/">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=6">
-    <link rel="stylesheet" href="assets/privacy-consent.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
+  <script src="assets/privacy-consent.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Vizancia | Practical AI Literacy Through Lessons and Games</title>
+  <meta name="description" content="Build practical AI judgment through short lessons, interactive games, guided practice, and family-friendly learning resources. Free to download on iOS and Android.">
+  <meta property="og:title" content="Vizancia | Practical AI Literacy">
+  <meta property="og:description" content="Learn how AI works, when to question an answer, and how to use it responsibly through short lessons and active games.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vizancia.com/">
+  <meta property="og:site_name" content="Vizancia">
+  <meta property="og:image" content="https://vizancia.com/assets/og-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vizancia | Practical AI Literacy">
+  <meta name="twitter:description" content="Short lessons, active games, and better habits for understanding and using AI.">
+  <meta name="twitter:image" content="https://vizancia.com/assets/og-home.png">
+  <meta name="theme-color" content="#10213f">
+  <link rel="canonical" href="https://vizancia.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/pro-pages.css?v=2">
+  <link rel="stylesheet" href="assets/home.css?v=1">
+  <link rel="stylesheet" href="assets/privacy-consent.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://vizancia.com/#organization",
+        "name": "Vizancia Incorporated",
+        "url": "https://vizancia.com/",
+        "logo": "https://vizancia.com/assets/apple-touch-icon.png",
+        "email": "info@vizancia.ca"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vizancia.com/#website",
+        "url": "https://vizancia.com/",
+        "name": "Vizancia",
+        "publisher": {"@id": "https://vizancia.com/#organization"}
+      },
+      {
         "@type": "MobileApplication",
         "name": "Vizancia",
         "operatingSystem": "iOS, Android",
         "applicationCategory": "EducationalApplication",
-        "description": "Master artificial intelligence through 96+ lessons, 11 mini-games, 1v1 duels, and global leaderboards. Free on iOS and Android.",
+        "description": "Practical AI literacy through short lessons, interactive games, and guided practice.",
         "url": "https://vizancia.com/",
-        "image": "https://vizancia.com/img-learn.png",
         "downloadUrl": [
-            "https://apps.apple.com/ca/app/vizancia/id6759349861",
-            "https://play.google.com/store/apps/details?id=com.vizancia.app"
+          "https://apps.apple.com/ca/app/vizancia/id6759349861",
+          "https://play.google.com/store/apps/details?id=com.vizancia.app"
         ],
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Vizancia Incorporated",
-            "url": "https://vizancia.com/",
-            "logo": "https://vizancia.com/assets/apple-touch-icon.png",
-            "email": "info@vizancia.ca"
-        }
-    }
-    </script>
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
+        "publisher": {"@id": "https://vizancia.com/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="pro-page home-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- Navigation -->
-<nav id="navbar">
-    <div class="nav-inner">
-        <a href="index.html" class="logo" style="text-decoration:none;">Vizancia</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links" id="navLinks">
-            <a href="#features">Features</a>
-            <a href="#games">Games</a>
-            <a href="#duels">Duels</a>
-            <a href="#paths">Paths</a>
-            <a href="mission.html">Mission</a>
-            <a href="sandbox.html" style="color: var(--accent); font-weight: 800;">Sandbox</a>
-            <a href="resources/">Resources</a>
-            <a href="support.html">Support</a>
-            <a href="#download" class="nav-cta">Get the app</a>
-        </div>
-    </div>
-</nav>
-
-<header class="hero">
-    <div class="hero-content">
-        <h1>learn ai<br><span class="gradient-text">the fun way</span></h1>
-        <p>Master artificial intelligence through bite-sized lessons, addictive mini-games, and competitive 1v1 duels. No coding required.</p>
-        <div class="cta-group" style="align-items: center;">
-            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; line-height: 0;">
-                <img src="assets/app-store-badge.svg" alt="Download on the App Store" style="height: 44px;">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; line-height: 0;">
-                <img src="assets/google-play-badge.svg" alt="Get it on Google Play" style="height: 44px;">
-            </a>
-        </div>
-    </div>
-</header>
-
-<!-- Stats Bar -->
-<!-- VERIFY count against shipping app -->
-<div class="stats-bar">
-    <div class="stat-item"><div class="stat-num">16</div><div class="stat-label">Categories</div></div>
-    <div class="stat-item"><div class="stat-num">96+</div><div class="stat-label">Lessons</div></div>
-    <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">Mini-Games</div></div>
-    <div class="stat-item"><div class="stat-num">576</div><div class="stat-label">Questions</div></div>
-    <div class="stat-item"><div class="stat-num">25+</div><div class="stat-label">Achievements</div></div>
-</div>
-
-<!-- Section 1: Learn -->
-<hr class="section-divider">
-<div class="feature-section reveal" id="features">
-    <div class="illust-col"><img src="img-learn.png" alt="Learn AI illustration" loading="lazy" decoding="async"></div>
-    <div class="text-col">
-        <h2 class="feature-heading">fun. addictive. <span class="hl">educational.</span></h2>
-        <p class="feature-body">Master artificial intelligence from the ground up with bite-sized lessons, interactive quizzes, and real-world examples. No coding required, just tap, learn, and grow.</p>
-        <div class="feature-chips">
-            <span class="chip">📖 96+ Lessons</span>
-            <span class="chip">🎯 Adaptive Quizzes</span>
-            <span class="chip">⚡ Bite-Sized</span>
-        </div>
-    </div>
-</div>
-
-<!-- Section 2: Games -->
-<hr class="section-divider">
-<div class="feature-section reverse reveal" id="games-intro">
-    <div class="illust-col"><img src="img-games.png" alt="Mini-games illustration" loading="lazy" decoding="async"></div>
-    <div class="text-col">
-        <h2 class="feature-heading">stay motivated with <span class="hl-amber">game-based learning.</span></h2>
-        <p class="feature-body">11 mini-games turn studying into play. Earn XP, maintain daily streaks, climb 20 levels, and unlock 25+ achievements. Combo multipliers and leaderboards keep you coming back.</p>
-        <div class="feature-chips">
-            <span class="chip">🔥 Daily Streaks</span>
-            <span class="chip">🏆 25+ Achievements</span>
-            <span class="chip">📊 Leaderboards</span>
-        </div>
-    </div>
-</div>
-
-<!-- Section 3: Duels -->
-<hr class="section-divider">
-<div class="feature-section reveal" id="duels">
-    <div class="illust-col"><img src="img-duels.png" alt="1v1 Duels illustration" loading="lazy" decoding="async"></div>
-    <div class="text-col">
-        <h2 class="feature-heading">challenge anyone. <span class="hl-red">test your knowledge together.</span></h2>
-        <p class="feature-body">Go head-to-head in real-time 1v1 AI knowledge duels via Game Center. No opponent? Battle AI bots at Easy, Medium, or Hard. Earn 8 milestone trophies.</p>
-        <div class="feature-chips">
-            <span class="chip">👥 Online 1v1</span>
-            <span class="chip">🤖 Bot Opponents</span>
-            <span class="chip">🏅 8 Trophies</span>
-        </div>
-    </div>
-</div>
-
-<!-- Section 4: Progress -->
-<hr class="section-divider">
-<div class="feature-section reverse reveal">
-    <div class="illust-col"><img src="img-progress.png" alt="Progress and leveling illustration" loading="lazy" decoding="async"></div>
-    <div class="text-col">
-        <h2 class="feature-heading">track your journey to <span class="hl-cyan">AI mastery.</span></h2>
-        <p class="feature-body">20 levels, XP milestones, daily streaks, and a progress dashboard that celebrates every step. Choose your pace: Casual, Regular, Serious, or Intense.</p>
-        <div class="feature-chips">
-            <span class="chip">⚡ 20 Levels</span>
-            <span class="chip">🔥 Streaks</span>
-            <span class="chip">📈 Progress Dashboard</span>
-        </div>
-    </div>
-</div>
-
-<!-- Section 5: For Everyone -->
-<hr class="section-divider">
-<div class="feature-section reveal">
-    <div class="illust-col"><img src="img-classroom.png" alt="Vizancia for everyone" loading="lazy" decoding="async"></div>
-    <div class="text-col">
-        <h2 class="feature-heading"><span class="hl">vizancia</span> for everyone</h2>
-        <p class="feature-body">Whether you're learning on your own or exploring AI with others, Vizancia is the perfect companion for AI literacy. Free, private, and built for flexibility; lessons and games work offline, while duels and the AI Sandbox need an internet connection.</p>
-        <div class="feature-chips">
-            <span class="chip">🚀 No Setup Required</span>
-            <span class="chip">🔒 Privacy First</span>
-            <span class="chip">📱 Lessons Work Offline</span>
-        </div>
-    </div>
-</div>
-
-<hr class="section-divider">
-
-<!-- Games Grid -->
-<section id="games">
-    <div class="reveal">
-        <p class="section-label">Mini-Games</p>
-        <h2 class="section-title">11 ways to master AI<br><span class="gradient-text">through play</span></h2>
-        <p class="section-subtitle">Each game features combos, score multipliers, and expanding content to keep every session fresh.</p>
-    </div>
-    <div class="games-grid">
-        <div class="game-card reveal"><div class="game-icon">⚡</div><div><h4>Speed Round</h4><p>60-second blitz with combo multipliers up to 4×</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🤖</div><div><h4>Fact or Fiction</h4><p>33 claims about AI; separate truth from myth</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">⚖️</div><div><h4>Ethics Court</h4><p>Judge real-world ethical dilemmas involving AI</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">✍️</div><div><h4>Prompt Craft</h4><p>Pick the best prompt for each scenario</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🔤</div><div><h4>Buzzword Buster</h4><p>44 terms; real AI jargon or made up?</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🧩</div><div><h4>Memory Grid</h4><p>Match AI concept pairs against the clock</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🔍</div><div><h4>Word Search</h4><p>Find hidden AI terms in the puzzle grid</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🔗</div><div><h4>AI Pairs</h4><p>Connect related AI concepts together</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🏷️</div><div><h4>Jargon Match</h4><p>Match AI terms to their definitions</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">📅</div><div><h4>AI Timeline</h4><p>Put AI milestones in chronological order</p></div></div>
-        <div class="game-card reveal"><div class="game-icon">🌊</div><div><h4>Falling Words</h4><p>Drag & drop into correct buckets, 4× combos</p></div></div>
-    </div>
-</section>
-
-<!-- Learning Paths -->
-<section id="paths">
-    <div class="reveal">
-        <p class="section-label">Learning Paths</p>
-        <h2 class="section-title">16 categories to<br><span class="gradient-text">AI mastery</span></h2>
-        <p class="section-subtitle">Each category contains multiple lessons with interactive quizzes. Unlock new paths as you progress.</p>
-    </div>
-
-    <div class="paths-grid">
-        <div class="path-card reveal"><span class="path-emoji">🧠</span><h4>AI Basics</h4><p>AI, ML, deep learning & neural networks</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🎓</span><h4>How AI Learns</h4><p>Supervised, unsupervised & reinforcement</p></div>
-        <div class="path-card reveal"><span class="path-emoji">✨</span><h4>Generative AI</h4><p>LLMs, chatbots & diffusion models</p></div>
-        <div class="path-card reveal"><span class="path-emoji">✍️</span><h4>Prompt Engineering</h4><p>Crafting effective prompts</p></div>
-        <div class="path-card reveal"><span class="path-emoji">⚖️</span><h4>AI Ethics</h4><p>Bias, fairness & responsible AI</p></div>
-        <div class="path-card reveal"><span class="path-emoji">💼</span><h4>AI at Work</h4><p>AI transforming industries</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🏥</span><h4>AI in Healthcare</h4><p>Diagnostics & medical AI</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🎨</span><h4>Creative Arts</h4><p>Music, art, writing & design</p></div>
-        <div class="path-card reveal"><span class="path-emoji">📜</span><h4>History of AI</h4><p>From Turing to modern breakthroughs</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🚀</span><h4>Future of AI</h4><p>AGI & emerging trends</p></div>
-        <div class="path-card reveal"><span class="path-emoji">👁️</span><h4>Computer Vision</h4><p>Image recognition & visual AI</p></div>
-        <div class="path-card reveal"><span class="path-emoji">💬</span><h4>NLP</h4><p>Language understanding & generation</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🤖</span><h4>Robotics</h4><p>Autonomous systems & embodied AI</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🔐</span><h4>AI Security</h4><p>Adversarial attacks & AI safety</p></div>
-        <div class="path-card reveal"><span class="path-emoji">📊</span><h4>Data Science</h4><p>Datasets, training & evaluation</p></div>
-        <div class="path-card reveal"><span class="path-emoji">🌍</span><h4>AI & Society</h4><p>Impact on jobs, law & daily life</p></div>
-    </div>
-</section>
-
-
-<!-- Download CTA -->
-<section class="download-cta-section" id="download">
-    <div class="reveal">
-        <div class="cta-card">
-            <h2>Ready to Master AI?</h2>
-            <div class="cta-features">
-                <span>✅ 100% Free</span>
-                <span>🔒 No Data Collected</span>
-                <span>📱 Lessons Work Offline</span>
-            </div>
-            <div style="display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap;">
-                <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; line-height: 0;">
-                    <img src="assets/app-store-badge.svg" alt="Download on the App Store" style="height: 48px;">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; line-height: 0;">
-                    <img src="assets/google-play-badge.svg" alt="Get it on Google Play" style="height: 48px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p>
-    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Apple, the Apple logo, iPhone, iPad, and App Store are trademarks of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
-    <div class="footer-links">
-        <a href="resources/">AI Learning Hub</a>
-        <a href="about.html">About</a>
-        <a href="methodology.html">Methodology</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="mission.html">Mission</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+  <header class="pro-header" id="siteHeader">
+    <div class="pro-container pro-header-row">
+      <a class="pro-brand" href="index.html" aria-label="Vizancia home">Vizancia</a>
+      <button class="pro-menu" id="proMenu" type="button" aria-label="Open menu" aria-controls="proNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="pro-nav" id="proNav" aria-label="Primary navigation">
+        <a href="#product">Product</a>
+        <a href="parents/">For parents</a>
+        <a href="homeschool/">Homeschool</a>
+        <a href="sandbox.html">Sandbox</a>
+        <a href="resources/">Learning Hub</a>
         <a href="support.html">Support</a>
-        <a href="mailto:info@vizancia.ca">Contact</a>
-        <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a class="pro-nav-cta" href="#download">Get the app</a>
+      </nav>
     </div>
-</footer>
+  </header>
 
-<script>
-// ── Nav scroll effect ──
-const nav = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-});
+  <main id="main-content">
+    <section class="home-hero">
+      <div class="pro-container home-hero-grid">
+        <div class="reveal">
+          <p class="pro-kicker">Practical AI literacy</p>
+          <h1 class="home-title">Learn how AI works. <span>Know when to question it.</span></h1>
+          <p class="home-lede">Vizancia turns complex AI ideas into short lessons, interactive games, and repeatable habits for checking answers, protecting private information, and keeping human judgment in charge.</p>
+          <div class="store-row" aria-label="Download Vizancia">
+            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.svg" alt="Download Vizancia on the App Store" width="144" height="48"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.svg" alt="Get Vizancia on Google Play" width="162" height="48"></a>
+          </div>
+          <p class="hero-note">Free to download · No Vizancia account for core lessons · Core progress stays on your device</p>
+        </div>
 
-// ── Mobile menu ──
-const toggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-toggle.addEventListener('click', () => {
-    const open = !toggle.classList.contains('active');
-    toggle.classList.toggle('active', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    document.body.classList.toggle('menu-open', open);
-    if (navigator.vibrate) navigator.vibrate(10);
-});
-navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-        if (navigator.vibrate) navigator.vibrate(10);
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-        document.body.classList.remove('menu-open');
+        <div class="lesson-demo reveal" aria-label="Sample Vizancia lesson preview">
+          <div class="lesson-shell">
+            <div class="lesson-toolbar"><strong>Vizancia lesson preview</strong><span>AI Basics · 4 of 7</span></div>
+            <div class="lesson-progress" aria-hidden="true"><span></span></div>
+            <div class="lesson-content">
+              <span class="lesson-tag">Core idea</span>
+              <h2>Fluent is not the same as factual.</h2>
+              <p>An AI system predicts a likely response from patterns. That response can sound polished even when a detail is missing, outdated, or wrong.</p>
+              <div class="lesson-example">
+                <strong>Try this habit</strong>
+                <p>Ask: “What evidence supports this answer, and what should I verify somewhere else?”</p>
+              </div>
+              <div class="lesson-action"><span>Next: identify a claim that needs checking</span><b>Continue</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pro-container home-proof reveal" aria-label="Current app highlights">
+      <div class="home-proof-grid">
+        <div class="home-proof-item"><strong>96+ short lessons</strong><span>Build understanding one concept at a time</span></div>
+        <div class="home-proof-item"><strong>11 mini-games</strong><span>Practise through active recall and play</span></div>
+        <div class="home-proof-item"><strong>16 learning categories</strong><span>From fundamentals to ethics and safety</span></div>
+        <div class="home-proof-item"><strong>Offline-first core</strong><span>Connected features are identified separately</span></div>
+      </div>
+    </div>
+
+    <section class="home-section" id="features">
+      <div class="pro-container">
+        <div class="home-heading center reveal">
+          <p class="pro-kicker">A better learning loop</p>
+          <h2>Understanding matters more than memorizing buzzwords.</h2>
+          <p>Every part of Vizancia is designed to help learners explain an idea, test their understanding, and decide what needs a reliable source or knowledgeable person.</p>
+        </div>
+        <div class="habit-grid">
+          <article class="habit-card reveal"><span class="habit-index">01</span><h3>Understand the concept</h3><p>Plain-language lessons explain what a system can do, how it works, and where its limits begin.</p></article>
+          <article class="habit-card reveal"><span class="habit-index">02</span><h3>Practise actively</h3><p>Quizzes, games, and examples turn passive reading into retrieval, comparison, and application.</p></article>
+          <article class="habit-card reveal"><span class="habit-index">03</span><h3>Use human judgment</h3><p>Learners practise protecting private information, checking important claims, and knowing when to ask a person.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section white" aria-labelledby="sample-title">
+      <div class="pro-container sample-grid">
+        <div class="sample-copy reveal">
+          <p class="pro-kicker">Try a sample question</p>
+          <h2 id="sample-title">A lesson should change what you do next.</h2>
+          <p>This short example uses the same explain, choose, and reflect pattern that supports stronger AI habits.</p>
+          <div class="sample-points">
+            <div class="sample-point"><span>1</span><div><strong>Notice the risk</strong><p>Find the claim that depends on evidence.</p></div></div>
+            <div class="sample-point"><span>2</span><div><strong>Choose a response</strong><p>Decide whether to trust, check, or stop.</p></div></div>
+            <div class="sample-point"><span>3</span><div><strong>Explain why</strong><p>Feedback connects the answer to a reusable habit.</p></div></div>
+          </div>
+        </div>
+        <div class="quiz-card reveal">
+          <fieldset>
+            <legend>An AI tool provides a confident statistic with no source. What is the strongest next step?</legend>
+            <div class="quiz-options">
+              <button class="quiz-option" type="button" data-answer="incorrect">Use it because the wording sounds certain.</button>
+              <button class="quiz-option" type="button" data-answer="correct">Check the statistic against a reliable, current source.</button>
+              <button class="quiz-option" type="button" data-answer="incorrect">Ask the same tool to repeat the answer more confidently.</button>
+            </div>
+          </fieldset>
+          <div class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite">Choose an answer to see the reasoning.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="product">
+      <div class="pro-container">
+        <div class="home-heading reveal">
+          <p class="pro-kicker">Inside the product</p>
+          <h2>Short sessions with enough variety to keep learning moving.</h2>
+          <p>Use lessons for structured understanding, games for practice, and connected challenges only when you choose them.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal"><p class="pro-kicker">Lessons and quizzes</p><h3>One idea at a time</h3><p>Move from AI fundamentals and training data to generative AI, prompting, bias, security, and social impact.</p></article>
+          <article class="product-card reveal"><p class="pro-kicker">Progress and motivation</p><h3>A clear sense of momentum</h3><p>XP, levels, streaks, achievements, and a progress view make consistent practice visible without requiring a Vizancia account.</p></article>
+          <article class="product-card wide reveal" id="games">
+            <div><p class="pro-kicker">Active practice</p><h3>Eleven different ways to retrieve and apply what you learned.</h3><p>Games vary the task so learners do more than repeat the same multiple-choice pattern.</p></div>
+            <div class="game-list" aria-label="Selected Vizancia games"><span>Speed Round</span><span>Fact or Fiction</span><span>Ethics Court</span><span>Prompt Craft</span><span>Memory Grid</span><span>AI Timeline</span><span>Jargon Match</span><span>Falling Words</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section white" id="curriculum">
+      <div class="pro-container">
+        <div class="home-heading center reveal">
+          <p class="pro-kicker">Curriculum overview</p>
+          <h2>From “What is AI?” to “How should I use it?”</h2>
+          <p>The current curriculum spans 16 categories. These four themes show how the content progresses.</p>
+        </div>
+        <div class="curriculum-grid">
+          <article class="curriculum-card reveal"><small>Foundation</small><h3>How AI works</h3><p>AI basics, machine learning, neural networks, training data, language, and vision.</p></article>
+          <article class="curriculum-card reveal"><small>Application</small><h3>How people use it</h3><p>Prompting, creative work, healthcare, robotics, work, and everyday decisions.</p></article>
+          <article class="curriculum-card reveal"><small>Judgment</small><h3>How to question it</h3><p>Uncertainty, hallucinations, evidence, bias, fairness, and human responsibility.</p></article>
+          <article class="curriculum-card reveal"><small>Safety</small><h3>How to use it carefully</h3><p>Privacy, security, manipulation, social impact, boundaries, and when to involve an adult.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="pro-container">
+        <div class="home-heading reveal"><p class="pro-kicker">Choose your route</p><h2>Built for different learning settings.</h2></div>
+        <div class="audience-grid">
+          <a class="audience-card reveal" href="parents/"><span>Families</span><h3>Help a child build better AI habits</h3><p>Review age-aware learning goals, privacy boundaries, sample questions, and family guidance.</p><b>Explore the parent guide →</b></a>
+          <a class="audience-card reveal" href="homeschool/"><span>Homeschool</span><h3>Add AI literacy to your learning plan</h3><p>See a flexible curriculum, offline activities, assessment ideas, and ready-to-use resources.</p><b>Explore homeschool learning →</b></a>
+          <a class="audience-card reveal" href="sandbox.html"><span>Guided practice</span><h3>Learn by examining AI responses</h3><p>Review the limited-beta Sandbox, its safeguards, and the adult-managed early-access process.</p><b>Review the Sandbox →</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section white" aria-labelledby="privacy-title">
+      <div class="pro-container">
+        <div class="privacy-panel reveal">
+          <div><p class="pro-kicker">A clear privacy boundary</p><h2 id="privacy-title">Offline core. Connected features explained.</h2><p>Vizancia separates local learning from services that need a network connection so families can understand what changes before choosing a feature.</p><p><a class="text-link" href="privacy.html">Read the full Privacy Policy</a></p></div>
+          <div class="privacy-facts">
+            <div class="privacy-fact"><strong>Core learning</strong><span>No Vizancia account; progress such as lessons and achievements is stored locally on the device.</span></div>
+            <div class="privacy-fact"><strong>Connected play</strong><span>Multiplayer, leaderboards, and platform services use the connection and policies identified in our privacy notice.</span></div>
+            <div class="privacy-fact"><strong>AI Sandbox beta</strong><span>Prompts must be processed online. Access is limited, adult-managed, and subject to additional notice and safeguards.</span></div>
+            <div class="privacy-fact"><strong>This website</strong><span>Optional Google Ads measurement remains off unless a visitor accepts it.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="resources">
+      <div class="pro-container">
+        <div class="home-heading reveal"><p class="pro-kicker">AI Learning Hub</p><h2>Practical guidance beyond the app.</h2><p>Source-backed articles and printable activities help families and educators turn AI literacy into everyday conversation and practice.</p></div>
+        <div class="resource-teasers">
+          <a class="resource-teaser reveal" href="resources/ai-literacy-for-parents.html"><small>Parent guide</small><h3>Five conversations that build AI literacy</h3><p>Help a learner question outputs, protect privacy, verify claims, and keep authorship visible.</p><b>Read the guide →</b></a>
+          <a class="resource-teaser reveal" href="resources/ai-safety-for-families.html"><small>Safety and privacy</small><h3>Create a safer family AI routine</h3><p>Match supervision to risk and prepare a clear response for unsafe or upsetting output.</p><b>Read the safety guide →</b></a>
+          <a class="resource-teaser reveal" href="resources/homeschool-ai-lesson-plan.html"><small>Lesson plan</small><h3>Teach AI literacy over four weeks</h3><p>A flexible sequence of discussion, experimentation, verification, and reflection.</p><b>Open the lesson plan →</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section white" id="download">
+      <div class="pro-container">
+        <div class="download-panel reveal">
+          <div><p class="pro-kicker">Start with five minutes</p><h2>Build one useful AI habit today.</h2><p>Vizancia is free to download. Current lessons, games, and duels are included at no cost.</p></div>
+          <div class="store-row" aria-label="Download Vizancia">
+            <a href="https://apps.apple.com/ca/app/vizancia/id6759349861" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.svg" alt="Download Vizancia on the App Store" width="144" height="48"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.vizancia.app" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.svg" alt="Get Vizancia on Google Play" width="162" height="48"></a>
+          </div>
+        </div>
+        <p class="disclosure-note">Store availability, compatibility, ratings, and current features are shown on the relevant store listing. Connected features have separate network and privacy requirements.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pro-footer">
+    <div class="pro-container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="pro-brand" href="index.html">Vizancia</a><p>Practical AI literacy through short lessons, active games, and thoughtful practice.</p></div>
+        <div class="footer-column"><strong>Product</strong><a href="#product">How it works</a><a href="parents/">For parents</a><a href="homeschool/">Homeschool</a><a href="sandbox.html">Sandbox beta</a></div>
+        <div class="footer-column"><strong>Learn</strong><a href="resources/">Learning Hub</a><a href="methodology.html">Methodology</a><a href="about.html">About</a><a href="changelog.html">Changelog</a></div>
+        <div class="footer-column"><strong>Trust &amp; help</strong><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sandbox-safety.html">Sandbox safety</a><a href="accessibility.html">Accessibility</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Vizancia Incorporated. All rights reserved.</p><span>Canadian company · Available on iOS and Android</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menu = document.getElementById('proMenu');
+    const nav = document.getElementById('proNav');
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      nav.classList.toggle('open', open);
     });
-});
-// ── Scroll Reveal ──
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            revealObserver.unobserve(e.target);
-        }
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-label', 'Open menu');
+      nav.classList.remove('open');
+    }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && nav.classList.contains('open')) {
+        menu.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-label', 'Open menu');
+        nav.classList.remove('open');
+        menu.focus();
+      }
     });
-}, { threshold: 0.15 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-</script>
 
+    const feedback = document.getElementById('quizFeedback');
+    document.querySelectorAll('.quiz-option').forEach(option => option.addEventListener('click', () => {
+      document.querySelectorAll('.quiz-option').forEach(button => {
+        button.classList.remove('correct', 'incorrect');
+        button.removeAttribute('aria-pressed');
+      });
+      const correct = option.dataset.answer === 'correct';
+      option.classList.add(correct ? 'correct' : 'incorrect');
+      option.setAttribute('aria-pressed', 'true');
+      feedback.innerHTML = correct
+        ? '<strong>That’s the strongest response.</strong> Confidence is a writing style, not evidence. A reliable and current source is the better check.'
+        : '<strong>Take another look.</strong> Repetition or confident wording does not verify a claim. Find a reliable, current source that can support or correct it.';
+    }));
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.1});
+      document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+    } else {
+      document.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+    }
+  </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
   <script src="../assets/privacy-consent.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
   <title>AI Literacy for Children and Teens | Vizancia for Parents</title>
   <meta name="description" content="Help your child understand AI through short lessons, games, and practical safety habits. No account, no in-app ads, and no app learning data collected.">
   <meta name="robots" content="index,follow">
@@ -13,13 +14,14 @@
   <meta property="og:description" content="Short lessons, active games, and safer AI habits for ages 8–17.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vizancia.com/parents/">
-  <meta property="og:image" content="https://vizancia.com/img-learn.png">
+  <meta property="og:image" content="https://vizancia.com/assets/og-parents.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/privacy-consent.css">
+  <link rel="stylesheet" href="../assets/home.css?v=1">
   <link rel="stylesheet" href="parents.css?v=2">
 </head>
 <body>
@@ -28,7 +30,8 @@
   <header class="site-header">
     <div class="container header-row">
       <a class="brand" href="../index.html">Vizancia</a>
-      <nav class="parent-nav" aria-label="Parents page">
+      <button class="parent-menu" id="parentMenu" type="button" aria-label="Open page sections" aria-controls="parentNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="parent-nav" id="parentNav" aria-label="Parents page">
         <a class="nav-tab active" href="#overview">Overview</a>
         <a class="nav-tab" href="#how-it-works">How it works</a>
         <a class="nav-tab" href="#safety">Safety</a>
@@ -51,12 +54,14 @@
             <a href="https://apps.apple.com/ca/app/vizancia/id6759349861?ct=parents" target="_blank" rel="noopener noreferrer"><img src="../assets/app-store-badge.svg" alt="Download Vizancia on the App Store"></a>
             <a href="https://play.google.com/store/apps/details?id=com.vizancia.app&amp;referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dparents" target="_blank" rel="noopener noreferrer"><img src="../assets/google-play-badge.svg" alt="Get Vizancia on Google Play"></a>
           </div>
-          <p class="hero-note"><strong>Free to download</strong> · No account · No in-app ads · Works offline</p>
+          <p class="hero-note"><strong>Free to download</strong> · No account for core lessons · No in-app ads · Core lessons work offline</p>
         </div>
-        <div class="hero-visual" aria-label="Illustration of a learner exploring artificial intelligence concepts">
-          <div class="visual-card"><img src="../img-learn.png" width="1024" height="1024" alt="Friendly Vizancia character learning AI concepts on a tablet"></div>
-          <div class="floating-note one">App learning data stays on-device</div>
-          <div class="floating-note two">Five-minute learning loop</div>
+        <div class="lesson-demo" aria-label="Sample Vizancia lesson preview">
+          <div class="lesson-shell">
+            <div class="lesson-toolbar"><strong>Parent preview</strong><span>AI Basics · 4 of 7</span></div>
+            <div class="lesson-progress" aria-hidden="true"><span></span></div>
+            <div class="lesson-content"><span class="lesson-tag">Core idea</span><h2>Fluent is not the same as factual.</h2><p>An AI answer can sound polished even when a detail is missing, outdated, or wrong.</p><div class="lesson-example"><strong>Ask together</strong><p>“Which claim in this answer needs a reliable source?”</p></div><div class="lesson-action"><span>Short lesson · active question · reflection</span><b>Five minutes</b></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -65,7 +70,7 @@
       <div class="trust-grid">
         <div class="trust-item"><strong>No account</strong><span>Start without a signup</span></div>
         <div class="trust-item"><strong>No in-app ads</strong><span>Learning stays the focus</span></div>
-        <div class="trust-item"><strong>Works offline</strong><span>Useful away from Wi-Fi</span></div>
+        <div class="trust-item"><strong>Offline-first core</strong><span>Lessons and most games work without Wi-Fi</span></div>
         <div class="trust-item"><strong>Three age modes</strong><span>Child, teen, and adult</span></div>
       </div>
     </div>
@@ -112,7 +117,7 @@
         <div class="safety-panel">
           <div class="section-kicker">Privacy and safety</div>
           <h2>A simpler app privacy model.</h2>
-          <p>The Vizancia mobile app is designed without accounts, in-app advertising, or third-party analytics SDKs. Learning progress stays on the device. Optional measurement on this marketing website is separate and requires a visitor’s consent.</p>
+          <p>The Vizancia core learning experience is designed without a Vizancia account, in-app advertising, or third-party behavioural analytics SDKs. Learning progress stays on the device. Multiplayer, platform services, and the limited-beta AI Sandbox are connected features with separate data flows. Optional measurement on this marketing website is separate and requires a visitor’s consent.</p>
           <div class="safety-grid">
             <div class="safety-item"><strong>No child profile</strong><span>No name, email, or account is required in the app.</span></div>
             <div class="safety-item"><strong>No in-app advertising</strong><span>No behavioural ad feed or “buy more” interruptions.</span></div>
@@ -121,7 +126,7 @@
             <div class="safety-item"><strong>Offline-first</strong><span>Core learning does not depend on a constant connection.</span></div>
             <div class="safety-item"><strong>Transparent policy</strong><span>The app and website practices are explained separately.</span></div>
           </div>
-          <a class="privacy-proof" href="../privacy.html">Read the full Privacy Policy</a>
+          <a class="privacy-proof" href="../privacy.html">Read the full Privacy Policy</a> <a class="privacy-proof" href="../sandbox-safety.html">Review Sandbox safety</a>
         </div>
       </div>
     </section>
@@ -168,7 +173,7 @@
 
     <section class="section alt">
       <div class="container narrow">
-        <div class="about-note"><div class="about-mark">V</div><div><h3>Built in Canada around one simple idea</h3><p>Children should understand how AI works before they are asked to trust it. Vizancia combines clear explanations, active practice, and privacy-conscious product choices. <a href="../methodology.html">Read the educational methodology</a>.</p></div></div>
+        <div class="about-note"><div class="about-mark">V</div><div><h3>Created by a Canadian company around one simple idea</h3><p>Children should understand how AI works before they are asked to trust it. Vizancia combines clear explanations, active practice, and privacy-conscious product choices. <a href="../methodology.html">Read the educational methodology</a>.</p></div></div>
       </div>
     </section>
 
@@ -179,6 +184,7 @@
           <details><summary>Are there purchases or advertisements in the app?</summary><p>The current app is free to download, has no in-app advertisements, and does not currently offer purchases. If that changes, pricing and terms would be disclosed before purchase and the website policies would be updated.</p></details>
           <details><summary>Will it ask for my child’s name or email?</summary><p>No account, name, or email is required to use the app. Learning progress is stored locally on the device.</p></details>
           <details><summary>Can my child talk to strangers?</summary><p>No. The learning experience does not include open chat or a public social feed. Optional Apple Game Center features are operated by Apple under Apple’s own terms and privacy practices.</p></details>
+          <details><summary>Can my child use the AI Sandbox independently?</summary><p>The Sandbox is an adult-managed limited beta and is not authorized for independent use by a child under 13. Prompts are processed online, so a parent, legal guardian, or educator must review the privacy notice, supervise minor use, and complete any required consent process.</p></details>
           <details><summary>Does Vizancia replace school instruction?</summary><p>No. Vizancia is a supplementary AI-literacy product. Families should still follow school policies and involve a teacher or qualified professional for important decisions.</p></details>
           <details><summary>How do I know the claims on this page are current?</summary><p>We link to the current app-store listings and maintain an editorial policy and changelog. We do not publish invented reviews, ratings, or credentials.</p></details>
         </div>
@@ -199,7 +205,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-links"><a href="../index.html">Home</a><a href="../resources/">AI Learning Hub</a><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../accessibility.html">Accessibility</a><a href="mailto:info@vizancia.ca">Contact</a></div>
+      <div class="footer-links"><a href="../index.html">Home</a><a href="../homeschool/">Homeschool</a><a href="../resources/">AI Learning Hub</a><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../sandbox-safety.html">Sandbox safety</a><a href="../accessibility.html">Accessibility</a><a href="mailto:info@vizancia.ca">Contact</a></div>
       <p>&copy; 2026 Vizancia Incorporated. The mobile app and marketing website have different measurement practices; see the Privacy Policy for details.</p>
     </div>
   </footer>

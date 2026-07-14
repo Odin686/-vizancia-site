@@ -1,6 +1,32 @@
 (function(){
   'use strict';
 
+  var parentMenu=document.getElementById('parentMenu');
+  var parentNav=document.getElementById('parentNav');
+  if(parentMenu&&parentNav){
+    parentMenu.addEventListener('click',function(){
+      var open=parentMenu.getAttribute('aria-expanded')!=='true';
+      parentMenu.setAttribute('aria-expanded',String(open));
+      parentMenu.setAttribute('aria-label',open?'Close page sections':'Open page sections');
+      parentNav.classList.toggle('open',open);
+    });
+    parentNav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click',function(){
+        parentMenu.setAttribute('aria-expanded','false');
+        parentMenu.setAttribute('aria-label','Open page sections');
+        parentNav.classList.remove('open');
+      });
+    });
+    document.addEventListener('keydown',function(event){
+      if(event.key==='Escape'&&parentNav.classList.contains('open')){
+        parentMenu.setAttribute('aria-expanded','false');
+        parentMenu.setAttribute('aria-label','Open page sections');
+        parentNav.classList.remove('open');
+        parentMenu.focus();
+      }
+    });
+  }
+
   document.querySelectorAll('[data-quiz]').forEach(function(quiz){
     var feedback=quiz.querySelector('[data-feedback]');
     quiz.querySelectorAll('.quiz-option').forEach(function(option){

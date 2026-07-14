@@ -37,6 +37,12 @@
 .lesson-demo::after { content: ""; position: absolute; z-index: -1; border-radius: 24px; }
 .lesson-demo::before { inset: 34px -18px -18px 42px; background: #dfe9f8; transform: rotate(3deg); }
 .lesson-demo::after { width: 112px; height: 112px; top: -34px; right: -30px; background: #dff8f3; border: 1px solid #c0eee3; }
+.illustration-demo { padding: 14px; }
+.illustration-demo > img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 21px; }
+.illustration-badge { position: absolute; right: 28px; bottom: 28px; max-width: calc(100% - 56px); padding: 12px 15px; border: 1px solid rgba(255,255,255,.9); border-radius: 14px; background: rgba(255,255,255,.92); box-shadow: 0 12px 30px rgba(16,33,63,.15); backdrop-filter: blur(12px); }
+.illustration-badge strong, .illustration-badge span { display: block; }
+.illustration-badge strong { color: var(--pro-ink); font: 800 .82rem "Plus Jakarta Sans", sans-serif; }
+.illustration-badge span { margin-top: 2px; color: var(--pro-muted); font-size: .74rem; font-weight: 800; }
 .lesson-shell { overflow: hidden; border: 1px solid #dfe6ef; border-radius: 21px; background: #fff; }
 .lesson-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 17px; border-bottom: 1px solid var(--pro-line); background: #fbfcfe; }
 .lesson-toolbar strong { color: var(--pro-ink); font: 800 .76rem "Plus Jakarta Sans", sans-serif; }
@@ -92,13 +98,37 @@
 .quiz-feedback { min-height: 82px; margin-top: 17px; padding: 17px 18px; border-radius: 14px; background: var(--pro-soft); color: var(--pro-body); font-size: .9rem; }
 .quiz-feedback strong { color: var(--pro-ink); }
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-.product-card { padding: 31px; border: 1px solid var(--pro-line); border-radius: 25px; background: #fff; }
+.product-card { overflow: hidden; padding: 31px; border: 1px solid var(--pro-line); border-radius: 25px; background: #fff; }
+.product-card-visual { padding: 0; }
+.product-card-image { display: block; width: 100%; aspect-ratio: 16 / 10; border-bottom: 1px solid var(--pro-line); background: linear-gradient(145deg, #fff, #f1f6fc); object-fit: contain; }
+.product-card-copy { padding: 29px 31px 32px; }
 .product-card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: .78fr 1.22fr; gap: 45px; align-items: center; background: var(--pro-navy); color: #c9d5e7; }
 .product-card h3 { margin: 0 0 10px; font-size: 1.28rem; }
 .product-card p { margin: 0; }
 .product-card.wide h3 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.25rem); }
-.game-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.game-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 24px; }
 .game-list span { padding: 11px 13px; border: 1px solid rgba(255,255,255,.13); border-radius: 11px; background: rgba(255,255,255,.06); color: #eef5ff; font-size: .78rem; font-weight: 800; }
+.game-showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.game-showcase figure { overflow: hidden; margin: 0; border: 1px solid rgba(255,255,255,.14); border-radius: 18px; background: rgba(255,255,255,.07); }
+.game-showcase img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.game-showcase figcaption { padding: 11px 13px; color: #eef5ff; font: 800 .76rem "Plus Jakarta Sans", sans-serif; }
+.campus-showcase { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr); overflow: hidden; border: 1px solid var(--pro-line); border-radius: 28px; background: #fff; box-shadow: var(--pro-shadow); }
+.campus-showcase figure { min-height: 520px; margin: 0; background: linear-gradient(145deg, #fff, #f0f6ff); }
+.campus-showcase img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.campus-copy { align-self: center; padding: 48px; }
+.campus-copy h3 { margin: 0; color: var(--pro-ink); font-size: clamp(1.75rem, 3vw, 2.55rem); line-height: 1.12; letter-spacing: -.045em; }
+.campus-copy > p:not(.pro-kicker) { margin: 17px 0 0; }
+.campus-features { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 27px; }
+.campus-features span { padding: 9px 12px; border: 1px solid #d8e3f3; border-radius: 10px; background: #f5f8fe; color: var(--pro-blue-dark); font: 800 .74rem "Plus Jakarta Sans", sans-serif; }
+.gameplay-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+.gameplay-card { overflow: hidden; border: 1px solid var(--pro-line); border-radius: 22px; background: #fff; box-shadow: var(--pro-shadow-sm); transition: transform .2s, box-shadow .2s; }
+.gameplay-card:hover { transform: translateY(-4px); box-shadow: var(--pro-shadow); }
+.gameplay-card > img { display: block; width: 100%; aspect-ratio: 1; border-bottom: 1px solid var(--pro-line); object-fit: cover; }
+.gameplay-card > div { padding: 22px; }
+.gameplay-card small { color: var(--pro-blue); font: 800 .65rem "Plus Jakarta Sans", sans-serif; letter-spacing: .09em; text-transform: uppercase; }
+.gameplay-card h3 { margin: 10px 0 7px; color: var(--pro-ink); font-size: 1.12rem; }
+.gameplay-card p { margin: 0; color: #65738a; font-size: .84rem; line-height: 1.6; }
+.gameplay-note { max-width: 760px; margin: 20px auto 0; color: #65738a; font-size: .76rem; text-align: center; }
 .curriculum-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
 .curriculum-card { padding: 24px; border: 1px solid var(--pro-line); border-radius: 20px; background: #fff; }
 .curriculum-card small { color: var(--pro-blue); font: 800 .67rem "Plus Jakarta Sans", sans-serif; letter-spacing: .09em; text-transform: uppercase; }
@@ -140,6 +170,10 @@
   .home-proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--pro-line); }
   .sample-copy { position: static; }
   .download-panel .store-row { justify-content: flex-start; }
+  .campus-showcase { grid-template-columns: 1fr; }
+  .campus-showcase figure { min-height: 0; }
+  .campus-showcase img { aspect-ratio: 16 / 11; object-fit: contain; }
+  .gameplay-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
   .home-hero { padding: 58px 0 54px; }
@@ -151,9 +185,11 @@
   .habit-card { min-height: 230px; }
   .habit-index { margin-bottom: 36px; }
   .quiz-card, .privacy-panel, .download-panel { padding: 28px; }
+  .product-card-copy { padding: 25px; }
+  .campus-copy { padding: 32px; }
 }
 @media (max-width: 520px) {
-  .home-proof-grid, .curriculum-grid, .game-list { grid-template-columns: 1fr; }
+  .home-proof-grid, .curriculum-grid, .game-list, .gameplay-gallery { grid-template-columns: 1fr; }
   .home-proof-item { border-right: 0; border-bottom: 1px solid var(--pro-line); }
   .home-proof-item:last-child { border-bottom: 0; }
   .store-row { align-items: stretch; }

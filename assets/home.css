@@ -156,6 +156,28 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 .campus-copy > p:not(.pro-kicker) { margin: 17px 0 0; }
 .campus-features { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 27px; }
 .campus-features span { padding: 9px 12px; border: 1px solid #d8e3f3; border-radius: 10px; background: #f5f8fe; color: var(--pro-blue-dark); font: 800 .74rem "Plus Jakarta Sans", sans-serif; }
+.campus-entry {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  gap: 56px;
+  align-items: center;
+  padding: 50px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(8, 145, 178, .2), transparent 34%),
+    linear-gradient(140deg, #15254a, var(--pro-navy));
+  color: #c8d3e6;
+  box-shadow: 0 26px 64px rgba(16, 33, 63, .2);
+}
+.campus-entry-copy .pro-kicker { color: #72d9e8; }
+.campus-entry-copy h2 { margin: 0; color: #fff; font-size: clamp(2.2rem, 4.2vw, 3.65rem); line-height: 1.05; letter-spacing: -.055em; }
+.campus-entry-copy > p:not(.pro-kicker) { margin: 18px 0 0; }
+.campus-entry-copy .pro-button { margin-top: 27px; }
+.campus-route-grid { display: grid; gap: 11px; }
+.campus-route-grid > div { display: grid; grid-template-columns: 46px 1fr; gap: 3px 14px; padding: 17px; border: 1px solid rgba(255,255,255,.13); border-radius: 15px; background: rgba(255,255,255,.07); }
+.campus-route-grid span { grid-row: 1 / 3; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 13px; background: rgba(114,217,232,.13); color: #89e7f2; font: 800 .73rem "Plus Jakarta Sans", sans-serif; }
+.campus-route-grid strong { color: #fff; font: 800 .91rem "Plus Jakarta Sans", sans-serif; }
+.campus-route-grid p { margin: 0; color: #bdc9dc; font-size: .8rem; line-height: 1.5; }
 .gameplay-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
 .gameplay-card { overflow: hidden; border: 1px solid var(--pro-line); border-radius: 22px; background: #fff; box-shadow: var(--pro-shadow-sm); transition: transform .2s, box-shadow .2s; }
 .gameplay-card:hover { transform: translateY(-4px); box-shadow: var(--pro-shadow); }
@@ -200,7 +222,7 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 .download-panel .store-row { justify-content: flex-end; margin-top: 0; }
 .disclosure-note { max-width: 760px; margin: 22px auto 0; color: #65738a; font-size: .78rem; text-align: center; }
 @media (max-width: 980px) {
-  .home-hero-grid, .sample-grid, .privacy-panel, .download-panel { grid-template-columns: 1fr; }
+  .home-hero-grid, .sample-grid, .privacy-panel, .download-panel, .campus-entry { grid-template-columns: 1fr; }
   .home-hero-grid { gap: 52px; }
   .lesson-demo { max-width: 620px; }
   .home-proof-grid, .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
@@ -221,7 +243,7 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
   .product-card.wide { grid-column: auto; grid-template-columns: 1fr; gap: 27px; }
   .habit-card { min-height: 230px; }
   .habit-index { margin-bottom: 36px; }
-  .quiz-card, .privacy-panel, .download-panel { padding: 28px; }
+  .quiz-card, .privacy-panel, .download-panel, .campus-entry { padding: 28px; }
   .product-card-copy { padding: 25px; }
   .campus-copy { padding: 32px; }
 }

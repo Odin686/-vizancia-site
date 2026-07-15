@@ -27,7 +27,7 @@ h1,h2,h3,.brand,.button,.section-kicker,.nav-tab,.trust-pill,.age-tab{font-famil
 .site-header{position:sticky;top:4px;z-index:100;background:rgba(248,250,252,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(223,230,239,.9)}
 .header-row{position:relative;min-height:70px;display:flex;align-items:center;gap:28px}
 .brand{flex:none;display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:800;font-size:1.35rem;line-height:1;letter-spacing:-.03em;color:var(--blue)}
-.brand::before{content:"";flex:0 0 38px;width:38px;height:38px;background:url('../assets/vizancia-mark.svg') center/contain no-repeat}
+.brand::before{content:"";flex:0 0 38px;width:38px;height:38px;background:url('../assets/vizancia-mark.svg?v=2') center/contain no-repeat}
 .parent-nav{display:flex;align-items:center;gap:4px;margin-left:auto;min-width:0}
 .nav-tab{text-decoration:none;font-size:.82rem;font-weight:700;color:var(--body);padding:9px 12px;border-radius:10px;transition:.2s ease}
 .nav-tab:hover,.nav-tab.active{color:var(--blue-dark);background:var(--lavender)}

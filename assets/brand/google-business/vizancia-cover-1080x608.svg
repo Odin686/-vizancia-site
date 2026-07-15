@@ -26,7 +26,7 @@
   <g transform="translate(64 476)">
     <rect width="177" height="47" rx="23.5" fill="#FFFFFF" fill-opacity=".1" stroke="#FFFFFF" stroke-opacity=".16"/>
     <circle cx="25" cy="23.5" r="6" fill="#67E8F9"/>
-    <text x="42" y="31" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="19" font-weight="700">Ages 8 to adult</text>
+    <text x="42" y="31" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="19" font-weight="700">Ages 8 and up</text>
   </g>
 
   <g filter="url(#shadow)">

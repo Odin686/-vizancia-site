@@ -6,8 +6,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const chrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const brandDirectory = join(root, 'assets', 'brand', 'google-business');
+const markPng = join(root, 'assets', 'vizancia-mark-720.png');
 const assets = [
-  { source: join(root, 'assets', 'vizancia-mark.svg'), output: join(root, 'assets', 'vizancia-mark-720.png'), width: 720, height: 720 },
+  { source: join(root, 'assets', 'vizancia-mark.svg'), output: markPng, width: 720, height: 720 },
   { source: join(root, 'assets', 'vizancia-mark.svg'), output: join(brandDirectory, 'vizancia-logo-720.png'), width: 720, height: 720 },
   { source: join(root, 'assets', 'vizancia-logo-horizontal.svg'), output: join(root, 'assets', 'vizancia-logo-horizontal-1200.png'), width: 1200, height: 360 },
   { source: join(brandDirectory, 'vizancia-cover-1080x608.svg'), output: join(brandDirectory, 'vizancia-cover-1080x608.png'), width: 1080, height: 608 },
@@ -33,3 +34,8 @@ for (const asset of assets) {
   if (result.status !== 0) throw new Error('Failed to render ' + asset.source + ': ' + (result.stderr || result.stdout));
   console.log('Rendered ' + asset.output.replace(root + '/', ''));
 }
+
+const appleTouchIcon = join(root, 'assets', 'apple-touch-icon.png');
+const resize = spawnSync('sips', ['-z', '180', '180', markPng, '--out', appleTouchIcon], { encoding: 'utf8' });
+if (resize.status !== 0) throw new Error('Failed to render Apple touch icon: ' + (resize.stderr || resize.stdout));
+console.log('Rendered ' + appleTouchIcon.replace(root + '/', ''));

@@ -15,7 +15,7 @@ body.campus-page::before {
 .campus-hero {
   position: relative;
   overflow: hidden;
-  padding: 76px 0 98px;
+  padding: 64px 0 82px;
   background:
     linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
@@ -73,11 +73,11 @@ body.campus-page::before {
   align-items: center;
   justify-content: center;
   padding: 13px 23px 11px;
-  border: 2px solid #7b6bf1;
-  border-bottom: 5px solid var(--campus-purple-dark);
+  border: 2px solid #fff;
+  border-bottom: 5px solid #a9b9d6;
   border-radius: 15px;
-  background: var(--campus-purple);
-  color: #fff;
+  background: #fff;
+  color: var(--campus-navy);
   font: 900 .88rem "Nunito", sans-serif;
   letter-spacing: .02em;
   text-decoration: none;
@@ -85,17 +85,23 @@ body.campus-page::before {
   transition: transform .14s, border-bottom-width .14s, background .14s;
 }
 
+.pro-page .campus-button { color: var(--campus-navy); }
 .campus-button:hover {
   transform: translateY(2px);
   border-bottom-width: 3px;
-  background: #7767ee;
+  background: #edfaff;
 }
 
 .campus-button.secondary {
-  border-color: rgba(255,255,255,.24);
-  border-bottom-color: rgba(0,0,0,.32);
-  background: rgba(255,255,255,.1);
+  border-color: #3ed0e0;
+  border-bottom-color: #087e91;
+  background: var(--campus-cyan);
 }
+.pro-page .campus-button.secondary { color: var(--campus-navy); }
+.campus-button.secondary:hover { background: #24c5d8; }
+.campus-button.solid { border-color: #28477e; border-bottom-color: #071326; background: var(--campus-navy); }
+.pro-page .campus-button.solid { color: #fff; }
+.campus-button.solid:hover { background: #18335f; }
 
 .campus-release-note {
   max-width: 620px;
@@ -108,7 +114,7 @@ body.campus-page::before {
 
 .campus-hero-screen {
   position: relative;
-  max-width: 380px;
+  max-width: 320px;
   justify-self: end;
   margin: 0;
   padding: 10px;
@@ -150,7 +156,7 @@ body.campus-page::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
-  margin-top: -33px;
+  margin-top: -28px;
   border: 1px solid #d9e0ec;
   border-radius: 19px;
   background: #fff;
@@ -166,8 +172,8 @@ body.campus-page::before {
 .campus-proof strong { display: block; color: var(--pro-ink); font: 900 .9rem "Nunito", sans-serif; }
 .campus-proof span { display: block; margin-top: 4px; color: #68748a; font-size: .78rem; line-height: 1.45; }
 
-.campus-section { padding: 96px 0; }
-.campus-heading { max-width: 780px; margin-bottom: 42px; }
+.campus-section { padding: 80px 0; }
+.campus-heading { max-width: 780px; margin-bottom: 36px; }
 .campus-heading.center { margin-inline: auto; text-align: center; }
 .campus-heading h2,
 .campus-world-copy h2,
@@ -184,7 +190,7 @@ body.campus-page::before {
 
 .campus-step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .campus-step {
-  min-height: 285px;
+  min-height: 245px;
   padding: 29px;
   border: 2px solid #e5e7ee;
   border-bottom-width: 6px;
@@ -199,7 +205,7 @@ body.campus-page::before {
   width: 45px;
   height: 45px;
   place-items: center;
-  margin-bottom: 51px;
+  margin-bottom: 36px;
   border-radius: 13px;
   background: #eeeafe;
   color: var(--campus-purple-dark);
@@ -211,8 +217,8 @@ body.campus-page::before {
 .campus-step p { margin: 0; font-size: .92rem; }
 
 .campus-world-section { background: var(--campus-navy); color: #cdd4e8; }
-.campus-world-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(340px, .88fr); gap: 66px; align-items: center; }
-.campus-world-image { margin: 0; padding: 11px; border: 1px solid rgba(255,255,255,.15); border-radius: 27px; background: rgba(255,255,255,.08); box-shadow: 0 25px 70px rgba(0,0,0,.25); }
+.campus-world-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr); gap: 54px; align-items: center; }
+.campus-world-image { width: min(100%, 590px); margin: 0; padding: 11px; border: 1px solid rgba(255,255,255,.15); border-radius: 27px; background: rgba(255,255,255,.08); box-shadow: 0 25px 70px rgba(0,0,0,.25); }
 .campus-world-image img { display: block; width: 100%; border-radius: 19px; }
 .campus-world-copy h2 { color: #fff; }
 .campus-world-copy > p:not(.pro-kicker) { margin: 19px 0 0; }
@@ -225,8 +231,8 @@ body.campus-page::before {
 .campus-screen-rail {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(270px, 315px);
-  gap: 18px;
+  grid-auto-columns: minmax(235px, 278px);
+  gap: 16px;
   overflow-x: auto;
   padding: 5px 6px 27px;
   scroll-snap-type: x mandatory;
@@ -248,10 +254,14 @@ body.campus-page::before {
 .campus-screen-card:nth-child(3n+2) { border-bottom-color: var(--campus-purple); }
 .campus-screen-card:nth-child(3n) { border-bottom-color: var(--campus-coral); }
 .campus-screen-card img { display: block; width: 100%; height: auto; }
-.campus-screen-card figcaption { padding: 18px 19px 20px; }
+.campus-screen-card figcaption { padding: 15px 17px 17px; }
 .campus-screen-card strong { display: block; color: var(--pro-ink); font: 900 .96rem "Nunito", sans-serif; }
 .campus-screen-card span { display: block; margin-top: 3px; color: #68748a; font-size: .78rem; line-height: 1.5; }
 .campus-scroll-hint { margin: 12px 4px 0; color: #6c778c; font-size: .78rem; font-weight: 800; text-align: right; }
+.campus-screen-cta { display: flex; align-items: center; justify-content: space-between; gap: 26px; margin-top: 30px; padding: 23px 25px; border: 1px solid #dbe3ef; border-radius: 19px; background: #f5f7ff; }
+.campus-screen-cta strong { display: block; color: var(--pro-ink); font: 900 .98rem "Nunito", sans-serif; }
+.campus-screen-cta span { display: block; margin-top: 3px; color: #66748a; font-size: .82rem; line-height: 1.5; }
+.campus-screen-cta .campus-button { flex: 0 0 auto; }
 
 .campus-principles-section { border-block: 1px solid #e1e6ee; background: #fff; }
 .campus-principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
@@ -268,7 +278,7 @@ body.campus-page::before {
 .campus-faq summary { padding: 19px 21px; color: var(--pro-ink); cursor: pointer; font: 900 .92rem "Nunito", sans-serif; }
 .campus-faq details p { margin: 0; padding: 0 21px 21px; font-size: .9rem; }
 
-.campus-download { padding: 0 0 96px; }
+.campus-download { padding: 0 0 80px; }
 .campus-download-panel {
   display: grid;
   grid-template-columns: 1.08fr .92fr;
@@ -307,19 +317,22 @@ body.campus-page::before {
   .campus-faq-intro { position: static; }
   .campus-store-row { justify-content: flex-start; }
   .campus-heading-wide { gap: 0; }
+  .campus-screen-cta { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 620px) {
-  .campus-hero { padding: 58px 0 80px; }
+  .campus-hero { padding: 52px 0 72px; }
   .campus-hero-copy h1 { font-size: clamp(2.8rem, 15vw, 4.4rem); }
   .campus-proof { grid-template-columns: 1fr; margin-top: -24px; }
   .campus-proof div { border-right: 0; border-bottom: 1px solid #e2e7ef; }
   .campus-proof div:last-child { border-bottom: 0; }
-  .campus-section { padding: 72px 0; }
+  .campus-section { padding: 64px 0; }
   .campus-principles { grid-template-columns: 1fr; }
-  .campus-screen-rail { grid-auto-columns: minmax(250px, 84vw); }
-  .campus-download { padding-bottom: 72px; }
+  .campus-screen-rail { grid-auto-columns: minmax(230px, 78vw); }
+  .campus-download { padding-bottom: 64px; }
   .campus-download-panel { padding: 31px; }
+  .campus-screen-cta { padding: 21px; }
+  .campus-screen-cta .campus-button { width: 100%; }
   .campus-store-row { align-items: flex-start; flex-direction: column; }
   .campus-store-row img { max-width: 100%; }
 }

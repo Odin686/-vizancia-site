@@ -30,6 +30,10 @@ const previews = [
   { name: 'resources-mobile-menu', path: '/resources/', width: 390, height: 844, mobile: true, click: '#menuToggle' },
   { name: 'sandbox-desktop', path: '/sandbox.html', width: 1440, height: 1000, mobile: false },
   { name: 'support-desktop', path: '/support.html', width: 1440, height: 1000, mobile: false },
+  { name: 'privacy-mobile', path: '/privacy.html', width: 390, height: 844, mobile: true, rejectConsent: true },
+  { name: 'privacy-desktop', path: '/privacy.html', width: 1440, height: 1000, mobile: false, rejectConsent: true },
+  { name: 'terms-mobile', path: '/terms.html', width: 390, height: 844, mobile: true, rejectConsent: true },
+  { name: 'terms-desktop', path: '/terms.html', width: 1440, height: 1000, mobile: false, rejectConsent: true },
 ];
 
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));

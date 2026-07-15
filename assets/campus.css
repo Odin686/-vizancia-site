@@ -114,7 +114,7 @@ body.campus-page::before {
 
 .campus-hero-screen {
   position: relative;
-  max-width: 320px;
+  max-width: 300px;
   justify-self: end;
   margin: 0;
   padding: 10px;
@@ -135,10 +135,21 @@ body.campus-page::before {
   transform: rotate(3deg);
 }
 
+.campus-hero-shot {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  border-radius: 22px;
+  background: #121632;
+}
+
 .campus-hero-screen img {
   display: block;
   width: 100%;
-  border-radius: 22px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: inherit;
 }
 
 .campus-hero-screen figcaption,

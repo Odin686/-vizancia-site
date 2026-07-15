@@ -34,11 +34,12 @@ body.learn-page::before { background: linear-gradient(90deg, var(--learn-blue), 
 .pro-page .learn-button.secondary { color: var(--learn-navy); }
 .learn-button.secondary:hover { background: #10a4be; }
 
-.learn-hero-visual { position: relative; min-height: 670px; margin: 0; }
-.learn-hero-device { position: absolute; top: 0; right: 18px; width: min(330px, 78%); padding: 9px; border: 1px solid rgba(255,255,255,.2); border-radius: 29px; background: rgba(255,255,255,.1); box-shadow: 0 34px 85px rgba(0,0,0,.36); transform: rotate(1.3deg); }
+.learn-hero-visual { position: relative; min-height: 600px; margin: 0; }
+.learn-hero-device { position: absolute; top: 0; right: 18px; width: min(310px, 78%); padding: 9px; border: 1px solid rgba(255,255,255,.2); border-radius: 29px; background: rgba(255,255,255,.1); box-shadow: 0 34px 85px rgba(0,0,0,.36); transform: rotate(1.3deg); }
 .learn-hero-device::before { content: ""; position: absolute; inset: 28px -18px -17px 32px; z-index: -1; border-radius: 26px; background: #213c73; transform: rotate(2.7deg); }
-.learn-hero-device img { display: block; width: 100%; border-radius: 20px; }
-.learn-hero-guides { position: absolute; z-index: 2; bottom: 28px; left: -35px; width: min(420px, 92%); height: auto; }
+.learn-hero-shot { position: relative; overflow: hidden; aspect-ratio: 9 / 16; border-radius: 20px; background: #121632; }
+.learn-hero-device img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; border-radius: inherit; }
+.learn-hero-guides { position: absolute; z-index: 2; bottom: 20px; left: -35px; width: min(420px, 92%); height: auto; }
 .learn-hero-visual figcaption { position: absolute; right: 4px; bottom: 0; color: #aebbd2; font-size: .69rem; font-weight: 800; }
 
 .learn-proof { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; margin-top: -33px; border: 1px solid #d9e2ef; border-radius: 19px; background: #fff; box-shadow: var(--pro-shadow); }
@@ -140,9 +141,9 @@ body.learn-page::before { background: linear-gradient(90deg, var(--learn-blue), 
 @media (max-width: 620px) {
   .learn-hero { padding: 58px 0 80px; }
   .learn-hero-copy h1 { font-size: clamp(2.85rem, 15vw, 4.5rem); }
-  .learn-hero-visual { min-height: 580px; }
-  .learn-hero-device { right: 10px; width: min(300px, 79%); }
-  .learn-hero-guides { bottom: 28px; left: -12px; width: min(360px, 94%); }
+  .learn-hero-visual { min-height: 550px; }
+  .learn-hero-device { right: 10px; width: min(290px, 79%); }
+  .learn-hero-guides { bottom: 20px; left: -12px; width: min(360px, 94%); }
   .learn-proof { grid-template-columns: 1fr; margin-top: -24px; }
   .learn-proof div { border-right: 0; border-bottom: 1px solid var(--pro-line); }
   .learn-proof div:last-child { border-bottom: 0; }

@@ -230,7 +230,7 @@ body.campus-page::before {
 .campus-world-section { background: var(--campus-navy); color: #cdd4e8; }
 .campus-world-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr); gap: 54px; align-items: center; }
 .campus-world-image { width: min(100%, 590px); margin: 0; padding: 11px; border: 1px solid rgba(255,255,255,.15); border-radius: 27px; background: rgba(255,255,255,.08); box-shadow: 0 25px 70px rgba(0,0,0,.25); }
-.campus-world-image img { display: block; width: 100%; border-radius: 19px; }
+.campus-world-image img { display: block; width: 100%; height: auto; border-radius: 19px; }
 .campus-world-copy h2 { color: #fff; }
 .campus-world-copy > p:not(.pro-kicker) { margin: 19px 0 0; }
 .campus-world-copy .pro-kicker { color: #74e0eb; }

@@ -51,7 +51,7 @@ body.learn-page::before { background: linear-gradient(90deg, var(--learn-blue), 
 .learn-section { padding: 96px 0; }
 .learn-path-layout { display: grid; grid-template-columns: minmax(360px, .82fr) minmax(0, 1.18fr); gap: 70px; align-items: center; }
 .learn-tablet-screen { margin: 0; padding: 11px; border: 1px solid #d8e2f0; border-radius: 27px; background: #fff; box-shadow: var(--pro-shadow); }
-.learn-tablet-screen img { display: block; width: 100%; border-radius: 19px; }
+.learn-tablet-screen img { display: block; width: 100%; height: auto; border-radius: 19px; }
 .learn-tablet-screen figcaption { padding: 10px 8px 2px; color: #66758d; font-size: .72rem; font-weight: 800; text-align: center; }
 .learn-path-copy h2,
 .learn-heading h2,

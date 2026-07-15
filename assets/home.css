@@ -193,6 +193,7 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 .learn-path-steps li:nth-child(3) span { border-color: var(--pro-mint); background: var(--pro-teal); box-shadow: 0 7px 0 #bce7dc; }
 .learn-path-steps strong { display: block; color: var(--pro-ink); font: 800 .95rem "Plus Jakarta Sans", sans-serif; }
 .learn-path-steps p { margin: 4px 0 0; color: #66748a; font-size: .83rem; line-height: 1.55; }
+.learn-path-copy > .pro-button { align-self: flex-start; margin-top: 28px; }
 .learn-guides { display: block; width: min(100%, 510px); height: auto; margin: auto 0 -10px; padding-top: 30px; }
 .learn-path-screens { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(115px, .45fr); gap: 16px; align-items: end; overflow: hidden; min-height: 590px; padding: 28px 28px 54px; border-radius: 24px; background: #182044; }
 .learn-path-screens::before { content: ""; position: absolute; width: 250px; height: 250px; right: -95px; top: -115px; border: 1px solid rgba(122, 215, 229, .3); border-radius: 50%; }

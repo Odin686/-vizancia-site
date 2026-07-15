@@ -4,7 +4,7 @@ This is a dependency-free static website for Vizancia. It can be hosted from the
 
 ## Structure
 
-- `index.html`, `parents/`, and `homeschool/` are the current marketing landing pages. The parent experience keeps its layout and interactions in `parents/parents.css` and `parents/parents.js`.
+- `index.html`, `campus.html`, `learn.html`, `parents/`, and `homeschool/` are the current marketing landing pages. The Campus and Learn & Train experiences use `assets/campus.css` and `assets/learn.css`; the parent experience keeps its layout and interactions in `parents/parents.css` and `parents/parents.js`.
 - `resources/` is the AI Learning Hub. Pages share `resources/resources.css` and `resources/resources.js`, and research articles link to their primary sources.
 - `about.html`, `methodology.html`, `editorial-policy.html`, `accessibility.html`, and `changelog.html` are technical trust pages.
 - `assets/privacy-consent.js` and `assets/privacy-consent.css` are the shared website consent implementation. Google Ads measurement must remain behind the consent flow.

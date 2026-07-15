@@ -114,8 +114,13 @@ nav.scrolled {
     position:relative; display:flex; justify-content:space-between; align-items:center;
 }
 .logo {
-    font-size: 1.7rem; font-weight: 900; letter-spacing: -0.5px;
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    font-size: 1.7rem; font-weight: 900; line-height: 1; letter-spacing: -0.5px;
     color: var(--primary);
+}
+.logo::before {
+    content: ""; flex: 0 0 38px; width: 38px; height: 38px;
+    background: url('assets/vizancia-mark.svg') center / contain no-repeat;
 }
 .nav-links { display:flex; gap:32px; align-items:center; }
 .nav-links a {
@@ -640,6 +645,8 @@ body.menu-open .nav-links .nav-cta:active {
     transform: none !important;
 }
 @media (max-width: 480px) {
+    .logo { font-size: 1.35rem; }
+    .logo::before { flex-basis: 34px; width: 34px; height: 34px; }
     .paths-grid { grid-template-columns: 1fr; }
     .hero h1 { letter-spacing: -1px; }
     .hero-stats { flex-wrap: wrap; gap: 16px; }

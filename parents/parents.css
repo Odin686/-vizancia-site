@@ -26,7 +26,8 @@ h1,h2,h3,.brand,.button,.section-kicker,.nav-tab,.trust-pill,.age-tab{font-famil
 
 .site-header{position:sticky;top:4px;z-index:100;background:rgba(248,250,252,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(223,230,239,.9)}
 .header-row{position:relative;min-height:70px;display:flex;align-items:center;gap:28px}
-.brand{flex:none;text-decoration:none;font-weight:800;font-size:1.35rem;letter-spacing:-.03em;color:var(--blue)}
+.brand{flex:none;display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:800;font-size:1.35rem;line-height:1;letter-spacing:-.03em;color:var(--blue)}
+.brand::before{content:"";flex:0 0 38px;width:38px;height:38px;background:url('../assets/vizancia-mark.svg') center/contain no-repeat}
 .parent-nav{display:flex;align-items:center;gap:4px;margin-left:auto;min-width:0}
 .nav-tab{text-decoration:none;font-size:.82rem;font-weight:700;color:var(--body);padding:9px 12px;border-radius:10px;transition:.2s ease}
 .nav-tab:hover,.nav-tab.active{color:var(--blue-dark);background:var(--lavender)}
@@ -146,7 +147,7 @@ details p{padding:0 34px 19px 0}
 }
 @media(max-width:640px){
   html{scroll-padding-top:112px}.container{width:min(calc(100% - 28px),1160px)}body{font-size:16px;padding-bottom:68px}
-  .header-row{min-height:60px;gap:12px}.brand{font-size:1.18rem}.parent-nav{margin-left:0}.nav-tab{padding:10px 12px;font-size:.78rem}
+  .header-row{min-height:60px;gap:12px}.brand{font-size:1.18rem}.brand::before{flex-basis:34px;width:34px;height:34px}.parent-nav{margin-left:0}.nav-tab{padding:10px 12px;font-size:.78rem}
   .js .parent-menu{display:block}.js .parent-nav{display:none;position:absolute;top:56px;left:0;right:0;z-index:10;flex-direction:column;align-items:stretch;gap:3px;padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:var(--shadow)}.js .parent-nav.open{display:flex}
   .hero{padding:50px 0 36px}.hero-grid{gap:30px}h1{font-size:2.65rem}.hero-copy{font-size:1.05rem}.store-buttons img{height:43px}
   .hero-visual{width:100%}.visual-card{padding:8px;border-radius:23px}.hero-media{aspect-ratio:3/4;border-radius:16px}.hero-media img{aspect-ratio:3/4;object-position:center}.hero-visual figcaption{margin:12px 5px 0;font-size:.82rem}

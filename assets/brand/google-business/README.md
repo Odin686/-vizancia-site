@@ -7,6 +7,13 @@ Recommended upload order:
 3. vizancia-campus-720.png — actual Campus product view.
 4. vizancia-learn-720.png — actual Learn path product view.
 
+Additional brand files:
+
+- assets/vizancia-logo-horizontal.svg — scalable horizontal logo.
+- assets/vizancia-logo-horizontal-1200.png — transparent high-resolution horizontal logo.
+- assets/vizancia-mark.svg — scalable square brand mark with the subtle brain motif.
+- assets/favicon.svg — simplified small-size mark for browser tabs.
+
 Additional useful product images already in the site:
 
 - assets/screenshots/campus/prompt-lab.jpg

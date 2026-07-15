@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">Vizancia</title>
+  <desc id="description">Vizancia wordmark with a connected V over a subtle brain motif.</desc>
+  <style>
+    @font-face {
+      font-family: "Vizancia Jakarta";
+      src: url("fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+      font-weight: 800;
+    }
+  </style>
+  <image href="vizancia-mark.svg" x="40" y="40" width="280" height="280"/>
+  <text x="370" y="231" fill="#10213F" font-family="Vizancia Jakarta, Plus Jakarta Sans, Arial, sans-serif" font-size="150" font-weight="800" letter-spacing="-8">Vizancia</text>
+</svg>

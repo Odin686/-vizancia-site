@@ -99,12 +99,24 @@ body.pro-page::before {
 .pro-header-row { min-height: 72px; display: flex; align-items: center; gap: 24px; }
 .pro-brand {
   flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   color: var(--pro-blue);
   font-size: 1.38rem;
   font-weight: 800;
+  line-height: 1;
   letter-spacing: -0.04em;
   text-decoration: none;
 }
+.pro-brand::before {
+  content: "";
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  background: url("vizancia-mark.svg") center / contain no-repeat;
+}
+.footer-brand .pro-brand::before { flex-basis: 34px; width: 34px; height: 34px; }
 .pro-nav { display: flex; align-items: center; gap: 3px; margin-left: auto; }
 .pro-nav a {
   padding: 9px 11px;
@@ -376,6 +388,8 @@ body.pro-page::before {
 }
 
 @media (max-width: 480px) {
+  .pro-brand { font-size: 1.2rem; }
+  .pro-brand::before { flex-basis: 34px; width: 34px; height: 34px; }
   .pro-title { font-size: 2.35rem; }
   .preview-body { padding: 17px; }
   .message { grid-template-columns: 30px 1fr; }

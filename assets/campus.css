@@ -42,8 +42,8 @@ body.campus-page::before {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(330px, .62fr);
-  gap: 72px;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, .75fr);
+  gap: 64px;
   align-items: center;
 }
 
@@ -114,7 +114,7 @@ body.campus-page::before {
 
 .campus-hero-screen {
   position: relative;
-  max-width: 300px;
+  width: min(440px, 100%);
   justify-self: end;
   margin: 0;
   padding: 10px;
@@ -138,7 +138,7 @@ body.campus-page::before {
 .campus-hero-shot {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 4 / 3;
   border-radius: 22px;
   background: #121632;
 }
@@ -148,7 +148,7 @@ body.campus-page::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center 32%;
   border-radius: inherit;
 }
 
@@ -311,7 +311,7 @@ body.campus-page::before {
 .campus-store-row img { width: auto; height: 48px; }
 
 @media (max-width: 1040px) {
-  .campus-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(290px, .55fr); gap: 44px; }
+  .campus-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(340px, .65fr); gap: 40px; }
   .campus-principles { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -321,7 +321,7 @@ body.campus-page::before {
   .campus-faq-layout,
   .campus-download-panel,
   .campus-heading-wide { grid-template-columns: 1fr; }
-  .campus-hero-screen { width: min(410px, 90%); justify-self: center; }
+  .campus-hero-screen { width: min(520px, 96%); justify-self: center; }
   .campus-step-grid { grid-template-columns: 1fr; }
   .campus-step { min-height: 0; }
   .campus-step > span { margin-bottom: 30px; }

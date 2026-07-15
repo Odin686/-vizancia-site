@@ -2,17 +2,17 @@
 
 Recommended upload order:
 
-1. vizancia-logo-720.png — profile logo.
-2. vizancia-cover-1080x608.png — cover candidate; keep the important content centred because Google may crop or select another primary image.
-3. vizancia-campus-720.png — actual Campus product view.
-4. vizancia-learn-720.png — actual Learn path product view.
+1. vizancia-logo-720.png: profile logo.
+2. vizancia-cover-1080x608.png: cover candidate; keep the important content centred because Google may crop or select another primary image.
+3. vizancia-campus-720.png: actual Campus product view.
+4. vizancia-learn-720.png: actual Learn path product view.
 
 Additional brand files:
 
-- assets/vizancia-logo-horizontal.svg — scalable horizontal logo.
-- assets/vizancia-logo-horizontal-1200.png — transparent high-resolution horizontal logo.
-- assets/vizancia-mark.svg — scalable square brand mark with the subtle brain motif.
-- assets/favicon.svg — simplified small-size mark for browser tabs.
+- assets/vizancia-logo-horizontal.svg: scalable horizontal logo.
+- assets/vizancia-logo-horizontal-1200.png: transparent high-resolution horizontal logo.
+- assets/vizancia-mark.svg: scalable square brand mark with the subtle brain motif.
+- assets/favicon.svg: simplified small-size mark for browser tabs.
 
 Additional useful product images already in the site:
 

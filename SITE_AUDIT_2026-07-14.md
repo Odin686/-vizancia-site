@@ -99,7 +99,7 @@ Have qualified privacy/technology counsel review the final policy, terms, Sandbo
 
 - Produce the short demo, screenshot set, transcript, and store creative.
 - Create adult-audience campaigns for parents and homeschool families with distinct landing URLs and UTM naming.
-- Test one message variable at a time and judge success by qualified store visits, installs, first opens, and retained learning—not clicks alone.
+- Test one message variable at a time and judge success by qualified store visits, installs, first opens, and retained learning, not clicks alone.
 - Build source-backed team and reviewer profiles after authorization.
 
 ### Days 61–90: product and content depth

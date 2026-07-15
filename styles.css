@@ -588,7 +588,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
     .btn-large { padding: 16px 20px !important; font-size: 1rem !important; }
 }
 
-/* Mobile navigation panel — triggered by body.menu-open */
+/* Mobile navigation panel, triggered by body.menu-open */
 body.menu-open #navbar {
     position: fixed;
     top: 0; left: 0; right: 0;

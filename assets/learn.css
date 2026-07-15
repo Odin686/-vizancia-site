@@ -83,8 +83,8 @@ body.learn-page::before { background: linear-gradient(90deg, var(--learn-blue), 
 .learn-practice-card.reverse { grid-template-columns: minmax(0, 1.28fr) minmax(260px, .72fr); }
 .learn-practice-card.reverse figure { grid-column: 2; }
 .learn-practice-card.reverse > div { grid-column: 1; grid-row: 1; }
-.learn-practice-card figure { margin: 0; padding: 8px; border: 1px solid rgba(255,255,255,.15); border-radius: 22px; background: rgba(255,255,255,.08); }
-.learn-practice-card figure img { display: block; width: 100%; border-radius: 15px; }
+.learn-practice-card figure { width: 100%; max-width: 360px; margin: 0 auto; padding: 8px; border: 1px solid rgba(255,255,255,.15); border-radius: 22px; background: rgba(255,255,255,.08); }
+.learn-practice-card figure img { display: block; width: 100%; height: clamp(500px, 55vw, 620px); object-fit: cover; object-position: center top; border-radius: 15px; }
 .learn-practice-card figcaption { padding: 9px 6px 1px; color: #b8c5d9; font-size: .69rem; font-weight: 800; text-align: center; }
 .learn-practice-card h3 { margin: 0; color: #fff; font: 900 clamp(1.8rem, 3.5vw, 3rem)/1.07 "Nunito", sans-serif; letter-spacing: -.045em; }
 .learn-practice-card > div > p:not(.pro-kicker) { margin: 16px 0 0; line-height: 1.7; }

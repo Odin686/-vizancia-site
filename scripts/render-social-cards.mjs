@@ -7,6 +7,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const chrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const cards = [
   'og-home',
+  'og-home-v2',
   'og-homeschool',
   'og-learning-hub',
   'og-parents',

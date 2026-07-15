@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Vizancia — understand AI and think for yourself</title>
+  <desc id="description">Vizancia logo, practical AI literacy message, and a real view of the explorable learning campus.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10213F"/>
+      <stop offset="1" stop-color="#173D73"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="70" y1="0" x2="720" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#FFFFFF" stroke-opacity=".035"/>
+    </pattern>
+    <clipPath id="campus-screen">
+      <rect x="846" y="58" width="286" height="514" rx="30"/>
+    </clipPath>
+    <filter id="device-shadow" x="-35%" y="-25%" width="170%" height="165%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#020617" flood-opacity=".38"/>
+    </filter>
+    <style>
+      @font-face {
+        font-family: "Vizancia Jakarta";
+        src: url("fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: "Vizancia Nunito";
+        src: url("fonts/nunito-latin.woff2") format("woff2");
+        font-weight: 400 800;
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1120" cy="35" r="270" fill="#2563EB" opacity=".18"/>
+  <circle cx="70" cy="640" r="245" fill="#0891B2" opacity=".14"/>
+  <path d="M705 0H1200V630H780C810 496 786 329 705 0Z" fill="#0B1730" opacity=".2"/>
+
+  <image href="vizancia-mark.svg" x="70" y="52" width="72" height="72"/>
+  <text x="164" y="106" fill="#FFFFFF" font-family="Vizancia Jakarta, Plus Jakarta Sans, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="-1.5">Vizancia</text>
+
+  <text x="70" y="213" fill="#67E8F9" font-family="Vizancia Nunito, Nunito, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="3.2">PRACTICAL AI LITERACY</text>
+  <text x="70" y="301" fill="#FFFFFF" font-family="Vizancia Jakarta, Plus Jakarta Sans, Arial, sans-serif" font-size="66" font-weight="800" letter-spacing="-2.8">Understand AI.</text>
+  <text x="70" y="379" fill="url(#accent)" font-family="Vizancia Jakarta, Plus Jakarta Sans, Arial, sans-serif" font-size="66" font-weight="800" letter-spacing="-2.8">Think for yourself.</text>
+
+  <text x="70" y="447" fill="#D7E2F1" font-family="Vizancia Nunito, Nunito, Arial, sans-serif" font-size="27">Short lessons, active games, and an explorable campus.</text>
+
+  <g transform="translate(70 496)" font-family="Vizancia Nunito, Nunito, Arial, sans-serif" font-size="18" font-weight="800">
+    <rect width="158" height="48" rx="24" fill="#FFFFFF" fill-opacity=".09" stroke="#FFFFFF" stroke-opacity=".13"/>
+    <circle cx="24" cy="24" r="6" fill="#67E8F9"/>
+    <text x="42" y="31" fill="#FFFFFF">Learn</text>
+    <rect x="172" width="158" height="48" rx="24" fill="#FFFFFF" fill-opacity=".09" stroke="#FFFFFF" stroke-opacity=".13"/>
+    <circle cx="196" cy="24" r="6" fill="#60A5FA"/>
+    <text x="214" y="31" fill="#FFFFFF">Play</text>
+    <rect x="344" width="176" height="48" rx="24" fill="#FFFFFF" fill-opacity=".09" stroke="#FFFFFF" stroke-opacity=".13"/>
+    <circle cx="368" cy="24" r="6" fill="#2DD4BF"/>
+    <text x="386" y="31" fill="#FFFFFF">Practise</text>
+  </g>
+
+  <g filter="url(#device-shadow)">
+    <rect x="828" y="40" width="322" height="550" rx="42" fill="#FFFFFF" fill-opacity=".13" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+    <image href="screenshots/campus/campus-ipad.jpg" x="846" y="58" width="286" height="514" preserveAspectRatio="xMidYMid slice" clip-path="url(#campus-screen)"/>
+  </g>
+</svg>

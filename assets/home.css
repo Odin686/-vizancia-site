@@ -169,7 +169,6 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
   color: #c8d3e6;
   box-shadow: 0 26px 64px rgba(16, 33, 63, .2);
 }
-.campus-entry-copy .pro-kicker { color: #72d9e8; }
 .campus-entry-copy h2 { margin: 0; color: #fff; font-size: clamp(2.2rem, 4.2vw, 3.65rem); line-height: 1.05; letter-spacing: -.055em; }
 .campus-entry-copy > p:not(.pro-kicker) { margin: 18px 0 0; }
 .campus-entry-copy .pro-button { margin-top: 27px; }

@@ -60,7 +60,6 @@ body.pro-page::before {
 .pro-nav a,
 .pro-button,
 .pro-kicker,
-.status-pill,
 .metric strong,
 .preview-label,
 .support-search label,
@@ -199,22 +198,6 @@ body.pro-page::before {
   pointer-events: none;
 }
 .sandbox-hero-grid { position: relative; display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 64px; align-items: center; }
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 22px;
-  padding: 8px 13px;
-  border: 1px solid #d6e2fb;
-  border-radius: 999px;
-  background: var(--pro-lavender);
-  color: var(--pro-blue-dark);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.status-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pro-teal); box-shadow: 0 0 0 4px rgba(15, 159, 134, 0.12); }
 .sandbox-hero-copy .pro-lede { max-width: 640px; }
 .trust-note { margin-top: 17px; color: var(--pro-muted); font-size: 0.86rem; font-weight: 700; }
 .product-preview {

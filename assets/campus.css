@@ -47,31 +47,6 @@ body.campus-page::before {
   align-items: center;
 }
 
-.campus-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 24px;
-  padding: 9px 14px;
-  border: 1px solid rgba(255,255,255,.2);
-  border-bottom-width: 3px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.08);
-  color: #fff;
-  font: 800 .74rem "Plus Jakarta Sans", sans-serif;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-
-.campus-status::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 2px;
-  background: var(--campus-gold);
-  box-shadow: 0 0 0 4px rgba(242,189,61,.14);
-}
-
 .campus-hero-copy h1 {
   max-width: 700px;
   margin: 0;

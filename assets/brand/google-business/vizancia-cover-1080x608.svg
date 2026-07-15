@@ -23,12 +23,6 @@
   <text x="64" y="300" fill="#67E8F9" font-family="Arial, sans-serif" font-size="52" font-weight="700">Know when to question it.</text>
   <text x="64" y="370" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Practical AI literacy through short lessons,</text>
   <text x="64" y="405" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">active games, and thoughtful practice.</text>
-  <g transform="translate(64 476)">
-    <rect width="177" height="47" rx="23.5" fill="#FFFFFF" fill-opacity=".1" stroke="#FFFFFF" stroke-opacity=".16"/>
-    <circle cx="25" cy="23.5" r="6" fill="#67E8F9"/>
-    <text x="42" y="31" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="19" font-weight="700">Ages 8 and up</text>
-  </g>
-
   <g filter="url(#shadow)">
     <rect x="719" y="38" width="310" height="532" rx="38" fill="#FFFFFF" fill-opacity=".12" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="2"/>
     <image href="../../screenshots/campus/campus-ipad.jpg" x="735" y="54" width="278" height="500" preserveAspectRatio="xMidYMid slice" clip-path="url(#screen)"/>

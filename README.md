@@ -18,6 +18,14 @@ This is a dependency-free static website for Vizancia. It can be hosted from the
 4. Test keyboard navigation, reduced motion, narrow mobile widths, the privacy choices control, and both store links before publishing.
 5. Have the privacy policy, consent implementation, and terms reviewed by qualified counsel for the jurisdictions where you advertise.
 
+## Visual direction
+
+- Treat the Campus and virtual-world experience as the benchmark for the site's personality: playful, exploratory, and grounded in the real product.
+- Prefer real app screenshots paired with world-building, pathways, and clear movement through the experience.
+- Use original character art as guides or wayfinding, not as unrelated decoration.
+- Keep the surrounding marketing layout clean and credible. Avoid templated status pills, excessive badges, generic AI imagery, and gratuitous glass or gradient effects.
+- The Learn experience should visibly communicate its winding path of connected lesson nodes and the feeling of making progress through a journey.
+
 ## Maintainability roadmap
 
 The site currently has repeated navigation and footer markup in legacy pages. The new resource and trust pages share a CSS vocabulary but remain plain HTML so they can deploy immediately. The next maintainability step should be a small static-site generator (Eleventy or Astro) with shared partials for navigation, footer, metadata, and consent. Migrate one page at a time, compare rendered output, then remove duplicated templates once the generated pages are verified.

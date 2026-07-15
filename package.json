@@ -5,6 +5,7 @@
   "scripts": {
     "audit": "node scripts/audit-site.mjs",
     "audit:responsive": "node scripts/audit-responsive.mjs",
+    "render:brand": "node scripts/render-brand-assets.mjs",
     "render:social": "node scripts/render-social-cards.mjs",
     "qa:visual": "node scripts/capture-site-previews.mjs"
   }

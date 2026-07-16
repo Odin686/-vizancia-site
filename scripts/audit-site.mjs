@@ -70,12 +70,35 @@ const forbiddenClaims = [
   /available\s+to\s+users\s+of\s+all\s+ages/i
 ];
 
+const staleProductClaims = [
+  /96\+\s+(?:short\s+)?lessons/i,
+  /\b576\s+(?:authored\s+|hand-crafted\s+|practice\s+)?questions\b/i,
+  /\b11\s+mini-games\b/i,
+  /\beleven\s+different\s+ways\b/i,
+  /\b20\s+levels\b/i,
+  /\b27\s+(?:local\s+)?achievements\b/i,
+  /\bEthics Court\b/i,
+  /\bPrompt Craft\b/i,
+  /\bthree\s+age\s+modes\b/i,
+  /\bthree\s+learning\s+modes\b/i,
+  /\bin-app\s+report\s+control\b/i,
+  /\bwe\s+do\s+not\s+ask\s+for\s+a\s+name\b/i,
+];
+
 for (const file of htmlFiles) {
   const relative = path.relative(root, file);
   if (relative === 'privacy.html' || relative === 'editorial-policy.html') continue;
   const source = await readFile(file, 'utf8');
   for (const pattern of forbiddenClaims) {
     if (pattern.test(source)) warnings.push(`${relative}: review potentially absolute claim ${pattern}`);
+  }
+}
+
+for (const file of htmlFiles) {
+  const relative = path.relative(root, file);
+  const source = await readFile(file, 'utf8');
+  for (const pattern of staleProductClaims) {
+    if (pattern.test(source)) errors.push(`${relative}: stale pre-3.5 product claim ${pattern}`);
   }
 }
 

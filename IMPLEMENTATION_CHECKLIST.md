@@ -66,6 +66,16 @@ The repository changes cover public website copy, design, consent defaults, sema
 - Keep ad creative directed to the adult purchaser or educator, especially where the product may be used by children.
 - Complete keyboard, screen-reader, 200% zoom, contrast, reduced-motion, and iOS/Android assistive-technology checks before claiming app accessibility support.
 
+## Guided program launch
+
+- Confirm that `info@vizancia.com` is an active monitored mailbox and send a complete test enquiry from a desktop and mobile email client.
+- Define the standard small-team scope for the CA$750 workplace audit and the threshold that requires a separate quote.
+- Confirm full-day workshop participant limits, delivery hours, travel area, venue expectations, taxes, payment timing, and cancellation or rescheduling terms.
+- Finish and verify the homeschool pack before collecting payment; confirm its household or classroom licence, delivery method, update policy, and refund terms.
+- Define the Builder Incubator cohort format, dates, pricing, adult eligibility, required accounts, selected tools, hosting or provider costs, support boundary, and project review process before enrollment.
+- Select and contract any checkout, invoicing, scheduling, video-meeting, or course-platform provider before replacing the current email-based enquiry flow.
+- Have qualified counsel review direct-service, digital-product, workshop, and cohort terms before taking payment.
+
 ## Primary references for the account review
 
 - [Office of the Privacy Commissioner of Canada: PIPEDA requirements in brief](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda_brief)

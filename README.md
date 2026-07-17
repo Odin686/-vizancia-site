@@ -4,7 +4,7 @@ This is a dependency-free static website for Vizancia. It can be hosted from the
 
 ## Structure
 
-- `index.html`, `campus.html`, `learn.html`, `parents/`, and `homeschool/` are the current marketing landing pages. The Campus and Learn & Train experiences use `assets/campus.css` and `assets/learn.css`; the parent experience keeps its layout and interactions in `parents/parents.css` and `parents/parents.js`.
+- `index.html`, `campus.html`, `learn.html`, `parents/`, `homeschool/`, and `programs.html` are the current marketing landing pages. The Programs page presents guided workplace, family, homeschool, coaching, and web-only incubator offers through an email-based enquiry flow. The Campus and Learn & Train experiences use `assets/campus.css` and `assets/learn.css`; the parent experience keeps its layout and interactions in `parents/parents.css` and `parents/parents.js`.
 - `resources/` is the AI Learning Hub. Pages share `resources/resources.css` and `resources/resources.js`, and research articles link to their primary sources.
 - `about.html`, `methodology.html`, `editorial-policy.html`, `accessibility.html`, and `changelog.html` are technical trust pages.
 - `assets/privacy-consent.js` and `assets/privacy-consent.css` are the shared website consent implementation. Google Ads measurement must remain behind the consent flow.
@@ -17,6 +17,7 @@ This is a dependency-free static website for Vizancia. It can be hosted from the
 3. For research-based articles, preserve the source link and identify the source’s audience, date, and limitations.
 4. Test keyboard navigation, reduced motion, narrow mobile widths, the privacy choices control, and both store links before publishing.
 5. Have the privacy policy, consent implementation, and terms reviewed by qualified counsel for the jurisdictions where you advertise.
+6. Before accepting payment for a guided program, confirm the written scope, taxes, participant or licence limits, payment method, cancellation terms, third-party costs, and delivery details described on the Programs page.
 
 ## Visual direction
 

@@ -30,6 +30,8 @@ const previews = [
   { name: 'resources-mobile-menu', path: '/resources/', width: 390, height: 844, mobile: true, click: '#menuToggle' },
   { name: 'sandbox-desktop', path: '/sandbox.html', width: 1440, height: 1000, mobile: false },
   { name: 'support-desktop', path: '/support.html', width: 1440, height: 1000, mobile: false },
+  { name: 'programs-mobile', path: '/programs.html', width: 390, height: 844, mobile: true, rejectConsent: true },
+  { name: 'programs-desktop', path: '/programs.html', width: 1440, height: 1000, mobile: false, rejectConsent: true },
   { name: 'campus-mobile', path: '/campus.html', width: 390, height: 844, mobile: true, rejectConsent: true },
   { name: 'campus-desktop', path: '/campus.html', width: 1440, height: 1000, mobile: false, rejectConsent: true },
   { name: 'learn-mobile', path: '/learn.html', width: 390, height: 844, mobile: true, rejectConsent: true },

@@ -22,6 +22,11 @@
 .home-title-line { display: block; }
 .home-title-accent { color: var(--pro-blue); }
 .home-lede { max-width: 640px; margin: 23px 0 0; font-size: 1.12rem; line-height: 1.7; }
+.pro-nav .pro-nav-programs { border: 1px solid #cbd8f6; background: var(--pro-lavender); color: var(--pro-blue-dark); }
+.pro-nav .pro-nav-programs:hover { border-color: #9fb8ef; background: #e3eaff; }
+.home-hero-actions { display: flex; gap: 13px; align-items: center; flex-wrap: wrap; margin-top: 30px; }
+.home-hero-actions .store-row { margin-top: 0; }
+.hero-programs-button { min-height: 48px; }
 .store-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 .store-row a { display: inline-flex; border-radius: 10px; line-height: 0; }
 .store-row img { width: auto; height: 48px; }
@@ -123,6 +128,18 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 .home-proof-item:last-child { border-right: 0; }
 .home-proof-item strong { display: block; color: var(--pro-ink); font: 800 .9rem "Plus Jakarta Sans", sans-serif; }
 .home-proof-item span { display: block; margin-top: 3px; color: #65738a; font-size: .78rem; line-height: 1.45; }
+.programs-spotlight-section { padding: 28px 0 18px; }
+.programs-spotlight { display: grid; grid-template-columns: .92fr 1.08fr; gap: 44px; align-items: center; overflow: hidden; padding: 38px 40px; border-radius: 28px; background: var(--pro-navy); color: #c8d5e7; box-shadow: 0 24px 58px rgba(16,33,63,.18); }
+.programs-spotlight .pro-kicker { color: #78dce8; }
+.programs-spotlight h2 { margin: 0; color: #fff; font-size: clamp(1.8rem, 3.4vw, 2.8rem); line-height: 1.1; letter-spacing: -.045em; }
+.programs-spotlight-copy > p:not(.pro-kicker) { margin: 14px 0 0; }
+.programs-spotlight-button { margin-top: 22px; background: #fff; color: var(--pro-navy) !important; box-shadow: none; }
+.programs-spotlight-button:hover { background: #eaf0ff; color: var(--pro-navy) !important; }
+.programs-spotlight-offers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.programs-spotlight-offers > div { min-height: 126px; padding: 17px; border: 1px solid rgba(255,255,255,.14); border-radius: 15px; background: rgba(255,255,255,.07); }
+.programs-spotlight-offers span { display: block; color: #75dce8; font: 800 .64rem "Plus Jakarta Sans", sans-serif; letter-spacing: .09em; text-transform: uppercase; }
+.programs-spotlight-offers strong { display: block; margin-top: 10px; color: #fff; font: 800 .95rem "Plus Jakarta Sans", sans-serif; line-height: 1.35; }
+.programs-spotlight-offers small { display: block; margin-top: 4px; color: #aebed4; font-size: .73rem; line-height: 1.45; }
 .home-section { padding: 96px 0; }
 .home-section.white { background: #fff; border-block: 1px solid var(--pro-line); }
 .home-heading { max-width: 760px; margin-bottom: 40px; }
@@ -246,7 +263,7 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 .curriculum-card small { color: var(--pro-blue); font: 800 .67rem "Plus Jakarta Sans", sans-serif; letter-spacing: .09em; text-transform: uppercase; }
 .curriculum-card h3 { margin: 12px 0 8px; font-size: 1rem; }
 .curriculum-card p { margin: 0; color: #65738a; font-size: .84rem; }
-.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.audience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
 .audience-card { display: flex; min-height: 260px; flex-direction: column; padding: 28px; border: 1px solid var(--pro-line); border-radius: 24px; background: #fff; color: inherit; text-decoration: none; box-shadow: var(--pro-shadow-sm); }
 .audience-card span { color: var(--pro-blue); font: 800 .68rem "Plus Jakarta Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 .audience-card h3 { margin: 18px 0 9px; font-size: 1.2rem; }
@@ -272,9 +289,12 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 .download-panel h2 { margin: 0; color: var(--pro-ink); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.08; letter-spacing: -.05em; }
 .download-panel p { margin: 14px 0 0; }
 .download-panel .store-row { justify-content: flex-end; margin-top: 0; }
+.homeschool-pack-action { display: grid; gap: 15px; justify-items: start; }
+.homeschool-pack-action strong { color: var(--pro-ink); font: 800 clamp(2.3rem, 5vw, 3.4rem)/1 "Plus Jakarta Sans", sans-serif; letter-spacing: -.055em; }
+.homeschool-pack-action span { color: #65738a; font-size: .79rem; }
 .disclosure-note { max-width: 760px; margin: 22px auto 0; color: #65738a; font-size: .78rem; text-align: center; }
 @media (max-width: 980px) {
-  .home-hero-grid, .sample-grid, .privacy-panel, .download-panel, .campus-entry, .learn-path-intro, .learn-path-board { grid-template-columns: 1fr; }
+  .home-hero-grid, .sample-grid, .privacy-panel, .download-panel, .campus-entry, .learn-path-intro, .learn-path-board, .programs-spotlight { grid-template-columns: 1fr; }
   .home-hero-grid { gap: 52px; }
   .lesson-demo, .hero-product { max-width: 620px; justify-self: start; }
   .home-proof-grid, .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
@@ -299,7 +319,7 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
   .product-card.wide { grid-column: auto; grid-template-columns: 1fr; gap: 27px; }
   .habit-card { min-height: 230px; }
   .habit-index { margin-bottom: 36px; }
-  .quiz-card, .privacy-panel, .download-panel, .campus-entry, .learn-path-board { padding: 28px; }
+  .quiz-card, .privacy-panel, .download-panel, .campus-entry, .learn-path-board, .programs-spotlight { padding: 28px; }
   .product-card-copy { padding: 25px; }
   .campus-copy { padding: 32px; }
   .learn-path-copy { padding: 8px 0 0; }
@@ -313,6 +333,7 @@ picture.media-frame > img { object-fit: cover; object-position: var(--media-posi
 }
 @media (max-width: 520px) {
   .home-proof-grid, .curriculum-grid, .game-list { grid-template-columns: 1fr; }
+  .programs-spotlight-offers { grid-template-columns: 1fr; }
   .home-proof-item { border-right: 0; border-bottom: 1px solid var(--pro-line); }
   .home-proof-item:last-child { border-bottom: 0; }
   .store-row { align-items: stretch; }

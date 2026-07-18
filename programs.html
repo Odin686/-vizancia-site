@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="assets/privacy-consent.js"></script>
+  <script src="assets/privacy-consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>document.documentElement.classList.add('js');</script>
@@ -56,7 +56,7 @@
         <a href="homeschool/">Homeschool</a>
         <a href="programs.html" aria-current="page">Programs</a>
         <a href="resources/">Learning Hub</a>
-        <a class="pro-nav-cta" href="#enquire">Start an enquiry</a>
+        <a class="pro-nav-cta" href="#book">Book a consultation</a>
       </nav>
     </div>
   </header>
@@ -70,9 +70,9 @@
           <p class="programs-lede">Choose a workplace audit or workshop, learn to build and ship a web app with AI, guide your family through safer AI use, teach a structured homeschool unit, or book a private question-and-demonstration session.</p>
           <div class="pro-button-row">
             <a class="pro-button" href="#programs">Explore programs</a>
-            <a class="pro-button secondary" href="#enquire">Ask about a program</a>
+            <a class="pro-button secondary" href="#book">Book a consultation</a>
           </div>
-          <p class="programs-availability"><strong>Enquiries are open.</strong> Introductory prices are in Canadian dollars. Scope and availability are confirmed before booking.</p>
+          <p class="programs-availability"><strong>Consultations and inquiries are open.</strong> Programs serve clients in Canada and the United States. Prices are shown in Canadian dollars; U.S. clients can receive a written USD quote before booking.</p>
         </div>
 
         <div class="programs-route-card reveal" aria-label="Vizancia program routes">
@@ -111,7 +111,7 @@
               <li>A tailored findings and priorities presentation for your team</li>
             </ul>
             <div class="scope-note"><strong>Fixed fee, not an hourly clock.</strong><span>Vizancia continues until the agreed audit scope and presentation are complete. A larger multi-team or technical review is scoped separately before work begins.</span></div>
-            <a class="pro-button program-select" href="#enquire" data-program="Workplace AI Literacy Audit — CA$750">Enquire about the audit</a>
+            <a class="pro-button program-select" href="#book" data-program="Workplace AI Literacy Audit — CA$750">Book an audit consultation</a>
           </article>
 
           <article class="offer-card reveal">
@@ -125,7 +125,7 @@
               <li>Manager discussion and practical next steps for continued learning</li>
             </ul>
             <p class="offer-fineprint">Delivery format, participant count, schedule, and tailoring are confirmed before booking. Applicable taxes, travel, and venue costs are extra where required.</p>
-            <a class="pro-button secondary program-select" href="#enquire" data-program="Full-day Workplace AI Literacy Workshop — CA$1,250">Enquire about the workshop</a>
+            <a class="pro-button secondary program-select" href="#book" data-program="Full-day Workplace AI Literacy Workshop — CA$1,250">Book a workshop consultation</a>
           </article>
         </div>
       </div>
@@ -159,7 +159,7 @@
 
         <div class="incubator-cta">
           <p><strong>Founding-cohort interest is open.</strong> Dates, format, cohort size, pricing, required accounts, and any third-party service costs will be disclosed before enrolment. The Incubator is a website-based program and is not included in the Vizancia mobile app.</p>
-          <a class="pro-button program-select" href="#enquire" data-program="Vizancia AI Builder Incubator — founding cohort">Join the Incubator interest list</a>
+          <a class="pro-button program-select" href="#book" data-program="Vizancia AI Builder Incubator — founding cohort">Join the Incubator interest list</a>
         </div>
       </div>
     </section>
@@ -181,7 +181,7 @@
               <ul class="compact-list"><li>Parent-guided demonstrations</li><li>A family rule-setting conversation</li><li>Questions tailored to your household</li></ul>
               <p class="family-boundary">A parent or legal guardian must attend whenever a minor participates.</p>
             </div>
-            <div class="personal-action"><strong>CA$125</strong><a class="text-link program-select" href="#enquire" data-program="Family AI Safety Lab — CA$125">Ask about the Family Lab →</a></div>
+            <div class="personal-action"><strong>CA$125</strong><a class="text-link program-select" href="#book" data-program="Family AI Safety Lab — CA$125">Book a Family Lab consultation →</a></div>
           </article>
 
           <article class="personal-offer reveal" id="coach">
@@ -193,7 +193,7 @@
               <ul class="compact-list"><li>Ask the questions you have been hesitant to ask</li><li>Compare weak and strong prompts</li><li>Practise checking an AI response before relying on it</li></ul>
               <p class="family-boundary">Educational guidance only; not legal, financial, medical, cybersecurity, or compliance advice.</p>
             </div>
-            <div class="personal-action"><strong>CA$125</strong><a class="text-link program-select" href="#enquire" data-program="Vizancia Coach — CA$125">Ask about coaching →</a></div>
+            <div class="personal-action"><strong>CA$125</strong><a class="text-link program-select" href="#book" data-program="Vizancia Coach — CA$125">Book a Coach consultation →</a></div>
           </article>
         </div>
       </div>
@@ -208,12 +208,12 @@
           <div class="pack-contents" aria-label="Planned homeschool curriculum pack contents">
             <span>Facilitator guide</span><span>Student workbook</span><span>Lesson slides</span><span>Projects</span><span>Assessments</span><span>Rubrics</span><span>Answer keys</span><span>Printables</span>
           </div>
-          <p class="offer-fineprint">Founding edition planned at CA$39. No payment is collected on this website today; enquire to receive availability details when the pack is ready.</p>
+          <p class="offer-fineprint">Founding edition planned at CA$39. No payment is collected on this website today; send an inquiry to receive availability details when the pack is ready.</p>
         </div>
         <div class="pack-price">
           <span>Founding edition</span>
           <strong>CA$39</strong>
-          <a class="pro-button program-select" href="#enquire" data-program="Homeschool AI Literacy Curriculum Pack — CA$39">Ask about the curriculum pack</a>
+          <a class="pro-button program-select" href="#book" data-program="Homeschool AI Literacy Curriculum Pack — CA$39">Send a curriculum inquiry</a>
           <a class="text-link" href="resources/homeschool-ai-lesson-plan.html">Preview the free four-week plan</a>
         </div>
       </div>
@@ -229,34 +229,37 @@
       </div>
     </section>
 
-    <section class="programs-section enquiry-section" id="enquire">
-      <div class="pro-container enquiry-grid">
-        <div class="enquiry-copy reveal">
-          <p class="pro-kicker">Start an enquiry</p>
-          <h2>Tell us what you want to make clearer or safer.</h2>
-          <p>Complete the form and your email app will prepare a message to <a class="text-link" href="mailto:info@vizancia.com?subject=Vizancia%20program%20enquiry">info@vizancia.com</a>. Review it and press Send to share your enquiry.</p>
-          <div class="enquiry-steps">
+    <section class="programs-section inquiry-section" id="book">
+      <div class="pro-container inquiry-grid">
+        <div class="inquiry-copy reveal">
+          <p class="pro-kicker">Book or inquire</p>
+          <h2>Book a consultation or send a program inquiry.</h2>
+          <p>Complete the form and your email app will prepare a message to <a class="text-link" href="mailto:info@vizancia.com?subject=Vizancia%20program%20inquiry">info@vizancia.com</a>. Review it and press Send to share your inquiry.</p>
+          <div class="inquiry-steps">
             <div><span>1</span><p>Choose the program that looks closest to your needs.</p></div>
             <div><span>2</span><p>Add the context Vizancia needs to recommend a useful next step.</p></div>
             <div><span>3</span><p>Review the prepared email and send it from your email account.</p></div>
           </div>
         </div>
 
-        <form class="enquiry-form reveal" id="programEnquiryForm" action="mailto:info@vizancia.com?subject=Vizancia%20program%20enquiry" method="post" enctype="text/plain">
+        <form class="inquiry-form reveal" id="programInquiryForm" action="mailto:info@vizancia.com?subject=Vizancia%20program%20inquiry" method="post" enctype="text/plain">
           <div class="form-row">
             <div class="form-field"><label for="leadName">Name <span aria-hidden="true">*</span></label><input id="leadName" name="name" type="text" autocomplete="name" required></div>
             <div class="form-field"><label for="leadEmail">Email <span aria-hidden="true">*</span></label><input id="leadEmail" name="email" type="email" autocomplete="email" inputmode="email" required></div>
           </div>
           <div class="form-row">
-          <div class="form-field"><label for="leadOrganization">Organization or household</label><input id="leadOrganization" name="organization" type="text" autocomplete="organization"></div>
-            <div class="form-field"><label for="leadProgram">Program <span aria-hidden="true">*</span></label><select id="leadProgram" name="program" required><option value="">Choose a program</option><option>Workplace AI Literacy Audit — CA$750</option><option>Full-day Workplace AI Literacy Workshop — CA$1,250</option><option>Vizancia AI Builder Incubator — founding cohort</option><option>Family AI Safety Lab — CA$125</option><option>Homeschool AI Literacy Curriculum Pack — CA$39</option><option>Vizancia Coach — CA$125</option><option>Not sure yet</option></select></div>
+            <div class="form-field"><label for="leadOrganization">Organization or household</label><input id="leadOrganization" name="organization" type="text" autocomplete="organization"></div>
+            <div class="form-field"><label for="leadCountry">Country or region <span aria-hidden="true">*</span></label><select id="leadCountry" name="country" autocomplete="country-name" required><option value="">Choose a country</option><option>Canada</option><option>United States</option><option>Other</option></select></div>
           </div>
           <div class="form-row">
+            <div class="form-field"><label for="leadProgram">Program <span aria-hidden="true">*</span></label><select id="leadProgram" name="program" required><option value="">Choose a program</option><option>Workplace AI Literacy Audit — CA$750</option><option>Full-day Workplace AI Literacy Workshop — CA$1,250</option><option>Vizancia AI Builder Incubator — founding cohort</option><option>Family AI Safety Lab — CA$125</option><option>Homeschool AI Literacy Curriculum Pack — CA$39</option><option>Vizancia Coach — CA$125</option><option>Not sure yet</option></select></div>
             <div class="form-field"><label for="leadGroup">Approximate group size</label><input id="leadGroup" name="group_size" type="text" inputmode="numeric" placeholder="For example, 12"></div>
+          </div>
+          <div class="form-row form-row-single">
             <div class="form-field"><label for="leadTiming">Preferred timing</label><input id="leadTiming" name="timing" type="text" placeholder="For example, September"></div>
           </div>
           <div class="form-field"><label for="leadMessage">What would you like help with? <span aria-hidden="true">*</span></label><textarea id="leadMessage" name="message" rows="6" maxlength="2000" required></textarea><small>Do not include passwords, private records, health information, payment details, or confidential workplace information.</small></div>
-          <button class="pro-button form-submit" type="submit">Prepare email enquiry</button>
+          <button class="pro-button form-submit" type="submit">Prepare program inquiry</button>
           <p class="form-privacy">This static form does not upload your answers or store them on Vizancia's website. Vizancia receives them only if you press Send in your email app. See the <a href="privacy.html#connected">Privacy Policy</a>.</p>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
@@ -264,7 +267,7 @@
     </section>
 
     <div class="pro-container pricing-disclosure">
-      <p>Prices are introductory, shown in Canadian dollars, and subject to applicable taxes. Sending an enquiry does not create a booking or payment obligation. Final scope, delivery format, availability, participant limits, cancellation terms, travel or venue costs, and payment details are confirmed in writing before purchase.</p>
+      <p>Prices displayed on this page are introductory Canadian-dollar prices and are subject to applicable taxes. U.S. clients may request a written USD quote; the currency shown on the accepted quote or invoice controls. Sending an inquiry does not create a booking or payment obligation. Final scope, delivery format, availability, participant limits, cancellation terms, travel or venue costs, and payment details are confirmed in writing before purchase.</p>
     </div>
   </main>
 

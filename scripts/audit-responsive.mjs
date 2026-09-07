@@ -14,6 +14,7 @@ const viewports = [
   { name: 'small-phone', width: 360, height: 800, mobile: true },
   { name: 'phone', width: 390, height: 844, mobile: true },
   { name: 'tablet', width: 768, height: 1024, mobile: true },
+  { name: 'compact-desktop', width: 1024, height: 900, mobile: false },
   { name: 'desktop', width: 1440, height: 1000, mobile: false },
 ];
 

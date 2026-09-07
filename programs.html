@@ -42,6 +42,7 @@
     }
   }
   </script>
+  <link rel="stylesheet" href="assets/schools.css?v=1">
 </head>
 <body class="pro-page programs-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -52,7 +53,7 @@
       <button class="pro-menu" id="proMenu" type="button" aria-label="Open menu" aria-controls="proNav" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="pro-nav" id="proNav" aria-label="Primary navigation">
         <a href="index.html#product">The app</a>
-        <a href="parents/">For parents</a>
+        <a class="pro-nav-programs" href="schools/">For schools</a><a href="parents/">For parents</a>
         <a href="homeschool/">Homeschool</a>
         <a href="programs.html" aria-current="page">Programs</a>
         <a href="resources/">Learning Hub</a>
@@ -67,9 +68,9 @@
         <div class="programs-hero-copy reveal">
           <p class="pro-kicker">Guided AI literacy programs</p>
           <h1>Bring better AI judgment into real decisions.</h1>
-          <p class="programs-lede">Choose a workplace audit or workshop, learn to build and ship a web app with AI, guide your family through safer AI use, teach a structured homeschool unit, or book a private question-and-demonstration session.</p>
+          <p class="programs-lede">Start with a teacher-led AI literacy investigation and free classroom materials. For additional guidance, explore school pilots, workplace workshops, family sessions, homeschool resources and adult coaching.</p>
           <div class="pro-button-row">
-            <a class="pro-button" href="#programs">Explore programs</a>
+            <a class="pro-button" href="schools/">Explore the school sequence</a>
             <a class="pro-button secondary" href="#book">Book a consultation</a>
           </div>
           <p class="programs-availability"><strong>Consultations and inquiries are open.</strong> Programs serve clients in Canada and the United States. Prices are shown in Canadian dollars; U.S. clients can receive a written USD quote before booking.</p>
@@ -77,11 +78,12 @@
 
         <div class="programs-route-card reveal" aria-label="Vizancia program routes">
           <p class="route-label">Choose your setting</p>
-          <a href="#workplace"><span>01</span><div><strong>Workplace</strong><small>Audit or full-day workshop</small></div></a>
-          <a href="#incubator"><span>02</span><div><strong>Builder Incubator</strong><small>Learn, build, deploy, and ship on the web</small></div></a>
-          <a href="#families"><span>03</span><div><strong>Family</strong><small>Private AI safety session</small></div></a>
-          <a href="#homeschool-pack"><span>04</span><div><strong>Homeschool</strong><small>Four-week curriculum pack</small></div></a>
-          <a href="#coach"><span>05</span><div><strong>Private coaching</strong><small>Questions and live demonstrations</small></div></a>
+          <a href="#school-pilots"><span>01</span><div><strong>Schools</strong><small>Free sequence and supported Ontario pilots</small></div></a>
+          <a href="#workplace"><span>02</span><div><strong>Workplace</strong><small>Audit or full-day workshop</small></div></a>
+          <a href="#incubator"><span>03</span><div><strong>Builder Incubator</strong><small>Learn, build, deploy, and ship on the web</small></div></a>
+          <a href="#families"><span>04</span><div><strong>Family</strong><small>Private AI safety session</small></div></a>
+          <a href="#homeschool-pack"><span>05</span><div><strong>Homeschool</strong><small>Four-week curriculum pack</small></div></a>
+          <a href="#coach"><span>06</span><div><strong>Private coaching</strong><small>Questions and live demonstrations</small></div></a>
         </div>
       </div>
     </section>
@@ -91,6 +93,8 @@
       <div><strong>Responsible</strong><span>Privacy, verification, authorship, and human judgment throughout</span></div>
       <div><strong>Plain language</strong><span>No coding background or technical vocabulary required</span></div>
     </div>
+
+    <section class="programs-section" id="school-pilots"><div class="pro-container"><div class="programs-heading reveal"><div><p class="pro-kicker">Start with the classroom</p><h2>One sequence. A clear teaching goal.</h2></div><p>Can we trust this? is a four-session investigation for Grades 6–8. The packet and projected slides are free. School staff can review the complete paper route before discussing support.</p></div><div class="school-cards"><article class="school-card"><h3>Free teacher materials</h3><p>Four 45-minute sessions, student activities, a reasoning rubric and facilitator notes. No live AI or student account is required.</p><a class="text-link" href="schools/#materials">Preview the packet and slides →</a></article><article class="school-card"><h3>Supported Ontario / GTA pilot</h3><p>Agree a teacher kickoff, delivery window, limited teacher support and a debrief. School approval, scope and a written quote come before any booking or payment.</p><a class="pro-button program-select" href="#book" data-program="School AI Literacy Pilot — scoped quote">Ask about a school pilot</a></article></div></div></section>
 
     <section class="programs-section" id="programs">
       <div class="pro-container">
@@ -252,7 +256,7 @@
             <div class="form-field"><label for="leadCountry">Country or region <span aria-hidden="true">*</span></label><select id="leadCountry" name="country" autocomplete="country-name" required><option value="">Choose a country</option><option>Canada</option><option>United States</option><option>Other</option></select></div>
           </div>
           <div class="form-row">
-            <div class="form-field"><label for="leadProgram">Program <span aria-hidden="true">*</span></label><select id="leadProgram" name="program" required><option value="">Choose a program</option><option>Workplace AI Literacy Audit — CA$750</option><option>Full-day Workplace AI Literacy Workshop — CA$1,250</option><option>Vizancia AI Builder Incubator — founding cohort</option><option>Family AI Safety Lab — CA$125</option><option>Homeschool AI Literacy Curriculum Pack — CA$39</option><option>Vizancia Coach — CA$125</option><option>Not sure yet</option></select></div>
+            <div class="form-field"><label for="leadProgram">Program <span aria-hidden="true">*</span></label><select id="leadProgram" name="program" required><option value="">Choose a program</option><option>School AI Literacy Pilot — scoped quote</option><option>Workplace AI Literacy Audit — CA$750</option><option>Full-day Workplace AI Literacy Workshop — CA$1,250</option><option>Vizancia AI Builder Incubator — founding cohort</option><option>Family AI Safety Lab — CA$125</option><option>Homeschool AI Literacy Curriculum Pack — CA$39</option><option>Vizancia Coach — CA$125</option><option>Not sure yet</option></select></div>
             <div class="form-field"><label for="leadGroup">Approximate group size</label><input id="leadGroup" name="group_size" type="text" inputmode="numeric" placeholder="For example, 12"></div>
           </div>
           <div class="form-row form-row-single">
@@ -269,13 +273,14 @@
     <div class="pro-container pricing-disclosure">
       <p>Prices displayed on this page are introductory Canadian-dollar prices and are subject to applicable taxes. U.S. clients may request a written USD quote; the currency shown on the accepted quote or invoice controls. Sending an inquiry does not create a booking or payment obligation. Final scope, delivery format, availability, participant limits, cancellation terms, travel or venue costs, and payment details are confirmed in writing before purchase.</p>
     </div>
-  </main>
+  <div class="pro-container school-footer-note"><p>Page reviewed <time datetime="2026-09-07">September 7, 2026</time> · <a href="releases.html">Public releases and preview details</a></p></div>
+</main>
 
   <footer class="pro-footer">
     <div class="pro-container">
       <div class="footer-grid">
         <div class="footer-brand"><a class="pro-brand" href="index.html">Vizancia</a><p>Practical AI literacy through short lessons, active games, thoughtful practice, and guided programs.</p></div>
-        <div class="footer-column"><strong>The app</strong><a href="index.html#product">How it works</a><a href="learn.html">Learn &amp; Train</a><a href="campus.html">AI Campus</a><a href="parents/">For parents</a><a href="homeschool/">Homeschool</a></div>
+        <div class="footer-column"><strong>The app</strong><a href="schools/">For schools</a><a href="passport.html">AI Passport preview</a><a href="releases.html">App availability</a><a href="index.html#product">How it works</a><a href="learn.html">Learn &amp; Train</a><a href="campus.html">AI Campus</a><a href="parents/">For parents</a><a href="homeschool/">Homeschool</a></div>
         <div class="footer-column"><strong>Programs</strong><a href="#workplace">Workplace audit</a><a href="#workplace">Full-day workshop</a><a href="#incubator">Builder Incubator</a><a href="#families">Family Safety Lab</a><a href="#homeschool-pack">Homeschool pack</a><a href="#coach">Private coaching</a></div>
         <div class="footer-column"><strong>Trust &amp; help</strong><a href="resources/">Learning Hub</a><a href="methodology.html">Methodology</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="accessibility.html">Accessibility</a></div>
       </div>

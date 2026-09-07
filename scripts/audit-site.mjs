@@ -31,16 +31,19 @@ for (const file of htmlFiles) {
   const relative = path.relative(root, file);
   const isRedirect = relative === 'legal.html';
   const isErrorPage = relative === '404.html';
+  // This unmodified, downloadable teaching artifact also runs from a local file.
+  // It is not a marketing landing page; keep its source hash identical to the app packet.
+  const isTeachingProjection = relative === 'schools/trust/index.html';
   const title = source.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   const description = source.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i)?.[1]?.trim();
   const h1Count = (source.match(/<h1\b/gi) || []).length;
   const canonical = source.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1];
 
   if (!title) errors.push(`${relative}: missing title`);
-  if (!description && !isRedirect) errors.push(`${relative}: missing meta description`);
+  if (!description && !isRedirect && !isTeachingProjection) errors.push(`${relative}: missing meta description`);
   if (h1Count !== 1 && !isRedirect) errors.push(`${relative}: expected one h1, found ${h1Count}`);
-  if (!canonical && !isRedirect && !isErrorPage) errors.push(`${relative}: missing canonical URL`);
-  if (!isRedirect && !isErrorPage && !/property=["']og:image["']/i.test(source)) warnings.push(`${relative}: missing og:image`);
+  if (!canonical && !isRedirect && !isErrorPage && !isTeachingProjection) errors.push(`${relative}: missing canonical URL`);
+  if (!isRedirect && !isErrorPage && !isTeachingProjection && !/property=["']og:image["']/i.test(source)) warnings.push(`${relative}: missing og:image`);
 
   for (const jsonMatch of source.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
     try { JSON.parse(jsonMatch[1]); }

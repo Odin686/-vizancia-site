@@ -2,6 +2,14 @@
 
 This is a dependency-free static website for Vizancia. It can be hosted from the repository root (including GitHub Pages) without a build step.
 
+## School and Passport update
+
+The existing visual system is preserved. `schools/` adds the free four-session Grades 6–8 investigation, unmodified app-source packet/projection and a complete offline ZIP. `passport.html` shows six fictional decisions and a real Android 3.8 preview image; the demonstration collects no journal input and saves/transmits no choice. `releases.html` separates the public Apple 3.6 release, the Google Play listing and upcoming 3.8 features. `assets/product-releases.json` records reviewed availability, curriculum counts and source hashes.
+
+The homepage prioritises the app and teacher sequence. Other services retain their existing prices. School support is scoped by a written quote; no public pilot price or booking is invented. Existing local inquiry/loading improvements are included in this branch.
+
+Run `npm run audit` to check the pages and source contracts. Review school/Passport interactions, keyboard and no-JavaScript paths, small-phone/tablet/desktop layouts and downloadable materials before publishing. Public release labels are dated facts: verify them when preparing each deployment. Earlier 3.5 screenshots retain explicit historical labels.
+
 ## Structure
 
 - `index.html`, `campus.html`, `learn.html`, `parents/`, `homeschool/`, and `programs.html` are the current marketing landing pages. The Programs page presents guided workplace, family, homeschool, coaching, and web-only incubator offers through an email-based enquiry flow. The Campus and Learn & Train experiences use `assets/campus.css` and `assets/learn.css`; the parent experience keeps its layout and interactions in `parents/parents.css` and `parents/parents.js`.

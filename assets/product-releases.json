@@ -1,0 +1,27 @@
+{
+  "reviewed": "2026-09-07",
+  "iosPublic": {
+    "version": "3.6",
+    "source": "https://itunes.apple.com/lookup?id=6759349861&country=ca"
+  },
+  "androidPublic": {
+    "version": null,
+    "source": "https://play.google.com/store/apps/details?id=com.vizancia.app"
+  },
+  "preview": {
+    "version": "3.8",
+    "status": "preview",
+    "iosCommit": "dda4eed6c9ecb882bd4ef79aef13b35d1aebf7bf",
+    "androidCommit": "eacf5a8086fc7932e2c5af29fad624a7ef69990e",
+    "lessons": 101,
+    "categories": 17,
+    "questions": 906,
+    "teachingCards": 212,
+    "questionTypes": 7,
+    "playGames": 16
+  },
+  "classroomArtifacts": {
+    "schools/trust/index.html": "95f483c52fd2a669de7b8802984618aefb1ba844e5322554402b4103e04b9b58",
+    "schools/trust/can-we-trust-this-pilot.pdf": "9a230d622bb468f00b36fdb064b7cf495c917116b041578cfdf3699097e74ccf"
+  }
+}

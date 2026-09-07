@@ -1,2 +1,5 @@
 # Docker recommends keeping workspace MCP client settings user-specific.
 .vscode/mcp.json
+
+# Local website screenshots and preview notes
+output/

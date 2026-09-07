@@ -1,0 +1,263 @@
+/* Small additions using the existing website's typography, colours and cards. */
+.school-hero {
+  padding: 68px 0 52px;
+  background: linear-gradient(135deg, #f7f9fc, #edf2ff);
+}
+.school-hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2.15rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+.school-hero .pro-kicker {
+  margin-bottom: 16px;
+}
+.school-hero p {
+  max-width: 680px;
+}
+.school-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+.school-section {
+  padding: 58px 0;
+  scroll-margin-top: 100px;
+}
+.school-section.white {
+  background: #fff;
+}
+.school-section h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+.school-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+.school-section p {
+  line-height: 1.7;
+}
+.school-intro {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+.school-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.school-card {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--pro-line);
+  border-radius: 20px;
+  box-shadow: var(--pro-shadow-sm);
+  min-width: 0;
+}
+.school-card p:last-child {
+  margin-bottom: 0;
+}
+.school-card ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+.school-card .pro-kicker {
+  margin-bottom: 12px;
+}
+.school-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 14px;
+}
+.school-actions .pro-button {
+  white-space: normal;
+  text-align: center;
+  min-height: 44px;
+}
+.school-note {
+  color: var(--pro-body);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+.release-note {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--pro-body);
+  margin: 16px 0 0;
+}
+.release-note a,
+.school-note a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.school-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 0;
+}
+.school-meta dt {
+  font-weight: 800;
+  color: var(--pro-ink);
+}
+.school-meta dd {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+.school-sample {
+  border-left: 4px solid var(--pro-blue);
+}
+.school-sample blockquote {
+  margin: 16px 0;
+  padding: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--pro-ink);
+}
+.school-sample details,
+.passport-example details {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--pro-line);
+}
+.school-sample summary,
+.passport-example summary {
+  cursor: pointer;
+  font-weight: 800;
+  padding: 8px 0;
+  color: var(--pro-blue-dark);
+}
+.school-sample button,
+.passport-choices button {
+  font: inherit;
+  cursor: pointer;
+}
+.school-sample [hidden],
+.passport-example [hidden] {
+  display: none !important;
+}
+.school-sample .evidence-source {
+  font-size: 0.78rem;
+  color: var(--pro-body);
+}
+.passport-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+.passport-choices[hidden] {
+  display: none;
+}
+.passport-choices button {
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--pro-line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--pro-ink);
+  font-size: 0.9rem;
+  text-align: left;
+}
+.passport-choices button[aria-pressed="true"] {
+  background: var(--pro-lavender);
+  border-color: var(--pro-blue);
+  color: var(--pro-blue-dark);
+  font-weight: 800;
+}
+.passport-example {
+  background: #f7f9ff;
+  border: 1px solid var(--pro-line);
+  border-radius: 16px;
+  padding: 22px;
+}
+.passport-example h3 {
+  margin-top: 18px;
+}
+.passport-example p {
+  margin: 8px 0;
+}
+.passport-example time {
+  font-size: 0.8rem;
+  color: var(--pro-body);
+}
+.passport-shot {
+  margin: 0 auto;
+  max-width: 290px;
+}
+.passport-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid var(--pro-line);
+}
+.passport-shot figcaption {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+.school-footer-note {
+  padding-top: 20px;
+  font-size: 0.78rem;
+  color: var(--pro-body);
+}
+.release-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.9;
+}
+.school-preview-link {
+  margin-top: 18px;
+}
+@media (max-width: 760px) {
+  .school-hero {
+    padding: 40px 0 32px;
+  }
+  .school-grid,
+  .school-cards {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .school-section {
+    padding: 38px 0;
+  }
+  .school-card {
+    padding: 22px;
+  }
+  .school-actions .pro-button {
+    flex: 1 1 190px;
+  }
+  .passport-shot {
+    max-width: 280px;
+  }
+}
+@media (max-width: 360px) {
+  .passport-choices,
+  .school-meta {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .pro-header,
+  .pro-footer,
+  .privacy-choices-button,
+  .privacy-consent,
+  .school-actions {
+    display: none !important;
+  }
+  .school-section,
+  .school-hero {
+    padding: 16px 0;
+    background: #fff;
+  }
+  .school-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}

@@ -2,7 +2,7 @@ import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = process.cwd();
-const ignored = new Set(['.git', 'node_modules']);
+const ignored = new Set(['.git', 'node_modules', 'dist', 'docs', '.openai']);
 const htmlFiles = [];
 
 async function walk(directory) {

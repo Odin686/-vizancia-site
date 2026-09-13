@@ -7,6 +7,9 @@
     "audit:responsive": "node scripts/audit-responsive.mjs",
     "render:brand": "node scripts/render-brand-assets.mjs",
     "render:social": "node scripts/render-social-cards.mjs",
-    "qa:visual": "node scripts/capture-site-previews.mjs"
+    "qa:visual": "node scripts/capture-site-previews.mjs",
+    "test": "node --test scripts/privacy.test.mjs",
+    "audit:release": "node scripts/release-check.mjs",
+    "build": "npm run audit && npm run audit:release && npm test && node scripts/build-static.mjs"
   }
 }

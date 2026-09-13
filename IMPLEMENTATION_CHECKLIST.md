@@ -1,3 +1,5 @@
+> Historical implementation backlog. The September 2026 review in `docs/WEBSITE_REVIEW_2026-09-13.md` supersedes the measurement setup below. Do not re-enable advertising tags from this old checklist.
+
 # Vizancia launch and account checklist
 
 The repository changes cover public website copy, design, consent defaults, semantic store-click events, legal-document consistency, and launch guidance. The items below require authenticated accounts, app source code, vendor contracts, or verified personal information and must not be guessed from the website repository.

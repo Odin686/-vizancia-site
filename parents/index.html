@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="../assets/privacy-consent.js"></script>
+  <script src="../assets/privacy-consent.js?v=3"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>document.documentElement.classList.add('js');</script>
@@ -16,13 +16,13 @@
   <meta property="og:url" content="https://vizancia.com/parents/">
   <meta property="og:image" content="https://vizancia.com/assets/og-parents.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=2">
+  <link rel="icon" href="/assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/app-icon.png">
   <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="../assets/visuals/v2/parents-home-mobile-720.avif" type="image/avif" media="(max-width: 640px)" imagesrcset="../assets/visuals/v2/parents-home-mobile-480.avif 480w, ../assets/visuals/v2/parents-home-mobile-720.avif 720w" imagesizes="calc(100vw - 28px)" fetchpriority="high">
   <link rel="preload" as="image" href="../assets/visuals/v2/parents-home-1000.avif" type="image/avif" media="(min-width: 641px)" imagesrcset="../assets/visuals/v2/parents-home-600.avif 600w, ../assets/visuals/v2/parents-home-1000.avif 1000w, ../assets/visuals/v2/parents-home-1400.avif 1400w" imagesizes="(max-width: 920px) min(560px, 90vw), 42vw" fetchpriority="high">
-  <link rel="stylesheet" href="../assets/privacy-consent.css?v=2">
+  <link rel="stylesheet" href="../assets/privacy-consent.css?v=3">
   <link rel="stylesheet" href="../assets/home.css?v=4">
   <link rel="stylesheet" href="parents.css?v=7">
 </head>
@@ -125,7 +125,7 @@
         <div class="safety-panel">
           <div class="section-kicker">Privacy and safety</div>
           <h2>A simpler app privacy model.</h2>
-          <p>The Vizancia core learning experience is designed without a Vizancia account, in-app advertising, or third-party behavioural analytics SDKs. Learning progress and an optional first name or nickname stay on the device. Global Game Center features are limited to Adult / Lifelong Learner profiles on supported Apple devices. The website-only AI Sandbox has a separate online data flow, and optional measurement on this marketing website requires a visitor’s consent.</p>
+          <p>The Vizancia core learning experience is designed without a Vizancia account, in-app advertising, or third-party behavioural analytics SDKs. Learning progress and an optional first name or nickname stay on the device. Version 4.1 duels use local computer-controlled opponents. The website-only AI Sandbox has a separate online data flow, and this website loads no advertising measurement tags. Hosting logs and correspondence are explained in the Privacy Policy.</p>
           <div class="safety-grid">
             <div class="safety-item"><strong>No required child profile</strong><span>No email or account is required. An optional first name or nickname stays on the device.</span></div>
             <div class="safety-item"><strong>No in-app advertising</strong><span>No behavioural ad feed or “buy more” interruptions.</span></div>
@@ -143,7 +143,7 @@
       <div class="container">
         <div class="section-head">
           <div><div class="section-kicker">Choose a starting point</div><h2>Recommendations that grow with the learner.</h2></div>
-          <p class="section-intro">Vizancia 3.5 for iPhone and iPad offers four grade-band choices plus an Adult / Lifelong Learner option. The selection adjusts the difficulty ceiling and game recommendations; it does not promise separately rewritten lesson text for every age.</p>
+          <p class="section-intro">Version 4.1 offers four grade-band choices plus an Adult / Lifelong Learner option. The selection adjusts the difficulty ceiling and game recommendations; it does not promise separately rewritten lesson text for every age.</p>
         </div>
         <div class="age-tabs" role="tablist" aria-label="Learning modes">
           <button class="age-tab" id="tab-k2" role="tab" aria-selected="false" aria-controls="panel-k2">Grades K–2</button>
@@ -166,11 +166,11 @@
         </div>
         <div class="age-panel" id="panel-912" role="tabpanel" aria-labelledby="tab-912" hidden>
           <div><div class="section-kicker">Advanced study</div><h3>Grades 9–12</h3><p>Adds technical concepts, economics, governance, and more complex trade-offs.</p></div>
-          <div class="curriculum-facts"><div class="curriculum-fact"><strong>Concept focus</strong><span>Models, prompting, limitations, economics, and governance</span></div><div class="curriculum-fact"><strong>Difficulty ceiling</strong><span>Advanced questions by default</span></div><div class="curriculum-fact"><strong>Parent prompt</strong><span>“Who is affected by this system and what evidence is missing?”</span></div><div class="curriculum-fact"><strong>Connected play</strong><span>Student profiles still cannot access global Game Center social features</span></div></div>
+          <div class="curriculum-facts"><div class="curriculum-fact"><strong>Concept focus</strong><span>Models, prompting, limitations, economics, and governance</span></div><div class="curriculum-fact"><strong>Difficulty ceiling</strong><span>Advanced questions by default</span></div><div class="curriculum-fact"><strong>Parent prompt</strong><span>“Who is affected by this system and what evidence is missing?”</span></div><div class="curriculum-fact"><strong>Connected play</strong><span>Practice against local bots; no online player matching</span></div></div>
         </div>
         <div class="age-panel" id="panel-adult" role="tabpanel" aria-labelledby="tab-adult" hidden>
           <div><div class="section-kicker">Independent learning</div><h3>Adult / Lifelong Learner</h3><p>Uses the full curriculum at an independent pace with advanced difficulty available.</p></div>
-          <div class="curriculum-facts"><div class="curriculum-fact"><strong>Concept focus</strong><span>Models, prompting, limitations, governance, and practical workflows</span></div><div class="curriculum-fact"><strong>Difficulty ceiling</strong><span>Advanced questions by default</span></div><div class="curriculum-fact"><strong>Family value</strong><span>Learn alongside a child and discuss the same concepts</span></div><div class="curriculum-fact"><strong>Connected play</strong><span>Only an explicitly selected adult profile may enable optional global Game Center features</span></div></div>
+          <div class="curriculum-facts"><div class="curriculum-fact"><strong>Concept focus</strong><span>Models, prompting, limitations, governance, and practical workflows</span></div><div class="curriculum-fact"><strong>Difficulty ceiling</strong><span>Advanced questions by default</span></div><div class="curriculum-fact"><strong>Family value</strong><span>Learn alongside a child and discuss the same concepts</span></div><div class="curriculum-fact"><strong>Connected play</strong><span>Local bot duels; no Game Center sign-in</span></div></div>
         </div>
       </div>
     </section>
@@ -201,8 +201,8 @@
         <div class="section-head" style="grid-template-columns:1fr"><div><div class="section-kicker">Parent questions</div><h2>What families usually check first.</h2></div></div>
         <div class="faq-list">
           <details><summary>Are there purchases or advertisements in the app?</summary><p>The current app is free to download, has no in-app advertisements, and does not currently offer purchases. If that changes, pricing and terms would be disclosed before purchase and the website policies would be updated.</p></details>
-          <details><summary>Will it ask for my child’s name or email?</summary><p>No email or Vizancia account is required. Version 3.5 offers an optional first name or nickname during onboarding; it is stored only on the device and can be left blank.</p></details>
-          <details><summary>Can my child talk to strangers?</summary><p>No. The learning experience does not include open chat or a public social feed, and student profiles cannot access global Game Center leaderboards or online duels. Optional Game Center features are limited to Adult / Lifelong Learner profiles and are operated by Apple under Apple’s own terms and privacy practices.</p></details>
+          <details><summary>Will it ask for my child’s name or email?</summary><p>No email or Vizancia account is required. The app offers an optional first name or nickname during onboarding; it is stored only on the device and can be left blank.</p></details>
+          <details><summary>Can my child talk to strangers?</summary><p>No. Version 4.1 has no open chat, public social feed, or online player matching. Bot duels run locally. Adult-managed external links and sharing have separate data flows.</p></details>
           <details><summary>Can my child use the AI Sandbox independently?</summary><p>The website-only Sandbox is separate from the mobile app. It is an adult-managed limited beta and is not authorized for independent use by a child under 13. Prompts are processed online, so a parent, legal guardian, or educator must review the privacy notice, supervise minor use, and complete any required consent process.</p></details>
           <details><summary>Does Vizancia replace school instruction?</summary><p>No. Vizancia is a supplementary AI-literacy product. Families should still follow school policies and involve a teacher or qualified professional for important decisions.</p></details>
           <details><summary>How do I know the claims on this page are current?</summary><p>We link to the current app-store listings and maintain an editorial policy and changelog. We do not publish invented reviews, ratings, or credentials.</p></details>
@@ -220,12 +220,12 @@
         </div>
       </div>
     </section>
-  </main>
+  <p class="pro-container release-note">Website updated September 13, 2026.</p></main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-links"><a href="../index.html">Home</a><a href="../homeschool/">Homeschool</a><a href="../programs.html">Programs</a><a href="../resources/">AI Learning Hub</a><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../sandbox-safety.html">Sandbox safety</a><a href="../accessibility.html">Accessibility</a><a href="mailto:info@vizancia.ca">Contact</a></div>
-      <p>&copy; 2026 Vizancia Incorporated. The mobile app and marketing website have different measurement practices; see the Privacy Policy for details.</p>
+      <div class="footer-links"><a href="../index.html">Home</a><a href="../teachers/">For teachers</a><a href="../programs.html">Programs</a><a href="../resources/">AI Learning Hub</a><a href="../about.html">About</a><a href="../methodology.html">Methodology</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../sandbox-safety.html">Sandbox safety</a><a href="../accessibility.html">Accessibility</a><a href="mailto:info@vizancia.ca">Contact</a></div>
+      <p>&copy; 2026 Vizancia Incorporated. The mobile app and website have different data flows; see the Privacy Policy for hosting, local storage, and sharing details.</p>
     </div>
   </footer>
 

@@ -1,0 +1,29 @@
+{
+  "reviewed": "2026-09-13",
+  "curriculumVersion": "4.1",
+  "counts": {
+    "paths": 17,
+    "lessons": 106,
+    "questions": 954,
+    "teachingCards": 401,
+    "dictionaryTerms": 93,
+    "games": 16
+  },
+  "ios": {
+    "sourceCommit": "fc43e793efefdf41774479814fbf7feb9135ddd3",
+    "version": "4.1",
+    "build": 11,
+    "storeStatus": "published",
+    "publishedAt": "2026-09-12T20:16:05Z",
+    "storeEvidence": "https://itunes.apple.com/lookup?id=6759349861&country=ca"
+  },
+  "android": {
+    "sourceCommit": "9763f55dc83b878e1702101a8114bcb0fc9f8e78",
+    "version": "4.1",
+    "build": 11,
+    "storeStatus": "unconfirmed",
+    "publicVersionObserved": "3.6",
+    "storeEvidence": "https://play.google.com/store/apps/details?id=com.vizancia.app&hl=en&gl=CA"
+  },
+  "appIconSha256": "db80fe3812e0ddfc6495f7ba93b3a8deb0e7e9a497268876a02765c5d2fa7e2f"
+}

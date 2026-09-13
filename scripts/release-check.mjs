@@ -19,7 +19,7 @@ for (const platform of ['ios', 'android']) {
 }
 assert.ok(release.includes(`${facts.ios.version} available`));
 assert.ok(release.includes(`${facts.android.version} update prepared`));
-assert.ok(home.includes('Android update prepared, Play availability not yet confirmed'));
+assert.ok(release.includes('Its Google Play rollout has not been confirmed.'));
 // Optional local release gate: compare BOTH repositories with the recorded source.
 // A new commit requires a fresh content/privacy/store review, even if only docs changed.
 const args = process.argv.slice(2);

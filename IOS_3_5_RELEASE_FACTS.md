@@ -1,4 +1,6 @@
-# Vizancia iOS 3.5 release facts
+# Vizancia iOS 3.5 release facts (historical)
+
+Current facts are in `data/app-releases.json` and `releases.html`. Do not reuse these historical numbers for current marketing.
 
 Verified July 16, 2026 against `Odin686/VizanciaiOS` commit `cda28fe` (`3.5.0`, build `4`). These facts describe the iPhone and iPad codebase. Do not apply them to Android without checking the Android release separately.
 

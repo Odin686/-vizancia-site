@@ -3,7 +3,7 @@
 
   var menu = document.getElementById('proMenu');
   var nav = document.getElementById('proNav');
-  var form = document.getElementById('programEnquiryForm');
+  var form = document.getElementById('programInquiryForm');
   var programField = document.getElementById('leadProgram');
   var status = document.getElementById('formStatus');
 
@@ -45,19 +45,21 @@
     var name = document.getElementById('leadName').value.trim();
     var email = document.getElementById('leadEmail').value.trim();
     var organization = document.getElementById('leadOrganization').value.trim();
+    var country = document.getElementById('leadCountry').value;
     var program = programField.value;
     var groupSize = document.getElementById('leadGroup').value.trim();
     var timing = document.getElementById('leadTiming').value.trim();
     var message = document.getElementById('leadMessage').value.trim();
-    var subject = 'Vizancia program enquiry — ' + program;
+    var subject = 'Vizancia program inquiry — ' + program;
     var body = [
       'Hello Vizancia team,',
       '',
-      'I would like to enquire about a Vizancia program.',
+      'I would like to inquire about a Vizancia program.',
       '',
       'Name: ' + name,
       'Reply email: ' + email,
       'Organization or household: ' + (organization || 'Not provided'),
+      'Country or region: ' + country,
       'Program: ' + program,
       'Approximate group size: ' + (groupSize || 'Not provided'),
       'Preferred timing: ' + (timing || 'Not provided'),
@@ -65,10 +67,10 @@
       'What I would like help with:',
       message,
       '',
-      'Sent from the enquiry form at https://vizancia.com/programs.html'
+      'Sent from the inquiry form at https://vizancia.com/programs.html'
     ].join('\n');
 
-    status.textContent = 'Your email app should open now. Review the prepared message and press Send to complete your enquiry.';
+    status.textContent = 'Your email app should open now. Review the prepared message and press Send to complete your inquiry.';
     window.location.href = 'mailto:info@vizancia.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 

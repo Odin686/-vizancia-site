@@ -1,4 +1,4 @@
-> Historical implementation backlog. The September 2026 review in `docs/WEBSITE_REVIEW_2026-09-13.md` supersedes the measurement setup below. Do not re-enable advertising tags from this old checklist.
+> Historical implementation backlog. Website measurement was removed on September 13, 2026 and reinstated on September 14, 2026 as an opt-in Google Consent Mode v2 implementation in `assets/privacy-consent.js` (see the addendum in `docs/WEBSITE_REVIEW_2026-09-13.md`). The GA4 key events `app_store_click` and `play_store_click`, imported into Google Ads, replace the `CONVERSION_DESTINATIONS` approach described below; there is no conversion-label constant to fill in. Personalised advertising, remarketing audiences, and Google Signals must stay disabled.
 
 # Vizancia launch and account checklist
 

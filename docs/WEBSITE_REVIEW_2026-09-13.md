@@ -18,6 +18,15 @@ This is a technical and content review with proposed policy changes, not a legal
 - The shared icon was copied unchanged from the apps. The Startup screenshot comes from the existing Android 4.1 preview QA capture. It is labelled as a preview, with platform rendering differences disclosed.
 - Both public stores link to `https://odin686.github.io/Vizancia-privacypolicy/`, a separate repository/policy. Updating this website does **not** update that policy or either store's privacy URL.
 
+## Addendum, September 14, 2026 — measurement reinstated as opt-in
+
+Website measurement returned on September 14, 2026 as a strict opt-in implementation of Google Consent Mode v2 (`assets/privacy-consent.js` v4, GA4 `G-Z5P9FY92DE` and Google Ads `AW-18320211414`). The two defects that justified the September 13 removal are closed as follows:
+
+- **Saved acceptance no longer overrides Global Privacy Control.** The script reads `navigator.globalPrivacyControl` before it reads storage. When the signal is present it never loads a Google script, never shows the notice, never reads or writes the stored choice, and never sends an event, whatever an earlier visit saved. The legacy `vizancia_google_ads_consent` key is removed and never reused; the new choice lives under `vizancia_consent_v2`.
+- **Store clicks are no longer queued before consent.** The document-level click listener returns immediately unless measurement is on, and measurement is on only when GPC is absent and either a saved `accepted:true` exists or the visitor clicks “Accept measurement” on the current page. Nothing is pushed to the dataLayer before that except the denied consent default. The GA4 key events `app_store_click` and `play_store_click` carry the link URL and a `data-placement` label; every store link now carries matching campaign parameters.
+
+Personalised advertising, remarketing audiences, and Google Signals stay disabled in the tag configuration. “Essential only” or withdrawing acceptance pushes a denied consent update and expires the first-party Google cookies the site can control. The privacy policy, homepage and homeschool privacy facts, Support FAQ, changelog, and README were updated in the same commit, and `scripts/privacy.test.mjs` enforces the guarantees in CI.
+
 ## Findings addressed in this branch
 
 - Removed old 96-lesson/16-category/17-game current claims. Current 4.1 curriculum: 17 paths, 106 lessons, 954 authored questions, 401 teaching cards, 93 dictionary terms, 16 games plus Train the Robot. Historical changelog entries and explicitly labelled old screenshots remain.

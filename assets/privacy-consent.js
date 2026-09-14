@@ -1,11 +1,11 @@
 /*
- * Vizancia website measurement consent, v4.
+ * Vizancia website measurement consent, v5.
  * Google Consent Mode v2, strict opt-in. Plain ES5, no dependencies, no innerHTML.
  *
  * Tag IDs
  *   GA4 property "Vizancia" 545697150, stream "Vizancia Website": G-Z5P9FY92DE
  *   Google Ads 113-359-6517, Google tag: AW-18320211414 (served by the same gtag.js load)
- *   GA4 key events imported into Google Ads: app_store_click, play_store_click
+ *   GA4 events to verify as key events/import into Google Ads: app_store_click, play_store_click
  *
  * Rules enforced by this file (scripts/privacy.test.mjs checks them in CI)
  *   1. The first dataLayer entry is a consent default that denies ad_storage, ad_user_data,
@@ -17,18 +17,19 @@
  *      link renders.
  *   3. The legacy key vizancia_google_ads_consent is removed and never reused.
  *   4. The visitor's choice lives in localStorage under vizancia_consent_v2 as
- *      {accepted: boolean, savedAt: number}. Blocked storage behaves like "no choice yet".
+ *      {accepted: boolean, savedAt: number}, valid for 180 days. Blocked storage behaves like "no choice yet".
  *   5. STRICT MODE: gtag.js is not loaded and no event is pushed until measurement is on.
  *      Measurement is on only when not GPC and (a saved accepted:true exists, or the visitor
  *      clicks "Accept measurement" on this page).
  *   6. enableMeasurement pushes consent update (ad_storage, ad_user_data, analytics_storage
  *      granted; ad_personalization stays denied), injects gtag.js once, then pushes
  *      gtag('js'), config G-Z5P9FY92DE (allow_ad_personalization_signals:false,
- *      allow_google_signals:false, cookie_expires 33696000 = 13 months) and config
+ *      allow_google_signals:false, cookie_expires 33696000, cookie_update:false) and config
  *      AW-18320211414 (allow_ad_personalization_signals:false).
  *   7. disableMeasurement pushes consent update with all four keys denied and expires the
  *      first-party Google cookies (_ga, _gid, _gat, _gcl_au, _gcl_aw, _gcl_gs, _ga_*) for the
- *      current hostname and the apex domain, path=/. No other cookie is touched.
+ *      current hostname and the apex domain, path=/. No other cookie is touched. GA4 is disabled
+ *      immediately, then a tagged page reloads to unload Google's running scripts.
  *   8. One capturing click listener on document records app_store_click (apps.apple.com) and
  *      play_store_click (play.google.com) with link_url, placement and transport_type 'beacon',
  *      and only while measurement is on.
@@ -47,12 +48,13 @@
   var ADS_ID = 'AW-18320211414';
   var GTAG_SRC = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
   var STORAGE_KEY = 'vizancia_consent_v2';
+  var CHOICE_MAX_AGE = 180 * 24 * 60 * 60 * 1000;
   var LEGACY_KEY = 'vizancia_google_ads_consent';
   var POLICY_HREF = '/privacy.html#website-measurement';
   var GOOGLE_COOKIES = ['_ga', '_gid', '_gat', '_gcl_au', '_gcl_aw', '_gcl_gs'];
   var NOTICE_TEXT = 'We use Google Analytics and Google Ads conversion measurement to see how ' +
     'people find this site and whether they continue to the App Store or Google Play. ' +
-    'No Google script runs and nothing is stored on your device unless you accept. ' +
+    'Google measurement stays off unless you accept. We save either choice in this browser for 180 days. ' +
     'No personalised advertising. ';
 
   // 1. dataLayer, gtag stub and the consent default come before anything else.
@@ -81,6 +83,8 @@
 
   var measurementOn = false;
   var tagInjected = false;
+  var publicOrigin = /^(?:www\.)?vizancia\.com$/i.test(window.location.hostname);
+  window['ga-disable-' + GA4_ID] = true;
 
   // 4. Stored choice helpers. Blocked storage behaves like "no choice yet".
   function readChoice() {
@@ -90,6 +94,8 @@
       if (!raw) return null;
       var parsed = JSON.parse(raw);
       if (!parsed || typeof parsed.accepted !== 'boolean') return null;
+      if (typeof parsed.savedAt !== 'number' || !isFinite(parsed.savedAt) ||
+          parsed.savedAt > Date.now() || Date.now() - parsed.savedAt >= CHOICE_MAX_AGE) return null;
       return parsed;
     } catch (error) {
       return null;
@@ -100,12 +106,18 @@
     if (gpc) return;
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ accepted: accepted === true, savedAt: Date.now() }));
-    } catch (error) { /* storage blocked: the choice applies to this page only */ }
+    } catch (error) {
+      // A failed refusal write must not leave an old saved acceptance behind.
+      if (!accepted) {
+        try { window.localStorage.removeItem(STORAGE_KEY); } catch (ignored) { /* storage blocked */ }
+      }
+    }
   }
 
   // 6. Turn measurement on: consent update, then one gtag.js load and both config calls.
   function enableMeasurement() {
-    if (gpc) return;
+    if (gpc || !publicOrigin) return;
+    window['ga-disable-' + GA4_ID] = false;
     measurementOn = true;
     gtag('consent', 'update', {
       ad_storage: 'granted',
@@ -124,7 +136,8 @@
     gtag('config', GA4_ID, {
       allow_ad_personalization_signals: false,
       allow_google_signals: false,
-      cookie_expires: 33696000
+      cookie_expires: 33696000,
+      cookie_update: false
     });
     gtag('config', ADS_ID, { allow_ad_personalization_signals: false });
   }
@@ -132,6 +145,7 @@
   // 7. Turn measurement off and expire the first-party Google cookies this site can control.
   function disableMeasurement() {
     measurementOn = false;
+    window['ga-disable-' + GA4_ID] = true;
     gtag('consent', 'update', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
@@ -139,6 +153,9 @@
       analytics_storage: 'denied'
     });
     clearGoogleCookies();
+    // A denied Consent Mode update alone can still permit cookieless pings.
+    // Reload only after a tag was injected so the next document contains no Google code.
+    if (tagInjected) window.location.reload();
   }
 
   function trim(value) { return String(value).replace(/^\s+|\s+$/g, ''); }
@@ -150,7 +167,7 @@
     var parts = raw.split(';');
     for (var i = 0; i < parts.length; i++) {
       var name = trim(parts[i].split('=')[0]);
-      if (name.indexOf('_ga_') === 0 && names.indexOf(name) === -1) names.push(name);
+      if (/^_(?:ga|gat|gcl)_/.test(name) && names.indexOf(name) === -1) names.push(name);
     }
     var host = '';
     try { host = (window.location && window.location.hostname) || ''; } catch (error) { host = ''; }
@@ -231,7 +248,7 @@
   }
 
   function renderNotice() {
-    if (gpc) return;
+    if (gpc || !publicOrigin) return;
     if (document.getElementById('privacy-notice')) return;
     if (!document.body) return;
 
@@ -277,7 +294,7 @@
     link.className = 'privacy-choices-button';
     link.href = POLICY_HREF;
     link.textContent = 'Website privacy';
-    if (!gpc) {
+    if (!gpc && publicOrigin) {
       link.addEventListener('click', function (event) {
         event.preventDefault();
         renderNotice();
@@ -294,6 +311,20 @@
   // 5 and 11. Apply a saved acceptance synchronously; defer only the UI.
   var choice = readChoice();
   if (choice && choice.accepted === true) enableMeasurement();
+  else clearGoogleCookies();
+
+  // A refusal in another tab, or a restored page, must stop a previously loaded tag too.
+  function refreshChoice() {
+    gpc = navigator.globalPrivacyControl === true;
+    var current = readChoice();
+    if (measurementOn && (gpc || !current || !current.accepted)) disableMeasurement();
+  }
+  window.addEventListener('storage', function (event) {
+    if (event.key === STORAGE_KEY || event.key === null) refreshChoice();
+  });
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) refreshChoice();
+  });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderUi, { once: true });

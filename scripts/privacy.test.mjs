@@ -1,4 +1,4 @@
-// Privacy and measurement guarantees for assets/privacy-consent.js (v4, Consent Mode v2, opt-in).
+// Privacy and measurement guarantees for assets/privacy-consent.js (v5, Consent Mode v2, opt-in).
 // node:test + node:vm only. A small fake DOM drives the script exactly as a browser would.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -85,16 +85,17 @@ function click(doc, target) {
   return event;
 }
 
-function boot({ gpc = false, saved = null, blocked = false, readyState = 'complete', cookie = '', hostname = 'www.vizancia.com', document: existing } = {}) {
+function boot({ gpc = false, saved = null, savedAt = Date.now(), blocked = false, readyState = 'complete', cookie = '', hostname = 'www.vizancia.com', document: existing } = {}) {
   const storage = new Map([['vizancia_google_ads_consent', JSON.stringify({ choice: 'accepted', savedAt: 1 })]]);
-  if (saved !== null) storage.set('vizancia_consent_v2', JSON.stringify({ accepted: saved, savedAt: 1 }));
+  if (saved !== null) storage.set('vizancia_consent_v2', JSON.stringify({ accepted: saved, savedAt }));
   const guard = () => { if (blocked) throw new Error('storage blocked'); };
   const localStorage = {
     getItem(key) { guard(); return storage.has(key) ? storage.get(key) : null; },
     setItem(key, value) { guard(); storage.set(key, String(value)); },
     removeItem(key) { guard(); storage.delete(key); },
   };
-  const window = { localStorage, location: { hostname } };
+  const window = { localStorage, reloads: 0, listeners: {}, location: { hostname, reload() { window.reloads++; } } };
+  window.addEventListener = (type, fn) => { (window.listeners[type] ||= []).push(fn); };
   const document = existing || makeDocument({ readyState, cookie });
   vm.runInNewContext(code, { window, document, navigator: { globalPrivacyControl: gpc } });
   const page = {
@@ -129,7 +130,7 @@ const DEFAULT_DENIED = JSON.stringify(['consent', 'default', {
 }]);
 const UPDATE_GRANTED = JSON.stringify(['consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'denied', analytics_storage: 'granted' }]);
 const UPDATE_DENIED = JSON.stringify(['consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' }]);
-const CONFIG_GA4 = JSON.stringify(['config', 'G-Z5P9FY92DE', { allow_ad_personalization_signals: false, allow_google_signals: false, cookie_expires: 33696000 }]);
+const CONFIG_GA4 = JSON.stringify(['config', 'G-Z5P9FY92DE', { allow_ad_personalization_signals: false, allow_google_signals: false, cookie_expires: 33696000, cookie_update: false }]);
 const CONFIG_ADS = JSON.stringify(['config', 'AW-18320211414', { allow_ad_personalization_signals: false }]);
 
 function assertNothingLoaded(page, label) {
@@ -148,7 +149,7 @@ test('consent default is denied first; no stored choice shows the notice and loa
   assert.equal(notice.getAttribute('role'), 'region');
   assert.equal(notice.getAttribute('aria-label'), 'Website measurement choice');
   assert.notEqual(notice.getAttribute('role'), 'dialog');
-  assert.ok(textOf(notice).includes('No Google script runs and nothing is stored on your device unless you accept. No personalised advertising. How this works.'));
+  assert.ok(textOf(notice).includes('Google measurement stays off unless you accept. We save either choice in this browser for 180 days. No personalised advertising. How this works.'));
   const how = find(notice, (n) => n.tagName === 'A')[0];
   assert.equal(how.href, '/privacy.html#website-measurement');
   assert.equal(page.button('privacy-notice-accept').textContent, 'Accept measurement');
@@ -304,6 +305,8 @@ test('withdrawing after acceptance denies consent and expires only Google cookie
   click(page.document, page.button('privacy-notice-decline'));
   assert.equal(page.stored().accepted, false);
   assert.equal(JSON.stringify(page.layer().at(-1)), UPDATE_DENIED);
+  assert.equal(page.window['ga-disable-G-Z5P9FY92DE'], true, 'GA4 is disabled before navigating');
+  assert.equal(page.window.reloads, 1, 'withdrawal unloads the running tag');
   const writes = page.document.cookieWrites;
   const named = (name) => writes.filter((w) => w.startsWith(`${name}=`));
   for (const name of ['_ga', '_ga_ABC123', '_gid', '_gat', '_gcl_au', '_gcl_aw', '_gcl_gs']) {
@@ -320,6 +323,55 @@ test('withdrawing after acceptance denies consent and expires only Google cookie
   const apple = page.addLink(APPLE, { placement: 'p' });
   click(page.document, apple);
   assert.equal(page.events().length, 0, 'store clicks stop after withdrawal');
+});
+
+test('expired, future or malformed consent cannot load measurement', () => {
+  for (const savedAt of [1, Date.now() - 180 * 86400000, Date.now() + 86400000, 'yesterday', null]) {
+    const page = boot({ saved: true, savedAt });
+    assertNothingLoaded(page, `invalid timestamp ${savedAt}`);
+    assert.ok(page.notice());
+    assert.equal(page.window['ga-disable-G-Z5P9FY92DE'], true);
+  }
+});
+
+test('a refusal in another tab or on a restored page unloads a previously accepted tag', () => {
+  for (const type of ['storage', 'pageshow']) {
+    const page = boot({ saved: true });
+    assert.equal(page.window['ga-disable-G-Z5P9FY92DE'], false);
+    page.storage.set('vizancia_consent_v2', JSON.stringify({ accepted: false, savedAt: Date.now() }));
+    const event = type === 'storage' ? { key: 'vizancia_consent_v2' } : { persisted: true };
+    page.window.listeners[type][0](event);
+    assert.equal(page.window.reloads, 1);
+    assert.equal(page.window['ga-disable-G-Z5P9FY92DE'], true);
+    click(page.document, page.addLink(APPLE));
+    assert.equal(page.events().length, 0);
+  }
+});
+
+test('a failed refusal write removes any old saved acceptance', () => {
+  const page = boot({ saved: true });
+  page.window.localStorage.setItem = () => { throw new Error('quota'); };
+  click(page.document, page.link());
+  click(page.document, page.button('privacy-notice-decline'));
+  assert.equal(page.stored(), null);
+  assert.equal(page.window.reloads, 1);
+});
+
+test('refusal clears additional Google cookie variants without clearing unrelated storage', () => {
+  const page = boot({ saved: false, cookie: '_gcl_ls=test; _gat_gtag_G_123=test; session=keep' });
+  assert.ok(page.document.cookieWrites.some((s) => s.startsWith('_gcl_ls=')));
+  assert.ok(page.document.cookieWrites.some((s) => s.startsWith('_gat_gtag_G_123=')));
+  assert.ok(page.document.cookieWrites.every((s) => !s.startsWith('session=')));
+  assert.equal(page.window.reloads, 0, 'a page without a loaded tag never reloads');
+});
+
+test('private previews and localhost never load production measurement', () => {
+  for (const hostname of ['localhost', '127.0.0.1', 'preview.chatgpt.site', 'vizancia.com.example.org']) {
+    const page = boot({ hostname, saved: true });
+    assertNothingLoaded(page, hostname);
+    assert.equal(page.window['ga-disable-G-Z5P9FY92DE'], true);
+    assert.equal(click(page.document, page.link()).defaultPrevented, false);
+  }
 });
 
 test('when the document is still loading, nothing renders until DOMContentLoaded', () => {
@@ -367,7 +419,7 @@ test('public source has no third-party script tags and no tag code outside the c
   }
 });
 
-test('every public page loads privacy-consent v4 synchronously', async () => {
+test('every public page loads privacy-consent v5 synchronously', async () => {
   const exempt = ['404.html', 'legal.html', path.join('teachers', 'activity', 'index.html')];
   let checked = 0;
   for (const file of await walk('.')) {
@@ -375,8 +427,8 @@ test('every public page loads privacy-consent v4 synchronously', async () => {
     const relative = path.relative('.', file);
     if (exempt.includes(relative)) continue;
     const text = await readFile(file, 'utf8');
-    assert.match(text, /<script\s+src=["'][^"']*privacy-consent\.js\?v=4["']\s*><\/script>/, `${relative}: consent script v4 without defer/async`);
-    assert.match(text, /privacy-consent\.css\?v=4["']/, `${relative}: consent stylesheet v4`);
+    assert.match(text, /<script\s+src=["'][^"']*privacy-consent\.js\?v=5["']\s*><\/script>/, `${relative}: consent script v5 without defer/async`);
+    assert.match(text, /privacy-consent\.css\?v=5["']/, `${relative}: consent stylesheet v5`);
     assert.doesNotMatch(text, /<script[^>]*privacy-consent\.js[^>]*\b(?:defer|async)\b/, `${relative}: consent script must not be deferred or async`);
     assert.equal((text.match(/<script[^>]*privacy-consent\.js/g) || []).length, 1, `${relative}: consent script tag appears once`);
     checked += 1;

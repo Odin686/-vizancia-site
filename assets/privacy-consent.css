@@ -2,3 +2,20 @@
 .privacy-choices-button:focus-visible { outline:3px solid #1d4ed8; outline-offset:3px; }
 body .sticky-download.visible ~ .privacy-choices-button { bottom:86px; }
 @media print { .privacy-choices-button { display:none; } }
+
+.privacy-notice { position:fixed; left:12px; right:12px; bottom:12px; z-index:9999; box-sizing:border-box; max-width:560px; margin:0 auto; padding:16px; border:2px solid #d4d4d4; border-radius:12px; color:#303030; background:#fff; font:400 .9375rem/1.5 system-ui,sans-serif; box-shadow:0 8px 24px rgba(0,0,0,.18); }
+.privacy-notice-text { margin:0 0 12px; }
+.privacy-notice-text a { color:#1d4ed8; text-decoration:underline; }
+.privacy-notice-text a:focus-visible { outline:3px solid #1d4ed8; outline-offset:2px; }
+.privacy-notice-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.privacy-notice-accept, .privacy-notice-decline { min-height:44px; padding:10px 16px; border:2px solid #1d4ed8; border-radius:10px; font:700 .9375rem/1.2 system-ui,sans-serif; cursor:pointer; }
+.privacy-notice-accept { color:#fff; background:#1d4ed8; }
+.privacy-notice-decline { color:#1d4ed8; background:#fff; }
+.privacy-notice-accept:focus-visible, .privacy-notice-decline:focus-visible { outline:3px solid #1d4ed8; outline-offset:3px; }
+body:has(#privacy-notice) .privacy-choices-button { display:none; }
+body .sticky-download.visible ~ .privacy-notice { bottom:86px; }
+@media print { .privacy-notice { display:none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .privacy-notice { animation:privacy-notice-fade .2s ease-out; }
+  @keyframes privacy-notice-fade { from { opacity:0; } to { opacity:1; } }
+}

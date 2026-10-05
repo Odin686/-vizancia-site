@@ -17,9 +17,11 @@ for (const platform of ['ios', 'android']) {
   assert.match(facts[platform].sourceCommit, /^[a-f0-9]{40}$/);
   assert.ok(['published','unconfirmed'].includes(facts[platform].storeStatus));
 }
-assert.ok(release.includes(`${facts.ios.version} available`));
-assert.ok(release.includes(`${facts.android.version} update prepared`));
-assert.ok(release.includes('Its Google Play rollout has not been confirmed.'));
+for (const platform of ['ios', 'android']) {
+  const f = facts[platform];
+  assert.ok(release.includes(f.storeStatus === 'published' ? `${f.version} available` : `${f.version} update prepared`), `${platform}: release page status differs from facts`);
+}
+assert.ok(release.includes(`Vizancia ${facts.curriculumVersion}</h1>`), 'Release page heading differs from curriculumVersion');
 // Optional local release gate: compare BOTH repositories with the recorded source.
 // A new commit requires a fresh content/privacy/store review, even if only docs changed.
 const args = process.argv.slice(2);

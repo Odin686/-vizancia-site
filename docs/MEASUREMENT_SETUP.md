@@ -75,3 +75,22 @@ and save the matching GA4 rule as part of the same rollout.
 Tag Assistant's automatic scanner may report no tag before consent or when a
 browser blocker prevents Google requests. Do not weaken privacy controls to
 make that scanner pass. A real post-consent event check is still required.
+
+## App measurement and privacy wording
+
+The iOS repository `Odin686/VizanciaiOS` was checked on October 6, 2026 at
+`30939c80f8b30a3b63dc8963c19464e0d14bf401`, the source commit recorded for 4.2.
+It contains no Firebase configuration file, SDK dependency, or initialization.
+Its privacy manifest declares no tracking or collected data. Android source
+has not been audited in this check. An imported Firebase conversion action in
+Google Ads does not establish that either live app emits `first_open`.
+
+The public copy describes the current 4.2 app separately from optional website
+measurement. Website acceptance does not enable app analytics. Before an app
+release adds Firebase Analytics, document the actual project, SDK, collected
+events and identifiers, collection controls, retention, and platform-specific
+attribution configuration. Update the matching app privacy notice, manifests,
+store disclosures, and website copy in that release; verify collection on a
+device. Do not announce Firebase as active solely because a conversion action
+or Firebase project exists, and do not remove the current release's privacy
+description to imply that an unshipped integration is already live.

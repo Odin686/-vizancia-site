@@ -13,7 +13,10 @@ tag snippet or bypass the notice to satisfy a tag scanner.
 | Measurement ID | `G-Z5P9FY92DE` |
 | Google Ads tag | `AW-18320211414` |
 
-`assets/privacy-consent.js` loads Google code only after acceptance, including a
+`assets/privacy-consent.js` uses `AW-18320211414` as the combined tag loader ID,
+then configures both Analytics and Ads destinations. The former standalone
+`G-Z5P9FY92DE` loader returns 404 after the tags were combined; do not switch the
+loader back to that ID. Google code loads only after acceptance, including a
 valid saved acceptance. Essential-only choices, withdrawal and Global Privacy
 Control keep measurement disabled. Google Signals and personalised-advertising
 signals remain disabled. Preview and localhost origins never load production
@@ -56,7 +59,7 @@ and save the matching GA4 rule as part of the same rollout.
 
 1. Run `npm run build`. The privacy tests verify consent, refusal, GPC,
    withdrawal, production-host restrictions and visible-time qualification.
-2. Verify the live page loads `privacy-consent.js?v=6` after Pages finishes.
+2. Verify the live page loads `privacy-consent.js?v=7` after Pages finishes.
 3. In a browser without measurement blockers, connect Tag Assistant to
    `https://vizancia.com/`. Choose **Accept measurement** and keep the page
    visible for ten seconds. Verify both tag destinations and the

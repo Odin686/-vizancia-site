@@ -1,4 +1,4 @@
-// Privacy and measurement guarantees for assets/privacy-consent.js (v6, Consent Mode v2, opt-in).
+// Privacy and measurement guarantees for assets/privacy-consent.js (v7, Consent Mode v2, opt-in).
 // node:test + node:vm only. A small fake DOM drives the script exactly as a browser would.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,7 +8,7 @@ import path from 'node:path';
 
 const code = await readFile('assets/privacy-consent.js', 'utf8');
 const codeWithoutComments = code.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
-const GTAG_SRC = 'https://www.googletagmanager.com/gtag/js?id=G-Z5P9FY92DE';
+const GTAG_SRC = 'https://www.googletagmanager.com/gtag/js?id=AW-18320211414';
 const APPLE = 'https://apps.apple.com/ca/app/vizancia/id6759349861?ct=home_hero';
 const PLAY = 'https://play.google.com/store/apps/details?id=com.vizancia.app&referrer=utm_source%3Dvizancia.com%26utm_campaign%3Dhome_hero';
 
@@ -498,7 +498,7 @@ test('public source has no third-party script tags and no tag code outside the c
   }
 });
 
-test('every public page loads privacy-consent v6 synchronously', async () => {
+test('every public page loads privacy-consent v7 synchronously', async () => {
   const exempt = ['404.html', 'legal.html', path.join('teachers', 'activity', 'index.html')];
   let checked = 0;
   for (const file of await walk('.')) {
@@ -506,7 +506,7 @@ test('every public page loads privacy-consent v6 synchronously', async () => {
     const relative = path.relative('.', file);
     if (exempt.includes(relative)) continue;
     const text = await readFile(file, 'utf8');
-    assert.match(text, /<script\s+src=["'][^"']*privacy-consent\.js\?v=6["']\s*><\/script>/, `${relative}: consent script v6 without defer/async`);
+    assert.match(text, /<script\s+src=["'][^"']*privacy-consent\.js\?v=7["']\s*><\/script>/, `${relative}: consent script v7 without defer/async`);
     assert.match(text, /privacy-consent\.css\?v=5["']/, `${relative}: consent stylesheet v5`);
     assert.doesNotMatch(text, /<script[^>]*privacy-consent\.js[^>]*\b(?:defer|async)\b/, `${relative}: consent script must not be deferred or async`);
     assert.equal((text.match(/<script[^>]*privacy-consent\.js/g) || []).length, 1, `${relative}: consent script tag appears once`);

@@ -1,5 +1,5 @@
 /*
- * Vizancia website measurement consent, v6.
+ * Vizancia website measurement consent, v7.
  * Google Consent Mode v2, strict opt-in. Plain ES5, no dependencies, no innerHTML.
  *
  * Tag IDs
@@ -47,7 +47,9 @@
 
   var GA4_ID = 'G-Z5P9FY92DE';
   var ADS_ID = 'AW-18320211414';
-  var GTAG_SRC = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+  // These destinations share a combined Google tag. Its current installation ID
+  // is ADS_ID; the former standalone GA4 loader returns 404 after combination.
+  var GTAG_SRC = 'https://www.googletagmanager.com/gtag/js?id=' + ADS_ID;
   var STORAGE_KEY = 'vizancia_consent_v2';
   var CHOICE_MAX_AGE = 180 * 24 * 60 * 60 * 1000;
   var LEGACY_KEY = 'vizancia_google_ads_consent';

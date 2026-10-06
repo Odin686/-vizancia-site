@@ -1,4 +1,4 @@
-// Privacy and measurement guarantees for assets/privacy-consent.js (v5, Consent Mode v2, opt-in).
+// Privacy and measurement guarantees for assets/privacy-consent.js (v6, Consent Mode v2, opt-in).
 // node:test + node:vm only. A small fake DOM drives the script exactly as a browser would.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -59,7 +59,7 @@ function textOf(node) {
 }
 
 function makeDocument({ readyState = 'complete', cookie = '' } = {}) {
-  const doc = { nodeType: 9, readyState, listeners: {}, cookieWrites: [], cookieValue: cookie };
+  const doc = { nodeType: 9, readyState, visibilityState: 'visible', listeners: {}, cookieWrites: [], cookieValue: cookie };
   doc.documentElement = new FakeNode('html');
   doc.documentElement.parentNode = doc;
   doc.head = doc.documentElement.appendChild(new FakeNode('head'));
@@ -95,11 +95,33 @@ function boot({ gpc = false, saved = null, savedAt = Date.now(), blocked = false
     removeItem(key) { guard(); storage.delete(key); },
   };
   const window = { localStorage, reloads: 0, listeners: {}, location: { hostname, reload() { window.reloads++; } } };
+  let now = Date.now();
+  let timerId = 0;
+  const timers = new Map();
+  window.setTimeout = (fn, delay) => { timers.set(++timerId, { fn, at: now + delay }); return timerId; };
+  window.clearTimeout = (id) => timers.delete(id);
+  class ClockDate extends Date { static now() { return now; } }
   window.addEventListener = (type, fn) => { (window.listeners[type] ||= []).push(fn); };
   const document = existing || makeDocument({ readyState, cookie });
-  vm.runInNewContext(code, { window, document, navigator: { globalPrivacyControl: gpc } });
+  const navigator = { globalPrivacyControl: gpc };
+  vm.runInNewContext(code, { window, document, navigator, Date: ClockDate });
   const page = {
-    window, document, storage,
+    window, document, storage, navigator,
+    advance(ms) {
+      const end = now + ms;
+      while (true) {
+        const next = [...timers].filter(([, t]) => t.at <= end).sort((a, b) => a[1].at - b[1].at)[0];
+        if (!next) break;
+        now = next[1].at;
+        timers.delete(next[0]);
+        next[1].fn();
+      }
+      now = end;
+    },
+    visibility(state) {
+      document.visibilityState = state;
+      for (const fn of document.listeners.visibilitychange || []) fn();
+    },
     layer: () => window.dataLayer.map((entry) => Array.from(entry)),
     scripts: () => find(document.head, (n) => n.tagName === 'SCRIPT'),
     notice: () => document.getElementById('privacy-notice'),
@@ -397,6 +419,63 @@ test('a saved acceptance while loading injects the tag synchronously in head', (
   assert.equal(page.notice(), undefined);
 });
 
+test('engagement counts ten visible seconds after consent and sends once to GA4 only', () => {
+  const page = boot();
+  page.advance(20000);
+  assertNothingLoaded(page, 'time before consent');
+  click(page.document, page.button('privacy-notice-accept'));
+  page.advance(6000);
+  page.visibility('hidden');
+  page.advance(60000);
+  assert.equal(page.events().length, 0, 'background time is excluded');
+  page.visibility('visible');
+  page.advance(3999);
+  assert.equal(page.events().length, 0);
+  page.advance(1);
+  assert.equal(JSON.stringify(page.events()), JSON.stringify([['event', 'vizancia_engaged_visit', {
+    send_to: 'G-Z5P9FY92DE', engagement_time_msec: 10000, transport_type: 'beacon'
+  }]]));
+  page.advance(30000);
+  page.visibility('hidden');
+  page.visibility('visible');
+  page.advance(10000);
+  assert.equal(page.events().length, 1, 'no repeated conversion on this document');
+});
+
+test('refusal, previews, GPC and withdrawal never emit an engagement conversion', () => {
+  for (const options of [{ saved: false }, { gpc: true, saved: true }, { hostname: 'localhost', saved: true }]) {
+    const page = boot(options);
+    page.advance(30000);
+    assertNothingLoaded(page, JSON.stringify(options));
+  }
+  const page = boot({ saved: true });
+  page.advance(5000);
+  click(page.document, page.link());
+  click(page.document, page.button('privacy-notice-decline'));
+  page.advance(30000);
+  assert.equal(page.events().length, 0, 'withdrawal cancels the pending event');
+});
+
+test('a saved acceptance in a background tab waits for visible time', () => {
+  const document = makeDocument();
+  document.visibilityState = 'hidden';
+  const page = boot({ saved: true, document });
+  page.advance(30000);
+  assert.equal(page.events().length, 0);
+  page.visibility('visible');
+  page.advance(10000);
+  assert.equal(page.events()[0][1], 'vizancia_engaged_visit');
+});
+
+test('a newly asserted GPC signal cancels engagement at timer completion', () => {
+  const page = boot({ saved: true });
+  page.advance(5000);
+  page.navigator.globalPrivacyControl = true;
+  page.advance(5000);
+  assert.equal(page.events().length, 0);
+  assert.equal(page.window['ga-disable-G-Z5P9FY92DE'], true);
+});
+
 // ---------- source and page checks ----------
 const SKIP_DIRS = ['.git', 'node_modules', 'dist', 'scripts', 'docs', '.openai'];
 async function walk(dir, files = []) {
@@ -419,7 +498,7 @@ test('public source has no third-party script tags and no tag code outside the c
   }
 });
 
-test('every public page loads privacy-consent v5 synchronously', async () => {
+test('every public page loads privacy-consent v6 synchronously', async () => {
   const exempt = ['404.html', 'legal.html', path.join('teachers', 'activity', 'index.html')];
   let checked = 0;
   for (const file of await walk('.')) {
@@ -427,7 +506,7 @@ test('every public page loads privacy-consent v5 synchronously', async () => {
     const relative = path.relative('.', file);
     if (exempt.includes(relative)) continue;
     const text = await readFile(file, 'utf8');
-    assert.match(text, /<script\s+src=["'][^"']*privacy-consent\.js\?v=5["']\s*><\/script>/, `${relative}: consent script v5 without defer/async`);
+    assert.match(text, /<script\s+src=["'][^"']*privacy-consent\.js\?v=6["']\s*><\/script>/, `${relative}: consent script v6 without defer/async`);
     assert.match(text, /privacy-consent\.css\?v=5["']/, `${relative}: consent stylesheet v5`);
     assert.doesNotMatch(text, /<script[^>]*privacy-consent\.js[^>]*\b(?:defer|async)\b/, `${relative}: consent script must not be deferred or async`);
     assert.equal((text.match(/<script[^>]*privacy-consent\.js/g) || []).length, 1, `${relative}: consent script tag appears once`);

@@ -1,11 +1,12 @@
 /*
- * Vizancia website measurement consent, v5.
+ * Vizancia website measurement consent, v6.
  * Google Consent Mode v2, strict opt-in. Plain ES5, no dependencies, no innerHTML.
  *
  * Tag IDs
  *   GA4 property "Vizancia" 545697150, stream "Vizancia Website": G-Z5P9FY92DE
  *   Google Ads 113-359-6517, Google tag: AW-18320211414 (served by the same gtag.js load)
- *   GA4 events to verify as key events/import into Google Ads: app_store_click, play_store_click
+ *   GA4 events: app_store_click, play_store_click, vizancia_engaged_visit.
+ *   GA4 generates ads_conversion_engagement from vizancia_engaged_visit for Ads.
  *
  * Rules enforced by this file (scripts/privacy.test.mjs checks them in CI)
  *   1. The first dataLayer entry is a consent default that denies ad_storage, ad_user_data,
@@ -52,8 +53,13 @@
   var LEGACY_KEY = 'vizancia_google_ads_consent';
   var POLICY_HREF = '/privacy.html#website-measurement';
   var GOOGLE_COOKIES = ['_ga', '_gid', '_gat', '_gcl_au', '_gcl_aw', '_gcl_gs'];
+  var ENGAGEMENT_MS = 10000;
+  var engagementTimer = null;
+  var visibleSince = null;
+  var visibleMs = 0;
+  var engagementSent = false;
   var NOTICE_TEXT = 'We use Google Analytics and Google Ads conversion measurement to see how ' +
-    'people find this site and whether they continue to the App Store or Google Play. ' +
+    'people find and engage with this site and whether they continue to the App Store or Google Play. ' +
     'Google measurement stays off unless you accept. We save either choice in this browser for 180 days. ' +
     'No personalised advertising. ';
 
@@ -125,7 +131,7 @@
       ad_personalization: 'denied',
       analytics_storage: 'granted'
     });
-    if (tagInjected) return;
+    if (tagInjected) { resumeEngagement(); return; }
     tagInjected = true;
     var script = document.createElement('script');
     script.async = true;
@@ -140,10 +146,45 @@
       cookie_update: false
     });
     gtag('config', ADS_ID, { allow_ad_personalization_signals: false });
+    resumeEngagement();
   }
+
+  // Qualify an engaged visit after ten consented seconds while the page is visible.
+  // Background time and time before consent do not count. Send once per document,
+  // only to GA4; the account's custom-event rule supplies the imported Ads event.
+  function pauseEngagement() {
+    if (engagementTimer !== null) window.clearTimeout(engagementTimer);
+    engagementTimer = null;
+    if (visibleSince !== null) visibleMs += Math.max(0, Date.now() - visibleSince);
+    visibleSince = null;
+  }
+
+  function resumeEngagement() {
+    if (!measurementOn || engagementSent || document.visibilityState === 'hidden' || visibleSince !== null) return;
+    visibleSince = Date.now();
+    engagementTimer = window.setTimeout(function () {
+      pauseEngagement();
+      if (navigator.globalPrivacyControl === true) { refreshChoice(); return; }
+      if (!measurementOn || document.visibilityState === 'hidden') return;
+      if (visibleMs < ENGAGEMENT_MS) { resumeEngagement(); return; }
+      engagementSent = true;
+      gtag('event', 'vizancia_engaged_visit', {
+        send_to: GA4_ID,
+        engagement_time_msec: visibleMs,
+        transport_type: 'beacon'
+      });
+    }, Math.max(0, ENGAGEMENT_MS - visibleMs));
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    pauseEngagement();
+    resumeEngagement();
+  });
 
   // 7. Turn measurement off and expire the first-party Google cookies this site can control.
   function disableMeasurement() {
+    pauseEngagement();
+    visibleMs = 0;
     measurementOn = false;
     window['ga-disable-' + GA4_ID] = true;
     gtag('consent', 'update', {

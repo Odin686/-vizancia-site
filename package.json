@@ -10,6 +10,8 @@
     "qa:visual": "node scripts/capture-site-previews.mjs",
     "test": "node --test scripts/*.test.mjs",
     "audit:release": "node scripts/release-check.mjs",
-    "build": "npm run audit && npm run audit:release && npm test && node scripts/build-static.mjs"
+    "build": "npm run audit && npm run audit:release && npm run audit:ios && npm test && node scripts/build-static.mjs",
+    "sync:ios": "node scripts/sync-ios-disclosures.mjs",
+    "audit:ios": "node scripts/sync-ios-disclosures.mjs --check && node scripts/ios-consistency-check.mjs"
   }
 }

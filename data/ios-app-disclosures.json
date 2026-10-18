@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "platform": "ios",
+  "reviewed": "2026-10-17",
+  "candidateVersion": "4.3",
+  "candidateBuild": 13,
+  "sourcePolicySha256": "7cd5a5bd74c9a0a893054e6633bb1480c63f7e7df7e4b904a2027da795ae190c",
+  "policyUrl": "https://odin686.github.io/VizanciaiOS/privacy-policy.html",
+  "sections": [
+    {
+      "sourceSection": 5,
+      "heading": "When optional Firebase analytics can run",
+      "body": "We use Google Analytics for Firebase to understand basic app usage and improve navigation and reliability. It is off by default for every learner. Settings requires a separate confirmation that you are 18 or older and use the device only for your own learning, not for children, students or other learners.",
+      "bullets": [
+        "Onboarding must be complete",
+        "The selected grade band must be high school or the corresponding adult level",
+        "There must be exactly one local learner profile",
+        "Classroom Mode must be off",
+        "An adult must explicitly confirm personal use and allow analytics"
+      ],
+      "footer": "A grade-band choice does not establish age or grant consent. Younger bands, multiple profiles and Classroom Mode exclude collection. The app does not configure Firebase on a cold launch without eligible saved consent.",
+      "links": []
+    },
+    {
+      "sourceSection": 6,
+      "heading": "Information Google receives after opt-in",
+      "body": "When eligible analytics is enabled, the SDK sends usage and technical information to Google. This may include:",
+      "bullets": [
+        "A generated app-instance identifier that groups activity from that app installation",
+        "Basic lifecycle and engagement events, such as first launch, sessions and engagement duration",
+        "Screen-view events for the fixed tab names Play, Learn, Train, Campus and Progress",
+        "App identifier and version, device model, operating system, language and related device or app metadata",
+        "Event times and approximate location derived from network information"
+      ],
+      "footer": "An app-instance identifier is pseudonymous, not a guarantee of anonymity. Network requests expose an IP address to Google for delivery and processing. Google states that Analytics does not log or store individual IP addresses. Analytics does not use the device's GPS or Apple's Location Services.",
+      "links": [
+        {
+          "label": "Google's app data disclosures",
+          "url": "https://support.google.com/analytics/answer/10285841"
+        },
+        {
+          "label": "Google Analytics data safeguards",
+          "url": "https://support.google.com/analytics/answer/6004245"
+        }
+      ]
+    },
+    {
+      "sourceSection": 7,
+      "heading": "Information excluded from analytics",
+      "body": "Our analytics interface accepts fixed navigation labels, not free text or learning records.",
+      "bullets": [
+        "No nickname, email address, local profile ID or grade band",
+        "No lesson answers, scores, XP, game results, review cards or learning histories",
+        "No AI Passport text, project notes, written responses or workshop code and test traces",
+        "No lesson-feedback ratings, contact lists, photos, microphone recordings or precise location",
+        "No account user ID, advertising identifier or vendor identifier"
+      ],
+      "footer": "The app denies advertising storage, advertising user-data and advertising-personalization consent. Advertising-ID support, vendor-ID collection and automatic screen reporting are disabled. The current release does not use Firebase Authentication, Firestore, Crashlytics, Performance Monitoring, Cloud Messaging or Firebase AI services.",
+      "links": []
+    },
+    {
+      "sourceSection": 8,
+      "heading": "Your analytics choices and withdrawal",
+      "body": "You may leave analytics off or withdraw consent in Settings. Withdrawing stops collection and resets local analytics data and identifiers. The app records a local withdrawal marker before attempting to save the profile preference, so a failed preference save does not restore collection on this device.",
+      "bullets": [
+        "Switching profiles, adding a second learner, choosing a younger band or entering Classroom Mode stops collection and resets local analytics data",
+        "Those exclusions suspend a saved choice; the same learner's choice may resume when the app becomes eligible again",
+        "Settings offers withdrawal of a saved choice when it is suspended; leave a temporary class session to manage personal settings if needed",
+        "Reset All Progress keeps preferences, including the analytics choice, and does not withdraw consent",
+        "Only a newly confirmed and successfully saved opt-in clears a withdrawal marker"
+      ],
+      "footer": "Withdrawal applies to future collection. It does not automatically delete information already received by Google. Reinstalling, clearing app data or resetting a local identifier is also not a request to delete previously sent information. Contact us about that information as explained below.",
+      "links": []
+    },
+    {
+      "sourceSection": 9,
+      "heading": "Retention and deletion",
+      "body": "Local learning records stay until you delete the relevant records or profile, reset progress, or remove the app. Some identity and preference settings survive Reset All Progress. Backups, exported files and recovery copies have separate lifetimes.",
+      "bullets": [
+        "As reviewed on October 17, 2026, the app's Google Analytics property retains event-level data for 2 months and user-level data for 14 months",
+        "Reset on new user activity is enabled, so new activity can extend the user identifier's 14-month retention window",
+        "These settings do not impose the same expiry on standard aggregated reports",
+        "Google's deletion processing and operational retention follow its applicable service terms; deletion is not instantaneous",
+        "Support correspondence is kept as needed to handle the request and related legal or administrative obligations; you may ask us to delete it"
+      ],
+      "footer": "We review retention settings when changing analytics practices. A request to delete local progress does not delete analytics already sent, and an analytics deletion request does not erase records held only on your device.",
+      "links": [
+        {
+          "label": "Google Analytics retention controls",
+          "url": "https://support.google.com/analytics/answer/7667196"
+        }
+      ]
+    },
+    {
+      "sourceSection": 10,
+      "heading": "Google and international processing",
+      "body": "Google provides the Firebase and Analytics infrastructure. Authorized people working on Vizancia can access the resulting analytics reports. Google processes information under its service terms, data-processing terms and privacy documentation, including processing needed to operate and protect its services.",
+      "bullets": [],
+      "footer": "Google may process analytics information in the United States and other countries where it or its service providers operate. Those countries may have different privacy laws, and their lawful-access requirements may apply.",
+      "links": [
+        {
+          "label": "Privacy and security in Firebase",
+          "url": "https://firebase.google.com/support/privacy"
+        },
+        {
+          "label": "Google's privacy policy",
+          "url": "https://policies.google.com/privacy"
+        }
+      ]
+    },
+    {
+      "sourceSection": 11,
+      "heading": "Children, families and schools",
+      "body": "The learning app supports younger audiences with adult guidance. Optional analytics is not offered for children's or students' learning and must not be enabled on a device used for them. Adults should use temporary Classroom Mode for shared sessions and review local profiles before handing a device to another person.",
+      "bullets": [],
+      "footer": "A school or educator must follow its own device, privacy, sharing and approval rules. Using the app or its adult check does not establish school approval or verified parental consent. If you believe a child's information was sent to us, contact info@vizancia.ca without including the child's work or unnecessary identifying details.",
+      "links": []
+    },
+    {
+      "sourceSection": 12,
+      "heading": "Reports and information you choose to share",
+      "body": "An adult may review a report and use Apple's share sheet to select a destination. Learning Reports and Class Period summaries can include a nickname, grade or module and practice results. Beta feedback reports contain structured lesson results and ratings; those details may identify a learner in context.",
+      "bullets": [],
+      "footer": "AI Passport text and other written responses are excluded from those reports and analytics. Review the full report before sharing and follow school rules. We receive a report only if you choose to send it to us. Copies you share, screenshots and text you copy are controlled by you and the recipients.",
+      "links": []
+    },
+    {
+      "sourceSection": 13,
+      "heading": "Backups, recovery copies and device removal",
+      "body": "Apple or computer backups may contain local app data depending on device settings. If a database cannot open, the app may preserve a recovery copy on the device before starting a fresh store. Removing the app does not erase external backups, recovery copies outside its container or files already shared.",
+      "bullets": [],
+      "footer": "Vizancia does not operate a cloud learning-sync service and cannot remotely retrieve or erase learning records held only on your device. Device owners and school administrators manage backups and shared copies through their own systems.",
+      "links": []
+    }
+  ]
+}

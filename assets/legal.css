@@ -51,9 +51,15 @@ body.legal-page::before { background: linear-gradient(90deg, var(--pro-blue), va
 
 .legal-trademark-note { margin-top: 19px; color: #6b778b; font-size: .76rem; line-height: 1.6; }
 
+.legal-toc { max-height: calc(100dvh - 118px); overflow-y: auto; }
+.legal-toc a { min-height: 44px; display: flex; align-items: center; }
+.legal-article { overflow-wrap: anywhere; }
+.legal-article a:focus-visible, .legal-toc a:focus-visible { outline: 3px solid var(--pro-blue); outline-offset: 3px; }
+#ios-analytics > div { scroll-margin-top: 100px; }
+
 @media (max-width: 880px) {
   .legal-layout { grid-template-columns: 1fr; }
-  .legal-toc { position: static; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .legal-toc { position: static; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: none; }
   .legal-toc strong, .legal-toc .legal-related { grid-column: 1 / -1; }
 }
 

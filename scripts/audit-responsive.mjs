@@ -8,7 +8,7 @@ const chrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const profileDirectory = mkdtempSync('/tmp/vizancia-responsive-audit-');
 const debuggingPort = 9224;
 const baseUrl = process.env.VIZANCIA_PREVIEW_URL || 'http://127.0.0.1:4173';
-const ignored = new Set(['.git', 'node_modules']);
+const ignored = new Set(['.git', 'node_modules', 'dist', 'docs', '.openai']);
 const pagePaths = [];
 const viewports = [
   { name: 'small-phone', width: 360, height: 800, mobile: true },
@@ -128,6 +128,16 @@ function auditPage() {
         .filter(element => parseFloat(getComputedStyle(element).fontSize) < 16)
         .map(identify)
     : [];
+  const navigationIssues = [];
+  const menu = document.getElementById('proMenu');
+  const nav = document.getElementById('proNav');
+  if (menu && nav && viewportWidth <= 980) {
+    if (!visible(menu) || visible(nav)) navigationIssues.push('mobile navigation must start collapsed with a visible menu button');
+    menu.click();
+    if (!visible(nav) || menu.getAttribute('aria-expanded') !== 'true') navigationIssues.push('menu button did not open navigation');
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    if (visible(nav) || menu.getAttribute('aria-expanded') !== 'false') navigationIssues.push('Escape did not close navigation');
+  }
   return {
     title: document.title,
     hasViewportMeta: Boolean(document.querySelector('meta[name="viewport"]')),
@@ -138,6 +148,7 @@ function auditPage() {
     distortedImages,
     primaryControls,
     zoomRiskFields,
+    navigationIssues,
   };
 }
 
@@ -202,6 +213,7 @@ try {
       if (result.distortedImages.length) errors.push(label + ': distorted images ' + result.distortedImages.join(', '));
       if (result.primaryControls.length) warnings.push(label + ': primary controls below 24px ' + result.primaryControls.join(', '));
       if (result.zoomRiskFields.length) warnings.push(label + ': form fields below 16px ' + result.zoomRiskFields.join(', '));
+      for (const issue of result.navigationIssues) errors.push(label + ': ' + issue);
     }
     console.log('Checked ' + pagePaths.length + ' pages at ' + viewport.width + 'px.');
   }

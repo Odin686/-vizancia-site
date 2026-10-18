@@ -78,19 +78,37 @@ make that scanner pass. A real post-consent event check is still required.
 
 ## App measurement and privacy wording
 
-The iOS repository `Odin686/VizanciaiOS` was checked on October 6, 2026 at
-`30939c80f8b30a3b63dc8963c19464e0d14bf401`, the source commit recorded for 4.2.
-It contains no Firebase configuration file, SDK dependency, or initialization.
-Its privacy manifest declares no tracking or collected data. Android source
-has not been audited in this check. An imported Firebase conversion action in
-Google Ads does not establish that either live app emits `first_open`.
+Reviewed October 17, 2026. The earlier October 6 no-SDK observation described
+historical 4.2 source and is superseded for the iOS 4.3 candidate. The candidate
+includes FirebaseCore and FirebaseAnalyticsCore 12.19.2 and the `vizancia-ios`
+configuration for bundle `ca.vizancia.app`. It has not been uploaded or submitted;
+Apple's public metadata still shows 4.2. Android source and delivery need their
+own review.
 
-The public copy describes the current 4.2 app separately from optional website
-measurement. Website acceptance does not enable app analytics. Before an app
-release adds Firebase Analytics, document the actual project, SDK, collected
-events and identifiers, collection controls, retention, and platform-specific
-attribution configuration. Update the matching app privacy notice, manifests,
-store disclosures, and website copy in that release; verify collection on a
-device. Do not announce Firebase as active solely because a conversion action
-or Firebase project exists, and do not remove the current release's privacy
-description to imply that an unshipped integration is already live.
+The iOS Analytics property is `545830472`, stream `16052353335`. It is separate
+from website property `545697150`. A configured iOS conversion action or a
+website store click does not prove an app installation, consent or event receipt.
+No live eligible-adult receipt has been verified. Do not bypass adult consent
+or exclude these unmeasured users from the disclosure simply to populate reports.
+
+The iOS client is default-off and configures Firebase only for eligible consent:
+completed onboarding, high grade band, one learner profile, Classroom Mode off,
+and a separate 18+ declaration of use only for the adult's own learning on a
+personal device. Younger bands, multiple profiles and Classroom Mode exclude
+collection. Only fixed five-tab screen names and SDK technical/lifecycle metadata
+are allowed; no learning records, written text, grade band or profile ID is sent.
+Withdrawal stops collection and writes a local denial before saving the profile.
+Reset All Progress preserves consent preferences and is not server-side deletion.
+
+The app property was reviewed at 2-month event retention, 14-month user retention,
+reset on new activity on, Google signals off and granular location/device data
+on. Aggregated reports have separate retention. These values must not be copied
+to the website-property disclosure without checking that property's settings.
+The property also contains Android; no property-wide setting was changed here.
+
+Shared wording is imported as `data/ios-app-disclosures.json` from the iOS Swift
+policy source and rendered with `npm run sync:ios`. The build checks for drift.
+The native policy and its GitHub Pages learning/support site remain separate in
+scope from this marketing website's Google Analytics/Ads consent and Sandbox
+notice. Website acceptance never enables app analytics. Keep store labels,
+platform metadata and event-receipt validation as separate release gates.

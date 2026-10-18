@@ -71,7 +71,7 @@
     ].join('\n');
 
     status.textContent = 'Your email app should open now. Review the prepared message and press Send to complete your inquiry.';
-    window.location.href = 'mailto:info@vizancia.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = 'mailto:info@vizancia.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 
   if ('IntersectionObserver' in window) {

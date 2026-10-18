@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>document.documentElement.classList.add('js');</script>
   <title>Privacy Policy | Vizancia</title>
-  <meta name="description" content="How Vizancia handles on-device learning data, support correspondence, connected features, optional AI Sandbox processing, and website hosting, and consent-based website measurement.">
+  <meta name="description" content="How Vizancia handles local learning records, optional adult iOS Firebase analytics, website measurement, support, and the separate Sandbox beta.">
   <meta name="theme-color" content="#10213f">
   <link rel="canonical" href="https://vizancia.com/privacy.html">
   <meta property="og:title" content="Vizancia Privacy Policy">
-  <meta property="og:description" content="A clear explanation of Vizancia's offline-first app, connected features, support communications, and website hosting.">
+  <meta property="og:description" content="Local learning, optional adult Firebase analytics, separate website measurement, and your privacy choices.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vizancia.com/privacy.html">
   <meta property="og:image" content="https://vizancia.com/assets/og-home-v2.png">
@@ -18,10 +18,10 @@
   <link rel="icon" href="/assets/app-icon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/app-icon.png">
   <link rel="stylesheet" href="assets/pro-pages.css?v=5">
-  <link rel="stylesheet" href="assets/legal.css?v=1">
+  <link rel="stylesheet" href="assets/legal.css?v=2">
   <link rel="stylesheet" href="assets/privacy-consent.css?v=5">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"Vizancia Privacy Policy","url":"https://vizancia.com/privacy.html","dateModified":"2026-10-06","publisher":{"@type":"Organization","name":"Vizancia Incorporated","url":"https://vizancia.com/"}}
+  {"@context":"https://schema.org","@type":"WebPage","name":"Vizancia Privacy Policy","url":"https://vizancia.com/privacy.html","dateModified":"2026-10-17","publisher":{"@type":"Organization","name":"Vizancia Incorporated","url":"https://vizancia.com/"}}
   </script>
 </head>
 <body class="pro-page legal-page">
@@ -43,7 +43,7 @@
         <p class="pro-kicker">Trust and transparency</p>
         <h1>Privacy Policy</h1>
         <p>How Vizancia handles information across the mobile app, this website, support communications, and optional connected features.</p>
-        <div class="legal-meta"><span>Effective September 14, 2026</span><span>Last updated October 6, 2026</span><span>App version 4.2</span></div>
+        <div class="legal-meta"><span>Effective September 14, 2026</span><span>Last updated October 17, 2026</span><span>iOS 4.3 candidate and website practices</span></div>
       </div>
     </section>
 
@@ -51,7 +51,7 @@
       <div class="pro-container legal-layout">
         <aside class="legal-toc" aria-label="Privacy Policy contents">
           <strong>On this page</strong>
-          <a href="#summary">At a glance</a><a href="#scope">Scope and accountability</a><a href="#core-app">Core app data</a><a href="#connected">Connected services</a><a href="#website-measurement">Website measurement</a><a href="#purposes">Purposes and legal bases</a><a href="#sharing">Sharing and service providers</a><a href="#retention">Retention and deletion</a><a href="#children">Children's privacy</a><a href="#rights">Your privacy rights</a><a href="#security">Security and transfers</a><a href="#contact">Contact and complaints</a>
+          <a href="#summary">At a glance</a><a href="#scope">Scope and accountability</a><a href="#core-app">Core app data</a><a href="#ios-analytics">Optional iOS Firebase analytics</a><a href="#connected">Connected services</a><a href="#website-measurement">Website measurement</a><a href="#purposes">Purposes and legal bases</a><a href="#sharing">Sharing and service providers</a><a href="#retention">Retention and deletion</a><a href="#children">Children's privacy</a><a href="#rights">Your privacy rights</a><a href="#security">Security and transfers</a><a href="#contact">Contact and complaints</a>
           <div class="legal-related"><strong>Related</strong><a href="terms.html">Terms of Service</a><a href="sandbox-safety.html">Sandbox Safety</a></div>
         </aside>
 
@@ -59,7 +59,7 @@
           <section class="legal-summary" id="summary">
             <h2>Privacy at a glance</h2>
             <ul>
-              <li>The version 4.2 core learning experience requires no Vizancia account and does not contain third-party advertising, behavioural analytics, or attribution SDKs.</li>
+              <li>Core learning requires no Vizancia account and contains no in-app advertising. The iOS 4.3 candidate includes optional Google Analytics for Firebase, off by default and restricted to consenting adults using a personal device only for their own learning.</li>
               <li>Lesson progress, XP, streaks, achievements, preferences, and any optional first name or nickname are stored locally on your device. Vizancia cannot retrieve or restore that local information.</li>
               <li>Version 4.2 duels run against local bots. Profiles are device-local and do not sync between iOS and Android.</li>
               <li>The website-only AI Sandbox is separate from the mobile App and has the online data flow described below.</li>
@@ -74,6 +74,7 @@
             <h2>1. Scope and accountability</h2>
             <p>This Privacy Policy (the “Policy”) explains how Vizancia Incorporated (“Vizancia,” “we,” “us,” or “our”), an Ontario, Canada corporation, handles personal information in connection with the Vizancia mobile application (the “App”), vizancia.com and its AI Learning Hub (the “Website”), support communications, and related services.</p>
             <p>Vizancia is the organization responsible for personal information under its control and the controller or equivalent where applicable. Our Privacy Officer is accountable for this Policy and can be reached using the contact information in Section 12.</p>
+            <p>Apple’s public listing was checked on October 17, 2026 and still offers iOS 4.2. The 4.3 (13) iOS build described here is a release candidate and has not been uploaded or submitted for review. These iOS Firebase disclosures apply to builds that include the SDK; installing it alone does not grant consent. Android release and SDK status must be reviewed separately. See <a href="releases.html">platform release details</a> and the <a href="https://odin686.github.io/VizanciaiOS/privacy-policy.html">iOS app policy</a>.</p>
             <p>The App, Website, app stores, and connected services do not all use data in the same way. This Policy separates those practices so that a person can understand what changes before choosing a connected feature.</p>
           </section>
 
@@ -87,21 +88,83 @@
               <div><strong>Reflections and practice</strong><span>Optional Passport writing, self-assessments, practice answers, feedback ratings, local profile labels, and activity history. Keep private information out of shared-device work.</span></div>
               <div><strong>Optional profile label</strong><span>A first name or nickname entered during onboarding. Leaving the field blank uses a generic “Learner” label.</span></div>
             </div>
-            <p>Vizancia does not receive this on-device progress. On iOS, device backups may include App data under Apple’s terms. Android 4.1 disables standard app backup; operating-system and device-transfer behaviour can vary. There is no Vizancia cloud account or cross-platform synchronization. Deleting the App or clearing its data generally removes the local copy, although a platform backup can remain until managed through the relevant platform account.</p>
+            <p>Vizancia does not receive this on-device progress. On iOS, device backups may include App data under Apple’s terms. Android backup and device-transfer behaviour depend on the installed build, operating system and device settings. There is no Vizancia cloud account or cross-platform synchronization. Deleting the App or clearing its data generally removes the local copy, although a platform backup can remain until managed through the relevant platform account.</p>
             <p>Reminder notifications, when enabled, are scheduled locally. Vizancia does not receive the notification schedule or content.</p>
+          </section>
+
+          <section id="ios-analytics">
+            <h2>Optional iOS Firebase analytics</h2>
+            <p>The following disclosures describe the reviewed iOS 4.3 candidate. They are shared with the iOS app policy. Website consent, the adult reading check, and selecting a learning stage do not enable app analytics.</p>
+            <!-- BEGIN SHARED IOS DISCLOSURES -->
+<div id="ios-privacy-5">
+<h3>When optional Firebase analytics can run</h3>
+<p>We use Google Analytics for Firebase to understand basic app usage and improve navigation and reliability. It is off by default for every learner. Settings requires a separate confirmation that you are 18 or older and use the device only for your own learning, not for children, students or other learners.</p>
+<ul><li>Onboarding must be complete</li><li>The selected grade band must be high school or the corresponding adult level</li><li>There must be exactly one local learner profile</li><li>Classroom Mode must be off</li><li>An adult must explicitly confirm personal use and allow analytics</li></ul>
+<p>A grade-band choice does not establish age or grant consent. Younger bands, multiple profiles and Classroom Mode exclude collection. The app does not configure Firebase on a cold launch without eligible saved consent.</p>
+</div>
+<div id="ios-privacy-6">
+<h3>Information Google receives after opt-in</h3>
+<p>When eligible analytics is enabled, the SDK sends usage and technical information to Google. This may include:</p>
+<ul><li>A generated app-instance identifier that groups activity from that app installation</li><li>Basic lifecycle and engagement events, such as first launch, sessions and engagement duration</li><li>Screen-view events for the fixed tab names Play, Learn, Train, Campus and Progress</li><li>App identifier and version, device model, operating system, language and related device or app metadata</li><li>Event times and approximate location derived from network information</li></ul>
+<p>An app-instance identifier is pseudonymous, not a guarantee of anonymity. Network requests expose an IP address to Google for delivery and processing. Google states that Analytics does not log or store individual IP addresses. Analytics does not use the device&#39;s GPS or Apple&#39;s Location Services.</p>
+<p><a href="https://support.google.com/analytics/answer/10285841" rel="noopener noreferrer">Google&#39;s app data disclosures</a></p>
+<p><a href="https://support.google.com/analytics/answer/6004245" rel="noopener noreferrer">Google Analytics data safeguards</a></p>
+</div>
+<div id="ios-privacy-7">
+<h3>Information excluded from analytics</h3>
+<p>Our analytics interface accepts fixed navigation labels, not free text or learning records.</p>
+<ul><li>No nickname, email address, local profile ID or grade band</li><li>No lesson answers, scores, XP, game results, review cards or learning histories</li><li>No AI Passport text, project notes, written responses or workshop code and test traces</li><li>No lesson-feedback ratings, contact lists, photos, microphone recordings or precise location</li><li>No account user ID, advertising identifier or vendor identifier</li></ul>
+<p>The app denies advertising storage, advertising user-data and advertising-personalization consent. Advertising-ID support, vendor-ID collection and automatic screen reporting are disabled. The current release does not use Firebase Authentication, Firestore, Crashlytics, Performance Monitoring, Cloud Messaging or Firebase AI services.</p>
+</div>
+<div id="ios-privacy-8">
+<h3>Your analytics choices and withdrawal</h3>
+<p>You may leave analytics off or withdraw consent in Settings. Withdrawing stops collection and resets local analytics data and identifiers. The app records a local withdrawal marker before attempting to save the profile preference, so a failed preference save does not restore collection on this device.</p>
+<ul><li>Switching profiles, adding a second learner, choosing a younger band or entering Classroom Mode stops collection and resets local analytics data</li><li>Those exclusions suspend a saved choice; the same learner&#39;s choice may resume when the app becomes eligible again</li><li>Settings offers withdrawal of a saved choice when it is suspended; leave a temporary class session to manage personal settings if needed</li><li>Reset All Progress keeps preferences, including the analytics choice, and does not withdraw consent</li><li>Only a newly confirmed and successfully saved opt-in clears a withdrawal marker</li></ul>
+<p>Withdrawal applies to future collection. It does not automatically delete information already received by Google. Reinstalling, clearing app data or resetting a local identifier is also not a request to delete previously sent information. Contact us about that information as explained below.</p>
+</div>
+<div id="ios-privacy-9">
+<h3>Retention and deletion</h3>
+<p>Local learning records stay until you delete the relevant records or profile, reset progress, or remove the app. Some identity and preference settings survive Reset All Progress. Backups, exported files and recovery copies have separate lifetimes.</p>
+<ul><li>As reviewed on October 17, 2026, the app&#39;s Google Analytics property retains event-level data for 2 months and user-level data for 14 months</li><li>Reset on new user activity is enabled, so new activity can extend the user identifier&#39;s 14-month retention window</li><li>These settings do not impose the same expiry on standard aggregated reports</li><li>Google&#39;s deletion processing and operational retention follow its applicable service terms; deletion is not instantaneous</li><li>Support correspondence is kept as needed to handle the request and related legal or administrative obligations; you may ask us to delete it</li></ul>
+<p>We review retention settings when changing analytics practices. A request to delete local progress does not delete analytics already sent, and an analytics deletion request does not erase records held only on your device.</p>
+<p><a href="https://support.google.com/analytics/answer/7667196" rel="noopener noreferrer">Google Analytics retention controls</a></p>
+</div>
+<div id="ios-privacy-10">
+<h3>Google and international processing</h3>
+<p>Google provides the Firebase and Analytics infrastructure. Authorized people working on Vizancia can access the resulting analytics reports. Google processes information under its service terms, data-processing terms and privacy documentation, including processing needed to operate and protect its services.</p>
+<p>Google may process analytics information in the United States and other countries where it or its service providers operate. Those countries may have different privacy laws, and their lawful-access requirements may apply.</p>
+<p><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Privacy and security in Firebase</a></p>
+<p><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google&#39;s privacy policy</a></p>
+</div>
+<div id="ios-privacy-11">
+<h3>Children, families and schools</h3>
+<p>The learning app supports younger audiences with adult guidance. Optional analytics is not offered for children&#39;s or students&#39; learning and must not be enabled on a device used for them. Adults should use temporary Classroom Mode for shared sessions and review local profiles before handing a device to another person.</p>
+<p>A school or educator must follow its own device, privacy, sharing and approval rules. Using the app or its adult check does not establish school approval or verified parental consent. If you believe a child&#39;s information was sent to us, contact info@vizancia.ca without including the child&#39;s work or unnecessary identifying details.</p>
+</div>
+<div id="ios-privacy-12">
+<h3>Reports and information you choose to share</h3>
+<p>An adult may review a report and use Apple&#39;s share sheet to select a destination. Learning Reports and Class Period summaries can include a nickname, grade or module and practice results. Beta feedback reports contain structured lesson results and ratings; those details may identify a learner in context.</p>
+<p>AI Passport text and other written responses are excluded from those reports and analytics. Review the full report before sharing and follow school rules. We receive a report only if you choose to send it to us. Copies you share, screenshots and text you copy are controlled by you and the recipients.</p>
+</div>
+<div id="ios-privacy-13">
+<h3>Backups, recovery copies and device removal</h3>
+<p>Apple or computer backups may contain local app data depending on device settings. If a database cannot open, the app may preserve a recovery copy on the device before starting a fresh store. Removing the app does not erase external backups, recovery copies outside its container or files already shared.</p>
+<p>Vizancia does not operate a cloud learning-sync service and cannot remotely retrieve or erase learning records held only on your device. Device owners and school administrators manage backups and shared copies through their own systems.</p>
+</div>
+<!-- END SHARED IOS DISCLOSURES -->
           </section>
 
           <section id="connected">
             <h2>3. Connected services and information you provide</h2>
-            <h3>Classroom sessions, reports, and sharing</h3><p>Classroom Mode in version 4.2 uses a temporary session separate from the personal profile. Session work clears when the session ends, times out, the app backgrounds, or the app restarts. Personal profiles remain on the device. Profiles and the adult arithmetic check are not passwords or secure accounts.</p><p>An adult can choose to export a progress report, certificate, or feedback report using the platform share sheet. Reports may contain a nickname, grade band, and learning results; report types disclose their contents before sharing. Passport reflections are not included in the classroom progress report. Shared copies are controlled by the selected recipient or service and are not removed by deleting App data. External AI-tool links open third-party services under their own policies; core lessons do not send prompts to a live model.</p><h3>Support and correspondence</h3>
+            <h3>Classroom sessions, reports, and sharing</h3><p>Classroom Mode in version 4.2 uses a temporary session separate from the personal profile. Session work clears when the session ends, times out, the app backgrounds, or the app restarts. Personal profiles remain on the device. Local profiles are not password protected. The iOS 4.3 adult check asks someone helping to follow a reading instruction. It deters accidental actions; it is not a password, identity check or age verification. Ordinary personal Class Period results can persist and are different from temporary Classroom Mode.</p><p>An adult can choose to export a progress report, completion PDF, or feedback report using the platform share sheet. Reports may contain a nickname, grade band, and learning results; report types disclose their contents before sharing. Passport reflections are not included in the classroom progress report. Shared copies are controlled by the selected recipient or service and are not removed by deleting App data. External AI-tool links open third-party services under their own policies; core lessons do not send prompts to a live model.</p><h3>Support and correspondence</h3>
             <p>If you email us, submit a report, inquire about a guided program, or otherwise contact us, we receive the email address or contact details you use, the message and attachments you send, and any organization, household, country or region, group-size, timing, device, operating-system, or App-version details you choose to include. We use that information to respond, recommend a suitable next step, prepare a scope or proposal, troubleshoot, investigate safety or legal issues, maintain records, and protect the Services.</p>
-            <p>The Programs inquiry form is email-based. Its answers remain in the browser until the visitor asks the device to prepare an email addressed to <a href="mailto:info@vizancia.com">info@vizancia.com</a>. Vizancia does not receive those answers unless the visitor sends the prepared message through their email provider. The email provider then processes the message under its own terms and privacy practices.</p>
+            <p>The Programs inquiry form is email-based. Its answers remain in the browser until the visitor asks the device to prepare an email addressed to <a href="mailto:info@vizancia.ca">info@vizancia.ca</a>. Vizancia does not receive those answers unless the visitor sends the prepared message through their email provider. The email provider then processes the message under its own terms and privacy practices.</p>
             <h3>Website-only AI Sandbox limited beta</h3>
             <p>The AI Sandbox is a Website experience and is not included in the offline mobile App. If you use the Sandbox, the prompt you submit, the generated response, and limited technical request information must be processed online to provide the response and apply safety and security controls. Vizancia does not use Sandbox content for advertising and does not offer a persistent conversation-history feature. Do not submit names, contact details, passwords, health information, school details, precise locations, private images, or other sensitive information.</p>
             <p>Before beta access is activated, the participant notice identifies the enabled provider, material processing purposes, retention or deletion configuration, processing locations, and controls required by the applicable deployment. If that notice conflicts with this general Policy on a feature-specific detail, the more specific notice controls for that feature.</p>
             <h3>Platform services</h3>
             <p>Version 4.2 uses local bot duels and does not integrate Game Center or online player matching. Earlier iOS releases offered optional adult-profile Game Center features, governed by Apple’s terms and privacy practices.</p>
-            <p>Apple and Google independently process App Store and Google Play data. Vizancia may receive aggregated store reports, ratings and reviews, purchase-entitlement information needed to provide or restore a purchase, and platform-provided diagnostic reports, depending on the relevant store and user settings. We do not receive payment-card details from the stores. Review <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
+            <p>Apple and Google independently process App Store and Google Play data. Vizancia may receive aggregated store reports, ratings and reviews, and platform-provided diagnostic reports, depending on the relevant store and user settings. We do not receive payment-card details from the stores. Review <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
           </section>
 
           <section id="website-measurement">
@@ -119,8 +182,8 @@
           <section id="purposes">
             <h2>5. Purposes and legal bases</h2>
             <p>We process the limited information described above to:</p>
-            <ul><li>provide a requested connected feature, support response, program recommendation, scope, or proposal;</li><li>operate, secure, troubleshoot, and enforce the Services;</li><li>investigate safety, abuse, fraud, infringement, or legal reports;</li><li>comply with law and protect legal rights; and</li><li>measure advertising performance only after Website consent.</li></ul>
-            <p>Optional website measurement is based on your consent. Where the GDPR, UK GDPR, or a similar law applies, connected processing requested by a user is based on performance of the requested service; security, support, and legal-record processing may rely on legitimate interests or legal obligations where appropriate. We do not use personal information for solely automated decisions that produce legal or similarly significant effects.</p>
+            <ul><li>provide a requested connected feature, support response, program recommendation, scope, or proposal;</li><li>operate, secure, troubleshoot, and enforce the Services;</li><li>investigate safety, abuse, fraud, infringement, or legal reports;</li><li>comply with law and protect legal rights; and</li><li>understand basic app navigation only after eligible adult app consent, and measure website engagement and advertising performance only after separate Website consent.</li></ul>
+            <p>Optional app analytics and website measurement each require their own consent. Declining either does not prevent core learning. Where the GDPR, UK GDPR, or a similar law applies, connected processing requested by a user is based on performance of the requested service; security, support, and legal-record processing may rely on legitimate interests or legal obligations where appropriate. We do not use personal information for solely automated decisions that produce legal or similarly significant effects.</p>
           </section>
 
           <section id="sharing">
@@ -136,6 +199,7 @@
               <li><strong>Core App progress:</strong> remains on the device until the user clears App data or removes the App, subject to platform backups controlled by the user and platform provider.</li>
               <li><strong>Support, program, and legal correspondence:</strong> kept only as long as reasonably necessary to answer the request, prepare or administer a requested engagement, maintain appropriate business or legal records, resolve disputes, and protect the Services, then deleted or de-identified under our records practices.</li>
               <li><strong>Sandbox:</strong> Vizancia does not provide persistent conversation history. Provider-side handling and deletion details are disclosed in the participant notice before the beta is enabled.</li>
+              <li><strong>iOS Firebase analytics:</strong> the shared iOS disclosures above describe the October 17 review: 2-month event retention, 14-month user retention, reset on new activity, aggregated-report exceptions, and the difference between withdrawal and server-side deletion. These app settings do not establish website-property retention.</li>
               <li><strong>Website measurement:</strong> the first-party Google measurement cookies last up to 13 months. Analytics cookie expiry is not extended on each visit. Refusing or withdrawing measurement clears the cookies the Website can control; your saved consent choice is valid for 180 days. Google controls retention of measurement data it has already received under its policies and the relevant account settings. GitHub controls its hosting security logs under its privacy practices.</li>
             </ul>
             <p>Where we must retain information for law, security, fraud prevention, or a legal claim, we restrict it to those purposes for the required period.</p>
@@ -143,7 +207,7 @@
 
           <section id="children">
             <h2>8. Children's privacy</h2>
-            <p>Vizancia is an educational product that may be used by children with appropriate adult involvement. The version 4.2 core App does not require an account, does not contain behavioural advertising or third-party analytics SDKs, and keeps learning progress and any optional nickname on the device. Version 4.2 does not offer online player matching.</p>
+            <p>Vizancia is an educational product that may be used by children with appropriate adult involvement. The core App requires no account, contains no in-app advertising and keeps learning progress and optional nicknames local. The iOS 4.3 candidate excludes Firebase collection in younger grade bands, with multiple learner profiles, and in Classroom Mode. Analytics must not be enabled on a device used for children, students or other learners. A high-school setting does not verify adulthood; a separate 18+ own-personal-learning declaration is required. No online player matching is offered.</p>
             <p>The website-only AI Sandbox is an adult-managed limited beta and is not authorized for independent use by a child under 13. A parent, legal guardian, or authorized educator must review the feature notice, supervise use, and complete any consent process required by law. The public Website loads Google measurement only after an explicit “Accept measurement” choice in the website notice, with personalised advertising disabled. The classroom projection view has no student input form or live AI endpoint.</p>
             <p>If we learn that personal information was collected from a child in a way that requires parental consent and valid consent was not obtained, we will take reasonable steps to delete it. A parent or guardian can contact the Privacy Officer to ask whether information associated with a child is held, request access or deletion where applicable, or withdraw consent.</p>
           </section>
@@ -151,8 +215,8 @@
           <section id="rights">
             <h2>9. Privacy rights and choices</h2>
             <p>Depending on location and subject to legal exceptions, a person may have rights to know or access personal information, correct inaccurate information, request deletion or portability, restrict or object to processing, withdraw consent, appeal a decision, and receive equal service without unlawful discrimination for exercising a right.</p>
-            <p>Vizancia generally has no server-side record for a core App user. Device-local data can be controlled by clearing App data or uninstalling the App. The “Website privacy” button lets you review or change your website measurement choice. Other requests can be sent to the Privacy Officer. We may need to verify a request proportionately before acting.</p>
-            <h3>Canada</h3><p>We follow PIPEDA and applicable provincial private-sector privacy laws, including Quebec's <em>Act respecting the protection of personal information in the private sector</em>. A person may complain to Vizancia and, where applicable, the <a href="https://www.priv.gc.ca/" target="_blank" rel="noopener noreferrer">Office of the Privacy Commissioner of Canada</a> or a provincial regulator.</p>
+            <p>Vizancia does not operate a cloud learner database. An opted-in iOS installation can have pseudonymous analytics records at Google. We do not send local profile IDs or account IDs and may be unable to associate particular analytics records with you. We will explain technical or legal limits when handling a request. Device-local records can be managed in the App or through device storage controls; backups and shared copies are separate. Reset All Progress preserves analytics preferences and is not a withdrawal or server-side deletion request. The “Website privacy” button lets you review or change your website measurement choice. Other requests can be sent to the Privacy Officer. We may need to verify a request proportionately before acting.</p>
+            <h3>Canada</h3><p>Privacy rights and obligations depend on applicable Canadian federal and provincial law, including PIPEDA and Quebec private-sector privacy law where they apply. A person may complain to Vizancia and, where applicable, the <a href="https://www.priv.gc.ca/" target="_blank" rel="noopener noreferrer">Office of the Privacy Commissioner of Canada</a> or a provincial regulator.</p>
             <h3>California and other U.S. states</h3><p>We do not sell personal information. We do not knowingly use sensitive personal information to infer characteristics. Some laws may define particular advertising-technology disclosures as “sharing” even without payment. The Website loads measurement only after an explicit acceptance, never builds personalised-advertising audiences, and treats a Global Privacy Control signal as a refusal even if an earlier acceptance was saved.</p>
             <h3>EEA and United Kingdom</h3><p>Where applicable, a person may exercise GDPR or UK GDPR rights and lodge a complaint with a local supervisory authority. Consent can be withdrawn without affecting processing that was lawful before withdrawal.</p>
           </section>

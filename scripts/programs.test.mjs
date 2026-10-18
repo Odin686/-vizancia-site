@@ -34,7 +34,7 @@ test('Programs uses the actual form markup and prepares an encoded email only af
   form.listeners.submit(event);
   const email = new URL(window.location.href);
   assert.equal(email.protocol, 'mailto:');
-  assert.equal(email.pathname, 'info@vizancia.com');
+  assert.equal(email.pathname, 'info@vizancia.ca');
   assert.equal(email.searchParams.get('subject'), 'Vizancia program inquiry — Family AI Safety Lab');
   assert.ok(email.searchParams.get('body').includes('Country or region: Canada'));
   assert.ok(email.searchParams.get('body').includes(fields.leadMessage));

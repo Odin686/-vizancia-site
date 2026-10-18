@@ -1,5 +1,5 @@
 {
-  "reviewed": "2026-10-05",
+  "reviewed": "2026-10-17",
   "curriculumVersion": "4.2",
   "counts": {
     "paths": 17,
@@ -15,7 +15,8 @@
     "build": 12,
     "storeStatus": "published",
     "publishedAt": "2026-10-03T18:42:04Z",
-    "storeEvidence": "https://itunes.apple.com/lookup?id=6759349861&country=ca"
+    "storeEvidence": "https://itunes.apple.com/lookup?id=6759349861&country=ca",
+    "storeCheckedAt": "2026-10-17"
   },
   "android": {
     "sourceCommit": "45c8203c0313571e7851cd08ea8a706c95978802",
@@ -23,7 +24,23 @@
     "build": 12,
     "storeStatus": "published",
     "storeEvidence": "https://play.google.com/store/apps/details?id=com.vizancia.app&hl=en&gl=CA",
-    "publishedAt": "2026-10-03"
+    "publishedAt": "2026-10-03",
+    "storeCheckedAt": "2026-10-05"
   },
-  "appIconSha256": "db80fe3812e0ddfc6495f7ba93b3a8deb0e7e9a497268876a02765c5d2fa7e2f"
+  "appIconSha256": "db80fe3812e0ddfc6495f7ba93b3a8deb0e7e9a497268876a02765c5d2fa7e2f",
+  "iosCandidate": {
+    "sourceCommit": "38502bc7c92bbb8b1e6aef762700a11917f35416",
+    "version": "4.3",
+    "build": 13,
+    "storeStatus": "not-submitted",
+    "distributionHold": "simulator-review",
+    "practiceActivities": 41,
+    "practiceQuestions": 118,
+    "learningStages": 5,
+    "firebaseSdkVersion": "12.19.2",
+    "analyticsDefault": "off",
+    "liveAnalyticsReceipt": "unverified",
+    "androidParity": "unverified",
+    "disclosures": "data/ios-app-disclosures.json"
+  }
 }

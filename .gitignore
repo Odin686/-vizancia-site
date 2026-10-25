@@ -3,3 +3,9 @@
 
 .DS_Store
 dist/
+
+# Generated PDF exports and visual QA
+/output/
+/tmp/
+__pycache__/
+*.pyc

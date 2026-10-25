@@ -3,7 +3,7 @@
   "subtitle": "Solve problems with AI. Keep your judgment.",
   "edition": "Classroom studio 2 / October 2026",
   "route": "Prepared exchanges with optional adult-operated demonstration",
-  "teacherPages": 14,
+  "teacherPages": 15,
   "studentPages": 15,
   "figmaFileKey": "OOMZDMjhMC6ntGYMvnnd1I",
   "pages": [
@@ -703,8 +703,62 @@
         {
           "type": "note",
           "label": "Publication and classroom use",
-          "text": "Fictional learning cases and fixed AI-style replies. Classroom copying permitted for your own educational use; no resale or implied endorsement. Educator-review pilot, not field-tested or a validated assessment. The optional website projection supplies the original case evidence; use this packet for the new problem-solving workflow.",
+          "text": "Fictional learning cases and fixed AI-style replies. Classroom copying permitted for your own educational use; no resale or implied endorsement. Educator-review pilot, not field-tested or a validated assessment. The optional website projection follows this workflow with the same fictional evidence. Keep individual responses on paper.",
           "kind": "teacher"
+        }
+      ]
+    },
+    {
+      "code": "T14",
+      "section": "Teacher guide / Learning design",
+      "title": "Teach the skill.\nThen choose how AI can help.",
+      "subtitle": "Learning principles and the human skills this exercise is designed to practise.",
+      "blocks": [
+        {
+          "type": "text",
+          "label": "Skills students keep practising directly",
+          "text": "Reading and understanding; problem framing; reasoning and calculation; asking useful questions; writing or explaining in their own words; judging evidence, values and consequences. Agreed access supports remain available."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Design principle",
+            "How it appears in the packet"
+          ],
+          "widths": [
+            145,
+            375
+          ],
+          "rows": [
+            [
+              "Plan, monitor and evaluate",
+              "Students preserve a first view, set a bounded brief, check claims and explain their revision. Make this thinking visible and model the routine aloud. [1]"
+            ],
+            [
+              "Worked models and own attempts",
+              "After the baseline, model the strategy with an unrelated example. Use T09-T10 after initial attempts; preserve S13 before revealing the new case key. [2]"
+            ],
+            [
+              "Explain and question",
+              "Ask which detail supports a claim, why a limitation matters, and what would change a decision. Students provide their own explanation before feedback. [2]"
+            ],
+            [
+              "Selective AI and human agency",
+              "Prepared AI help is inspected rather than obeyed. Students can choose a person, another tool or no AI, and remain responsible for the recommendation. [3]"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Optional delayed practice",
+          "text": "In a later lesson, ask students to explain one idea without an AI answer or the worked model visible, then reopen the records and correct it. Schedule a further revisit after a delay. This follow-up is additional to the four-period core. [2]"
+        },
+        {
+          "type": "note",
+          "kind": "teacher",
+          "label": "Evidence-informed design, not a validated programme",
+          "text": "[1] EEF, Metacognition and Self-Regulated Learning, 2nd edition (2025): educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition.\n[2] IES, Organizing Instruction and Study to Improve Student Learning (2007): ies.ed.gov/ncee/wwc/PracticeGuide/1.\n[3] OECD Digital Education Outlook 2026: doi.org/10.1787/062a7394-en\nUNESCO AI competency framework (2024): unesco.org/en/articles/ai-competency-framework-students.\nThese sources inform design choices; they do not endorse or establish the effectiveness of this packet.",
+          "bodyStyle": "small"
         }
       ]
     },
@@ -1169,6 +1223,25 @@
           "kind": "check"
         }
       ]
+    }
+  ],
+  "publication": "Educator pilot / October 25, 2026",
+  "evidenceSources": [
+    {
+      "label": "EEF: Metacognition and Self-Regulated Learning (2025)",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition"
+    },
+    {
+      "label": "IES: Organizing Instruction and Study to Improve Student Learning (2007)",
+      "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1"
+    },
+    {
+      "label": "OECD Digital Education Outlook 2026",
+      "url": "https://doi.org/10.1787/062a7394-en"
+    },
+    {
+      "label": "UNESCO AI competency framework for students (2024)",
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-students"
     }
   ]
 }

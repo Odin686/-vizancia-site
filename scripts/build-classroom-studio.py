@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Render the classroom studio review PDF from the editable Figma page model.
 
-Matches the Figma print tokens and auto-layout block vocabulary. This fallback
-requires no Figma tool quota and never modifies public download files.
+Matches the Figma print tokens and auto-layout block vocabulary. This renderer
+requires no Figma tool quota. --publish creates the named publication exports;
+public download files are copied explicitly after verification.
 """
 from pathlib import Path
-import json,hashlib,os,re
+import json,hashlib,os,re,sys
 from datetime import datetime,timezone
 from html import escape
 from reportlab.pdfgen import canvas
@@ -43,11 +44,11 @@ class Page:
  def rule(self,y,width=W,x=L):self.c.setStrokeColor(C['line']);self.c.setLineWidth(.6);self.c.line(x,y,x+width,y)
  def note(self,b,y,width=W,x=L):
   kind=b.get('kind','human');bg,accent={'human':('mist','ink'),'ai':('lavender','purple'),'check':('mint','teal'),'teacher':('sand','amber')}[kind]
-  label=para(b['label'].upper(),'label',accent);body=para(b['text']);h1=label.wrap(width-24,900)[1];h2=body.wrap(width-24,900)[1];height=24+h1+8+h2
+  label=para(b['label'].upper(),'label',accent);body=para(b['text'],b.get('bodyStyle','body'));h1=label.wrap(width-24,900)[1];h2=body.wrap(width-24,900)[1];height=24+h1+8+h2
   if y-height<51:raise ValueError(f'{self.code}: note overflow {y-height}')
   self.c.setFillColor(C[bg]);self.c.rect(x,y-height,width,height,fill=1,stroke=0)
   a=self.text(b['label'].upper(),y-12,width-24,'label',accent,x+12)-8
-  self.text(b['text'],a,width-24,x=x+12);return y-height
+  self.text(b['text'],a,width-24,style=b.get('bodyStyle','body'),x=x+12);return y-height
  def table(self,b,y):
   rows=[b['headers']]+b['rows'];widths=b.get('widths') or [W/len(rows[0])]*len(rows[0])
   values=[[para(v,'label' if r==0 else 'small','paper' if r==0 else 'ink') for v in row] for r,row in enumerate(rows)]
@@ -90,13 +91,14 @@ class Page:
    y-=14
   LOG.append(dict(code=self.code,bottom=y+14,boxes=self.boxes))
 def build(name,pages):
- c=canvas.Canvas(str(OUT/name),pagesize=(612,792),pageCompression=1,invariant=1);c.setTitle('Evidence to Action / Classroom studio 2 / Review draft');c.setAuthor('Vizancia Incorporated');c.setCreator('Vizancia classroom publishing / Figma-aligned review export');c.setSubject('Prepared AI exchanges, human judgment, independent checking and iteration / Grades 6-8');c._doc.Catalog.Lang=PDFString('en-CA');c.setViewerPreference('DisplayDocTitle','true')
+ c=canvas.Canvas(str(OUT/name),pagesize=(612,792),pageCompression=1,invariant=1);c.setTitle('Evidence to Action / '+('Educator pilot' if '--publish' in sys.argv else 'Review draft')+' / '+('Complete classroom packet' if len(pages)==len(DATA['pages']) else 'Teacher guide' if pages[0]['code'].startswith('T') else 'Student handouts'));c.setAuthor('Vizancia Incorporated');c.setCreator('Vizancia classroom publishing / Figma-aligned review export');c.setSubject('Prepared AI exchanges, human judgment, independent checking and iteration / Grades 6-8');c._doc.Catalog.Lang=PDFString('en-CA');c.setViewerPreference('DisplayDocTitle','true')
  for p in pages:
   c.bookmarkPage(p['code']);c.addOutlineEntry(p['code']+' / '+p['title'].replace('\n',' '),p['code'],0);Page(c,p).render();c.showPage()
  c.save();return dict(file=name,pages=len(pages),sha256=hashlib.sha256((OUT/name).read_bytes()).hexdigest())
 if __name__=='__main__':
- files=[]
- for name,pages in [('evidence-to-action-studio-draft.pdf',DATA['pages']),('evidence-to-action-teacher-studio-draft.pdf',DATA['pages'][:14]),('evidence-to-action-student-studio-draft.pdf',DATA['pages'][14:])]:
+ files=[];publish='--publish' in sys.argv;teacher_count=DATA['teacherPages']
+ exports=[('evidence-to-action-complete.pdf' if publish else 'evidence-to-action-studio-draft.pdf',DATA['pages']),('evidence-to-action-teacher-guide.pdf' if publish else 'evidence-to-action-teacher-studio-draft.pdf',DATA['pages'][:teacher_count]),('evidence-to-action-student-handouts.pdf' if publish else 'evidence-to-action-student-studio-draft.pdf',DATA['pages'][teacher_count:])]
+ for name,pages in exports:
   result=build(name,pages);files.append(result);print(result['file'],result['pages'],'pages')
- (OUT/'studio-manifest.json').write_text(json.dumps(dict(edition=DATA['edition'],publication='local review draft; website unchanged',figma='https://www.figma.com/design/'+DATA['figmaFileKey'],files=files),indent=2)+'\n')
+ (OUT/'studio-manifest.json').write_text(json.dumps(dict(edition=DATA['edition'],publication=DATA['publication'] if publish else 'local review draft',figma='https://www.figma.com/design/'+DATA['figmaFileKey'],files=files),indent=2)+'\n')
  (ROOT/'tmp/pdfs/studio-layout-log.json').write_text(json.dumps(LOG,indent=2)+'\n')

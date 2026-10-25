@@ -49,3 +49,13 @@ python scripts/build-classroom-studio.py
 
 Outputs are ignored under `output/pdf/`; the current published edition remains
 in `teachers/activity/`. Keep both editions distinct during review.
+
+## Publication update, October 25
+
+The owner subsequently authorized website publication and reported teacher
+outreach underway. The publication adds one teacher learning-design page (T14),
+updates the teacher landing page and rebuilds the projection to match the
+problem-solving workflow. Public counts are 30 complete / 15 teacher / 15
+student pages and 27 projection slides. The original review and the Figma
+composition above remain historical records of that stage. No school approval,
+booked pilot, payment or measured effect is inferred from the outreach report.

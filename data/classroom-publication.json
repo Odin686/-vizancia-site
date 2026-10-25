@@ -1,0 +1,31 @@
+{
+  "edition": "Classroom studio 2 / October 2026",
+  "publication": "Educator pilot / October 25, 2026",
+  "figma": "https://www.figma.com/design/OOMZDMjhMC6ntGYMvnnd1I",
+  "files": [
+    {
+      "file": "evidence-to-action-complete.pdf",
+      "pages": 30,
+      "sha256": "2b66f9f43a8ed71a43090df1f0e3e8e9caf2c2afd85e7fa08dc611fceb63603e",
+      "url": "https://vizancia.com/teachers/activity/evidence-to-action-complete.pdf",
+      "sizeBytes": 93219
+    },
+    {
+      "file": "evidence-to-action-teacher-guide.pdf",
+      "pages": 15,
+      "sha256": "66d219e15df102c2ad7b3daa7b8eadbf318ab557e696b7c14362cca4c9bbd164",
+      "url": "https://vizancia.com/teachers/activity/evidence-to-action-teacher-guide.pdf",
+      "sizeBytes": 67008
+    },
+    {
+      "file": "evidence-to-action-student-handouts.pdf",
+      "pages": 15,
+      "sha256": "b71e518e04c90c5ad286fa7725b26da0e0eaf99237cd0230e20be8a7ae5e80aa",
+      "url": "https://vizancia.com/teachers/activity/evidence-to-action-student-handouts.pdf",
+      "sizeBytes": 58698
+    }
+  ],
+  "publishedDate": "2026-10-25",
+  "projectionSlides": 27,
+  "legacyAlias": "https://vizancia.com/teachers/activity/can-we-trust-this-pilot.pdf"
+}

@@ -1,5 +1,5 @@
 {
-  "reviewed": "2026-10-17",
+  "reviewed": "2026-10-25",
   "curriculumVersion": "4.2",
   "counts": {
     "paths": 17,
@@ -29,18 +29,38 @@
   },
   "appIconSha256": "db80fe3812e0ddfc6495f7ba93b3a8deb0e7e9a497268876a02765c5d2fa7e2f",
   "iosCandidate": {
-    "sourceCommit": "38502bc7c92bbb8b1e6aef762700a11917f35416",
+    "sourceCommit": "2e477ba387b61662bd573224c996aa5f5ec1b027",
     "version": "4.3",
     "build": 13,
     "storeStatus": "not-submitted",
-    "distributionHold": "simulator-review",
+    "distributionHold": "owner-canceled-store-uploads",
     "practiceActivities": 41,
     "practiceQuestions": 118,
     "learningStages": 5,
     "firebaseSdkVersion": "12.19.2",
     "analyticsDefault": "off",
     "liveAnalyticsReceipt": "unverified",
-    "androidParity": "unverified",
+    "androidParity": "source-reviewed",
     "disclosures": "data/ios-app-disclosures.json"
+  },
+  "marketing": {
+    "minimumLessons": 100,
+    "catalogNote": "Catalog varies by release; dated counts are historical snapshots."
+  },
+  "privacyPolicyUrl": "https://vizancia.com/privacy.html",
+  "androidCandidate": {
+    "sourceCommit": "f295fad5ec1b33424443b820f12984a9d10ed783",
+    "version": "4.3",
+    "build": 13,
+    "storeStatus": "not-submitted",
+    "analyticsDefault": "off",
+    "liveAnalyticsReceipt": "unverified",
+    "iosPolicySourceSha256": "7cd5a5bd74c9a0a893054e6633bb1480c63f7e7df7e4b904a2027da795ae190c",
+    "privacyAdaptations": [
+      "App-private WebView storage",
+      "Independent withdrawal markers",
+      "Android share sheet",
+      "Automatic app backup disabled"
+    ]
   }
 }

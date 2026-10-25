@@ -1,0 +1,1174 @@
+{
+  "title": "Evidence to Action",
+  "subtitle": "Solve problems with AI. Keep your judgment.",
+  "edition": "Classroom studio 2 / October 2026",
+  "route": "Prepared exchanges with optional adult-operated demonstration",
+  "teacherPages": 14,
+  "studentPages": 15,
+  "figmaFileKey": "OOMZDMjhMC6ntGYMvnnd1I",
+  "pages": [
+    {
+      "code": "T00",
+      "section": "Teacher and student studio",
+      "title": "Evidence\nto Action",
+      "subtitle": "Solve problems with AI.\nKeep your judgment.",
+      "blocks": [
+        {
+          "type": "cover"
+        },
+        {
+          "type": "note",
+          "label": "The classroom challenge",
+          "text": "Make a recommendation about a fictional school garden. Use prepared AI replies, inspect the original records, question the advice and explain your final decision.",
+          "kind": "human"
+        }
+      ]
+    },
+    {
+      "code": "T01",
+      "section": "Teacher guide / The assignment",
+      "title": "One problem.\nA decision students can defend.",
+      "subtitle": "The deliverable is a recommendation and the reasoning behind it.",
+      "blocks": [
+        {
+          "type": "note",
+          "label": "Problem to solve",
+          "text": "The Campus wants to conserve water while keeping its garden healthy. Should it adopt a proposed AI watering system, run a limited test, choose a simpler option or wait? No purchase must be made today.",
+          "kind": "human"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Student output",
+            "Evidence to retain"
+          ],
+          "rows": [
+            [
+              "A one-page recommendation",
+              "The action, supporting records, limits, a next check and a responsible role."
+            ],
+            [
+              "An AI contribution report",
+              "What the prepared AI reply added, missed or overstated; what the learner accepted, changed or rejected."
+            ],
+            [
+              "An iteration trail",
+              "The first view, independent check, revised brief and reason for a meaningful final edit."
+            ]
+          ],
+          "widths": [
+            180,
+            340
+          ]
+        },
+        {
+          "type": "text",
+          "label": "The route chosen for this edition",
+          "text": "Prepared exchanges are the core. A teacher demonstration is optional, uses only approved tools and fictional inputs, and adds no student account requirement. The learner may justify using a person, another tool or no AI."
+        },
+        {
+          "type": "note",
+          "label": "What earns recognition",
+          "text": "The source connection, quality of questioning and explanation of the decision. AI use, fluent wording, confidence and the number of exchanges earn no extra credit.",
+          "kind": "check"
+        }
+      ]
+    },
+    {
+      "code": "T02",
+      "section": "Teacher guide / The working cycle",
+      "title": "Keep the human\nin the decision loop.",
+      "subtitle": "Checking happens throughout; return to the step that addresses the gap.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Step",
+            "Student action"
+          ],
+          "rows": [
+            [
+              "01 / Think first",
+              "Define the problem, purpose, audience and success criteria. Preserve an initial idea before AI help."
+            ],
+            [
+              "02 / Brief the help",
+              "State your own view, permitted sources, constraints, format and the kind of help you need."
+            ],
+            [
+              "03 / Report the contribution",
+              "Quote or accurately summarise what AI added. Separate its suggestions from your own reasoning."
+            ],
+            [
+              "04 / Question and investigate",
+              "Challenge assumptions, check original sources, calculate and consider people affected."
+            ],
+            [
+              "05 / Iterate with evidence",
+              "Bring a new finding back into a sharper brief. Inspect the prepared revision and recheck it."
+            ],
+            [
+              "06 / Decide and own",
+              "Accept, edit or reject suggestions. Explain the final work, remaining uncertainty and human responsibility."
+            ]
+          ],
+          "widths": [
+            145,
+            375
+          ]
+        },
+        {
+          "type": "note",
+          "label": "A useful stopping rule",
+          "text": "Finish when the recommendation meets the brief, key claims are supported or qualified, and the learner can explain the choices. An unresolved issue may require human review or a pause. Endless polishing is not the goal.",
+          "kind": "check"
+        }
+      ]
+    },
+    {
+      "code": "T03",
+      "section": "Teacher guide / Four-session route",
+      "title": "Build one recommendation.\nThen solve a new case.",
+      "subtitle": "Four 45-minute sessions, plus an approximately eight-minute diagnostic baseline.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Session",
+            "Focus and pages",
+            "Output"
+          ],
+          "rows": [
+            [
+              "1 / Frame",
+              "S01-S04: task, first view, garden evidence and AI brief.",
+              "A human starting point and a bounded request for help."
+            ],
+            [
+              "2 / Audit",
+              "S05-S07 plus S03: prepared replies, contribution report and independent check.",
+              "A claim-by-claim record of what AI got right, wrong or left unknown."
+            ],
+            [
+              "3 / Iterate",
+              "S08-S11 plus S03/S05: stakeholder needs, revised brief, prepared revision and final recommendation.",
+              "An evidence-driven iteration and a final decision with ownership."
+            ],
+            [
+              "4 / Transfer",
+              "S12-S14: a new library problem; first response before feedback, then supported revision.",
+              "A separate independent attempt and an explanation of what changed."
+            ]
+          ],
+          "widths": [
+            93,
+            232,
+            195
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Print and release deliberately",
+          "text": "S00 precedes substantive teaching. Keep the garden records for sessions 2 and 3. Release S05 only after the first brief, S10 only after the revised brief, and S14 only after preserving the independent S13 response."
+        },
+        {
+          "type": "note",
+          "label": "Time is a teaching plan, not a performance target",
+          "text": "Use short notes where sufficient. Accept oral or scribed explanations and extra paper. Do not add every teacher example or the live demonstration to an already full period. Record any change to time, support or route.",
+          "kind": "teacher"
+        }
+      ]
+    },
+    {
+      "code": "T04",
+      "section": "Teacher guide / Facilitation",
+      "title": "Support independence\nwithout withholding access.",
+      "subtitle": "Read the teacher pages first. Keep model answers separate from student materials.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Before class",
+            "During the exercise"
+          ],
+          "rows": [
+            [
+              "Confirm school approval, accommodations and screen/device rules. Paper is a complete route.",
+              "Ask for a first idea before showing the prepared reply. Make students point to a specific source detail."
+            ],
+            [
+              "Print selected pages and plan pairs or groups of three. Rotate reader, checker and reporter.",
+              "Distinguish what was observed, what is proposed, what people value and what remains unknown."
+            ],
+            [
+              "Keep baseline work and identified responses within the school.",
+              "Read aloud, enlarge print, allow drawing or scribing and keep agreed supports comparable."
+            ]
+          ],
+          "widths": [
+            260,
+            260
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Prepared means prepared",
+          "text": "The supplied replies are fixed authored examples. They were not generated from the student's wording. A written brief practises directing help; comparing it with a supplied reply practises evaluating help."
+        },
+        {
+          "type": "note",
+          "label": "Protect thinking and privacy",
+          "text": "Do not score spelling, speed, handwriting, confidence or personal beliefs. Do not require private disclosures. No student names, photos or work need to leave the classroom. Keep access support distinct from substantive hints.",
+          "kind": "teacher"
+        }
+      ]
+    },
+    {
+      "code": "T05",
+      "section": "Teacher guide / 1 / Frame the problem",
+      "title": "Start with a human view.\nThen ask for useful help.",
+      "subtitle": "S01-S04 / 45 minutes",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Minutes",
+            "Teacher move",
+            "Student task"
+          ],
+          "rows": [
+            [
+              "0-5",
+              "Introduce",
+              "Read S01. Name the decision; students preserve a first view on S02."
+            ],
+            [
+              "5-13",
+              "Investigate",
+              "Release S03. Read the records; ask what was measured, for how long and under which conditions."
+            ],
+            [
+              "13-25",
+              "Frame",
+              "Students define success, an unknown and at least two possible actions."
+            ],
+            [
+              "25-37",
+              "Brief",
+              "Complete S04: goal, permitted sources, constraints and kind of help. No reply yet."
+            ],
+            [
+              "37-45",
+              "Explain",
+              "Share why the chosen help fits the task. Preserve the brief before session 2."
+            ]
+          ],
+          "widths": [
+            58,
+            90,
+            372
+          ]
+        },
+        {
+          "type": "note",
+          "label": "Teacher key / release after reasons",
+          "text": "The watering log supports a small observed comparison. It does not establish plant health, universal savings or a verified price. Let students find the limits before modelling them.",
+          "kind": "teacher"
+        },
+        {
+          "type": "text",
+          "label": "Coach the reasoning",
+          "text": "What do you already think, and what would you need help with rather than hand over?"
+        }
+      ]
+    },
+    {
+      "code": "T06",
+      "section": "Teacher guide / 2 / Report and check",
+      "title": "AI can contribute.\nIt cannot verify itself.",
+      "subtitle": "S05-S07 plus S03 / 45 minutes",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Minutes",
+            "Teacher move",
+            "Student task"
+          ],
+          "rows": [
+            [
+              "0-5",
+              "Recall",
+              "Revisit the student brief and success criteria before showing a reply."
+            ],
+            [
+              "5-13",
+              "Inspect",
+              "Release S05. Compare prepared replies A/B and the source inventory."
+            ],
+            [
+              "13-25",
+              "Report",
+              "Complete S06: quote a useful contribution, a concern and a question."
+            ],
+            [
+              "25-37",
+              "Check",
+              "Complete S07 against S03 and the inventory; calculate if useful."
+            ],
+            [
+              "37-45",
+              "Decide",
+              "Record which claim to keep, qualify, remove or leave unresolved, with a reason."
+            ]
+          ],
+          "widths": [
+            58,
+            90,
+            372
+          ]
+        },
+        {
+          "type": "note",
+          "label": "Teacher key / release after reasons",
+          "text": "Reply B narrows the two-day result but adds an unsupported 30-credit price. Unknown is not zero. Reply A generalises beyond the records. A second AI reply does not supply independent confirmation.",
+          "kind": "teacher"
+        },
+        {
+          "type": "text",
+          "label": "Coach the reasoning",
+          "text": "What exactly did AI say, what did you check, and what changed because of that check?"
+        }
+      ]
+    },
+    {
+      "code": "T07",
+      "section": "Teacher guide / 3 / Question and iterate",
+      "title": "Bring better evidence back.\nMake the final choice yourself.",
+      "subtitle": "S08-S11 plus the garden records / 45 minutes",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Minutes",
+            "Teacher move",
+            "Student task"
+          ],
+          "rows": [
+            [
+              "0-5",
+              "Prioritise",
+              "Name the most consequential gap found in session 2."
+            ],
+            [
+              "5-13",
+              "Investigate",
+              "Read S08. Identify needs involving access, permission, cost and human responsibility."
+            ],
+            [
+              "13-25",
+              "Rebrief",
+              "Write S09 before releasing S10. Inspect the prepared revision against the new requirements."
+            ],
+            [
+              "25-37",
+              "Create",
+              "Complete S11: final recommendation, AI contribution and the learner's consequential edit."
+            ],
+            [
+              "37-45",
+              "Defend",
+              "A partner challenges one claim or condition. The learner revises or explains why it stands."
+            ]
+          ],
+          "widths": [
+            58,
+            90,
+            372
+          ]
+        },
+        {
+          "type": "note",
+          "label": "Teacher key / release after reasons",
+          "text": "S10 is a prepared revision based on the supplied findings, not a response to each student's brief. It improves the source boundary, but the class must still judge the action, feasible safeguards and unresolved questions.",
+          "kind": "teacher"
+        },
+        {
+          "type": "text",
+          "label": "Coach the reasoning",
+          "text": "Which new finding changed your instruction, and which part of the final decision remains yours?"
+        }
+      ]
+    },
+    {
+      "code": "T08",
+      "section": "Teacher guide / 4 / Independent transfer",
+      "title": "Use the routine again.\nKeep first work separate.",
+      "subtitle": "S12-S14 / 45 minutes",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Minutes",
+            "Teacher move",
+            "Student task"
+          ],
+          "rows": [
+            [
+              "0-5",
+              "Frame",
+              "Introduce the new library problem without diagnosing its measurement error."
+            ],
+            [
+              "5-13",
+              "Inspect",
+              "Release S12. Read independently with agreed access support."
+            ],
+            [
+              "13-25",
+              "Apply",
+              "Complete S13 before substantive hints or feedback; preserve the response."
+            ],
+            [
+              "25-37",
+              "Challenge",
+              "Only now compare the first reasoning and discuss a source check."
+            ],
+            [
+              "37-45",
+              "Revise",
+              "Release S14. Explain a revision or a justified recheck and any support used."
+            ]
+          ],
+          "widths": [
+            58,
+            90,
+            372
+          ]
+        },
+        {
+          "type": "note",
+          "label": "Teacher key / release after reasons",
+          "text": "Teacher key, after S13: pages read and comprehension differ. Groups, materials and noise differ. Unnamed websites add no traceable support. A feasible next check should address the claimed outcome and access needs.",
+          "kind": "teacher"
+        },
+        {
+          "type": "text",
+          "label": "Coach the reasoning",
+          "text": "After preserving the first response: what did the source measure, and what did the claim promise?"
+        }
+      ]
+    },
+    {
+      "code": "T09",
+      "section": "Teacher guide / A worked audit",
+      "title": "Separate contribution\nfrom confirmation.",
+      "subtitle": "Use only after students have completed their own check.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "AI statement",
+            "Independent check",
+            "Decision"
+          ],
+          "rows": [
+            [
+              "10 rather than 20 litres",
+              "The groundskeeper's log records that comparison for two similar beds over two days.",
+              "Keep with the conditions; do not extend to every garden."
+            ],
+            [
+              "50% less water",
+              "(20 - 10) / 20 = 0.5 for the recorded use. Plant health was not measured.",
+              "Qualify: lower use in the comparison does not prove a successful system."
+            ],
+            [
+              "The system costs 30 credits",
+              "The source inventory says none of the supplied records gives a price.",
+              "Remove the price; request a verified cost before a purchase decision."
+            ],
+            [
+              "Run a longer comparison",
+              "This is a proposed next action, not an observed result.",
+              "Judge feasibility, permission, measures and access; name a responsible role."
+            ]
+          ],
+          "widths": [
+            145,
+            225,
+            150
+          ]
+        },
+        {
+          "type": "text",
+          "label": "A useful question is answerable",
+          "text": "Prefer \"Which record establishes the price?\" to \"Are you sure?\" Prefer \"What would we need to measure?\" to asking for more confident language."
+        },
+        {
+          "type": "note",
+          "label": "Three possible judgments",
+          "text": "Useful and supported; useful but needs checking; unsupported or unsuitable for this task. A reply can contain all three. Do not reject a valid observation merely because another sentence is wrong.",
+          "kind": "check"
+        }
+      ]
+    },
+    {
+      "code": "T10",
+      "section": "Teacher guide / A worked iteration",
+      "title": "An iteration needs\na reason to change.",
+      "subtitle": "A new prompt is not evidence of improvement. Inspect the new output.",
+      "blocks": [
+        {
+          "type": "note",
+          "label": "First brief / prepared example",
+          "text": "Use the garden records to organise a recommendation. Separate observations, limits and next steps; identify unknown facts.",
+          "kind": "ai"
+        },
+        {
+          "type": "text",
+          "label": "What the independent check adds",
+          "text": "The log is limited to two days; no source verifies a price. Stakeholders require permission, access, a simpler comparison and a person responsible. Those findings become requirements in the next brief."
+        },
+        {
+          "type": "note",
+          "label": "Revised brief / prepared example",
+          "text": "Keep the two-day observation and remove the unverified price. Compare a supervised trial, a simpler timer and waiting. Label proposals as proposals. Identify approvals, access needs and the decisions a person must make.",
+          "kind": "ai"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "What improved",
+            "What remains a human decision"
+          ],
+          "rows": [
+            [
+              "Source limits are explicit; the missing price stays unknown. Options and safeguards are more visible.",
+              "Whether a trial is justified; who may approve it; which outcomes and stop conditions matter."
+            ],
+            [
+              "The learner can identify why a requirement changed.",
+              "Whether to accept the suggestion, edit it, choose a simpler option or pause."
+            ]
+          ],
+          "widths": [
+            260,
+            260
+          ]
+        },
+        {
+          "type": "note",
+          "label": "Do not force an extra exchange",
+          "text": "If the recommendation already meets the criteria and the student can defend it, stop. If a relevant gap remains, return with a specific finding or seek human review.",
+          "kind": "check"
+        }
+      ]
+    },
+    {
+      "code": "T11",
+      "section": "Teacher guide / Feedback",
+      "title": "Review the thinking trail,\nnot just the final paragraph.",
+      "subtitle": "Use descriptive feedback. There is no automatic score or credit for AI use.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Dimension",
+            "Look for",
+            "Useful next question"
+          ],
+          "rows": [
+            [
+              "Framing",
+              "A first view, a clear purpose and criteria for a good decision.",
+              "What was your own starting point?"
+            ],
+            [
+              "Checking",
+              "An exact source detail or independent calculation connected to a claim.",
+              "What did you establish for yourself?"
+            ],
+            [
+              "Iteration",
+              "A changed instruction or edit linked to a finding, rather than polishing alone.",
+              "What changed, and why did it matter?"
+            ],
+            [
+              "Ownership",
+              "A justified tool choice, remaining uncertainty and human responsibility.",
+              "Which part of the decision is yours to defend?"
+            ]
+          ],
+          "widths": [
+            100,
+            245,
+            175
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Describe the next move",
+          "text": "Use \"not yet visible\", \"visible with a prompt\" or \"explained with evidence\" and point to the student's work. Coach one gap, let the learner revise, and recheck that gap. A justified retained answer is acceptable."
+        },
+        {
+          "type": "note",
+          "label": "Keep interpretation honest",
+          "text": "The short baseline does not elicit every process dimension. Do not calculate a total pre/post gain, pool with the older 0-8 rubric or infer a causal programme effect. Keep S13's first attempt separate from S14's supported revision; missing work is missing.",
+          "kind": "teacher"
+        }
+      ]
+    },
+    {
+      "code": "T12",
+      "section": "Teacher guide / Optional demonstration",
+      "title": "Demonstrate a process.\nKeep the paper route complete.",
+      "subtitle": "An optional adult-operated demo is separate from the core exercise and requires local approval.",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Before",
+            "During",
+            "After"
+          ],
+          "rows": [
+            [
+              "Use a school-approved service under its current terms, account rules and privacy process. Use only fictional supplied material.",
+              "Teacher operates the tool. Show the brief and preserve the actual output before discussion. Do not submit student work or identifiers.",
+              "Report what actually happened. Recheck claims against the records and compare the result with the prepared exchange."
+            ],
+            [
+              "If approval or access is unavailable, use the prepared replies. No student account or live tool is required.",
+              "Ask students to predict a useful question or likely omission before viewing the response. Outputs vary; errors are not guaranteed.",
+              "Record which findings changed the next instruction. Return to the paper task and the learner's own final decision."
+            ]
+          ],
+          "widths": [
+            173,
+            174,
+            173
+          ]
+        },
+        {
+          "type": "note",
+          "label": "Never imply the example was personalised",
+          "text": "The printed replies are authored simulations. A live demonstration may differ. Neither a fluent demonstration nor a clean second response proves reliability or replaces an independent check.",
+          "kind": "teacher"
+        },
+        {
+          "type": "text",
+          "label": "Adapt the time rather than compress the learning",
+          "text": "Replace a prepared-reply comparison or plan an extra block. Preserve time for students' own thinking, independent checking and explanation. Do not crowd the demo into the independent transfer task."
+        }
+      ]
+    },
+    {
+      "code": "T13",
+      "section": "Teacher guide / Resources and reuse",
+      "title": "Take the routine\nto another real problem.",
+      "subtitle": "Use an adult-prepared, non-sensitive task with a small set of inspectable sources.",
+      "blocks": [
+        {
+          "type": "text",
+          "label": "A reusable assignment",
+          "text": "State the audience and a decision. Supply original records and a clear deliverable. Preserve a first view, report any help, conduct an independent check, question the proposal and explain a revision. Reuse the six-step cycle without requiring AI."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Keep locally",
+            "Share only if safe"
+          ],
+          "rows": [
+            [
+              "Initial and revised work, source checks, help used, teacher feedback and accommodations.",
+              "Non-identifying material feedback or safe aggregate observations. Do not send student work, names or private reflections to Vizancia."
+            ],
+            [
+              "Record the route and timing actually used; additional coaching changes interpretation.",
+              "Questions or material feedback: info@vizancia.ca. Privacy: vizancia.com/privacy.html."
+            ]
+          ],
+          "widths": [
+            260,
+            260
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Educator reading",
+          "text": "UNESCO, AI competency framework for students (2024): unesco.org/en/articles/ai-competency-framework-students. NIST AI 600-1, Generative AI Profile (2024): doi.org/10.6028/NIST.AI.600-1. Background reading, not endorsement or validation."
+        },
+        {
+          "type": "note",
+          "label": "Publication and classroom use",
+          "text": "Fictional learning cases and fixed AI-style replies. Classroom copying permitted for your own educational use; no resale or implied endorsement. Educator-review pilot, not field-tested or a validated assessment. The optional website projection supplies the original case evidence; use this packet for the new problem-solving workflow.",
+          "kind": "teacher"
+        }
+      ]
+    },
+    {
+      "code": "S00",
+      "section": "Student baseline / Before teaching",
+      "title": "Start with your own view.",
+      "subtitle": "About eight minutes. Work individually with the support agreed with your teacher.",
+      "blocks": [
+        {
+          "type": "note",
+          "label": "A fictional lunch-queue proposal",
+          "text": "A supplier says its AI lunch-queue sign halves waiting time for every school. On one Tuesday, one queue using the sign averaged 4 minutes; a different queue on Monday averaged 8. Menus and staffing differed. The trial did not measure how many students got lunch. An AI-style summary repeats the claim without naming a source.",
+          "kind": "human"
+        },
+        {
+          "type": "field",
+          "label": "Would you recommend using the sign now?",
+          "prompt": "Use a case detail to explain your reasoning.",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "What is uncertain, and what would you check next?",
+          "prompt": "",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "What help would you choose, and why?",
+          "prompt": "Your own work, a person, another tool, AI help or unsure are possible choices.",
+          "height": 65
+        }
+      ]
+    },
+    {
+      "code": "S01",
+      "section": "Student assignment / The challenge",
+      "title": "Solve the problem.\nKeep the decision yours.",
+      "subtitle": "Your final product is a recommendation you can defend.",
+      "blocks": [
+        {
+          "type": "note",
+          "label": "The challenge",
+          "text": "The Campus wants to conserve water while keeping its garden healthy. A supplier proposes an AI watering system. Should the Campus adopt it, run a limited test, choose a simpler option or wait? There is no deadline requiring a purchase today.",
+          "kind": "human"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "What to deliver",
+            "What to show"
+          ],
+          "rows": [
+            [
+              "A recommendation",
+              "State the action, the evidence, a limit, a next check and a responsible role."
+            ],
+            [
+              "An AI contribution report",
+              "Show something AI added, a concern you investigated and what you accepted, changed or rejected."
+            ],
+            [
+              "A revision trail",
+              "Keep your first view, independent check, revised instruction and explanation of a final edit."
+            ]
+          ],
+          "widths": [
+            175,
+            345
+          ]
+        },
+        {
+          "type": "text",
+          "label": "How this paper exercise works",
+          "text": "Write your own thinking and brief first. Your teacher then supplies prepared replies. They are fixed examples, not responses generated from your wording. Your job is to question the help and decide what to do with it."
+        },
+        {
+          "type": "note",
+          "label": "Success is understanding you can explain",
+          "text": "You may use a person, another tool or no AI. More exchanges or more polished wording do not earn extra credit. Leave out private information.",
+          "kind": "check"
+        }
+      ]
+    },
+    {
+      "code": "S02",
+      "section": "Human first / Preserve your starting point",
+      "title": "What do you think\nbefore receiving help?",
+      "subtitle": "Keep this page so you can explain what changed later.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / My first recommendation",
+          "prompt": "What would you do now, and why?",
+          "height": 100
+        },
+        {
+          "type": "field",
+          "label": "02 / A good outcome would mean...",
+          "prompt": "Consider the garden, the people affected and what must not be sacrificed.",
+          "height": 95
+        },
+        {
+          "type": "field",
+          "label": "03 / What I know, assume and need to find out",
+          "prompt": "Separate a fact from an assumption. Name one uncertainty.",
+          "height": 100
+        },
+        {
+          "type": "note",
+          "label": "Think before outsourcing",
+          "text": "Which part of this problem do you need to understand yourself? Which part could help usefully support?",
+          "kind": "human"
+        }
+      ]
+    },
+    {
+      "code": "S03",
+      "section": "Source records / Garden case",
+      "title": "Inspect the original records.",
+      "subtitle": "These records are fictional. Trace claims to what was actually observed.",
+      "blocks": [
+        {
+          "type": "source",
+          "label": "A. Groundskeeper's test log",
+          "source": "Campus groundskeeper • fictional local record • 4 May",
+          "text": "Two similar beds were observed for two days. The usual schedule used 20 litres; the new system used 10. Only water use was recorded. Plant health and longer-term weather were not measured."
+        },
+        {
+          "type": "source",
+          "label": "B. Supplier's poster",
+          "source": "Sprout Systems • fictional advertisement • 5 May",
+          "text": "'Save half your water everywhere!' The poster repeats the Campus test. The supplier sells the system. It gives no additional tests or methods."
+        },
+        {
+          "type": "source",
+          "label": "C. Groundskeeper's clarification",
+          "source": "Campus groundskeeper • fictional interview note • 6 May",
+          "text": "'The result is promising for these beds. I have not tested a heat wave, different plants or a whole growing season. I would not promise the same savings everywhere.'"
+        }
+      ]
+    },
+    {
+      "code": "S04",
+      "section": "Brief / Before the prepared reply",
+      "title": "Direct the help\nwithout handing over judgment.",
+      "subtitle": "Write your own brief. The supplied reply later is a fixed example, not a personalised response.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / Task, audience and my current view",
+          "prompt": "What are we deciding, for whom, and what do I already think?",
+          "height": 75
+        },
+        {
+          "type": "field",
+          "label": "02 / What help may do - and must not do",
+          "prompt": "Organise, explain, question, compare or review? What remains my responsibility?",
+          "height": 75
+        },
+        {
+          "type": "field",
+          "label": "03 / Sources, constraints and output",
+          "prompt": "Name the allowed records. Ask for unknowns to be labelled and unsupported facts to be left out.",
+          "height": 90
+        },
+        {
+          "type": "field",
+          "label": "04 / How I will check the result",
+          "prompt": "Which claim or reasoning step will I check independently?",
+          "height": 65
+        }
+      ]
+    },
+    {
+      "code": "S05",
+      "section": "Prepared AI exchanges / Inspect after your brief",
+      "title": "Read the contribution\nbefore trusting it.",
+      "subtitle": "Authored simulations, not live AI. Compare both replies with your brief and the garden records.",
+      "blocks": [
+        {
+          "type": "source",
+          "label": "A. Reply to 'Make the system sound exciting'",
+          "source": "Authored simulation • not a live model or evidence",
+          "text": "'The AI system guarantees a 50% saving in every garden. Its successful test proves it is ready for the whole school. Buy it now!'"
+        },
+        {
+          "type": "source",
+          "label": "B. Reply to 'Separate observations, limits and next steps'",
+          "source": "Authored simulation • not a live model or evidence",
+          "text": "'The two-day test used 10 rather than 20 litres. We do not know the result in other conditions. Run a longer comparison and measure plant health. The system costs 30 credits.'"
+        },
+        {
+          "type": "source",
+          "label": "C. Source check",
+          "source": "Campus evidence folder • fictional document inventory",
+          "text": "The folder contains the two-day log, supplier poster and groundskeeper clarification. None gives a price. The 30-credit price in reply B cannot be verified from these documents."
+        }
+      ]
+    },
+    {
+      "code": "S06",
+      "section": "AI contribution report / Before revision",
+      "title": "What did AI contribute?\nWhat deserves a question?",
+      "subtitle": "Use a short quote or an accurate summary. Do not call the reply an independent source.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / A useful contribution",
+          "prompt": "What did the reply help you notice, organise or explain?",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "02 / A statement I would challenge",
+          "prompt": "Quote or summarise the detail. What is your concern?",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "03 / A question that could change the decision",
+          "prompt": "Make it specific: which source, assumption, missing outcome or affected person matters?",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "04 / My independent checking plan",
+          "prompt": "What will I calculate, inspect or ask a knowledgeable person?",
+          "height": 60
+        }
+      ]
+    },
+    {
+      "code": "S07",
+      "section": "Independent check / Return to the records",
+      "title": "Check outside the reply.",
+      "subtitle": "Use the garden records and source inventory. A second AI answer alone is not a source check.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / The claim I checked",
+          "prompt": "Write the precise statement, not just the topic.",
+          "height": 55
+        },
+        {
+          "type": "field",
+          "label": "02 / What I did and what I found",
+          "prompt": "Name the record and exact detail, calculation or independent method.",
+          "height": 100
+        },
+        {
+          "type": "field",
+          "label": "03 / My judgment",
+          "prompt": "Supported, needs qualification, not established, or unresolved? Explain why.",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "04 / What this changes",
+          "prompt": "Keep, qualify, remove or investigate? Connect the change to the decision.",
+          "height": 85
+        }
+      ]
+    },
+    {
+      "code": "S08",
+      "section": "Stakeholder records / Add the missing needs",
+      "title": "Consider people\nas well as performance.",
+      "subtitle": "Separate what people value, what they report and what still needs checking.",
+      "blocks": [
+        {
+          "type": "source",
+          "label": "A. Groundskeeper's priorities",
+          "source": "Fictional role card • read aloud or discuss",
+          "text": "'I want to conserve water and keep plants healthy. I can supervise a small trial. We need a manual stop and a clear rule for checking dry soil. A person must remain responsible.'"
+        },
+        {
+          "type": "source",
+          "label": "B. Student garden club",
+          "source": "Fictional role card • read aloud or discuss",
+          "text": "'We want to keep learning how to care for the garden. The controls should work for everyone. We do not agree to upload our names or photos to test the watering system.'"
+        },
+        {
+          "type": "source",
+          "label": "C. School purchasing lead",
+          "source": "Fictional role card • read aloud or discuss",
+          "text": "'No price has been confirmed. We need the real costs, approval and a comparison with a simpler timer. We can pause the proposal while gathering this information.'"
+        }
+      ]
+    },
+    {
+      "code": "S09",
+      "section": "Iterate / Write before the prepared revision",
+      "title": "Return with better inputs.",
+      "subtitle": "Use what you found independently to improve the next request.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / The finding that changes my instruction",
+          "prompt": "Name the evidence, constraint or missing perspective. Why does it matter?",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "02 / My challenge question",
+          "prompt": "What should the help reconsider or explain? Avoid asking only for confidence or more polish.",
+          "height": 65
+        },
+        {
+          "type": "field",
+          "label": "03 / My revised brief",
+          "prompt": "State the new requirements, allowed sources, unknowns and kind of revision needed.",
+          "height": 140
+        },
+        {
+          "type": "note",
+          "label": "Before you inspect the prepared revision",
+          "text": "Predict one improvement and one thing you will still need to judge for yourself. Your brief is practice; the next supplied reply is an authored example.",
+          "kind": "check"
+        }
+      ]
+    },
+    {
+      "code": "S10",
+      "section": "Prepared revision / Inspect after your rebrief",
+      "title": "Better does not mean finished.",
+      "subtitle": "This fixed revision uses the supplied findings. It is not a new source or a response to your own wording.",
+      "blocks": [
+        {
+          "type": "note",
+          "label": "Prepared AI-style revision",
+          "text": "The supplied two-day comparison recorded 10 rather than 20 litres. That supports describing this small test, not promising the same result everywhere. Plant health and other conditions were not measured; the price is not established by the records. Options include a supervised trial with approval, a simpler timer or waiting for better information. A trial proposal should address water use, plant health, access, privacy and a manual stop. The responsible people must agree the checks and review conditions before acting.",
+          "kind": "ai"
+        },
+        {
+          "type": "field",
+          "label": "01 / What improved, and what supports that judgment?",
+          "prompt": "Compare with the earlier reply and your revised requirements.",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "02 / What would I still question, edit or reject?",
+          "prompt": "Consider an option, a missing safeguard, an assumption or an unresolved fact.",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "03 / What remains a human decision?",
+          "prompt": "Whose permission and responsibility matter? What can this reply not decide for us?",
+          "height": 85
+        }
+      ]
+    },
+    {
+      "code": "S11",
+      "section": "Final recommendation / Human ownership",
+      "title": "Make the work yours.",
+      "subtitle": "A justified trial, simpler option or pause can all be defensible. Use extra paper or an oral explanation if needed.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / Our recommendation",
+          "prompt": "State an action, a source detail, a limitation, a next check and a responsible role. Distinguish a proposed safeguard from an observed result.",
+          "height": 175
+        },
+        {
+          "type": "field",
+          "label": "02 / AI contribution and my consequential edit",
+          "prompt": "What did you accept, change or reject? Name one specific change and the reason for it.",
+          "height": 95
+        },
+        {
+          "type": "field",
+          "label": "03 / Remaining uncertainty and responsibility",
+          "prompt": "What could change your decision? Who must approve, check or stop the action?",
+          "height": 80
+        }
+      ]
+    },
+    {
+      "code": "S12",
+      "section": "Independent transfer / A new problem",
+      "title": "Use the routine\nin a different setting.",
+      "subtitle": "Read the new records, then complete S13 before feedback or worked answers.",
+      "blocks": [
+        {
+          "type": "source",
+          "label": "A. Trial note",
+          "source": "Fictional library log • 12 June",
+          "text": "Six volunteers sat at the display for two lunch breaks. They read twice as many pages as a different group the previous week. No comprehension questions were asked. Reading materials and noise levels differed."
+        },
+        {
+          "type": "source",
+          "label": "B. AI-style summary",
+          "source": "Authored simulation • not independent evidence",
+          "text": "'The trial confirms doubled comprehension for all students. Several websites agree.' The summary gives no website titles, links or new measurements."
+        },
+        {
+          "type": "source",
+          "label": "C. Librarian's note",
+          "source": "Fictional interview note • 13 June",
+          "text": "'Pages read and understanding are different measures. We need a fair comparison and accessible options. Some students prefer a quiet corner without a display. We have not obtained a price or approval.'"
+        }
+      ]
+    },
+    {
+      "code": "S13",
+      "section": "Independent first response / Before feedback",
+      "title": "Solve the new problem\nwith your own reasoning.",
+      "subtitle": "Work individually with agreed access support. Preserve this before discussion.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / My initial view",
+          "prompt": "What would you recommend about the display, and why?",
+          "height": 70
+        },
+        {
+          "type": "field",
+          "label": "02 / The AI contribution and my independent check",
+          "prompt": "What does the summary say? What does a named original record establish? Explain a limit.",
+          "height": 120
+        },
+        {
+          "type": "field",
+          "label": "03 / My recommendation and next check",
+          "prompt": "Choose an action, explain the help you would use or decline, and keep a person responsible.",
+          "height": 145
+        }
+      ]
+    },
+    {
+      "code": "S14",
+      "section": "Supported revision / After feedback",
+      "title": "Explain the improvement.\nKeep ownership of the answer.",
+      "subtitle": "Only use this page after the first response has been preserved.",
+      "blocks": [
+        {
+          "type": "field",
+          "label": "01 / Feedback, question or new check",
+          "prompt": "What did you investigate after your first response? Note any help or substantive hint.",
+          "height": 85
+        },
+        {
+          "type": "field",
+          "label": "02 / My revision - or reason for retaining my view",
+          "prompt": "Connect your change or recheck to a source, a need or a reasoning gap.",
+          "height": 130
+        },
+        {
+          "type": "field",
+          "label": "03 / What I can now explain without copying AI",
+          "prompt": "What did I understand for myself? When would I use, limit or stop AI help?",
+          "height": 95
+        },
+        {
+          "type": "note",
+          "label": "Take the routine with you",
+          "text": "Think first. Direct the help. Report its contribution. Question and check. Iterate for a reason. Make the final decision yours.",
+          "kind": "check"
+        }
+      ]
+    }
+  ]
+}

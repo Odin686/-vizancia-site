@@ -9,6 +9,11 @@ const candidate = facts.iosCandidate;
 assert.equal(candidate.version, disclosures.candidateVersion);
 assert.equal(candidate.build, disclosures.candidateBuild);
 assert.equal(candidate.analyticsDefault, 'off');
+assert.equal(facts.androidCandidate.analyticsDefault, 'off');
+assert.equal(facts.androidCandidate.storeStatus, 'not-submitted');
+assert.match(facts.androidCandidate.sourceCommit, /^[a-f0-9]{40}$/);
+assert.equal(facts.androidCandidate.iosPolicySourceSha256, disclosures.sourcePolicySha256);
+assert.equal(facts.privacyPolicyUrl, 'https://vizancia.com/privacy.html');
 assert.equal(candidate.storeStatus, 'not-submitted', 'Review all candidate messaging before changing distribution status');
 assert.match(candidate.sourceCommit, /^[a-f0-9]{40}$/);
 assert.match(disclosures.sourcePolicySha256, /^[a-f0-9]{64}$/);
@@ -31,11 +36,15 @@ for (const file of await pages()) {
   assert.doesNotMatch(text, /4\.3 (?:is (?:live|available)|available|on both stores)/i, `${file}: candidate presented as published`);
   assert.doesNotMatch(text, /info@vizancia\.com/i, `${file}: use the confirmed support contact`);
 }
+const policy = await readFile('privacy.html', 'utf8');
+assert.ok(policy.includes('<link rel="canonical" href="https://vizancia.com/privacy.html"'));
+assert.ok(policy.includes('Android storage and sharing'));
+assert.doesNotMatch(policy, /href="https:\/\/(?:odin686\.github\.io|github\.com\/Odin686)\/[^" ]*privacy/i, 'Policy destination must use the branded website');
 const release = await readFile('releases.html', 'utf8');
 assert.ok(release.includes(`${candidate.practiceActivities} practice activities`) || release.includes(`${candidate.practiceActivities} activities`));
 assert.ok(release.includes(`${candidate.practiceQuestions} questions`));
 assert.ok(release.includes(`FirebaseAnalyticsCore ${candidate.firebaseSdkVersion}`));
-assert.ok(release.includes('has not been uploaded or submitted'));
+assert.ok(release.includes('Neither has been uploaded or submitted to Apple or Google Play'));
 
 // Search engines must see the same privacy answer a visitor can read.
 const support = await readFile('support.html', 'utf8');

@@ -9,9 +9,12 @@ const home = await readFile('index.html', 'utf8');
 for (const [name, count] of Object.entries(facts.counts)) {
   assert.match(release, new RegExp(`data-release-count="${name}">${count}</span>`), `${name}: release page differs from recorded facts`);
 }
-for (const [label, name] of [['short lessons','lessons'],['practice games','games'],['learning paths','paths']]) {
-  assert.ok(home.includes(`${facts.counts[name]} ${label}`), `Homepage ${label} differs from release facts`);
-}
+assert.equal(facts.marketing.minimumLessons, 100);
+assert.ok(facts.counts.lessons >= facts.marketing.minimumLessons, '100+ lessons claim exceeds reviewed library');
+assert.ok(home.includes('100+ lessons'), 'Homepage should use the reviewed lower-bound lesson claim');
+assert.ok(home.includes('Games and challenges'));
+assert.ok(home.includes('Guided learning paths'));
+assert.doesNotMatch(home, /\b\d+ (?:short lessons|practice games|learning paths)\b|Sixteen games/i, 'Homepage must not promise fixed catalog totals');
 assert.equal(createHash('sha256').update(await readFile('assets/app-icon.png')).digest('hex'), facts.appIconSha256, 'Shared app icon changed');
 for (const platform of ['ios', 'android']) {
   assert.match(facts[platform].sourceCommit, /^[a-f0-9]{40}$/);
@@ -32,9 +35,9 @@ if (args.length) {
     const head = execFileSync('git', ['-C', dir, 'rev-parse', 'HEAD'], {encoding:'utf8'}).trim();
     const dirty = execFileSync('git', ['-C', dir, 'status', '--porcelain'], {encoding:'utf8'}).trim();
     assert.equal(dirty, '', `${platform} working tree is not clean`);
-    assert.equal(head, facts[platform].sourceCommit, `${platform} source changed: review website facts and policies`);
+    assert.equal(head, facts[`${platform}Candidate`].sourceCommit, `${platform} candidate source changed: review website facts and policies`);
     const remote = execFileSync('git', ['-C', dir, 'ls-remote', 'origin', 'refs/heads/main'], {encoding:'utf8'}).trim().split(/\s+/)[0];
     assert.equal(head, remote, `${platform} checkout differs from GitHub main`);
   }
 }
-console.log('Release facts, homepage counts and shared app icon verified.');
+console.log('Release snapshots, flexible homepage claims and shared app icon verified.');

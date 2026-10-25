@@ -78,3 +78,32 @@ snapshots retain their historical counts. Adjust the reviewed lower-bound claim
 if the library falls below 100 lessons. Candidate source references are separate
 from published store records; optional local release checks compare main with
 the candidate references, not with the older published source commits.
+
+## Evidence to Action classroom publication
+
+The October 25 teacher resource uses the professional **Evidence to Action**
+print template. The original download URL remains compatible, serving the
+20-page complete packet. Separate 11-page teacher and 9-page student exports
+are linked on the teacher page. The projection's browser title matches the
+publication; its fictional case records, slide sequence and behavior are
+unchanged. The native apps keep their existing case title.
+
+`data/evidence-to-action.json` preserves the canonical Trust case and selected
+teaching examples from the October 18 local educator beta, with source hashes.
+This focused publication does not replace or claim delivery of the broader,
+unpublished eight-stage Think First programme or its optional labs/portfolio.
+The original case evidence remains unchanged. Baseline and transfer first
+responses precede substantive feedback; supported revision stays separate.
+
+Rebuild using a Python environment with `scripts/requirements-pdf.txt`, then run:
+
+```sh
+python scripts/build-evidence-to-action.py
+```
+
+Outputs are in `output/pdf/` (ignored). Copy the complete packet to
+`teachers/activity/can-we-trust-this-pilot.pdf`, and the teacher/student PDFs to
+the same public directory. Render all pages with `pdftoppm`; inspect spacing,
+tables, evidence, answer separation and writing areas before publishing. The
+fonts and reusable layout source are in `scripts/pdf_assets/` and the builder.
+Website behavior still passes through `npm run build`.

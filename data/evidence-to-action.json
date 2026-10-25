@@ -1,0 +1,372 @@
+{
+  "edition": "October 2026 / Classroom edition 1",
+  "title": "Evidence to Action",
+  "subtitle": "A teacher's guide to evaluating AI-supported claims",
+  "sourceCaseSha256": "3bc8cfa1c55107acff7ba2a97348160f474cd20af42bff09adda17ec425f1af0",
+  "sourceTeachingSha256": "e94ae4fcf71e0e508a3079de447730b30dfe3f494334f69e2c9df803109dc18c",
+  "case": {
+    "version": 1,
+    "id": "can-we-trust-this-v1",
+    "title": "Can we trust this?",
+    "subtitle": "A Campus investigation in four 45-minute sessions",
+    "audience": "Grades 6-8 with a teacher or facilitator",
+    "disclosure": "All people, organisations, data and AI replies in these cases are fictional and authored for learning. No live AI is used. Do not treat the examples as gardening or product advice.",
+    "routine": "Make an initial judgment. Examine evidence. Choose an action. Explain your reasons. Revisit what changed.",
+    "sessions": [
+      {
+        "id": "library",
+        "number": 1,
+        "title": "Follow the evidence",
+        "room": "Library",
+        "goal": "Separate a claim from supporting evidence and identify a limit.",
+        "claim": "The Campus newspaper receives this pitch: 'An AI watering system saves 50% of water in every garden. Our two-day test proves the school should buy it.'",
+        "beforePrompt": "Would you publish that claim now? Give an initial reason and one thing you would need to know.",
+        "evidencePrompt": "Select the evidence cards that matter to your decision. For each one, explain what it can and cannot support.",
+        "cards": [
+          {
+            "id": "garden-log",
+            "title": "A. Groundskeeper's test log",
+            "source": "Campus groundskeeper • fictional local record • 4 May",
+            "body": "Two similar beds were observed for two days. The usual schedule used 20 litres; the new system used 10. Only water use was recorded. Plant health and longer-term weather were not measured."
+          },
+          {
+            "id": "garden-ad",
+            "title": "B. Supplier's poster",
+            "source": "Sprout Systems • fictional advertisement • 5 May",
+            "body": "'Save half your water everywhere!' The poster repeats the Campus test. The supplier sells the system. It gives no additional tests or methods."
+          },
+          {
+            "id": "garden-email",
+            "title": "C. Groundskeeper's clarification",
+            "source": "Campus groundskeeper • fictional interview note • 6 May",
+            "body": "'The result is promising for these beds. I have not tested a heat wave, different plants or a whole growing season. I would not promise the same savings everywhere.'"
+          }
+        ],
+        "choices": [
+          {
+            "id": "publish",
+            "title": "Publish the universal claim",
+            "feedback": "The figures describe two beds for two days. Repeating them in an advertisement adds no independent evidence. A universal claim goes beyond this test."
+          },
+          {
+            "id": "qualify",
+            "title": "Report the small test and its limits",
+            "feedback": "This is supported if you explain the conditions and missing measures. You can report 10 versus 20 litres in this test without promising universal savings or healthy plants."
+          },
+          {
+            "id": "pause",
+            "title": "Wait and request a better test",
+            "feedback": "This is reasonable if the article's purpose is to recommend a purchase. Specify what you need: more conditions, longer observation, plant health and an independent check."
+          }
+        ],
+        "discussion": "Partner A explains the strongest evidence. Partner B asks what is missing. Swap roles. Agree on one sentence that could responsibly appear in the newspaper.",
+        "reflection": "What changed between your first judgment and your decision? Name a source and a limit.",
+        "nextStep": "Ask what would count as a fair comparison before looking at an AI-style reply.",
+        "teacherKey": "A supports a narrow description of observed water use, not plant health or universal savings. B is a sales claim based on A, not independent corroboration. C narrows the interpretation. Accept a qualified report or a justified pause; score reasoning, not agreement with one preferred action.",
+        "timing": [
+          "5 min: initial judgment",
+          "8 min: read or project evidence",
+          "12 min: pairs examine sources",
+          "12 min: draft a responsible headline",
+          "8 min: reflect and exit"
+        ]
+      },
+      {
+        "id": "workshop",
+        "number": 2,
+        "title": "A better prompt is only a start",
+        "room": "Prompt Workshop",
+        "goal": "Distinguish a useful response from a verified claim and choose appropriate help.",
+        "claim": "The newspaper team wants a recommendation about the same watering system. Two authored AI-style replies use the Library evidence. Neither reply is a new source.",
+        "beforePrompt": "Before reading the replies, write two things a responsible recommendation must include. Would you use AI, another tool, a person, or your own work for this task?",
+        "evidencePrompt": "Compare the replies with the test log. Select the cards you used to check a claim. Notice what a clearer prompt improved and what it could not verify.",
+        "cards": [
+          {
+            "id": "reply-a",
+            "title": "A. Reply to 'Make the system sound exciting'",
+            "source": "Authored simulation • not a live model or evidence",
+            "body": "'The AI system guarantees a 50% saving in every garden. Its successful test proves it is ready for the whole school. Buy it now!'"
+          },
+          {
+            "id": "reply-b",
+            "title": "B. Reply to 'Separate observations, limits and next steps'",
+            "source": "Authored simulation • not a live model or evidence",
+            "body": "'The two-day test used 10 rather than 20 litres. We do not know the result in other conditions. Run a longer comparison and measure plant health. The system costs 30 credits.'"
+          },
+          {
+            "id": "reply-check",
+            "title": "C. Source check",
+            "source": "Campus evidence folder • fictional document inventory",
+            "body": "The folder contains the two-day log, supplier poster and groundskeeper clarification. None gives a price. The 30-credit price in reply B cannot be verified from these documents."
+          }
+        ],
+        "choices": [
+          {
+            "id": "accept",
+            "title": "Use reply B unchanged",
+            "feedback": "B is more useful than A, but it adds an unsupported price. Structure and caution do not guarantee that every detail is grounded."
+          },
+          {
+            "id": "check",
+            "title": "Check B, remove the price, and write our conclusion",
+            "feedback": "This keeps useful organisation while correcting the unsupported detail. If AI help is permitted, disclose its role; your group remains responsible for the final recommendation."
+          },
+          {
+            "id": "human",
+            "title": "Work from the records with a person instead",
+            "feedback": "This is a valid choice. A librarian or groundskeeper can help examine the original records. Explain how you will still check facts and avoid inventing missing information."
+          }
+        ],
+        "discussion": "One partner checks each factual sentence; the other proposes wording. Swap. Discuss a task where AI help would be useful and a task where it would skip the skill you need to practise. Follow the school's rules.",
+        "reflection": "Which help did you choose and why? What did you personally check or contribute?",
+        "nextStep": "Bring your checked recommendation and unresolved questions to the Campus meeting.",
+        "teacherKey": "Reply A overgeneralises and pushes a purchase. Reply B correctly narrows the water result but fabricates a price. Checking is still necessary after prompt improvement. Accept justified use, non-use or human help; do not award extra credit for using AI. Accessibility support is not cheating.",
+        "timing": [
+          "5 min: set criteria before replies",
+          "8 min: compare authored replies",
+          "12 min: verify each factual sentence",
+          "12 min: write a checked recommendation",
+          "8 min: reflect on help and responsibility"
+        ]
+      },
+      {
+        "id": "meeting",
+        "number": 3,
+        "title": "Make a decision together",
+        "room": "Campus discussion",
+        "goal": "Consider affected people and propose a proportionate, reversible decision.",
+        "claim": "At a Campus meeting, the newspaper must recommend buying the system, running a limited trial, or waiting. There is no deadline requiring a purchase today.",
+        "beforePrompt": "Who should be heard before a decision? Write your recommendation and one question you would ask them.",
+        "evidencePrompt": "Select the perspectives that affect your recommendation. Separate what people value from claims that require testing.",
+        "cards": [
+          {
+            "id": "meeting-ground",
+            "title": "A. Groundskeeper's priorities",
+            "source": "Fictional role card • read aloud or discuss",
+            "body": "'I want to conserve water and keep plants healthy. I can supervise a small trial. We need a manual stop and a clear rule for checking dry soil. A person must remain responsible.'"
+          },
+          {
+            "id": "meeting-student",
+            "title": "B. Student garden club",
+            "source": "Fictional role card • read aloud or discuss",
+            "body": "'We want to keep learning how to care for the garden. The controls should work for everyone. We do not agree to upload our names or photos to test the watering system.'"
+          },
+          {
+            "id": "meeting-budget",
+            "title": "C. School purchasing lead",
+            "source": "Fictional role card • read aloud or discuss",
+            "body": "'No price has been confirmed. We need the real costs, approval and a comparison with a simpler timer. We can pause the proposal while gathering this information.'"
+          }
+        ],
+        "choices": [
+          {
+            "id": "buy",
+            "title": "Buy for every garden immediately",
+            "feedback": "The evidence does not establish cost, accessibility or performance across gardens. This commits resources before the unanswered questions are resolved."
+          },
+          {
+            "id": "trial",
+            "title": "Propose a supervised trial with conditions",
+            "feedback": "Name the responsible person, required approval, comparison, success measures, stop rule and review date. A proposal is not permission to start the trial."
+          },
+          {
+            "id": "wait",
+            "title": "Wait or use a simpler solution",
+            "feedback": "A justified pause or simpler timer is reasonable. Explain what need it meets, what is still unknown, and what evidence could change your mind."
+          }
+        ],
+        "discussion": "Use the three role cards. Each person speaks, another paraphrases, and the group records one disagreement fairly. Write a recommendation with a responsible person and a review or stop condition.",
+        "reflection": "Whose perspective changed your thinking? What does your group remain responsible for? You may keep personal reflections private and share only your project recommendation.",
+        "nextStep": "Try the reasoning routine in a new situation without the watering example in front of you.",
+        "teacherKey": "Look for listening, a distinction between evidence and values, privacy, accessibility, a comparison and a reversible decision. More than one recommendation is defensible. Never score a student's beliefs or require private disclosures. The teacher evaluates the assigned recommendation only.",
+        "timing": [
+          "5 min: initial recommendation",
+          "8 min: read role cards",
+          "12 min: meeting with rotating roles",
+          "12 min: write a conditional recommendation",
+          "8 min: reflect and identify a next check"
+        ]
+      },
+      {
+        "id": "transfer",
+        "number": 4,
+        "title": "Use the method somewhere new",
+        "room": "Library and Passport",
+        "goal": "Apply source checking, limits and responsible tool choice to an unfamiliar claim.",
+        "claim": "A fictional company says its AI quiet-desk display doubles reading comprehension for every student. It cites a lunchtime trial and an enthusiastic AI-style summary. The library is considering a purchase.",
+        "beforePrompt": "Before opening the evidence, say what you would need to know and how you would check it. Complete your initial response without using the earlier worked answers; keep agreed accessibility supports.",
+        "evidencePrompt": "Make a final recommendation using at least one source, one limitation and a next check. Decide what help is appropriate. Explain aloud, on paper or in your Passport.",
+        "cards": [
+          {
+            "id": "desk-log",
+            "title": "A. Trial note",
+            "source": "Fictional library log • 12 June",
+            "body": "Six volunteers sat at the display for two lunch breaks. They read twice as many pages as a different group the previous week. No comprehension questions were asked. Reading materials and noise levels differed."
+          },
+          {
+            "id": "desk-summary",
+            "title": "B. AI-style summary",
+            "source": "Authored simulation • not independent evidence",
+            "body": "'The trial confirms doubled comprehension for all students. Several websites agree.' The summary gives no website titles, links or new measurements."
+          },
+          {
+            "id": "desk-librarian",
+            "title": "C. Librarian's note",
+            "source": "Fictional interview note • 13 June",
+            "body": "'Pages read and understanding are different measures. We need a fair comparison and accessible options. Some students prefer a quiet corner without a display. We have not obtained a price or approval.'"
+          }
+        ],
+        "choices": [
+          {
+            "id": "recommend",
+            "title": "Recommend buying on this evidence",
+            "feedback": "The trial did not measure comprehension and did not compare equivalent conditions. Unnamed websites and a fluent summary cannot establish the claim."
+          },
+          {
+            "id": "test",
+            "title": "Request a fair test and involve library users",
+            "feedback": "Specify an understanding measure, comparable conditions, accessible participation, permission and an independent check. A proposed test could inform a later decision; it does not guarantee a benefit."
+          },
+          {
+            "id": "decline",
+            "title": "Decline for now and explain what would change my mind",
+            "feedback": "This can be justified by the missing evidence, price or unmet needs. Explain the limits precisely and name what new evidence would be relevant."
+          }
+        ],
+        "discussion": "Give your individual recommendation before viewing the feedback. Then compare with a partner: what reasoning carried over from the garden case, and what was different? Teachers may score the assigned response using the paper rubric.",
+        "reflection": "How did you decide what to trust? What can you now explain without copying the previous example? What will you check in a real task?",
+        "nextStep": "Revisit one Passport entry after a week. Record what changed or what remains uncertain.",
+        "teacherKey": "Score the initial individual recommendation before feedback. Strong responses distinguish pages from comprehension, identify unequal groups and short duration, reject unsupported corroboration, include affected people and propose a concrete next check. Score the reasoning, not the selected option. This is an informal transfer check, not a validated assessment or proof of programme effectiveness.",
+        "timing": [
+          "5 min: individual first judgment",
+          "8 min: read new evidence",
+          "12 min: individual transfer response before feedback",
+          "12 min: partner explanation and feedback",
+          "8 min: Passport revisit plan"
+        ]
+      }
+    ]
+  },
+  "teaching": [
+    {
+      "number": 1,
+      "concept": "A claim, a source and a conclusion are different things",
+      "explain": "A claim says something may be true. A source is a record we can inspect. Evidence is the relevant part of a source that supports or challenges a claim. A conclusion connects that evidence to a decision. Repetition can make a claim familiar without making it better supported.",
+      "model": "Use the watering record after learners have made their first attempt. Underline the observation, circle the conditions and cross out a conclusion that goes further. Ask what was measured, with what comparison and over what period.",
+      "worked": "The record reports 10 rather than 20 litres for two similar beds over two days. It supports describing that small test. It does not establish healthy plants, every garden, a full growing season or a verified purchase price. A responsible headline can preserve the useful observation while refusing the universal claim.",
+      "guided": "Present: 'Three documents say the system works.' Ask learners to draw arrows from each statement to its original information. If two repeat the same test, count the test once. Ask what new independent evidence would add.",
+      "independent": "The learner writes a recommendation in S04 and names a source, a limitation and a next check. Use P01-P04 for a fuller project brief and source audit after the timed lesson.",
+      "review": "Ask the learner to point to the exact source detail. If they only name a document, ask what it actually measured. If they reject all evidence, ask what narrow conclusion is still justified.",
+      "samples": [
+        [
+          "Developing",
+          "It saves half the water, so we should buy it.",
+          "Recognises the numerical result but removes its conditions and jumps from one observation to a purchase.",
+          "Which words would keep the result limited to the test?"
+        ],
+        [
+          "Secure",
+          "The small test used 10 instead of 20 litres. I would report that result but ask about plant health before recommending a purchase.",
+          "Connects a bounded result to an appropriate next check.",
+          "Why does that check matter to your recommendation?"
+        ],
+        [
+          "Extending",
+          "The poster repeats the same test; it is not another trial. A longer comparison with an appropriate plant-health measure could change my recommendation.",
+          "Traces dependence between sources and proposes an outcome relevant to the decision.",
+          "What would make that comparison fair and practical?"
+        ]
+      ]
+    },
+    {
+      "number": 2,
+      "concept": "A useful prompt is a brief, not a guarantee",
+      "explain": "A prompt is an instruction or question given to a generative AI system. A useful brief gives a goal, audience, permitted sources, constraints, output format and a checking plan. Generative systems can produce plausible unsupported or incorrect details, sometimes called hallucinations. Confident wording is not verification.",
+      "model": "Before showing the prepared replies, model the structure of a brief with headings only. After the first attempt, compare an original factual sentence with its source. A factual gap should remain a gap rather than being filled with a confident guess.",
+      "worked": "The prepared reply includes a 30-credit price. The source inventory gives no verified price. The checking result is 'not established by these records', not proof that the real price would be zero or that every sentence is false. Remove the unsupported price and explain how an unknown cost affects the decision.",
+      "guided": "Compare 'Make this sound impressive' with 'Use records A-C only; distinguish the observation, a limit and a next check; mark unknown details.' Ask which requirements are testable. Then ask which factual checks remain necessary even if every instruction is followed.",
+      "independent": "The learner writes S06 before seeing the fixed replies, then records a claim/source/status check and a corrected recommendation on S08. Use P03-P06 for a full prompt brief, checking ledger and revision record.",
+      "review": "Do not accept 'I checked it' without a source/action. Ask what the learner compared, what they found, what they changed and what remains unknown. A new prompt alone is not evidence that the answer improved.",
+      "samples": [
+        [
+          "Developing",
+          "I added more detail to my prompt, so the answer is reliable now.",
+          "Describes effort but treats prompt length as evidence of correctness.",
+          "Which factual statement did you verify, and against what?"
+        ],
+        [
+          "Secure",
+          "I removed the 30-credit price because the original folder does not verify it. My new brief asks the help to label unsupported details as unknown.",
+          "Makes a specific source-driven correction and improves the checking requirement.",
+          "How will you check the next version?"
+        ],
+        [
+          "Extending",
+          "The reply helps organise the evidence but cannot become an independent source. I preserved the small test, removed the price and kept a separate unresolved-questions list.",
+          "Separates usefulness, source authority and uncertainty.",
+          "What could still be omitted even in this improved version?"
+        ]
+      ]
+    },
+    {
+      "number": 3,
+      "concept": "A technically possible action can still be the wrong choice",
+      "explain": "Responsible use considers purpose, permission, privacy, access and consequences. Bias can appear in whose needs or examples are included, which outcome is treated as success and who is left out. A preference is not a measured fact, but it can still matter to a decision. More than one conclusion can be defensible.",
+      "model": "Read a role card and separate three elements: what the person values, what they report and what still needs checking. Model paraphrasing the concern without agreeing automatically. Ask which perspective might be missing from the supplied set.",
+      "worked": "A proposal for a supervised trial can identify a responsible adult, an accessible alternative, a comparison and a stop/review condition. It must not treat the proposal itself as permission, assume a verified price or require students to upload names or photographs. Waiting or choosing a simpler timer can also be justified.",
+      "guided": "Offer a draft that says, 'Everyone benefits, so install it now.' Ask what 'everyone' hides. Learners identify a missing need, an unverified fact and an action that requires permission. They rewrite one sentence before changing the whole recommendation.",
+      "independent": "Preserve S11, then revise on S12 using a role-card need and a source check. P05-P08 support a longer version comparison, peer review and final responsibility statement.",
+      "review": "Ask why the edit matters to an affected person. Do not score agreement with the teacher, a private belief or the learner's willingness to disclose an experience. Ask what would justify changing, pausing or stopping the proposal.",
+      "samples": [
+        [
+          "Developing",
+          "Most of us voted yes, so the system must work.",
+          "Confuses a preference about action with evidence about performance.",
+          "Which part was a vote, and which part needs a source?"
+        ],
+        [
+          "Secure",
+          "We would consider a supervised trial if there is approval, an accessible alternative and a person checking the outcome. We would not upload names.",
+          "Connects an action to permission, access and responsibility.",
+          "What outcome and stop condition would you specify?"
+        ],
+        [
+          "Extending",
+          "I changed my first proposal because it assumed everyone wanted the same control. I would compare the trial with a simpler option and review whether the agreed outcome and access needs are met.",
+          "Explains the revision and recognises an alternative and a meaningful review.",
+          "Whose perspective is still missing, and how could you include it safely?"
+        ]
+      ]
+    },
+    {
+      "number": 4,
+      "concept": "Transfer means using the routine without copying the previous answer",
+      "explain": "A transferable routine asks what the task is, what the sources establish, where the limits are, what help is appropriate and what to do next. A new case may require a different decision. Revision means a reasoned improvement or a justified recheck, not changing an answer simply to please someone.",
+      "model": "Before independent work, remind learners of the routine without naming the new case's error. Preserve their first recommendation. Only afterwards model how to compare the claim with what the source actually measured.",
+      "worked": "In the quiet-desk case, the record describes pages read during two lunch breaks, not measured comprehension. The groups and reading materials differ. Unnamed websites in the summary do not add traceable evidence. A proposed next test should measure the outcome relevant to the claim and retain accessible alternatives.",
+      "guided": "After the first response is preserved, ask 'What did this source measure?' and 'What would a result about the claim need to measure?' Learners name the gap before seeing a teacher model. They then decide whether to revise their recommendation or retain it with a clearer reason.",
+      "independent": "Use S13-S15 without substantive hints. Use S16-S17 for the revision and explanation. An expanded portfolio can use P01-P08 with a separately approved fictional task, retaining the source packet and the two versions.",
+      "review": "Separate first-response evidence from supported revision. Record the help received. Do not infer a causal programme effect or compare dimensions the baseline did not elicit. A learner may show understanding orally with agreed access support.",
+      "samples": [
+        [
+          "Developing",
+          "They read twice as many pages, so they understood twice as much.",
+          "Substitutes a convenient activity count for the claimed outcome.",
+          "After preserving the first response: what was measured?"
+        ],
+        [
+          "Secure",
+          "The trial counted pages, not understanding. I would wait and ask for an appropriate comparison and a comprehension measure.",
+          "Identifies the measure mismatch and a relevant next check.",
+          "What else should the comparison keep fair?"
+        ],
+        [
+          "Extending",
+          "I would consider a fair, accessible test before a purchase. My revision distinguishes the observed page count from the unmeasured claim and removes the summary's untraceable support.",
+          "Connects evidence limits, access, traceability and a meaningful revision.",
+          "What finding would change your decision, and who would review it?"
+        ]
+      ]
+    }
+  ]
+}

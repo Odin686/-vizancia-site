@@ -81,29 +81,45 @@ the candidate references, not with the older published source commits.
 
 ## Evidence to Action classroom publication
 
-The October 25 teacher resource uses the professional **Evidence to Action**
-print template. The original download URL remains compatible, serving the
-20-page complete packet. Separate 11-page teacher and 9-page student exports
-are linked on the teacher page. The projection's browser title matches the
-publication; its fictional case records, slide sequence and behavior are
-unchanged. The native apps keep their existing case title.
+Classroom studio 2, October 25, 2026, publishes the human-first AI problem-solving
+exercise approved by the owner. The complete packet is 30 pages; the separate
+teacher guide and student handouts are 15 pages each. The 27-slide offline
+projection follows the same four-session sequence and staged answer release.
+The original `can-we-trust-this-pilot.pdf` URL remains a byte-identical alias of
+`evidence-to-action-complete.pdf` for existing outreach links.
 
-`data/evidence-to-action.json` preserves the canonical Trust case and selected
-teaching examples from the October 18 local educator beta, with source hashes.
-This focused publication does not replace or claim delivery of the broader,
-unpublished eight-stage Think First programme or its optional labs/portfolio.
-The original case evidence remains unchanged. Baseline and transfer first
-responses precede substantive feedback; supported revision stays separate.
+The core uses prepared, explicitly authored AI exchanges and a complete paper
+route. A live demonstration is optional, adult-operated and subject to local
+approval. Students frame the problem independently, report the AI contribution,
+question and check original records, improve the brief, inspect a prepared
+revision and explain their final decision. Independent work and coached
+revision stay separate. Feedback is descriptive, not an automated score.
 
-Rebuild using a Python environment with `scripts/requirements-pdf.txt`, then run:
+Teacher page T14 explains the design rationale using EEF, IES, OECD and UNESCO
+references. These inform instructional choices; no endorsement, school-board
+approval, brain-health benefit or measured programme effect is asserted.
+The optional delayed recall activity is additional to the four-period core.
+Timings need educator dry runs. Agreed accessibility supports remain available.
 
-```sh
-python scripts/build-evidence-to-action.py
-```
+Source and build:
 
-Outputs are in `output/pdf/` (ignored). Copy the complete packet to
-`teachers/activity/can-we-trust-this-pilot.pdf`, and the teacher/student PDFs to
-the same public directory. Render all pages with `pdftoppm`; inspect spacing,
-tables, evidence, answer separation and writing areas before publishing. The
-fonts and reusable layout source are in `scripts/pdf_assets/` and the builder.
-Website behavior still passes through `npm run build`.
+- `data/evidence-to-action-studio.json`: current publication content.
+- `data/evidence-to-action.json`: unchanged original fictional evidence and
+  historical edition-1 teaching excerpts.
+- `scripts/build-classroom-studio.py --publish`: creates current PDF exports.
+- `scripts/build-classroom-projection.py`: generates the matching projection.
+- `scripts/requirements-pdf.txt`: development-only Python dependencies.
+- `scripts/pdf_assets/`: the bundled OFL Inter fonts, layout notes and projection template.
+
+Render every PDF page, verify teacher/student separation and compare the twelve
+original evidence records before copying exports to `teachers/activity/`.
+`data/classroom-publication.json` records output hashes, sizes and page counts.
+Run `npm run build` after copying the reviewed PDFs and rebuilding the slides.
+The old `build-evidence-to-action.py` remains an historical edition-1 builder;
+do not overwrite the current public packet with its outputs.
+
+The editable Figma file has the 29-page review composition. The public edition
+adds T14's learning rationale through the local print renderer. Figma's Starter
+connector quota prevented further edits; do not claim the public PDFs are native
+Figma exports or that the Figma file includes this addendum. The broader Think
+First labs and portfolio remain separate. Native app case content is unchanged.
